@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>3 Nhất Group</title>
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link rel="stylesheet" href="index.css">
+
+</head>
+<body  data-swipe-threshold='20' data-swipe-timeout='500' data-swipe-ignore='false'>
+
+	<div class='ngang' id='ngang'></div>
+	<div class='doc' id='doc'>
+	
+		<div id="Audio" style="display:none">
+			<audio id="myAudio1"><source src="https://3nhat.github.io/Audio/click.mp3" type="audio/mpeg"></audio>
+			<audio id="myAudio2"><source src="https://3nhat.github.io/Audio/sai.mp3" type="audio/mpeg"></audio>
+			<audio id="myAudio3"><source src="https://3nhat.github.io/Audio/trung.mp3" type="audio/mpeg"></audio>
+			<audio id="myAudio4"><source src="https://3nhat.github.io/Audio/Alert.mp3" type="audio/mpeg"></audio>
+		</div>
+		<div id="HuongDan" class="HuongDan">
+			Do chương trình sử dụng tính năng tracking đơn hàng nên bạn phải bật định vị và cho phép truy cập định vị, chương trình mới hoạt động. Xin cảm ơn
+		</div>
+		<div id="Geo" style="display: none;"></div>
+		<div id="container_loader">
+			<div class="main_loader" >
+				<div class="loader" onclick="EID('container_loader').style.display = 'none'"></div>
+			</div>
+		</div>
+		<div id='VirtualButton' class='VirtualButton QuangThu'><div>31G</div></div>
+		<div id='Alert' class='Alert'>
+			<div class='Alert_khung'>
+				<div class='Alert_header'>
+					<div id= 'Alert_header_1' class='Alert_header_1'>
+						<span class="fa-stack">
+						  	<i class="fa fa-square fa-stack-2x" style='color: red'></i>
+						  	<i class="fa fa-close fa-stack-1x" style='color: white; cursor: pointer;'></i>
+						</span>
+					</div>
+					<div id= 'Alert_header_2' class='Alert_header_2'>
+						Thông báo
+					</div>
+					<div id= 'Alert_header_3' class='Alert_header_1'>
+						<span class="fa-stack">
+							<i class="fa fa-square fa-stack-2x" style='color: green'></i>
+						  	<i class="fa fa-check fa-stack-1x" style='color: white; cursor: pointer;'></i>
+						</span>
+					</div>
+				</div>
+				<div id= 'Alert_body' class='Alert_body'>
+					hdskjfhskjdf
+				</div>
+
+			</div>
+		</div>
+		
+		<div id='Control' class='Control'>
+			<div class='Control_khung'>
+				<div class='Control_header'>
+					<div id= 'Control_header_1' class='Control_header_1'>
+						<span class="fa-stack">
+						  	<i class="fa fa-square fa-stack-2x" style='color: red'></i>
+						  	<i class="fa fa-close fa-stack-1x" style='color: white; cursor: pointer;'></i>
+						</span>
+					</div>
+					<div id= 'Control_header_2' class='Control_header_2'>
+						Thông báo
+					</div>
+					<div id= 'Control_header_3' class='Control_header_1'>
+						<span class="fa-stack">
+							<i class="fa fa-square fa-stack-2x" style='color: green'></i>
+						  	<i class="fa fa-check fa-stack-1x" style='color: white; cursor: pointer;'></i>
+						</span>
+					</div>
+				</div>
+				<div id= 'Control_body' class='Control_body'>
+					hdskjfhskjdf
+				</div>
+
+			</div>
+		</div>
+
+
+		<div class='header' id='header'>
+			<div id='header1' class='header1'><div>Công ty cổ phần tập đoàn 3 Nhất</div></div>
+			<div class='header2'>
+				<div class='header2_1'>
+				<div class='logo'>
+					<div class='sideLogo headsLogo'><img id='imageLogo1' class='imageLogo1'></div>
+					<div class='sideLogo tailsLogo'><img id='imageLogo2' class='imageLogo2'></div>
+				</div>
+			    </div>
+			    <div id='header2_2' class='header2_2'>
+
+			    </div>
+			</div>
+			<div class='header3'>
+
+			    	<div id='header3_2_button' class='header3_2'>Thông tin chạy</div>
+
+
+			</div>
+		</div>
+
+		<div id='content' class='content'>
+			<div class='content_image'>
+				
+			</div>
+			<div class='content1'>
+				<div class='content1_div3'>
+					<div class='info1_khung'>
+						<div class='info1_header'>
+							<div id= 'info1_header_1' class='info1_header_1'>
+								<span class="fa-stack">
+									<i class="fa fa-square fa-stack-2x" style='color: red'></i>
+									<i class="fa fa-close fa-stack-1x" style='color: white; cursor: pointer;'></i>
+								</span>
+							</div>
+							<div id= 'info1_header_2' class='info1_header_2'>
+								Thông báo
+							</div>
+							<div id= 'info1_header_3' class='info1_header_1'>
+								<span class="fa-stack">
+									<i class="fa fa-square fa-stack-2x" style='color: green'></i>
+									<i class="fa fa-check fa-stack-1x" style='color: white; cursor: pointer;'></i>
+								</span>
+							</div>
+						</div>
+						<div id= 'info1_body' class='info1_body'>
+							hdskjfhskjdf
+						</div>
+
+					</div>
+				</div>
+				<div class='content1_div2'>
+					<div class='control1_khung'>
+						<div class='control1_header'>
+							<div id= 'control1_header_1' class='control1_header_1'>
+								<span class="fa-stack">
+									<i class="fa fa-square fa-stack-2x" style='color: green'></i>
+									<i class="fa fa-chevron-left fa-stack-1x" style='color: white; cursor: pointer;'></i>
+								</span>
+							</div>
+							<div id= 'control1_header_2' class='control1_header_2'>
+								Nhóm nút khung đỏ
+							</div>
+							<div id= 'control1_header_3' class='control1_header_1'>
+								<span class="fa-stack">
+									
+									<i class="fa fa-square fa-stack-2x" style='color: red'></i>
+									<i class="fa fa-close fa-stack-1x" style='color: white; cursor: pointer;'></i>
+								</span>
+							</div>
+						</div>
+						<div id= 'control1_body' class='control1_body'>
+							<div class='content1bK_parent'>
+								<div class='content1bK'>
+									<div class='content1bKK'>
+										<div class='VD_content1bKK_icon'>
+											<span class='icon1 fa-stack'>
+												<i class='fa-regular fa-square fa-spin fa-stack-2x' style='animation-duration: 10s;'></i>
+												<i class='fa-solid fa-truck-fast fa-beat fa-stack-1x' style='--fa-beat-scale: 1.2;'></i>
+											</span>
+											<span class='fa-stack icon1Text1'>
+												<i class='fa-stack-1x'>Quang</i>
+											</span>
+											<span class='fa-stack icon1Text2'>
+												<i class='fa-stack-1x'>Thu</i>
+											</span>
+
+										</div>
+									</div>
+									<div class='content1bKK_2'>
+										<span class='fa-stack icon1Text3'>
+											<i class='fa-stack-1x'>Test chữ ngẫu nhiên Test chữ ngẫu nhiên</i>
+										</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class='content1bK_parent'>
+								<div class='content1bK'>
+									<div class='content1bKK'>
+										<div class='VD_content1bKK_icon'>
+											<span class='icon1 fa-stack'>
+												<i class='fa-regular fa-square fa-spin fa-stack-2x' style='animation-duration: 10s;'></i>
+												<i class='fa-solid fa-truck-fast fa-beat fa-stack-1x' style='--fa-beat-scale: 1.2;'></i>
+											</span>
+											<span class='fa-stack icon1Text1'>
+												<i class='fa-stack-1x'>Quang</i>
+											</span>
+											<span class='fa-stack icon1Text2'>
+												<i class='fa-stack-1x'>Thu</i>
+											</span>
+
+										</div>
+									</div>
+									<div class='content1bKK_2'>
+										<span class='fa-stack icon1Text3'>
+											<i class='fa-stack-1x'>Test chữ ngẫu nhiên Test chữ ngẫu nhiên</i>
+										</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class='content1bK_parent'>
+								<div class='content1bK'>
+									<div class='content1bKK'>
+										<div class='VD_content1bKK_icon'>
+											<span class='icon1 fa-stack'>
+												<i class='fa-regular fa-square fa-spin fa-stack-2x' style='animation-duration: 10s;'></i>
+												<i class='fa-solid fa-truck-fast fa-beat fa-stack-1x' style='--fa-beat-scale: 1.2;'></i>
+											</span>
+											<span class='fa-stack icon1Text1'>
+												<i class='fa-stack-1x'>Quang</i>
+											</span>
+											<span class='fa-stack icon1Text2'>
+												<i class='fa-stack-1x'>Thu</i>
+											</span>
+
+										</div>
+									</div>
+									<div class='content1bKK_2'>
+										<span class='fa-stack icon1Text3'>
+											<i class='fa-stack-1x'>Test chữ ngẫu nhiên Test chữ ngẫu nhiên</i>
+										</span>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+
+					</div>
+				</div>
+				<div class='content1_div1'></div>
+				<div class='content1a'>
+					<div class='content1a1'>
+						<span class="fa-stack">
+							<i class="fa-regular fa-square fa-stack-2x" style='color: red'></i>
+							<i id='content1a_button_1' class="fa fa-list fa-stack-1x" style="color: red; cursor: pointer;"></i>
+						</span>
+					</div>
+					<div class='content1a2'>
+						<span class="fa-stack">
+							
+							<i class="fa-regular fa-square fa-stack-2x" style='color: red'></i>
+							<i id='content1a_button_2' class="fa fa-clipboard fa-stack-1x" style="color: red; cursor: pointer;"></i>
+						</span>
+						
+					</div>
+					<div class='content1a3'>
+						<div class="group">      
+							<input id='content1a_input' type="text" required>
+							<span class="highlight"></span>
+							<span class="bar"></span>
+							<label>Từ gợi nhớ</label>
+						</div>
+					</div>
+					<div class='content1a4'>
+						<span class="fa-stack">
+							<i class="fa-regular fa-square fa-stack-2x" style='color: red'></i>
+							<i id='content1a_button_3' class="fa fa-search fa-stack-1x" style="color: red; cursor: pointer;"></i>
+						</span>
+					</div>
+				</div>
+				<div class='content1b' id='content1b'>
+					<div id='content1b_khung1' class='khung1 list-group'>
+						<div class='content1bK list-group-item'>
+							<div class='content1bKK'>
+								<div class='VD_content1bKK'>
+									<div class='VD_content1bKKa'>QTDU001</div>
+									<div class='VD_content1bKKa STT_VD'>1</div>
+									<div class='VD_content1bKKb'>QTDU002</div>
+									<div class='VD_content1bKKb2'>
+										<progress min='0' max='100' value='QTDU003' style= 'accent-color: #30cc7e; place-self: center; width: clamp(100%, 60%, 100%);'></progress>
+									</div>
+								</div>
+								<div class='VD_content1bKKc'>
+									<div class='VD_content1bKKc1'>QTDU004</div>
+									<div class='VD_content1bKK'>QTDU005</div>
+									<div class='VD_content1bKK'>QTDU006</div>
+									<div class='VD_content1bKK'>QTDU007</div>
+									<div class='VD_content1bKKc2'>
+										<progress min='0' max='100' value='QTDU003' style= 'accent-color: #30cc7e; place-self: center; width: clamp(100%, 60%, 100%);'></progress>
+									</div>
+								</div>
+
+								<div class='VD_content1bKKd'>
+									<a>Người Gửi:</a> QTDU008
+								</div>
+								<div class='VD_content1bKKd'>
+									<a>Ghi chú:</a> QTDU009
+								</div>
+								<div class='VD_content1bKKd'>
+									<a>Người Nhận:</a> QTDU010
+								</div>
+
+							</div>
+						</div>
+
+						<div class='content1bK list-group-item'>
+							<div class='content1bKK'>
+								<div class='VD_content1bKK'>
+									<div class='VD_content1bKKa'>234567Q</div>
+									<div class='VD_content1bKKa STT_VD'>2</div>
+									<div class='VD_content1bKKb'>Phát + 1</div>
+									<div class='VD_content1bKKb2'>
+										<progress min='0' max='100' value='80' style= 'accent-color: #30cc7e; place-self: center; width: clamp(100%, 60%, 100%);'></progress>
+									</div>
+								</div>
+								<div class='VD_content1bKKc'>
+									<div class='VD_content1bKKc1'>Hàng thịt cá đông lạnh</div>
+									<div class='VD_content1bKK'>22/02/2022</div>
+									<div class='VD_content1bKK'>22/02/2022</div>
+									<div class='VD_content1bKK'>22/02/2022</div>
+									<div class='VD_content1bKKc2'>
+										<progress min='0' max='100' value='80' style= 'accent-color: #30cc7e; place-self: center; width: clamp(100%, 60%, 100%);'></progress>
+									</div>
+								</div>
+
+								<div class='VD_content1bKKd'>
+									<a>Người Gửi:</a> (987654321.84) (U234567Q) (Công ty xyz) (1/37, Hoàng Việt, PH.04, QU.TÂN BÌNH, TP.HỒ CHÍ MINH)
+								</div>
+								<div class='VD_content1bKKd'>
+									<a>Ghi chú:</a> (Khai giá) (đồng kiểm) (báo phát) (Dễ vỡ) (Phát trước 17h30)
+								</div>
+								<div class='VD_content1bKKd'>
+									<a>Người Nhận:</a> (987654321.84) (U234567Q) (Công ty xyz) (1/37, Hoàng Việt, PH.04, QU.TÂN BÌNH, TP.HỒ CHÍ MINH)
+								</div>
+
+							</div>
+						</div>
+
+						<div class='content1bK list-group-item'>
+							<div class='content1bKK'>
+								<div class='VD_content1bKK'>
+									<div class='VD_content1bKKa'>234567Q</div>
+									<div class='VD_content1bKKa STT_VD'>3</div>
+									<div class='VD_content1bKKb'>Phát + 1</div>
+									<div class='VD_content1bKKb2'>
+										<progress min='0' max='100' value='80' style= 'accent-color: #30cc7e; place-self: center; width: clamp(100%, 60%, 100%);'></progress>
+									</div>
+								</div>
+								<div class='VD_content1bKKc'>
+									<div class='VD_content1bKKc1'>Hàng thịt cá đông lạnh</div>
+									<div class='VD_content1bKK'>22/02/2022</div>
+									<div class='VD_content1bKK'>22/02/2022</div>
+									<div class='VD_content1bKK'>22/02/2022</div>
+									<div class='VD_content1bKKc2'>
+										<progress min='0' max='100' value='80' style= 'accent-color: #30cc7e; place-self: center; width: clamp(100%, 60%, 100%);'></progress>
+									</div>
+								</div>
+
+								<div class='VD_content1bKKd'>
+									<a>Người Gửi:</a> (987654321.84) (U234567Q) (Công ty xyz) (1/37, Hoàng Việt, PH.04, QU.TÂN BÌNH, TP.HỒ CHÍ MINH)
+								</div>
+								<div class='VD_content1bKKd'>
+									<a>Ghi chú:</a> (Khai giá) (đồng kiểm) (báo phát) (Dễ vỡ) (Phát trước 17h30)
+								</div>
+								<div class='VD_content1bKKd'>
+									<a>Người Nhận:</a> (987654321.84) (U234567Q) (Công ty xyz) (1/37, Hoàng Việt, PH.04, QU.TÂN BÌNH, TP.HỒ CHÍ MINH)
+								</div>
+
+							</div>
+						</div>
+
+						<div class='content1bK list-group-item'>
+							<div class='content1bKK'>
+								<div class='VD_content1bKK'>
+									<div class='VD_content1bKKa'>234567Q</div>
+									<div class='VD_content1bKKa STT_VD'>4</div>
+									<div class='VD_content1bKKb'>Phát + 1</div>
+									<div class='VD_content1bKKb2'>
+										<progress min='0' max='100' value='80' style= 'accent-color: #30cc7e; place-self: center; width: clamp(100%, 60%, 100%);'></progress>
+									</div>
+								</div>
+								<div class='VD_content1bKKc'>
+									<div class='VD_content1bKKc1'>Hàng thịt cá đông lạnh</div>
+									<div class='VD_content1bKK'>22/02/2022</div>
+									<div class='VD_content1bKK'>22/02/2022</div>
+									<div class='VD_content1bKK'>22/02/2022</div>
+									<div class='VD_content1bKKc2'>
+										<progress min='0' max='100' value='80' style= 'accent-color: #30cc7e; place-self: center; width: clamp(100%, 60%, 100%);'></progress>
+									</div>
+								</div>
+
+								<div class='VD_content1bKKd'>
+									<a>Người Gửi:</a> (987654321.84) (U234567Q) (Công ty xyz) (1/37, Hoàng Việt, PH.04, QU.TÂN BÌNH, TP.HỒ CHÍ MINH)
+								</div>
+								<div class='VD_content1bKKd'>
+									<a>Ghi chú:</a> (Khai giá) (đồng kiểm) (báo phát) (Dễ vỡ) (Phát trước 17h30)
+								</div>
+								<div class='VD_content1bKKd'>
+									<a>Người Nhận:</a> (987654321.84) (U234567Q) (Công ty xyz) (1/37, Hoàng Việt, PH.04, QU.TÂN BÌNH, TP.HỒ CHÍ MINH)
+								</div>
+
+							</div>
+						</div>
+
+						<div class='content1bK list-group-item'>
+							<div class='content1bKK'>
+								<div class='VD_content1bKK'>
+									<div class='VD_content1bKKa'>234567Q</div>
+									<div class='VD_content1bKKa STT_VD'>5</div>
+									<div class='VD_content1bKKb'>Phát + 1</div>
+									<div class='VD_content1bKKb2'>
+										<progress min='0' max='100' value='80' style= 'accent-color: #30cc7e; place-self: center; width: clamp(100%, 60%, 100%);'></progress>
+									</div>
+								</div>
+								<div class='VD_content1bKKc'>
+									<div class='VD_content1bKKc1'>Hàng thịt cá đông lạnh</div>
+									<div class='VD_content1bKK'>22/02/2022</div>
+									<div class='VD_content1bKK'>22/02/2022</div>
+									<div class='VD_content1bKK'>22/02/2022</div>
+									<div class='VD_content1bKKc2'>
+										<progress min='0' max='100' value='80' style= 'accent-color: #30cc7e; place-self: center; width: clamp(100%, 60%, 100%);'></progress>
+									</div>
+								</div>
+
+								<div class='VD_content1bKKd'>
+									<a>Người Gửi:</a> (987654321.84) (U234567Q) (Công ty xyz) (1/37, Hoàng Việt, PH.04, QU.TÂN BÌNH, TP.HỒ CHÍ MINH)
+								</div>
+								<div class='VD_content1bKKd'>
+									<a>Ghi chú:</a> (Khai giá) (đồng kiểm) (báo phát) (Dễ vỡ) (Phát trước 17h30)
+								</div>
+								<div class='VD_content1bKKd'>
+									<a>Người Nhận:</a> (987654321.84) (U234567Q) (Công ty xyz) (1/37, Hoàng Việt, PH.04, QU.TÂN BÌNH, TP.HỒ CHÍ MINH)
+								</div>
+
+							</div>
+						</div>
+
+
+					</div>
+
+				</div>
+			</div>
+			<div class='content2'>
+				<div class='content2_div3'>
+					<div class='info2_khung'>
+						<div class='info2_header'>
+							<div id= 'info2_header_1' class='info2_header_1'>
+								<span class="fa-stack">
+									<i class="fa fa-square fa-stack-2x" style='color: red'></i>
+									<i class="fa fa-close fa-stack-1x" style='color: white; cursor: pointer;'></i>
+								</span>
+							</div>
+							<div id= 'info2_header_2' class='info2_header_2'>
+								Thông báo
+							</div>
+							<div id= 'info2_header_3' class='info2_header_1'>
+								<span class="fa-stack">
+									<i class="fa fa-square fa-stack-2x" style='color: green'></i>
+									<i class="fa fa-check fa-stack-1x" style='color: white; cursor: pointer;'></i>
+								</span>
+							</div>
+						</div>
+						<div id= 'info2_body' class='info2_body'>
+							hdskjfhskjdf
+						</div>
+
+					</div>
+				</div>
+				<div class='content2_div2'>
+					<div class='control2_khung'>
+						<div class='control2_header'>
+							<div id= 'control2_header_1' class='control2_header_1'>
+								<span class="fa-stack">
+									<i class="fa fa-square fa-stack-2x" style='color: red'></i>
+									<i class="fa fa-close fa-stack-1x" style='color: white; cursor: pointer;'></i>
+								</span>
+							</div>
+							<div id= 'control2_header_2' class='control2_header_2'>
+								Nhóm nút khung xanh
+							</div>
+							<div id= 'control2_header_3' class='control2_header_1'>
+								<span class="fa-stack">
+									<i class="fa fa-square fa-stack-2x" style='color: green'></i>
+									<i class="fa fa-check fa-stack-1x" style='color: white; cursor: pointer;'></i>
+								</span>
+							</div>
+						</div>
+						<div id= 'control2_body' class='control2_body'>
+							hdskjfhskjdf
+						</div>
+
+					</div>
+				</div>
+				<div class='content2_div1'></div>
+				<div class='content2a'>
+					<div class='content2a1'>
+						<span class="fa-stack">
+							<i class="fa-regular fa-square fa-stack-2x" style='color: blue'></i>
+							<i id='content2a_button_1' class="fa fa-list fa-stack-1x" style="color: blue; cursor: pointer;"></i>
+						</span>
+					</div>
+					<div class='content2a2'>
+						<span class="fa-stack">
+							<i class="fa-regular fa-square fa-stack-2x" style='color: blue'></i>
+							<i id='content2a_button_2' class="fa fa-clipboard fa-stack-1x" style="color: blue; cursor: pointer;"></i>
+						</span>
+						
+					</div>
+					<div class='content2a3'>
+						<div class="group">      
+							<input id='content2a_input' type="text" required>
+							<span class="highlight"></span>
+							<span class="bar"></span>
+							<label>Từ gợi nhớ</label>
+						</div>
+					</div>
+					<div class='content2a4'>
+						<span class="fa-stack">
+							<i class="fa-regular fa-square fa-stack-2x" style='color: blue'></i>
+							<i id='content2a_button_3' class="fa fa-check fa-stack-1x" style="color: blue; cursor: pointer;"></i>
+						</span>
+					</div>
+			    </div>
+			    <div class='content2b' id='content2b'>
+				<div class='khung2'>
+					<div class='content1bK'>
+						<div class='content1bKK'>
+							<div class='VD_content1bKK_icon'>
+								<span class='icon1 fa-stack'>
+									<i class='fa-regular fa-square fa-spin fa-stack-2x' style='animation-duration: 10s;'></i>
+									<i class='fa-solid fa-truck-fast fa-beat fa-stack-1x' style='--fa-beat-scale: 1.2;'></i>
+								</span>
+								<span class='fa-stack icon1Text1'>
+									<i class='fa-stack-1x'>Quang</i>
+								</span>
+								<span class='fa-stack icon1Text2'>
+									<i class='fa-stack-1x'>Thu</i>
+								</span>
+
+							</div>
+						</div>
+						<div class='content1bKK_2'>
+							<span class='fa-stack icon1Text1'>
+								<i class='fa-stack-1x'>Test chữ ngẫu nhiên</i>
+							</span>
+						</div>
+					</div>
+
+					<div class='content1bK'>
+						<div class='content1bKK'>
+							<div class='VD_content1bKK_icon'>
+								<span class='icon1 fa-stack'>
+									<i class='fa-regular fa-square fa-spin fa-stack-2x' style='animation-duration: 10s;'></i>
+									<i class='fa-solid fa-truck-fast fa-beat fa-stack-1x' style='--fa-beat-scale: 1.2;'></i>
+								</span>
+								<span class='fa-stack icon1Text1'>
+									<i class='fa-stack-1x'>Quang</i>
+								</span>
+								<span class='fa-stack icon1Text2'>
+									<i class='fa-stack-1x'>Thu</i>
+								</span>
+
+							</div>
+						</div>
+					</div>
+
+					<div class='content1bK'>
+						<div class='content1bKK'>
+							<div class='VD_content1bKK_icon'>
+								<span class='icon1 fa-stack'>
+									<i class='fa-regular fa-square fa-spin fa-stack-2x' style='animation-duration: 10s;'></i>
+									<i class='fa-solid fa-truck-fast fa-beat fa-stack-1x' style='--fa-beat-scale: 1.2;'></i>
+								</span>
+								<span class='fa-stack icon1Text1'>
+									<i class='fa-stack-1x'>Quang</i>
+								</span>
+								<span class='fa-stack icon1Text2'>
+									<i class='fa-stack-1x'>Thu</i>
+								</span>
+
+							</div>
+						</div>
+					</div>
+
+					<div class='content1bK'>
+						<div class='content1bKK'>
+							<div class='VD_content1bKK_icon'>
+								<span class='icon1 fa-stack'>
+									<i class='fa-regular fa-square fa-spin fa-stack-2x' style='animation-duration: 10s;'></i>
+									<i class='fa-solid fa-truck-fast fa-beat fa-stack-1x' style='--fa-beat-scale: 1.2;'></i>
+								</span>
+								<span class='fa-stack icon1Text1'>
+									<i class='fa-stack-1x'>Quang</i>
+								</span>
+								<span class='fa-stack icon1Text2'>
+									<i class='fa-stack-1x'>Thu</i>
+								</span>
+
+							</div>
+						</div>
+					</div>
+
+					<div class='content1bK'>
+						<div class='content1bKK'>
+							<div class='VD_content1bKK_icon'>
+								<span class='icon1 fa-stack'>
+									<i class='fa-regular fa-square fa-spin fa-stack-2x' style='animation-duration: 10s;'></i>
+									<i class='fa-solid fa-truck-fast fa-beat fa-stack-1x' style='--fa-beat-scale: 1.2;'></i>
+								</span>
+								<span class='fa-stack icon1Text1'>
+									<i class='fa-stack-1x'>Quang</i>
+								</span>
+								<span class='fa-stack icon1Text2'>
+									<i class='fa-stack-1x'>Thu</i>
+								</span>
+
+							</div>
+						</div>
+					</div>
+
+					<div class='content1bK'>
+						<div class='content1bKK'>
+							<div class='VD_content1bKK_icon'>
+								<span class='icon1 fa-stack'>
+									<i class='fa-regular fa-square fa-spin fa-stack-2x' style='animation-duration: 10s;'></i>
+									<i class='fa-solid fa-truck-fast fa-beat fa-stack-1x' style='--fa-beat-scale: 1.2;'></i>
+								</span>
+								<span class='fa-stack icon1Text1'>
+									<i class='fa-stack-1x'>Quang</i>
+								</span>
+								<span class='fa-stack icon1Text2'>
+									<i class='fa-stack-1x'>Thu</i>
+								</span>
+
+							</div>
+						</div>
+					</div>
+
+
+
+
+				</div>
+			    </div>
+			</div>
+			<div class='content3' >
+				<div class='content3_div3'>
+					<div class='info3_khung'>
+						<div class='info3_header'>
+							<div id= 'info3_header_1' class='info3_header_1'>
+								<span class="fa-stack">
+									<i class="fa fa-square fa-stack-2x" style='color: red'></i>
+									<i class="fa fa-close fa-stack-1x" style='color: white; cursor: pointer;'></i>
+								</span>
+							</div>
+							<div id= 'info3_header_2' class='info3_header_2'>
+								Thông báo
+							</div>
+							<div id= 'info3_header_3' class='info3_header_1'>
+								<span class="fa-stack">
+									<i class="fa fa-square fa-stack-2x" style='color: green'></i>
+									<i class="fa fa-check fa-stack-1x" style='color: white; cursor: pointer;'></i>
+								</span>
+							</div>
+						</div>
+						<div id= 'info3_body' class='info3_body'>
+							hdskjfhskjdf
+						</div>
+
+					</div>
+				</div>
+				<div class='content3_div2'>
+					<div class='control3_khung'>
+						<div class='control3_header'>
+							<div id= 'control3_header_1' class='control3_header_1'>
+								<span class="fa-stack">
+									<i class="fa fa-square fa-stack-2x" style='color: red'></i>
+									<i class="fa fa-close fa-stack-1x" style='color: white; cursor: pointer;'></i>
+								</span>
+							</div>
+							<div id= 'control3_header_2' class='control3_header_2'>
+								Nhóm nút khung tím
+							</div>
+							<div id= 'control3_header_3' class='control3_header_1'>
+								<span class="fa-stack">
+									<i class="fa fa-square fa-stack-2x" style='color: green'></i>
+									<i class="fa fa-check fa-stack-1x" style='color: white; cursor: pointer;'></i>
+								</span>
+							</div>
+						</div>
+						<div id= 'control3_body' class='control3_body'>
+							hdskjfhskjdf
+						</div>
+
+					</div>
+				</div>
+				<div class='content3_div1'></div>
+				<div class='content3a'>
+					<div class='content3a1'>
+						<span class="fa-stack">
+							<i class="fa-regular fa-square fa-stack-2x" style='color: purple'></i>
+							<i id='content3a_button_1' class="fa fa-list fa-stack-1x" style="color: blue; cursor: pointer;"></i>
+						</span>
+					</div>
+					<div class='content3a2'>
+						<span class="fa-stack">
+							<i class="fa-regular fa-square fa-stack-2x" style='color: purple'></i>
+							<i id='content3a_button_2' class="fa fa-clipboard fa-stack-1x" style="color: purple; cursor: pointer;"></i>
+						</span>
+						
+					</div>
+					<div class='content3a3'>
+						<div class="group">      
+							<input id='content3a_input' type="text" required>
+							<span class="highlight"></span>
+							<span class="bar"></span>
+							<label>Từ gợi nhớ</label>
+						</div>
+					</div>
+					<div class='content3a4'>
+						<span class="fa-stack">
+							<i class="fa-regular fa-square fa-stack-2x" style='color: purple'></i>
+							<i id='content3a_button_3' class="fa fa-check fa-stack-1x" style="color: purple; cursor: pointer;"></i>
+						</span>
+					</div>
+				</div>
+				<div id='content3b' class='content3b'>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div id='DDOS' class='DDOS' style="display: block">
+		<div id="xacnhan" style="display: none">
+			<div id="captcha2"></div>
+			<input type="text" class="CaptchaInput" placeholder="Mã xác thực" id="cpatchaTextBox"/>
+		</div>
+		<div id="container" class="container" style="display: none">
+			<div class="captcha">
+				<canvas id="c"></canvas>
+				<canvas id="puzzle"></canvas>
+				<input id="slider" type="range", value="0", min="0", step="1">
+
+			</div>
+		</div>
+	</div>
+	
+	<script src="index.js"></script>
+
+
+</body>
+</html>
