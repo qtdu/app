@@ -492,7 +492,7 @@ body{
 	border-radius: 2%; 
 	/*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 	/*padding: calc(0.05 * 0.8 * var(--width-content));*/
-	margin: calc(0.05 * 0.8 * var(--width-content));
+	
 	font-weight: 400;
 
 	
@@ -503,9 +503,13 @@ body{
 
 }
 
+.info1_body, .info2_body, .info3_body {
+	margin: calc(0.05 * 0.8 * var(--width-content));
+}
 
-
-
+.control1_body, .control2_body, .control3_body {
+	margin: calc(0.01 * 0.8 * var(--width-content));
+}
 
 .content1_div1, .content2_div1, .content3_div1 {
 	position: absolute;
