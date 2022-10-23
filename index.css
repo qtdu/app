@@ -510,6 +510,7 @@ body{
 .control1_body, .control2_body, .control3_body {
 	/*margin-left: calc(-0.02 * 0.8 * var(--width-content));*/
 	padding-bottom: calc(0.02 * 0.8 * var(--width-content));
+	padding-top: calc(0.02 * 0.8 * var(--width-content));
 }
 
 .content1_div1, .content2_div1, .content3_div1 {
