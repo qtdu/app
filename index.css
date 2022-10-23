@@ -329,7 +329,8 @@ body{
 }
 
 .header1{
-	width: calc(100vw - 6 * var(--size-mau)/40));
+	/*width: calc(100vw - 6 * var(--size-mau)/40));*/
+	width: 100%;
     	margin: calc(var(--size-mau)/40) );
     	padding: calc(2 * var(--size-mau)/40);
     	height: calc(1.5 * var(--size-mau)/4);
@@ -343,9 +344,6 @@ body{
 	overflow: hidden;
 }
 
-.header1 div {
-	width: 100%;
-}
 
 .header2{
 	display: flex;
