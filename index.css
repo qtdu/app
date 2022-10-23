@@ -508,7 +508,7 @@ body{
 }
 
 .control1_body, .control2_body, .control3_body {
-	padding-left: calc(-0.02 * 0.8 * var(--width-content));
+	margin-left: calc(-0.02 * 0.8 * var(--width-content));
 	padding-bottom: calc(0.02 * 0.8 * var(--width-content));
 }
 
