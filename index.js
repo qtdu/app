@@ -207,7 +207,7 @@ function QT001(){
 	  ];
 	
 	
-	function DisplayGoogleDoc(id){
+	function DisplayGoogleDoc(prop, id){
     var rand = Math.floor(Math.random() * (arrLink.length-1));
 	  var script_id = '';	
 		for(var i=0; i< arrLink[rand].length; i++) {
@@ -219,7 +219,13 @@ function QT001(){
     link = link + "&para2=DISPLAYDOC";
     link = link + "]QQQ[" + id;
 		
-		EID('Iframe_main').src = link;
+		var ifr = EID('Iframe_main')
+		ifr.src = link;
+		
+		var arr = prop.split(']QTQ[');
+		root.style.setProperty('--color-iframe',arr[0]);
+		ifr.style.width = arr[1];
+		
   }
 	
 	
@@ -305,7 +311,7 @@ function QT001(){
 				for(i=1;i<arr.length;i+=2){
 					
 					//alert(arr[i+1][4]);
-					DisplayGoogleDoc(arr[i+1][4])
+					DisplayGoogleDoc(arr[i][4], arr[i+1][4])
 					window.soFile = arr[i].length-5;
 					for(j=5;j<arr[i].length;j++){
 						if(arr[i][j] == 'ELE') {
