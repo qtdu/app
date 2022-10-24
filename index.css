@@ -218,6 +218,7 @@ body{
 	
 }
 
+
 .Alert_khung, .Control_khung, .Iframe_khung {
 	border-radius: 5px; 
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -230,6 +231,7 @@ body{
 	/*top: calc(8 * var(--size-standard)/40);*/
 	
 }
+
 
 .Alert_header, .Control_header, .Iframe_header {
 	/*border-radius: 2%; 
@@ -314,6 +316,10 @@ body{
 		
 	 
 
+}
+
+.Iframe_body {
+	width: 100%;
 }
 
 #Iframe_main {
