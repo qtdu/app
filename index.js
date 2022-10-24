@@ -206,6 +206,12 @@ function QT001(){
 ['AKfyc', 'bzzVI9B', 'IrlEM', 'dg5CLr-pE', 'DgCfoOe', 'mvxD5M', 'btWU3mw', 'V6QLlx7E', 'X9NDcux', '1kfdMqx', '7_g']
 	  ];
 	
+	function DisplayPDF(id) {
+		
+		vcar link = "https://drive.google.com/file/d/" + id + "/preview?usp=embed_googleplus";
+		var ifr = EID('Iframe_main');
+		ifr.src = link;
+	}
 	
 	function DisplayGoogleDoc(prop, id){
 		var arr = prop.split(']QTQ[');
