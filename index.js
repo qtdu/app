@@ -349,7 +349,7 @@ function QT001(){
 								type='loai2.3';
 							}
 							Send_Worker_1(type,arr[i+1][j]);
-						} else	if (arr[i][j].indexOf('PDF') {
+						} else	if (arr[i][j].indexOf('PDF')>0) {
 							DisplayPDF(arr[i+1][j]);    
 						} else {
 							DisplayGoogleDoc(arr[i][j], arr[i+1][j]);
