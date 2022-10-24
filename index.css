@@ -20,7 +20,6 @@
 	--size-mau: calc(var(--size-standard) / (2 * var(--thietbi) - 1));
       	--height-content: calc(var(--vh, 1vh) * 100 - var(--size-mau)/4 - 2 * var(--size-mau)/40 - 2 * 2 * var(--size-mau)/40 - var(--size-mau) - var(--size-mau)/4);
         --color-iframe: white;
-	--heso-scale-iframe: 1;
 	
       	--heso-cotcontent : 3;
       	--width-content: calc(100vw / var(--heso-cotcontent) - 2 * var(--size-mau)/40);
@@ -358,9 +357,6 @@ body{
 	height: calc(var(--height-content) - calc(var(--size-mau)/4));
 	width: 100%;
 	border: none;
-	scrollbar-color: var(--color-iframe);
-	transform: scale(var(--heso-scale-iframe));
-	transform-origin: top left;
 }
 
 
