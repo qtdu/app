@@ -207,36 +207,9 @@ function QT001(){
 	  ];
 	
 	
-	function DisplayGoogleDoc_PDF(prop, id){
-		var arr = prop.split(']QTQ[');
-		/*
-		var tyle = (thietbi==true) ? arr[3] : 1;
-		
-    var rand = Math.floor(Math.random() * (arrLink.length-1));
-	  var script_id = '';	
-		for(var i=0; i< arrLink[rand].length; i++) {
-		  script_id = script_id + arrLink[rand][i]
-		}
-		script_id = 'AKfycbzBVrGSFTOjYKSH57U2XGRxfIkGdmkRb0FPR66_3K4ZgZIZ6q0dUeH6QnQ_SRa4BfZO';
-    var link = "https://script.google.com/macros/s/" + script_id + "/exec";
-    link = link + "?para1=F001";
-    link = link + "&para2=DISPLAYDOC";
-    link = link + "]QQQ[" + id;
-   link = link + "]QQQ[" + tyle;
-		*/
+	function DisplayGoogleDoc_PDF(id){
 		var ifr = EID(arr[4]);
-		
-		if (arr.indexOf('PDF')>=0) link = "https://drive.google.com/file/d/" + id + "/preview?usp=embed_googleplus";
-		if (arr.indexOf('GOOGLEDOC')>=0) link = "https://docs.google.com/viewer?srcid=" + id + "&pid=explorer&efh=false&a=v&chrome=false&embedded=true";
-		ifr.src = link;
-		
-		
-		root.style.setProperty('--color-iframe',arr[0]);
-		if(arr[1]!='none')
-			ifr.style.width = arr[1] + arr[2];
-
-
-		
+		ifr.src = "https://docs.google.com/viewer?srcid=" + id + "&pid=explorer&efh=false&a=v&chrome=false&embedded=true";		
   }
 	
 	
@@ -339,7 +312,8 @@ function QT001(){
 							}
 							Send_Worker_1(type,arr[i+1][j]);
 						} else	{
-							DisplayGoogleDoc_PDF(arr[i][j], arr[i+1][j]);
+							//DisplayGoogleDoc_PDF(arr[i][j], arr[i+1][j]);
+							EID(arr[i][j]).src = "https://docs.google.com/viewer?srcid=" + arr[i+1][j] + "&pid=explorer&efh=false&a=v&chrome=false&embedded=true";
 						}
 					}
 				}
