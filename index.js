@@ -227,6 +227,7 @@ function QT001(){
 
 		ifr.style.width = arr[1] + arr[2];
 		
+		/*
 		var w = window.innerWidth;
 		alert(w)
 		w = w * 0.264583;
@@ -238,8 +239,9 @@ function QT001(){
 			alert(tyle);
 			ifr.style.height = ifr.offsetHeight * (ifr/w);
 		}
+		*/
 		
-		root.style.setProperty('--heso-scale-iframe',tyle);
+		root.style.setProperty('--heso-scale-iframe','0.8');
 
 		
   }
