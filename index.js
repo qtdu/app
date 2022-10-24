@@ -230,8 +230,8 @@ function QT001(){
 		
 		
 		root.style.setProperty('--color-iframe',arr[0]);
-
-		ifr.style.width = arr[1] + arr[2];
+		if(arr[1]!='none')
+			ifr.style.width = arr[1] + arr[2];
 
 
 		
