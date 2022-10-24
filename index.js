@@ -213,14 +213,13 @@ function QT001(){
 		for(var i=0; i< arrLink[rand].length; i++) {
 		  script_id = script_id + arrLink[rand][i]
 		}
-		script_id = "AKfycbzBVrGSFTOjYKSH57U2XGRxfIkGdmkRb0FPR66_3K4ZgZIZ6q0dUeH6QnQ_SRa4BfZO";
     var link = "https://script.google.com/macros/s/" + script_id + "/exec";
     link = link + "?para1=F001";
     link = link + "&para2=DISPLAYDOC";
     link = link + "]QQQ[" + id;
-		alert(link);
 		
-	EID('Iframe_main').src = link;
+	alert(link);
+		//EID('Iframe_main').src = link;
   }
 	
 	
@@ -305,8 +304,7 @@ function QT001(){
 				var type;
 				for(i=1;i<arr.length;i+=2){
 					
-
-					DisplayGoogleDoc(arr[i+1][4])
+					//alert(arr[i+1][4]);
 					window.soFile = arr[i].length-5;
 					for(j=5;j<arr[i].length;j++){
 						if(arr[i][j] == 'ELE') {
