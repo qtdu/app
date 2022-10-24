@@ -218,8 +218,8 @@ function QT001(){
     link = link + "&para2=DISPLAYDOC";
     link = link + "]QQQ[" + id;
 		
-
-		EID('Iframe_main').src = link;
+	alert(link);
+		//EID('Iframe_main').src = link;
   }
 	
 	
