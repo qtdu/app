@@ -265,39 +265,6 @@ function QT001(){
   }
    	
   Send_Worker_2();
-
-  function Send_Worker_3(id){ //để lấy nội dung file google doc
-		var x0 = '2';
-    var x1 = 'getND';
-    var x2 =  "NoLink"
-    var x3 = "NoStringFunc";
-    var x4 = 'Func_Run02a';
-    var x5 = 'QT';
-
-    var rand = Math.floor(Math.random() * (arrLink.length-1));
-	  var script_id = '';	
-		for(var i=0; i< arrLink[rand].length; i++) {
-		  script_id = script_id + arrLink[rand][i]
-		}
-
-    var x6 = "https://script.google.com/macros/s/" + script_id + "/exec";
-    var queryString = window.location.search;
-    var urlParams = new URLSearchParams(queryString);
-    var co = urlParams.get('co');
-    var pr = urlParams.get('pr');
-
-    co = (co==null) ? "Main" : co;
-    pr = (pr==null) ? "Main" : pr;
-		
-    x6 = x6 + "?para1=F001"; 
-    x6 = x6+ "&para2=" + "DISPLAYDOC"; //loại
-    x6 = x6 + "]QQQ["  + id; // id của file google doc
-		
-		x7= 'json';
-		x8= 'loai3';
-    var exp = x0 + ' ]TTT[ ' + x1 + ' ]TTT[ ' + x2 + ' ]TTT[ ' + x3 + ' ]TTT[ ' + x4 + ' ]TTT[ ' + x5 + ' ]TTT[ ' + x6 + ' ]TTT[ ' + x7 + ' ]TTT[ ' + x8;
-    TaoHuyWorker(exp);
-  }
 	
 	window.window['Func_Run02a'] = function(x5){
 		
@@ -318,7 +285,6 @@ function QT001(){
 			if(x5[3] == 'loai2') {
 				var type;
 				for(i=1;i<arr.length;i+=2){
-          DisplayGoogleDoc(arr[i+1][4]);
 					window.soFile = arr[i].length-5;
 					for(j=5;j<arr[i].length;j++){
 						if(arr[i][j] == 'ELE') {
@@ -368,20 +334,6 @@ function QT001(){
 		}
 			
 		  
-  }
-
-  function DisplayGoogleDoc(id){
-    var rand = Math.floor(Math.random() * (arrLink.length-1));
-	  var script_id = '';	
-		for(var i=0; i< arrLink[rand].length; i++) {
-		  script_id = script_id + arrLink[rand][i]
-		}
-    var link = "https://script.google.com/macros/s/" + script_id + "/exec";
-    link = link + "?para1=F001";
-    link = link + "&para2=DISPLAYDOC";
-    link = link + ""]QQQ[" + id;
-
-    EID('Iframe_main').src = link;
   }
 	
 	function XulyFunc(arr) {
