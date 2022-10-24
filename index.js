@@ -228,10 +228,14 @@ function QT001(){
 		ifr.style.width = arr[1] + arr[2];
 		
 		var w = window.innerWidth;
+		alert(w)
 		w = w * 0.264583;
 		var tyle = 1;
 		if(w < 1*arr[1]) {
+			alert(w);
+			alert(arr[1]);
 			tyle = w/arr[1];
+			alert(tyle);
 			ifr.style.height = ifr.offsetHeight * (ifr/w);
 		}
 		
