@@ -232,6 +232,7 @@ body{
 	
 }
 
+, .Iframe_khung { width: 100%}
 
 .Alert_header, .Control_header, .Iframe_header {
 	/*border-radius: 2%; 
