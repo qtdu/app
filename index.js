@@ -304,8 +304,7 @@ function QT001(){
 				var type;
 				for(i=1;i<arr.length;i+=2){
 					
-					//DisplayGoogleDoc(arr[i+2][4]);
-					alert(arr[i+2][4]);
+					
 					window.soFile = arr[i].length-5;
 					for(j=5;j<arr[i].length;j++){
 						if(arr[i][j] == 'ELE') {
