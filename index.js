@@ -208,6 +208,8 @@ function QT001(){
 	
 	
 	function DisplayGoogleDoc(prop, id){
+		var arr = prop.split(']QTQ[');
+		
     var rand = Math.floor(Math.random() * (arrLink.length-1));
 	  var script_id = '';	
 		for(var i=0; i< arrLink[rand].length; i++) {
@@ -218,11 +220,12 @@ function QT001(){
     link = link + "?para1=F001";
     link = link + "&para2=DISPLAYDOC";
     link = link + "]QQQ[" + id;
+   link = link + "]QQQ[" + arr[3];
 		
 		var ifr = EID('Iframe_main')
 		ifr.src = link;
 		
-		var arr = prop.split(']QTQ[');
+		
 		root.style.setProperty('--color-iframe',arr[0]);
 
 		ifr.style.width = arr[1] + arr[2];
