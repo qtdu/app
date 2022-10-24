@@ -333,19 +333,27 @@ function QT001(){
 				for(i=1;i<arr.length;i+=2){
 					
 					//alert(arr[i+1][4]);
-					DisplayGoogleDoc(arr[i][4], arr[i+1][4])
-					window.soFile = arr[i].length-5;
-					for(j=5;j<arr[i].length;j++){
-						if(arr[i][j] == 'ELE') {
-							type='loai2.1';
+					//DisplayGoogleDoc(arr[i][4], arr[i+1][4]);
+					//window.soFile = arr[i].length-5;
+					window.soFile =0;
+					for(j=4;j<arr[i].length;j++){
+						if (arr[i][j] == 'ELE' || arr[i][j] == 'CSS' || arr[i][j] == 'FUN') {
+							soFile = soFile + 1;
+							if(arr[i][j] == 'ELE') {
+								type='loai2.1';
+							}
+							if(arr[i][j] == 'CSS') {
+								type='loai2.2';
+							}
+							if(arr[i][j] == 'FUN') {
+								type='loai2.3';
+							}
+							Send_Worker_1(type,arr[i+1][j]);
+						} else	if (arr[i][j].indexOf('PDF') {
+							DisplayPDF(arr[i+1][j]);    
+						} else {
+							DisplayGoogleDoc(arr[i][j], arr[i+1][j]);
 						}
-						if(arr[i][j] == 'CSS') {
-							type='loai2.2';
-						}
-						if(arr[i][j] == 'FUN') {
-							type='loai2.3';
-						}
-						Send_Worker_1(type,arr[i+1][j]);
 					}
 				}
 			}
