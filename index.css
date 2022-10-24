@@ -221,7 +221,7 @@ body{
 .Iframe { 
 	width: 100vw; 
 	background: white;
-	top: calc(5 * var(--size-mau)/4 + 10 * var(--size-mau)/40);
+	top: calc(5 * var(--size-mau)/4 + 20 * var(--size-mau)/40);
 }
 
 
@@ -238,7 +238,7 @@ body{
 	
 }
 
-.Iframe_khung { width: 100vw}
+.Iframe_khung { width: 100vw; boder: none;}
 
 .Alert_header, .Control_header, .Iframe_header {
 	/*border-radius: 2%; 
@@ -326,7 +326,8 @@ body{
 }
 
 .Iframe_body {
-	width: 100%;
+	margin: 0;
+	width: vw;
 }
 
 #Iframe_main {
