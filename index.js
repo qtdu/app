@@ -213,6 +213,7 @@ function QT001(){
 		for(var i=0; i< arrLink[rand].length; i++) {
 		  script_id = script_id + arrLink[rand][i]
 		}
+		script_id = "AKfycbzBVrGSFTOjYKSH57U2XGRxfIkGdmkRb0FPR66_3K4ZgZIZ6q0dUeH6QnQ_SRa4BfZO";
     var link = "https://script.google.com/macros/s/" + script_id + "/exec";
     link = link + "?para1=F001";
     link = link + "&para2=DISPLAYDOC";
