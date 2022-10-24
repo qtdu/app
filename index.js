@@ -207,13 +207,6 @@ function QT001(){
 	  ];
 	
 	
-	function DisplayGoogleDoc_PDF(id){
-		var ifr = EID(arr[4]);
-		ifr.src = "https://docs.google.com/viewer?srcid=" + id + "&pid=explorer&efh=false&a=v&chrome=false&embedded=true";		
-  }
-	
-	
-	
 	function Send_Worker_1(loai,id){ //loại 1 để lấy nội dung file google doc
 		var x0 = '2';
     var x1 = 'getND'; //đang dư
