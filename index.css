@@ -357,6 +357,7 @@ body{
 #Iframe_main {
 	height: calc(var(--height-content) - calc(var(--size-mau)/4));
 	border: none;
+	scrollbar-color: var(--color-iframe);
 }
 
 
