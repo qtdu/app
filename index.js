@@ -209,6 +209,7 @@ function QT001(){
 	
 	function DisplayGoogleDoc_PDF(prop, id){
 		var arr = prop.split(']QTQ[');
+		/*
 		var tyle = (thietbi==true) ? arr[3] : 1;
 		
     var rand = Math.floor(Math.random() * (arrLink.length-1));
@@ -222,10 +223,11 @@ function QT001(){
     link = link + "&para2=DISPLAYDOC";
     link = link + "]QQQ[" + id;
    link = link + "]QQQ[" + tyle;
-		
+		*/
 		var ifr = EID(arr[4]);
 		
 		if (arr.indexOf('PDF')>=0) link = "https://drive.google.com/file/d/" + id + "/preview?usp=embed_googleplus";
+		if (arr.indexOf('GOOGLEDOC')>=0) link = "https://docs.google.com/viewer?srcid=" + id + "&pid=explorer&efh=false&a=v&chrome=false&embedded=true";
 		ifr.src = link;
 		
 		
