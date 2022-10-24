@@ -223,7 +223,7 @@ function QT001(){
     link = link + "]QQQ[" + id;
    link = link + "]QQQ[" + tyle;
 		
-		var ifr = EID('Iframe_main');
+		var ifr = EID(arr[4]);
 		
 		if (arr.indexOf('PDF')>=0) link = "https://drive.google.com/file/d/" + id + "/preview?usp=embed_googleplus";
 		ifr.src = link;
