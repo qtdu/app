@@ -241,7 +241,7 @@ function QT001(){
 		}
 		*/
 		
-		root.style.setProperty('--heso-scale-iframe','0.8');
+		//root.style.setProperty('--heso-scale-iframe','0.8');
 
 		
   }
