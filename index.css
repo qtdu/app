@@ -494,7 +494,8 @@ body{
 	width: calc(0.8 * var(--width-content));
 	margin-left: calc(0.1 * var(--width-content));
 	margin-top: var(--size-mau);
-	max-height: calc(var(--height-content) - 1.5 * var(--size-mau));
+	/*max-height: calc(var(--height-content) - 1.5 * var(--size-mau));*/
+	height: calc(var(--height-content) - 1.5 * var(--size-mau));
 
 	background: white;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -544,13 +545,15 @@ body{
 	
 	/*overflow-y: scroll;*/
 	overflow-x: hidden;
-		
-	 
-
+			 
 }
 
 .info1_body, .info2_body, .info3_body {
 	margin: calc(0.05 * 0.8 * var(--width-content));
+}
+
+.Iframe1_body, .Iframe2_body, .Iframe3_body {
+	height: calc(0.8 * var(--height-content));
 }
 
 .control1_body, .control2_body, .control3_body, .Iframe1_body, .Iframe2_body, .Iframe3_body {
