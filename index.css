@@ -560,9 +560,9 @@ body{
 }
 
 #Iframe1_main, #Iframe2_main, #Iframe3_main {
-	width: calc(0.8 * var(--width-content));
-	height: calc(0.8 * var(--height-content));
-	border: none;
+	width: calc(0.4 * var(--width-content));
+	height: calc(0.4 * var(--height-content));
+	border: 0.5px solid;;
 }
 
 .content1_div1, .content2_div1, .content3_div1 {
