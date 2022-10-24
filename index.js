@@ -209,6 +209,7 @@ function QT001(){
 	
 	function DisplayGoogleDoc(prop, id){
 		var arr = prop.split(']QTQ[');
+		var tyle = (thietbi==true) ? arr[3] : 1;
 		
     var rand = Math.floor(Math.random() * (arrLink.length-1));
 	  var script_id = '';	
@@ -220,7 +221,7 @@ function QT001(){
     link = link + "?para1=F001";
     link = link + "&para2=DISPLAYDOC";
     link = link + "]QQQ[" + id;
-   link = link + "]QQQ[" + arr[3];
+   link = link + "]QQQ[" + tyle;
 		
 		var ifr = EID('Iframe_main')
 		ifr.src = link;
