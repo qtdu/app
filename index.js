@@ -218,11 +218,11 @@ function QT001(){
     link = link + "&para2=DISPLAYDOC";
     link = link + "]QQQ[" + id;
 		
-	//alert(prop);
-		//var arr = prop.split(']QTQ[');
+
 		EID('Iframe_main').src = link;
-		//ifr.style.width = arr[1];
   }
+	
+	
 	
 	function Send_Worker_1(loai,id){ //loại 1 để lấy nội dung file google doc
 		var x0 = '2';
@@ -304,7 +304,7 @@ function QT001(){
 				var type;
 				for(i=1;i<arr.length;i+=2){
 					
-					DisplayGoogleDoc(arr[i+2][4]);
+					//DisplayGoogleDoc(arr[i+2][4]);
 					window.soFile = arr[i].length-5;
 					for(j=5;j<arr[i].length;j++){
 						if(arr[i][j] == 'ELE') {
