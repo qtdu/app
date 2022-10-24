@@ -478,14 +478,15 @@ body{
 
 }
 
-.content1_div3, .content2_div3, .content3_div3, .content1_div2, .content2_div2, .content3_div2 {
+.content1_div3, .content2_div3, .content3_div3, .content1_div2, .content2_div2, .content3_div2, .content1_div1, .content2_div1, .content3_div1 {
 	position: absolute;
 	width: var(--width-content);
 	height: calc(var(--height-content) - 1.5 * var(--size-mau));
 	display: none;
 }
-.content1_div3, .content2_div3, .content3_div3 {z-index: 1002;}
-.content1_div2, .content2_div2, .content3_div2 {z-index: 1001; display: block;}
+.content1_div3, .content2_div3, .content3_div3 {z-index: 1002; display: none;}
+.content1_div2, .content2_div2, .content3_div2 {z-index: 1001; display: none;}
+.content1_div1, .content2_div1, .content3_div1 {z-index: 1000; display: block;}
 
 
 
