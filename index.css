@@ -516,16 +516,10 @@ body{
 	
 }
 
-.info1_body::-webkit-scrollbar, .info1_khung::-webkit-scrollbar, .info2_body::-webkit-scrollbar, .info2_khung::-webkit-scrollbar, .info3_body::-webkit-scrollbar, .info3_khung::-webkit-scrollbar,
-.control1_body::-webkit-scrollbar, .control1_khung::-webkit-scrollbar, .control2_body::-webkit-scrollbar, .control2_khung::-webkit-scrollbar, .control3_body::-webkit-scrollbar, .control3_khung::-webkit-scrollbar, 
-.Iframe1_body::-webkit-scrollbar, .Iframe1_khung::-webkit-scrollbar, .Iframe2_body::-webkit-scrollbar, .Iframe2_khung::-webkit-scrollbar, .Iframe3_body::-webkit-scrollbar, .Iframe3_khung::-webkit-scrollbar
-{
+.info1_body::-webkit-scrollbar, .info1_khung::-webkit-scrollbar, .info2_body::-webkit-scrollbar, .info2_khung::-webkit-scrollbar, .info3_body::-webkit-scrollbar, .info3_khung::-webkit-scrollbar, .control1_body::-webkit-scrollbar, .control1_khung::-webkit-scrollbar, .control2_body::-webkit-scrollbar, .control2_khung::-webkit-scrollbar, .control3_body::-webkit-scrollbar, .control3_khung::-webkit-scrollbar, .Iframe1_body::-webkit-scrollbar, .Iframe1_khung::-webkit-scrollbar, .Iframe2_body::-webkit-scrollbar, .Iframe2_khung::-webkit-scrollbar, .Iframe3_body::-webkit-scrollbar, .Iframe3_khung::-webkit-scrollbar {
 	display: none;
 }
-.info1_body, .info1_khung, .info2_body, .info2_khung, .info3_body, .info3_khung,
-.control1_body, .control1_khung, .control2_body, .control2_khung, .control3_body, .control3_khung, 
-.Iframe1_body, .Iframe1_khung, .Iframe2_body, .Iframe2_khung, .Iframe3_body, .Iframe3_khung
-{
+.info1_body, .info1_khung, .info2_body, .info2_khung, .info3_body, .info3_khung, .control1_body, .control1_khung, .control2_body, .control2_khung, .control3_body, .control3_khung, .Iframe1_body, .Iframe1_khung, .Iframe2_body, .Iframe2_khung, .Iframe3_body, .Iframe3_khung {
 	-ms-overflow-style: none; scrollbar-width: none;
 }
 
