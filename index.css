@@ -556,7 +556,7 @@ body{
 }
 
 .Iframe1_body, .Iframe2_body, .Iframe3_body {
-	height: calc(0.8 * var(--height-content) - 1.2 * var(--size-mau)/4);
+	height: calc(0.8 * var(--height-content) - (1.6/var(--thietbi)) * var(--size-mau)/4);
 }
 
 .control1_body, .control2_body, .control3_body, .Iframe1_body, .Iframe2_body, .Iframe3_body {
@@ -567,7 +567,7 @@ body{
 
 #Iframe1_main, #Iframe2_main, #Iframe3_main {
 	width: calc(0.8 * var(--width-content));
-	height: calc(0.8 * var(--height-content) - 1.2 * var(--size-mau)/4); /*calc(0.4 * var(--height-content));*/
+	height: calc(0.8 * var(--height-content) - (1.6/var(--thietbi)) * var(--size-mau)/4); /*calc(0.4 * var(--height-content));*/
 	border: 0.5px solid;;
 }
 
