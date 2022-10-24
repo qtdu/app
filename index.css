@@ -495,7 +495,8 @@ body{
 	margin-left: calc(0.1 * var(--width-content));
 	margin-top: var(--size-mau);
 	/*max-height: calc(var(--height-content) - 1.5 * var(--size-mau));*/
-	height: calc(var(--height-content) - 1.5 * var(--size-mau));
+	/*height: calc(var(--height-content) - 1.5 * var(--size-mau));*/
+	height: calc(var(--height-content) - 1 * var(--size-mau));
 
 	background: white;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
