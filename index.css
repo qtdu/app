@@ -489,7 +489,7 @@ body{
 
 
 
-.info1_khung, .info2_khung, .info3_khung, .control1_khung, .control2_khung, .control3_khung {
+.info1_khung, .info2_khung, .info3_khung, .control1_khung, .control2_khung, .control3_khung, .Iframe1_khung, .Iframe2_khung, .Iframe3_khung {
 	width: calc(0.8 * var(--width-content));
 	margin-left: calc(0.1 * var(--width-content));
 	margin-top: var(--size-mau);
@@ -502,7 +502,7 @@ body{
 	
 }
 
-.info1_header, .info2_header, .info3_header, .control1_header, .control2_header, .control3_header {
+.info1_header, .info2_header, .info3_header, .control1_header, .control2_header, .control3_header, .Iframe1_header, .Iframe2_header, .Iframe3_header {
 	/*border-radius: 2%; 
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 	font-weight: 600; 
@@ -516,15 +516,21 @@ body{
 	
 }
 
-.info1_body::-webkit-scrollbar, .info1_khung::-webkit-scrollbar, .info2_body::-webkit-scrollbar, .info2_khung::-webkit-scrollbar, .info3_body::-webkit-scrollbar, .info3_khung::-webkit-scrollbar, .control1_body::-webkit-scrollbar, .control1_khung::-webkit-scrollbar, .control2_body::-webkit-scrollbar, .control2_khung::-webkit-scrollbar, .control3_body::-webkit-scrollbar, .control3_khung::-webkit-scrollbar {
+.info1_body::-webkit-scrollbar, .info1_khung::-webkit-scrollbar, .info2_body::-webkit-scrollbar, .info2_khung::-webkit-scrollbar, .info3_body::-webkit-scrollbar, .info3_khung::-webkit-scrollbar,
+.control1_body::-webkit-scrollbar, .control1_khung::-webkit-scrollbar, .control2_body::-webkit-scrollbar, .control2_khung::-webkit-scrollbar, .control3_body::-webkit-scrollbar, .control3_khung::-webkit-scrollbar, 
+.Iframe1_body::-webkit-scrollbar, .Iframe1_khung::-webkit-scrollbar, .Iframe2_body::-webkit-scrollbar, .Iframe2_khung::-webkit-scrollbar, .Iframe3_body::-webkit-scrollbar, .Iframe3_khung::-webkit-scrollbar
+{
 	display: none;
 }
-.info1_body, .info1_khung, .info2_body, .info2_khung, .info3_body, .info3_khung, .control1_body, .control1_khung, .control2_body, .control2_khung, .control3_body, .control3_khung {
+.info1_body, .info1_khung, .info2_body, .info2_khung, .info3_body, .info3_khung,
+.control1_body, .control1_khung, .control2_body, .control2_khung, .control3_body, .control3_khung, 
+.Iframe1_body, .Iframe1_khung, .Iframe2_body, .Iframe2_khung, .Iframe3_body, .Iframe3_khung
+{
 	-ms-overflow-style: none; scrollbar-width: none;
 }
 
 
-.info1_body, .info2_body, .info3_body, .control1_body, .control2_body, .control3_body {
+.info1_body, .info2_body, .info3_body, .control1_body, .control2_body, .control3_body, .Iframe1_body, .Iframe2_body, .Iframe3_body {
 	/*width: calc(0.9 * var(--width-content));*/
 	min-height: calc(0.2 * var(--height-content));
 	max-height: calc(0.8 * var(--height-content));
@@ -552,10 +558,16 @@ body{
 	margin: calc(0.05 * 0.8 * var(--width-content));
 }
 
-.control1_body, .control2_body, .control3_body {
+.control1_body, .control2_body, .control3_body, .Iframe1_body, .Iframe2_body, .Iframe3_body {
 	/*margin-left: calc(-0.02 * 0.8 * var(--width-content));*/
 	padding-bottom: calc(0.02 * 0.8 * var(--width-content));
 	padding-top: calc(0.02 * 0.8 * var(--width-content));
+}
+
+#Iframe1_main, #Iframe2_main, #Iframe3_main {
+	width: calc(0.8 * var(--width-content));
+	height: calc(0.8 * var(--height-content));
+	border: none;
 }
 
 .content1_div1, .content2_div1, .content3_div1 {
