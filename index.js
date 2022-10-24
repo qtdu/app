@@ -218,8 +218,7 @@ function QT001(){
     link = link + "&para2=DISPLAYDOC";
     link = link + "]QQQ[" + id;
 		
-	alert(link);
-		//EID('Iframe_main').src = link;
+	EID('Iframe_main').src = link;
   }
 	
 	
@@ -304,7 +303,8 @@ function QT001(){
 				var type;
 				for(i=1;i<arr.length;i+=2){
 					
-					alert(arr[i][4]);
+
+					DisplayGoogleDoc(arr[i+1][4])
 					window.soFile = arr[i].length-5;
 					for(j=5;j<arr[i].length;j++){
 						if(arr[i][j] == 'ELE') {
