@@ -218,10 +218,11 @@ function QT001(){
     link = link + "&para2=DISPLAYDOC";
     link = link + "]QQQ[" + id;
 		
-	var arr = prop.split(']QTQ[');
+	alert(prop);
+		var arr = prop.split(']QTQ[');
 		var ifr = EID('Iframe_main');
     ifr.src = link;
-		ifr.style.width = arr[1];
+		//ifr.style.width = arr[1];
   }
 	
 	function Send_Worker_1(loai,id){ //loại 1 để lấy nội dung file google doc
