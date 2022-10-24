@@ -226,7 +226,7 @@ body{
 }
 
 
-.Alert_khung, .Control_khung, .Iframe_khung {
+.Alert_khung, .Control_khung {
 	border-radius: 5px; 
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	border: blue solid;
@@ -302,7 +302,7 @@ body{
 }
 
 
-.Alert_body, .Control_body, .Iframe_body {
+.Alert_body, .Control_body {
 	/*width: calc(0.9 * var(--width-content));*/
 	min-height: calc(0.2 * var(--height-content));
 	max-height: calc(0.8 * var(--height-content));
@@ -329,9 +329,17 @@ body{
 .Iframe_body {
 	margin: 0;
 	width: 100vw;
+	height: var(--height-content);
+	display: flex; 
+	justify-content: center;
+	align-items: flex-start;
+
+	overflow: hidden;
 	border: none;
-	background: var(--color-iframe);
+	background: var(--color-iframe);	
+	 
 }
+
 
 #Iframe_main {
 	height: calc(var(--height-content) - calc(var(--size-mau)/4));
