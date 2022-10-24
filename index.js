@@ -224,7 +224,19 @@ function QT001(){
 		
 		var arr = prop.split(']QTQ[');
 		root.style.setProperty('--color-iframe',arr[0]);
-		ifr.style.width = arr[1];
+
+		ifr.style.width = arr[1] + arr[2];
+		
+		var w = window.innerWidth;
+		w = w * 0.264583;
+		var tyle = 1;
+		if(w < 1*arr[1]) {
+			tyle = w/arr[1];
+			ifr.style.height = ifr.offsetHeight * (ifr/w);
+		}
+		
+		root.style.setProperty('--heso-scale-iframe',tyle);
+
 		
   }
 	
