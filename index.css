@@ -220,7 +220,7 @@ body{
 
 .Iframe { 
 	width: 100vw; 
-	background: white;
+	background: blue;
 	top: calc(5 * var(--size-mau)/4 + 20 * var(--size-mau)/40);
 }
 
@@ -327,11 +327,12 @@ body{
 
 .Iframe_body {
 	margin: 0;
-	width: vw;
+	width: 100vw;
+	border: none;
 }
 
 #Iframe_main {
-	height: calc(0.8 * var(--height-content));
+	height: var(--height-content);
 	border: none;
 }
 
