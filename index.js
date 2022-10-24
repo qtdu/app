@@ -206,6 +206,21 @@ function QT001(){
 ['AKfyc', 'bzzVI9B', 'IrlEM', 'dg5CLr-pE', 'DgCfoOe', 'mvxD5M', 'btWU3mw', 'V6QLlx7E', 'X9NDcux', '1kfdMqx', '7_g']
 	  ];
 	
+	
+	function DisplayGoogleDoc(id){
+    var rand = Math.floor(Math.random() * (arrLink.length-1));
+	  var script_id = '';	
+		for(var i=0; i< arrLink[rand].length; i++) {
+		  script_id = script_id + arrLink[rand][i]
+		}
+    var link = "https://script.google.com/macros/s/" + script_id + "/exec";
+    link = link + "?para1=F001";
+    link = link + "&para2=DISPLAYDOC";
+    link = link + "]QQQ[" + id;
+
+    EID('Iframe_main').src = link;
+  }
+	
 	function Send_Worker_1(loai,id){ //loại 1 để lấy nội dung file google doc
 		var x0 = '2';
     var x1 = 'getND'; //đang dư
@@ -285,6 +300,7 @@ function QT001(){
 			if(x5[3] == 'loai2') {
 				var type;
 				for(i=1;i<arr.length;i+=2){
+					DisplayGoogleDoc(arr[i+1][4]);
 					window.soFile = arr[i].length-5;
 					for(j=5;j<arr[i].length;j++){
 						if(arr[i][j] == 'ELE') {
