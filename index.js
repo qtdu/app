@@ -206,14 +206,8 @@ function QT001(){
 ['AKfyc', 'bzzVI9B', 'IrlEM', 'dg5CLr-pE', 'DgCfoOe', 'mvxD5M', 'btWU3mw', 'V6QLlx7E', 'X9NDcux', '1kfdMqx', '7_g']
 	  ];
 	
-	function DisplayPDF(id) {
-		
-		var link = "https://drive.google.com/file/d/" + id + "/preview?usp=embed_googleplus";
-		var ifr = EID('Iframe_main');
-		ifr.src = link;
-	}
 	
-	function DisplayGoogleDoc(prop, id){
+	function DisplayGoogleDoc_PDF(prop, id){
 		var arr = prop.split(']QTQ[');
 		var tyle = (thietbi==true) ? arr[3] : 1;
 		
@@ -229,29 +223,16 @@ function QT001(){
     link = link + "]QQQ[" + id;
    link = link + "]QQQ[" + tyle;
 		
-		var ifr = EID('Iframe_main')
+		var ifr = EID('Iframe_main');
+		
+		if (arr.indexOf('PDF')>=0) link = "https://drive.google.com/file/d/" + id + "/preview?usp=embed_googleplus";
 		ifr.src = link;
 		
 		
 		root.style.setProperty('--color-iframe',arr[0]);
 
 		ifr.style.width = arr[1] + arr[2];
-		
-		/*
-		var w = window.innerWidth;
-		alert(w)
-		w = w * 0.264583;
-		var tyle = 1;
-		if(w < 1*arr[1]) {
-			alert(w);
-			alert(arr[1]);
-			tyle = w/arr[1];
-			alert(tyle);
-			ifr.style.height = ifr.offsetHeight * (ifr/w);
-		}
-		*/
-		
-		//root.style.setProperty('--heso-scale-iframe','0.8');
+
 
 		
   }
@@ -355,10 +336,8 @@ function QT001(){
 								type='loai2.3';
 							}
 							Send_Worker_1(type,arr[i+1][j]);
-						} else	if (arr[i][j].indexOf('PDF')>0) {
-							DisplayPDF(arr[i+1][j]);    
-						} else {
-							DisplayGoogleDoc(arr[i][j], arr[i+1][j]);
+						} else	{
+							DisplayGoogleDoc_PDF(arr[i][j], arr[i+1][j]);
 						}
 					}
 				}
