@@ -208,7 +208,7 @@ function QT001(){
 	
 	function DisplayPDF(id) {
 		
-		vcar link = "https://drive.google.com/file/d/" + id + "/preview?usp=embed_googleplus";
+		var link = "https://drive.google.com/file/d/" + id + "/preview?usp=embed_googleplus";
 		var ifr = EID('Iframe_main');
 		ifr.src = link;
 	}
