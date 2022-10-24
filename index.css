@@ -218,7 +218,11 @@ body{
 	
 }
 
-.Iframe { width: 100vw}
+.Iframe { 
+	width: 100vw; 
+	background: white;
+	calc(5 * var(--size-mau)/4 + 10 * var(--size-mau)/40);
+}
 
 
 .Alert_khung, .Control_khung, .Iframe_khung {
