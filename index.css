@@ -280,8 +280,8 @@ body{
 	
 	font-size: calc(0.8 * var(--font-size-31G));
 	
-	margin-top: calc(0.01 * var(--thietbi) * var(--width-content));
-	margin-bottom: calc(0.01 * var(--thietbi) * var(--width-content));
+	margin-top: calc(0.01 * (2 * var(--thietbi) - 1) * var(--width-content));
+	margin-bottom: calc(0.01 * (2 * var(--thietbi) - 1) * var(--width-content));
 
 	cursor: pointer;
 }
@@ -297,8 +297,8 @@ body{
 	/*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 	border: 0.5px solid;
 
-	margin-top: calc(0.01 * var(--thietbi) * var(--width-content));
-	margin-bottom: calc(0.01 * var(--thietbi) * var(--width-content));
+	margin-top: calc(0.01 * (2 * var(--thietbi) - 1) * var(--width-content));
+	margin-bottom: calc(0.01 * (2 * var(--thietbi) - 1) * var(--width-content));
 	padding: calc(0.01 * var(--width-content));
 	calc(0.01 * var(--width-content));
 	
