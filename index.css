@@ -268,7 +268,7 @@ body{
 	
 }
 
-.Alert_header_1, .Control_header_1, .Iframe_header_1, .info1_header_1, .info2_header_1, .info3_header_1 {
+.Alert_header_1, .Control_header_1, .Iframe_header_1, .info1_header_1, .info2_header_1, .info3_header_1, .control1_header_1, .control2_header_1, .control3_header_1, .Iframe1_header_1, .Iframe2_header_1, .Iframe3_header_1 {
 	
 	flex: calc(var(--size-mau)/4);
 	height: calc(var(--size-mau)/4);
@@ -288,7 +288,7 @@ body{
 	*/
 	cursor: pointer;
 }
-.Alert_header_2, .Control_header_2, .Iframe_header_2, .info1_header_2, .info2_header_2, .info3_header_2, .control1_header_2, .control2_header_2, .control3_header_2 {
+.Alert_header_2, .Control_header_2, .Iframe_header_2, .info1_header_2, .info2_header_2, .info3_header_2, .control1_header_2, .control2_header_2, .control3_header_2, .Iframe1_header_2, .Iframe2_header_2, .Iframe3_header_2 {
 	
 	flex: 100%;
 	height: calc((0.2 * (3 - var(--thiebi)) + 0.5 * (2 * var(--thietbi) - 1)) * var(--size-mau)/4);
@@ -519,6 +519,7 @@ body{
 	
 }
 
+
 .info1_body::-webkit-scrollbar, .info1_khung::-webkit-scrollbar, .info2_body::-webkit-scrollbar, .info2_khung::-webkit-scrollbar, .info3_body::-webkit-scrollbar, .info3_khung::-webkit-scrollbar, .control1_body::-webkit-scrollbar, .control1_khung::-webkit-scrollbar, .control2_body::-webkit-scrollbar, .control2_khung::-webkit-scrollbar, .control3_body::-webkit-scrollbar, .control3_khung::-webkit-scrollbar, .Iframe1_body::-webkit-scrollbar, .Iframe1_khung::-webkit-scrollbar, .Iframe2_body::-webkit-scrollbar, .Iframe2_khung::-webkit-scrollbar, .Iframe3_body::-webkit-scrollbar, .Iframe3_khung::-webkit-scrollbar {
 	display: none;
 }
@@ -554,7 +555,7 @@ body{
 }
 
 .Iframe1_body, .Iframe2_body, .Iframe3_body {
-	height: calc(0.8 * var(--height-content) - 1.5*var(--size-mau)/4);
+	height: calc(0.8 * var(--height-content) - 1.6*var(--size-mau)/4);
 }
 
 .control1_body, .control2_body, .control3_body, .Iframe1_body, .Iframe2_body, .Iframe3_body {
@@ -565,7 +566,7 @@ body{
 
 #Iframe1_main, #Iframe2_main, #Iframe3_main {
 	width: calc(0.8 * var(--width-content));
-	height: calc(0.8 * var(--height-content) - 1.5 * var(--size-mau)/4); /*calc(0.4 * var(--height-content));*/
+	height: calc(0.8 * var(--height-content) - 1.6 * var(--size-mau)/4); /*calc(0.4 * var(--height-content));*/
 	border: 0.5px solid;;
 }
 
