@@ -565,6 +565,7 @@ body{
 	border: 0.5px solid;;
 }
 
+/*
 .content1_div1, .content2_div1, .content3_div1 {
 	position: absolute;
 	width: calc(var(--width-content) - var(--size-mau)/2 - 4 * var(--size-mau)/40  - var(--size-mau)/2 - 4 * var(--size-mau)/40);
@@ -577,6 +578,7 @@ body{
 	border: solid;
 	display: none;
 }
+*/
 
 .content1{ display: var(--display-content1);}
 .content2{ display: var(--display-content2);}
