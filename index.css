@@ -31,6 +31,8 @@
 	
 	--top-Iframe: calc(5 * var(--size-mau)/4 + (12 + 2.5 * var(--thietbi)) * var(--size-mau)/40);
 	--h-Iframe: calc( var(--height-content));
+	--w-IframeX: calc(0.8 * var(--width-content));
+	--h-IframeX: calc(0.8 * var(--height-content) - (1.6/(2 * var(--thietbi) - 1)) * var(--size-mau)/4); 
 	
 	--width-31G: calc(5vh * (2 - var(--thietbi)) + 5vw * (var(--thietbi) - 1));
 	--font-size-31G: 1em;
@@ -572,25 +574,10 @@ body{
 
 #Iframe1_main, #Iframe2_main, #Iframe3_main {
 	position: block;
-	width: calc(0.8 * var(--width-content));
-	height: calc(0.8 * var(--height-content) - (1.6/(2 * var(--thietbi) - 1)) * var(--size-mau)/4); 
+	width: var(--w-IframeX);
+	height: var(--h-IframeX);
 	border: 0.5px solid;
 }
-
-/*
-.content1_div1, .content2_div1, .content3_div1 {
-	position: absolute;
-	width: calc(var(--width-content) - var(--size-mau)/2 - 4 * var(--size-mau)/40  - var(--size-mau)/2 - 4 * var(--size-mau)/40);
-	height: calc(7*var(--size-mau)/2);
-	top: calc(var(--size-mau)/2 + 4* var(--size-mau)/40);
-	left: calc(var(--size-mau)/2 + 4 * var(--size-mau)/40);
-	z-index: 1000;
-	background: white;
-	border-radius: 5px;
-	border: solid;
-	display: none;
-}
-*/
 
 .content1{ display: var(--display-content1);}
 .content2{ display: var(--display-content2);}
