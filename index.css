@@ -30,6 +30,7 @@
       	--hesoContent2 : 5;
 	
 	--top-Iframe: calc(5 * var(--size-mau)/4 + (12 + 2.5 * var(--thietbi)) * var(--size-mau)/40);
+	--h-Iframe: calc( var(--height-content));
 	
 	--width-31G: calc(5vh * (2 - var(--thietbi)) + 5vw * (var(--thietbi) - 1));
 	--font-size-31G: 1em;
@@ -206,7 +207,7 @@ body{
 	width: 98%; /*var(--width-content);*/
     	overflow: hidden;
 	/*margin: calc(var(--size-standard)/40);*/
-    	height: calc( var(--height-content));
+    	
 	font-size: var(--font-size-31G);
 	
 	left: 0;
@@ -219,7 +220,12 @@ body{
 	
 	padding: calc(0.02 * var(--width-content));
 
-	
+}
+.Alert, .Control, .Iframe {
+	height: calc( var(--height-content));
+}
+.Iframe {
+	height: var(--h-Iframe);
 }
 
 .Iframe { 
