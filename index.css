@@ -19,7 +19,7 @@
 	
 	--size-mau: calc(var(--size-standard) / (2 * var(--thietbi) - 1));
       	--height-content: calc(var(--vh, 1vh) * 100 - var(--size-mau)/4 - 2 * var(--size-mau)/40 - 2 * 2 * var(--size-mau)/40 - var(--size-mau) - var(--size-mau)/4);
-        --color-iframe: rgb(230, 230, 230);
+        --color-iframe: rgb(217, 217, 217);
 	
       	--heso-cotcontent : 3;
       	--width-content: calc(100vw / var(--heso-cotcontent) - 2 * var(--size-mau)/40);
