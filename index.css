@@ -12,6 +12,8 @@
       	--display-content1: none;
       	--display-content2: none;
       	--display-content3: none;
+	
+	
         
       	--display-content-phu: flex;
 	--display-VD_content1bKKb2: none;
@@ -26,6 +28,8 @@
         
       	--hesoContent1 : 2;
       	--hesoContent2 : 5;
+	
+	--top-Iframe: calc(5 * var(--size-mau)/4 + (12 + 2.5 * var(--thietbi)) * var(--size-mau)/40);
 	
 	--width-31G: calc(5vh * (2 - var(--thietbi)) + 5vw * (var(--thietbi) - 1));
 	--font-size-31G: 1em;
@@ -221,7 +225,7 @@ body{
 .Iframe { 
 	width: 100vw; 
 	background: var(--color-iframe);
-	top: calc(5 * var(--size-mau)/4 + (12 + 2.5 * var(--thietbi)) * var(--size-mau)/40);
+	top: var(--top-Iframe);
 	
 }
 
