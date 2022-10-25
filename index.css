@@ -573,7 +573,7 @@ body{
 #Iframe1_main, #Iframe2_main, #Iframe3_main {
 	position: block;
 	width: calc(0.8 * var(--width-content));
-	height: calc(0.8 * var(--height-content) - (1.6/(2 * var(--thietbi) - 1)) * var(--size-mau)/4); /*calc(0.4 * var(--height-content));
+	height: calc(0.8 * var(--height-content) - (1.6/(2 * var(--thietbi) - 1)) * var(--size-mau)/4); 
 	border: 0.5px solid;
 }
 
