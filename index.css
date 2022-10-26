@@ -224,13 +224,15 @@ body{
 	padding: calc(0.02 * var(--width-content));
 	
 	padding-top: calc(0.02 * var(--width-content) * (2 * var(--thietbi) - 1));
+	
+	background: rgb(255, 255, 255, 0.2);
 
 }
 .Alert, .Control, .Login, .Iframe {
 	height: calc(1.2 * var(--height-content));
 }
 .Login {
-	background: white;
+	/*background: white;*/
 	width: 100%;
 	/*height: calc(1.2 * var(--height-content));*/
 }
