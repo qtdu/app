@@ -221,7 +221,7 @@ function QT001(){
     var x4 = 'Func_Run02a';
     var x5 = 'QT';
 
-    var x6 = 'https://docs.google.com/feeds/download/documents/export/Export?id=' + id + '&exportFormat=txt';
+    var x6 = (dinhdang != 'myself') ? 'https://docs.google.com/feeds/download/documents/export/Export?id=' + id + '&exportFormat=txt' : dinhdang;
 	  var x7= dinhdang;
 	  var x8= loai;
     
