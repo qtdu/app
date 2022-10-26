@@ -229,6 +229,9 @@ body{
 .Alert, .Control, .Login {
 	height: calc( var(--height-content));
 }
+.Login {
+	background: white;
+}
 .Iframe {
 	height: var(--h-Iframe);
 	width: 100vw; 
@@ -391,6 +394,11 @@ body{
 	align-items: flex-start; 
 	flex-direction: column; 
 	padding-right: calc(var(--thietbi) * 5px);
+}
+#Login1_select {
+	margin-bottom: 6px; width: 90%; font-size: 16px
+	border-radius: 5px; 
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
 }
 
 .Login_body_2 {
