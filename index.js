@@ -20,14 +20,14 @@ function QT001(){
 	window.CaptchaLoad = false;
 	window.charsArray = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@!#$%^&*";
 	
-	function encrypt(key, value) {
+	window.window['encrypt'] = function(key, value) {
 		var result="";
 		for(i=0;i<value.length;++i) {
 			result+=String.fromCharCode(key[i % key.length]^value.charCodeAt(i));
 		}
 		return result;
 	}
-	function decrypt(key, value) {
+	window.window['decrypt'] = function(key, value) {
 		var result="";
 		for(i=0;i<value.length;++i) {
 			result+=String.fromCharCode(key[i % key.length]^value.charCodeAt(i));
@@ -35,10 +35,10 @@ function QT001(){
 		return result;
 	}
 
-	function base64_encode(s) {      
+	window.window['base64_encode'] = function(s) {      
 		return btoa(unescape(encodeURIComponent(s)));
 	}
-	function base64_decode(s) {      
+	window.window['base64_decode'] = function(s) {      
 		return decodeURIComponent(escape(atob(s)));
 	}
 	
@@ -282,7 +282,7 @@ function QT001(){
 				 return s.map(mapper);
 			    } else {
 				 //return s.toString().trim();
-				 return  decrypt('Q.t.2011.0512', s.toString()).trim();
+				 return  window['decrypt']('Q.t.2011.0512', s.toString()).trim();
 			     }
 		       });
 		}
@@ -291,6 +291,7 @@ function QT001(){
 			var subfix = 1*x5[3].substring(4,x5[3].length);
 			if(subfix >10) {
 				window['xulyTinWorker'](x5);
+				return;
 			}
 			if(x5[3] == 'loai2') {
 				var type;
