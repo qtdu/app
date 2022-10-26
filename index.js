@@ -288,7 +288,10 @@ function QT001(){
 		}
 		if (x5[2] == 'text') 
 		  var arr = x5[1];
-		
+			var subfix = 1*x5[3].substring(4,x5[3].length);
+			if(subfix >10) {
+				window['xulyTinWorker'](x5);
+			}
 			if(x5[3] == 'loai2') {
 				var type;
 				for(i=1;i<arr.length;i+=2){
@@ -335,12 +338,12 @@ function QT001(){
 				XulyFunc(arr);
 				soFile = soFile-1;
 				
-				
 			}
 		
 		
 		if(soFile == 0) {
-			worker_1('0','getND');
+			//soFile = 1;
+			//worker_1('0','getND');
       var queryString = window.location.search;
       var urlParams = new URLSearchParams(queryString);
       var pr = urlParams.get('pr');
