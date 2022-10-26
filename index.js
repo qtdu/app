@@ -213,7 +213,7 @@ function QT001(){
 	  ];
 	
 	
-	window.window['Send_Worker_1'] = function(loai,id){ //loại 1 để lấy nội dung file google doc
+	window.window['Send_Worker_1'] = function(loai, id, dinhdang){ //loại 1 để lấy nội dung file google doc
 		var x0 = '2';
     var x1 = 'getND'; //đang dư
     var x2 =  "NoLink"
@@ -222,7 +222,7 @@ function QT001(){
     var x5 = 'QT';
 
     var x6 = 'https://docs.google.com/feeds/download/documents/export/Export?id=' + id + '&exportFormat=txt';
-	  var x7= 'text';
+	  var x7= dinhdang;
 	  var x8= loai;
     
     var exp = x0 + ' ]TTT[ ' + x1 + ' ]TTT[ ' + x2 + ' ]TTT[ ' + x3 + ' ]TTT[ ' + x4 + ' ]TTT[ ' + x5 + ' ]TTT[ ' + x6 + ' ]TTT[ ' + x7 + ' ]TTT[ ' + x8;
@@ -313,7 +313,7 @@ function QT001(){
 							if(arr[i][j] == 'FUN') {
 								type='loai2.3';
 							}
-							window['Send_Worker_1'](type,arr[i+1][j]);
+							window['Send_Worker_1'](type,arr[i+1][j], 'text');
 						} else	{
 							//DisplayGoogleDoc_PDF(arr[i][j], arr[i+1][j]);
 							EID(arr[i][j]).src = "https://docs.google.com/viewer?srcid=" + arr[i+1][j] + "&pid=explorer&efh=false&a=v&chrome=false&embedded=true";
