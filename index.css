@@ -226,16 +226,16 @@ body{
 	padding-top: calc(0.02 * var(--width-content) * (2 * var(--thietbi) - 1));
 
 }
-.Alert, .Control, .Login {
-	height: calc( var(--height-content));
+.Alert, .Control, .Login, .Iframe {
+	height: calc(1.2 * var(--height-content));
 }
 .Login {
 	background: white;
 	width: 100%;
-	height: calc(1.2 * var(--height-content));
+	/*height: calc(1.2 * var(--height-content));*/
 }
 .Iframe {
-	height: var(--h-Iframe);
+	/*height: var(--h-Iframe);*/
 	width: 100vw; 
 	background: var(--color-iframe);
 	top: var(--top-Iframe);
