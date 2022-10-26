@@ -199,9 +199,10 @@ body{
 
 .Alert {z-index: 98; display: none; /*flex;*/}
 .Control {z-index: 97; display: none; /*flex;*/}
-.Iframe {z-index: 96; display: flex; /*flex;*/}
+.Iframe {z-index: 96; display: none; /*flex;*/}
+.Iframe {z-index: 95; display: flex; /*flex;*/}
 
-.Alert, .Control, .Iframe {
+.Alert, .Control, .Iframe, .Login {
 	position: fixed; 
 	
 	font-weight: 600; 
@@ -223,14 +224,11 @@ body{
 	padding: calc(0.02 * var(--width-content));
 
 }
-.Alert, .Control, .Iframe {
+.Alert, .Control, .Login {
 	height: calc( var(--height-content));
 }
 .Iframe {
 	height: var(--h-Iframe);
-}
-
-.Iframe { 
 	width: 100vw; 
 	background: var(--color-iframe);
 	top: var(--top-Iframe);
@@ -238,7 +236,7 @@ body{
 }
 
 
-.Alert_khung, .Control_khung {
+.Alert_khung, .Control_khung, .Login_khung {
 	border-radius: 5px; 
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	border: blue solid;
@@ -253,7 +251,7 @@ body{
 
 .Iframe_khung { width: 100vw; boder: none; background: var(--color-iframe);}
 
-.Alert_header, .Control_header {
+.Alert_header, .Control_header, .Login_header {
 	/*border-radius: 2%; 
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 	font-weight: 600; 
@@ -279,7 +277,7 @@ body{
 	
 }
 
-.Alert_header_1, .Control_header_1, .Iframe_header_1, .info1_header_1, .info2_header_1, .info3_header_1, .control1_header_1, .control2_header_1, .control3_header_1, .Iframe1_header_1, .Iframe2_header_1, .Iframe3_header_1 {
+.Alert_header_1, .Control_header_1, .Iframe_header_1, .Login_header_1, .info1_header_1, .info2_header_1, .info3_header_1, .control1_header_1, .control2_header_1, .control3_header_1, .Iframe1_header_1, .Iframe2_header_1, .Iframe3_header_1 {
 	
 	flex: calc(var(--size-mau)/4);
 	height: calc(var(--size-mau)/4);
@@ -299,7 +297,7 @@ body{
 
 	cursor: pointer;
 }
-.Alert_header_2, .Control_header_2, .Iframe_header_2, .info1_header_2, .info2_header_2, .info3_header_2, .control1_header_2, .control2_header_2, .control3_header_2, .Iframe1_header_2, .Iframe2_header_2, .Iframe3_header_2 {
+.Alert_header_2, .Control_header_2, .Iframe_header_2, .Login_header_2, .info1_header_2, .info2_header_2, .info3_header_2, .control1_header_2, .control2_header_2, .control3_header_2, .Iframe1_header_2, .Iframe2_header_2, .Iframe3_header_2 {
 	
 	flex: 100%;
 	height: calc((0.2 * (3 - var(--thiebi)) + 0.5 * (2 * var(--thietbi) - 1)) * var(--size-mau)/4);
@@ -321,15 +319,15 @@ body{
 	
 }
 
-.Alert_body::-webkit-scrollbar, .Alert::-webkit-scrollbar, .Control_body::-webkit-scrollbar, .Control::-webkit-scrollbar, .Iframe_body::-webkit-scrollbar, .Iframe::-webkit-scrollbar {
+.Alert_body::-webkit-scrollbar, .Alert::-webkit-scrollbar, .Control_body::-webkit-scrollbar, .Control::-webkit-scrollbar, .Iframe_body::-webkit-scrollbar, .Iframe::-webkit-scrollbar, .Login_body::-webkit-scrollbar, .Login::-webkit-scrollbar {
 	display: none;
 }
-.Alert_body, .Alert, .Control_body, .Control, .Iframe_body, .Iframe {
+.Alert_body, .Alert, .Control_body, .Control, .Iframe_body, .Iframe, .Login_body, .Login {
 	-ms-overflow-style: none; scrollbar-width: none;
 }
 
 
-.Alert_body, .Control_body {
+.Alert_body, .Control_body, .Login_body {
 	/*width: calc(0.9 * var(--width-content));*/
 	min-height: calc(0.2 * var(--height-content));
 	max-height: calc(0.8 * var(--height-content));
