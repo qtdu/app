@@ -638,7 +638,8 @@ body{
 }
 
 .Iframe1_body, .Iframe2_body, .Iframe3_body {
-	height: calc(0.8 * var(--height-content) - (1.6/(2 * var(--thietbi) - 1)) * var(--size-mau)/4);
+	height: calc(0.98*var(--h-IframeX));
+	
 }
 
 .control1_body, .control2_body, .control3_body, .Iframe1_body, .Iframe2_body, .Iframe3_body {
@@ -650,7 +651,7 @@ body{
 #Iframe1_main, #Iframe2_main, #Iframe3_main {
 	position: '';
 	width: var(--w-IframeX);
-	height: calc(0.9*var(--h-IframeX));
+	height: calc(0.98*var(--h-IframeX));
 	border: 0.5px solid;
 }
 
