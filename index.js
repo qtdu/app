@@ -47,12 +47,16 @@ function QT001(){
   function worker_1(x0, x1){
     var x2 = "NoLink";
     var x3 = "function T(exp){ " +
-                        "fetch (exp[1])" +
+			"if(exp[2] == 'myself') { postMessage(exp); }" + 
+              		"fetch (exp[1])" +
                           ".then(x => D(x,exp[2]))" +
                           ".then(y => postMessage([exp[0],y,exp[2],exp[3]]));" +
               "} " +
               "function Q() { self.addEventListener('message', function(e) { T(e.data); }, false); } " +
-	            "function D(x, val) { if(val=='json') {return x.json();} if(val=='text') {return x.text();} } " +
+	      "function D(x, val) { " +
+			"if(val=='json') {return x.json();} " +
+			"if(val=='text') {return x.text();} " +
+	      "} " +
               "Q();";
 
     var x4 = 'Func_Run02a';
@@ -63,7 +67,7 @@ function QT001(){
     
     var exp = x0 + ' ]TTT[ ' + x1 + ' ]TTT[ ' + x2 + ' ]TTT[ ' + x3 + ' ]TTT[ ' + x4 + ' ]TTT[ ' + x5 + ' ]TTT[ ' + x6 + ' ]TTT[ ' + x7 + ' ]TTT[ ' + x8;
         
-    TaoHuyWorker(exp);
+    window['TaoHuyWorker'](exp);
 
   }  
     
