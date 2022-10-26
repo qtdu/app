@@ -231,6 +231,8 @@ body{
 }
 .Login {
 	background: white;
+	width: 100%;
+	height: calc(1.2 * var(--height-content));
 }
 .Iframe {
 	height: var(--h-Iframe);
