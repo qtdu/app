@@ -152,7 +152,7 @@ body{
     	padding: 0 10vw 0 10vw;
     
     	background: orange;
-    	z-index: 102;
+    	z-index: 102000;
     	font-size: calc(var(--size-mau)/4);
 }
 
@@ -163,12 +163,12 @@ body{
 }
 
 .doc {
-    	z-index: 100;
+    	z-index: 100000;
     	display: var(--display-doc);
 }
 		
 .HuongDan {
-        z-index: 100;
+        z-index: 100000;
         width: 100%; height: 100vh; 
         background: orange; 
         position: fixed; 
@@ -179,7 +179,7 @@ body{
 }
 
 .VirtualButton {
-	z-index: 99;
+	z-index: 99000;
 	width: var(--width-31G); 
 	height: var(--width-31G);
 	font-size: var(--font-size-31G); 
@@ -197,10 +197,10 @@ body{
 }
 .VirtualButton div{ width: var(--width-31G); text-align: center;}
 
-.Alert {z-index: 98; display: none; /*flex;*/}
-.Control {z-index: 97; display: none; /*flex;*/}
-.Iframe {z-index: 96; display: none; /*flex;*/}
-.Iframe {z-index: 95; display: flex; /*flex;*/}
+.Alert {z-index: 98000; display: none; /*flex;*/}
+.Control {z-index: 97000; display: none; /*flex;*/}
+.Iframe {z-index: 96000; display: none; /*flex;*/}
+.Login {z-index: 95000; display: flex; /*flex;*/}
 
 .Alert, .Control, .Iframe, .Login {
 	position: fixed; 
