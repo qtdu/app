@@ -584,7 +584,7 @@ body{
 	border-radius: 5px;
 	border: solid;
 	
-	padding-top: calc(0.02 * var(--width-content) * (2 * var(--thietbi) - 1));
+	padding-top: calc(0.005 * var(--width-content) * (2 * var(--thietbi) - 1));
 	
 }
 
