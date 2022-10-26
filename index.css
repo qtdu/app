@@ -200,7 +200,7 @@ body{
 .Alert {z-index: 98000; display: none; /*flex;*/}
 .Control {z-index: 97000; display: none; /*flex;*/}
 .Iframe {z-index: 96000; display: none; /*flex;*/}
-.Login {z-index: 95000; display: flex; /*flex;*/}
+.Login {z-index: 95000; display: none; /*flex;*/}
 
 .Alert, .Control, .Iframe, .Login {
 	position: fixed; 
@@ -225,7 +225,7 @@ body{
 	
 	padding-top: calc(0.02 * var(--width-content) * (2 * var(--thietbi) - 1));
 	
-	background: rgb(255, 255, 255, 0.8);
+	background: rgb(255, 255, 255, 0.9);
 
 }
 .Alert, .Control, .Login, .Iframe {
