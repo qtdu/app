@@ -279,6 +279,8 @@ body{
 	
 }
 
+
+
 .Alert_header_1, .Control_header_1, .Iframe_header_1, .Login_header_1, .info1_header_1, .info2_header_1, .info3_header_1, .control1_header_1, .control2_header_1, .control3_header_1, .Iframe1_header_1, .Iframe2_header_1, .Iframe3_header_1 {
 	
 	flex: calc(var(--size-mau)/4);
@@ -364,19 +366,50 @@ body{
 	background: white;
 	
 	border-radius: 5px; 
-	/*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-	/*padding: calc(0.05 * var(--width-content));*/
 	margin: calc(0.05 * var(--width-content));
-	/*border: solid;*/
 	font-weight: 400;
-
-	
-	/*overflow-y: scroll;*/
 	overflow-x: hidden;
 		
-	 
-
 }
+
+.Login_body_1 {
+	width: 100%; 
+	display: flex; 
+	justify-content: flex-start; 
+	align-items: flex-start; 
+	flex-direction: row;
+}
+
+.Login_body_1_icon{
+	width: calc(100% * (29 + (8*var(--thietbi) - 7))/100);
+}
+
+.Login_body_1_edit{
+	width: calc(100% * (71 - (8*var(--thietbi) - 7))/100); 
+	display: flex; 
+	justify-content: flex-start; 
+	align-items: flex-start; 
+	flex-direction: column; 
+	padding-right: calc(var(--thietbi) * 5px);
+}
+
+.Login_body_2 {
+	width: 100%; 
+	margin-top:10px; 
+	margin-bottom:10px; 
+	display: flex; 
+	flex-wrap: wrap;
+}
+
+.Login_body_2_icon {
+	width: 10%; 
+	margin-left: 2%; 
+	margin-right: 2%
+}
+
+
+
+
 
 .Iframe_body {
 	margin: 0;
