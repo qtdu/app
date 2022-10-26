@@ -727,7 +727,7 @@ body{
   width: 100%;
   
 }
-#content1a_input, #content2a_input, #content3a_input  				{
+#content1a_input, #content2a_input, #content3a_input, #Login1_input, #Login2_input     				{
   font-size: initial; /*18px;*/
   font-weight: 500;
   padding:10px 10px 2px 5px;
@@ -737,7 +737,7 @@ body{
   border-bottom:1px solid #757575;
 
 }
-#content1a_input:focus, #content2a_input:focus, #content3a_input:focus  		{ outline:none; }
+#content1a_input:focus, #content2a_input:focus, #content3a_input:focus, #Login1_input:focus, #Login2_input:focus  { outline:none; }
 
 /* LABEL ======================================= */
 label 				 {
@@ -754,7 +754,7 @@ label 				 {
 }
 
 /* active state */
-#content1a_input:focus ~ label, #content1a_input:valid ~ label, #content2a_input:focus ~ label, #content2a_input:valid ~ label, #content3a_input:focus ~ label, #content3a_input:valid ~ label 		{
+#content1a_input:focus ~ label, #content1a_input:valid ~ label, #content2a_input:focus ~ label, #content2a_input:valid ~ label, #content3a_input:focus ~ label, #content3a_input:valid ~ label, #Login1_input:focus ~ label, #Login1_input:valid ~ label , #Login2_input:focus ~ label, #Login2_input:valid ~ label		{
   top:-7px;
   font-size: 12px;
   color:#5264AE;
@@ -781,7 +781,7 @@ label 				 {
 }
 
 /* active state */
-#content1a_input:focus ~ .bar:before, #content1a_input:focus ~ .bar:after, #content2a_input:focus ~ .bar:before, #content2a_input:focus ~ .bar:after, #content3a_input:focus ~ .bar:before, #content3a_input:focus ~ .bar:after {
+#content1a_input:focus ~ .bar:before, #content1a_input:focus ~ .bar:after, #content2a_input:focus ~ .bar:before, #content2a_input:focus ~ .bar:after, #content3a_input:focus ~ .bar:before, #content3a_input:focus ~ .bar:after, #Login1_input:focus ~ .bar:before, #Login1_input:focus ~ .bar:after, #Login2_input:focus ~ .bar:before, #Login2_input:focus ~ .bar:after  {
   width:50%;
 }
 
@@ -797,7 +797,7 @@ label 				 {
 }
 
 /* active state */
-#content1a_input:focus ~ .highlight, #content2a_input:focus ~ .highlight, #content3a_input:focus ~ .highlight {
+#content1a_input:focus ~ .highlight, #content2a_input:focus ~ .highlight, #content3a_input:focus ~ .highlight, #Login1_input:focus ~ .highlight, #Login2_input:focus ~ .highlight {
   -webkit-animation:inputHighlighter 0.3s ease;
   -moz-animation:inputHighlighter 0.3s ease;
   animation:inputHighlighter 0.3s ease;
