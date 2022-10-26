@@ -67,7 +67,7 @@ function QT001(){
 
   }  
     
-  function TaoHuyWorker(exp){
+  window.window['TaoHuyWorker'] = function(exp){
     var arr = exp.split(']TTT[');
     var x0 = arr[0].trim(); //xác định tạo hay xoá hay gửi thông tin
     var x1 = arr[1].trim(); //Biến lưu trên worker.js
@@ -209,7 +209,7 @@ function QT001(){
 	  ];
 	
 	
-	function Send_Worker_1(loai,id){ //loại 1 để lấy nội dung file google doc
+	window.window['Send_Worker_1'] = function(loai,id){ //loại 1 để lấy nội dung file google doc
 		var x0 = '2';
     var x1 = 'getND'; //đang dư
     var x2 =  "NoLink"
@@ -222,10 +222,10 @@ function QT001(){
 	  var x8= loai;
     
     var exp = x0 + ' ]TTT[ ' + x1 + ' ]TTT[ ' + x2 + ' ]TTT[ ' + x3 + ' ]TTT[ ' + x4 + ' ]TTT[ ' + x5 + ' ]TTT[ ' + x6 + ' ]TTT[ ' + x7 + ' ]TTT[ ' + x8;
-    TaoHuyWorker(exp);
+    window['TaoHuyWorker'](exp);
   }
 	
-	function Send_Worker_2(){ //để lấy nội dung file google sheet
+	window.window['Send_Worker_2'] = function(){ //để lấy nội dung file google sheet
 		var x0 = '2';
     var x1 = 'getND';
     var x2 =  "NoLink"
@@ -264,10 +264,10 @@ function QT001(){
 		x7= 'json';
 		x8= 'loai2';
     var exp = x0 + ' ]TTT[ ' + x1 + ' ]TTT[ ' + x2 + ' ]TTT[ ' + x3 + ' ]TTT[ ' + x4 + ' ]TTT[ ' + x5 + ' ]TTT[ ' + x6 + ' ]TTT[ ' + x7 + ' ]TTT[ ' + x8;
-    TaoHuyWorker(exp);
+    window['TaoHuyWorker'](exp);
   }
    	
-  Send_Worker_2();
+  window['Send_Worker_2']();
 	
 	window.window['Func_Run02a'] = function(x5){
 		
@@ -305,7 +305,7 @@ function QT001(){
 							if(arr[i][j] == 'FUN') {
 								type='loai2.3';
 							}
-							Send_Worker_1(type,arr[i+1][j]);
+							window['Send_Worker_1'](type,arr[i+1][j]);
 						} else	{
 							//DisplayGoogleDoc_PDF(arr[i][j], arr[i+1][j]);
 							EID(arr[i][j]).src = "https://docs.google.com/viewer?srcid=" + arr[i+1][j] + "&pid=explorer&efh=false&a=v&chrome=false&embedded=true";
