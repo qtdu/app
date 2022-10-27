@@ -783,6 +783,174 @@ function QT001(){
 
 	}
 	toado();
+	
+	
+	function ZoomImage() {
+			var xemhinh=true;
+
+		window.addEventListener("contextmenu", function(e) {
+				e.preventDefault();
+			}, false);
+
+		    const zoomElm = document.getElementById('zoomInput');
+		const outputElm = document.getElementById('zoomOutput');
+
+		// variable Zoom Power
+		var zoomPower = zoomElm.value;
+		zoomElm.addEventListener('input', function(e){
+		  zoomPower = e.target.value;
+		  showZoomOutput();
+		});
+		zoomElm.addEventListener('change', function(e){
+		  // zoomPower = e.target.value;   
+		      root.style.setProperty('--scaleImage',zoomElm.value);
+		  showZoomOutput();
+		});
+
+		function showZoomOutput() {
+		  outputElm.innerText = 'x' + zoomElm.value;
+		}
+		// show initial Zoom Level
+		showZoomOutput();
+
+
+
+
+
+
+		  var zoom = document.getElementById( 'zoom_image' ),
+		      Zw = zoom.offsetWidth,
+		      Zh = zoom.offsetHeight,
+		      img = document.querySelector( 'img' );
+
+
+		  var timeout, ratio, Ix, Iy;
+
+		  function activate () {
+		    document.body.classList.add( 'active' );
+		  }
+
+		  function deactivate() {
+		    document.body.classList.remove( 'active' );
+		  }
+
+		  function updateMagnifier( x, y ) {
+			//zoom.style.top = (y - Iy>3*Zh/4) ? ( y - Zh/2) + 'px' : ( y + Zh/2) + 'px';
+		    zoom.style.top = ( y - Zh/2) + 'px';
+		    //zoom.style.left = ( x ) + 'px';
+		    zoom.style.left = (x - Ix>3*Zw/4) ? ( x - Zw/2) + 'px' : ( x + Zw/2) + 'px';
+		    zoom.style.backgroundPosition = (( Ix - x ) * ratio + Zw / 2 ) + 'px ' + (( Iy - y ) * ratio + Zh / 2 ) + 'px';
+		  }
+
+		  function onLoad () {
+		    ratio = img.naturalWidth / img.width;
+		    zoom.style.backgroundImage = 'url(' + img.src + ')';
+		    Ix = img.offsetLeft;
+		    Iy = img.offsetTop;
+		  }
+
+		  function onMousemove( e ) {
+
+		    let posX, posY, touch = false;
+
+			if (e.touches) {
+				posX = e.touches[0].clientX;
+				posY = e.touches[0].clientY;
+				touch = true;
+			} else {
+				posX = e.clientX;
+				posY = e.clientY;
+			}
+
+
+
+		    clearTimeout( timeout );
+		    activate();
+		    //updateMagnifier( e.x, e.y );
+		    updateMagnifier( posX, posY );
+
+		    timeout = setTimeout( deactivate, 2500 );
+		  }
+
+		  function onMouseleave () {
+		    deactivate();
+		  }
+
+
+		  function onOver( e ) {
+			let posX, posY, touch = false;
+
+			if (e.touches) {
+				posX = e.touches[0].clientX;
+				posY = e.touches[0].clientY;
+				touch = true;
+			} else {
+				posX = e.clientX;
+				posY = e.clientY;
+			}
+
+			touch
+				? zoom.style.top = `${posY - zoom.offsetHeight / 1.25}px`
+				: zoom.style.top = `${posY - zoom.offsetHeight / 2}px`;
+			zoom.style.left = `${posX - zoom.offsetWidth / 2}px`;
+		  }
+
+		  img.addEventListener( 'load', onLoad );
+
+
+
+		  img.addEventListener( 'mousemove', onMousemove );
+		  img.addEventListener( 'touchmove', onMousemove );
+
+		  img.addEventListener( 'mouseleave', onMouseleave );
+		  img.addEventListener('mouseout', onMouseleave);
+			img.addEventListener('touchend', onMouseleave);
+
+		  img.addEventListener( 'mouseover', onOver );
+		  img.addEventListener( 'touchstart', onOver );
+
+
+
+		var scrollStatus = {
+		  wheeling: false,
+		  functionCall: false
+		};
+		var scrollTimer = false;
+		window.addEventListener('wheel', function(event){
+		    var initialZoom = parseFloat(zoomElm.value);
+		    scrollStatus.wheeling = true;
+		    if (!scrollStatus.functionCall) {
+		      if (event.deltaY < 0) {
+			if (initialZoom < 10 ) {
+			  initialZoom = initialZoom + 0.5;
+			}
+		      } else if (event.deltaY > 0) {
+
+			if (initialZoom > 1 ) {
+			  initialZoom = initialZoom - 0.5;
+			}
+		      }
+
+		      zoomElm.value = initialZoom;
+		      zoomPower = initialZoom;
+		      showZoomOutput();
+
+		      root.style.setProperty('--scaleImage',initialZoom);
+
+		      scrollStatus.functionCall = true;
+		    }
+
+		    window.clearInterval(scrollTimer);
+		    scrollTimer = window.setTimeout(function() {
+		      scrollStatus.wheeling = false;
+		      scrollStatus.functionCall = false;
+		    }, 10); 
+
+		});
+
+	}
+	ZoomImage();
+	
 }
 
 /*
