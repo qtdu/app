@@ -915,3 +915,11 @@ body.active .image2zoom {
   opacity: 1;
   -webkit-transform: scale(var(--scaleImage));
 }
+
+.image2zoom{
+	object-fit: contain;
+
+   max-width:100vw; 
+   height:auto; 
+   max-height:calc(var(--height-content) - 2 * var(--size-mau)/40);
+}
