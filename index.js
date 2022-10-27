@@ -588,7 +588,7 @@ function QT001(){
 
 		  function updateMagnifier( x, y ) {
 			Ix = (W - img.offsetWidth)/2;
-		    	Iy = EID('header').offsetHeight - 50;
+		    	Iy = EID('header').offsetHeight - ECN('content', 'zoom-container')[0].offsetHeight;
 			Zw = zoom.offsetWidth;
 		      Zh = zoom.offsetHeight;
 
