@@ -586,9 +586,11 @@ function QT001(){
 
 		  function updateMagnifier( x, y ) {
 			//zoom.style.top = (y - Iy>3*Zh/4) ? ( y - Zh/2) + 'px' : ( y + Zh/2) + 'px';
-		    zoom.style.top = ( y - Zh/2) + 'px';
+		    //zoom.style.top = ( y - Zh/2) + 'px';
 		    //zoom.style.left = ( x ) + 'px';
-		    zoom.style.left = (x - Ix>3*Zw/4) ? ( x - Zw/2) + 'px' : ( x + Zw/2) + 'px';
+		    //zoom.style.left = (x - Ix>3*Zw/4) ? ( x - Zw/2) + 'px' : ( x + Zw/2) + 'px';
+			  zoom.style.top = ( y ) + 'px';
+			  zoom.style.left = ( x ) + 'px';
 		    zoom.style.backgroundPosition = (( Ix - x ) * ratio + Zw / 2 ) + 'px ' + (( Iy - y ) * ratio + Zh / 2 ) + 'px';
 		  }
 
@@ -646,10 +648,10 @@ function QT001(){
 			zoom.style.left = `${posX - zoom.offsetWidth / 2}px`;
 		  }
 
-		  //img.addEventListener( 'load', onLoad );
+		  img.addEventListener( 'load', onLoad );
 
 
-		onLoad();
+		//onLoad();
 		  img.addEventListener( 'mousemove', onMousemove );
 		  img.addEventListener( 'touchmove', onMousemove );
 
