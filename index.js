@@ -594,7 +594,8 @@ function QT001(){
 			  zoom.style.top = ( y ) + 'px';
 			  zoom.style.left = ( x ) + 'px';
 			  ratio = 1;
-		    zoom.style.backgroundPosition = (( Ix - x ) * ratio + Zw/2) + 'px ' + (( Iy - y ) * ratio + Zh/2 ) + 'px';
+		    //zoom.style.backgroundPosition = (( Ix - x ) * ratio + 0*Zw/2) + 'px ' + (( Iy - y ) * ratio + 0*Zh/2 ) + 'px';
+			zoom.style.backgroundPosition = (( x - Ix ) * ratio + 0*Zw/2) + 'px ' + (( y - Iy ) * ratio + 0*Zh/2 ) + 'px';
 		  }
 
 		function getOffset(el) {
