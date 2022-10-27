@@ -590,8 +590,8 @@ function QT001(){
 			Ix = (W - img.offsetWidth)/2;
 		    	Iy = EID('header').offsetHeight;
 			  
-			zoom.style.top = (y - Iy>3*Zh/4) ? ( y - Zh/2) + 'px' : ( y + Zh/2) + 'px';
-		    //zoom.style.top = ( y - Zh/2) + 'px';
+			//zoom.style.top = (y - Iy>3*Zh/4) ? ( y - Zh/2) + 'px' : ( y + Zh/2) + 'px';
+		    zoom.style.top = ( y - Zh/2) + 'px';
 		    //zoom.style.left = ( x ) + 'px';
 		    zoom.style.left = (x - Ix>3*Zw/4) ? ( x - Zw/2) + 'px' : ( x + Zw/2) + 'px';
 			  //zoom.style.top = ( y - Zh) + 'px';
