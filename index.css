@@ -920,6 +920,6 @@ body.active .image2zoom {
 	object-fit: contain;
 
    width:calc(0.9 * var(--width-content));
-   height:auto; 
-   max-height:calc(var(--height-content) - 2 * var(--size-mau)/40);
+   height:calc(var(--height-content) - 2 * var(--size-mau)/40);
+   /*max-height:calc(var(--height-content) - 2 * var(--size-mau)/40);*/
 }
