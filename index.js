@@ -587,6 +587,9 @@ function QT001(){
 		  }
 
 		  function updateMagnifier( x, y ) {
+			Ix = (W - img.offsetWidth)/2 - Zw;
+		    	Iy = EID('header').offsetHeight;
+			  
 			//zoom.style.top = (y - Iy>3*Zh/4) ? ( y - Zh/2) + 'px' : ( y + Zh/2) + 'px';
 		    //zoom.style.top = ( y - Zh/2) + 'px';
 		    //zoom.style.left = ( x ) + 'px';
@@ -607,7 +610,7 @@ function QT001(){
 		}  
 		
 		function onLoad () {
-			alert(1);
+			
 		    ratio = img.naturalWidth / img.width;
 		    zoom.style.backgroundImage = 'url(' + img.src + ')';
 			  
@@ -615,10 +618,10 @@ function QT001(){
 		    //Iy = img.offsetTop;
 			//Ix = getOffset(img).left - Zw/2;
 		    	//Iy = getOffset(img).top;
-			Ix = (W - img.offsetWidth)/2 - Zw;
-		    	Iy = EID('header').offsetHeight;
+			//Ix = (W - img.offsetWidth)/2 - Zw;
+		    	//Iy = EID('header').offsetHeight;
 			  
-			alert(img.offsetWidth);
+			//alert(img.offsetWidth);
 			  //alert(Ix + "_" + Iy);
 			//alert(W + " - " + img.offsetWidth);
 			//alert(EID('header').offsetHeight);
