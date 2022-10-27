@@ -536,7 +536,6 @@ function QT001(){
 			EID('ngang').innerHTML = nd;
 		}
 	}
-
 	
 	function toado(){
 		EID("Geo").innerHTML=="";
@@ -788,10 +787,6 @@ function QT001(){
 	function ZoomImage() {
 			var xemhinh=true;
 
-		window.addEventListener("contextmenu", function(e) {
-				e.preventDefault();
-			}, false);
-
 		    const zoomElm = document.getElementById('zoomInput');
 		const outputElm = document.getElementById('zoomOutput');
 
@@ -947,9 +942,12 @@ function QT001(){
 		    }, 10); 
 
 		});
+		
+		alert('Q')
 
 	}
 	ZoomImage();
+	
 	
 }
 
