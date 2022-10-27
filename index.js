@@ -618,6 +618,8 @@ function QT001(){
 		    	Iy = EID('header').offsetHeight;
 			  
 			  //alert(Ix + "_" + Iy);
+			alert(W + " - " + img.offsetWidth);
+			alert(EID('header').offsetHeight);
 		  }
 
 		  function onMousemove( e ) {
