@@ -594,12 +594,22 @@ function QT001(){
 		    zoom.style.backgroundPosition = (( Ix - x ) * ratio + Zw / 2 ) + 'px ' + (( Iy - y ) * ratio + Zh / 2 ) + 'px';
 		  }
 
-		  function onLoad () {
+		function getOffset(el) {
+		  const rect = el.getBoundingClientRect();
+		  return {
+		    left: rect.left + window.scrollX,
+		    top: rect.top + window.scrollY
+		  };
+		}  
+		
+		function onLoad () {
 		    ratio = img.naturalWidth / img.width;
 		    zoom.style.backgroundImage = 'url(' + img.src + ')';
 			  
-		    Ix = img.offsetLeft;
-		    Iy = img.offsetTop;
+		    //Ix = img.offsetLeft;
+		    //Iy = img.offsetTop;
+			Ix = getOffset(img).left;
+		    	Iy = getOffset(img).top;
 			  
 			  alert(Ix + "_" + Iy);
 		  }
