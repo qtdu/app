@@ -538,7 +538,7 @@ function QT001(){
 	}
 	
 	function ZoomImage() {
-		alert('Q');
+		
 			var xemhinh=true;
 
 		    const zoomElm = EID('zoomInput');
@@ -563,14 +563,15 @@ function QT001(){
 		showZoomOutput();
 
 
-
+		
 
 
 
 		  var zoom = EID('zoom_image'),
 		      Zw = zoom.offsetWidth,
 		      Zh = zoom.offsetHeight,
-		      img = document.querySelector( 'img' );
+		      //img = document.querySelector( 'img' );
+		      img = EID('image2zoom');
 
 
 		  var timeout, ratio, Ix, Iy;
