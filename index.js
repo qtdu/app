@@ -13,6 +13,8 @@ var lengthOtp = 2;
 var rand = 0;
 var page = "Group";
 var LinkImage = "http://placekitten.com/400/200";
+var W = window.innerWidth;
+var H = window.innerHeight;
 
 window.addEventListener('DOMContentLoaded', (event) => { QT001(); });
 
@@ -608,10 +610,12 @@ function QT001(){
 			  
 		    //Ix = img.offsetLeft;
 		    //Iy = img.offsetTop;
-			Ix = getOffset(img).left;
-		    	Iy = getOffset(img).top;
+			//Ix = getOffset(img).left;
+		    	//Iy = getOffset(img).top;
+			Ix = (W - img.offsetWidth)/2;
+		    	Iy = EID('header').offsetHeight;
 			  
-			  alert(Ix + "_" + Iy);
+			  //alert(Ix + "_" + Iy);
 		  }
 
 		  function onMousemove( e ) {
