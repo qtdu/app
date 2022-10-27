@@ -591,8 +591,8 @@ function QT001(){
 		    //zoom.style.top = ( y - Zh/2) + 'px';
 		    //zoom.style.left = ( x ) + 'px';
 		    //zoom.style.left = (x - Ix>3*Zw/4) ? ( x - Zw/2) + 'px' : ( x + Zw/2) + 'px';
-			  zoom.style.top = ( y ) + 'px';
-			  zoom.style.left = ( x ) + 'px';
+			  zoom.style.top = ( y - Zh) + 'px';
+			  zoom.style.left = ( x - Zw) + 'px';
 			  ratio = 1;
 		    //zoom.style.backgroundPosition = (( Ix - x ) * ratio + 0*Zw/2) + 'px ' + (( Iy - y ) * ratio + 0*Zh/2 ) + 'px';
 			zoom.style.backgroundPosition = (( Ix - x ) * ratio  + Zw/2) + 'px ' + (( Iy - y ) * ratio + Zh/2 ) + 'px';
