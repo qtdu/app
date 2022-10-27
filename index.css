@@ -548,6 +548,7 @@ body{
 	height: calc(var(--height-content) - 2 * var(--size-mau)/40);
 	z-index: 1000;
 	display: none;
+	background: white;
 }
 
 .content1, .content2, .content3{
