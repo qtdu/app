@@ -614,12 +614,12 @@ function QT001(){
 		    //Iy = img.offsetTop;
 			//Ix = getOffset(img).left;
 		    	//Iy = getOffset(img).top;
-			Ix = (W - img.offsetWidth)/2 - Zw/2;
+			Ix = (W - img.offsetWidth)/2;
 		    	Iy = EID('header').offsetHeight;
 			  
 			  //alert(Ix + "_" + Iy);
-			alert(W + " - " + img.offsetWidth);
-			alert(EID('header').offsetHeight);
+			//alert(W + " - " + img.offsetWidth);
+			//alert(EID('header').offsetHeight);
 		  }
 
 		  function onMousemove( e ) {
