@@ -595,6 +595,7 @@ function QT001(){
 		  function onLoad () {
 		    ratio = img.naturalWidth / img.width;
 		    zoom.style.backgroundImage = 'url(' + img.src + ')';
+			  alert(img.src);
 		    Ix = img.offsetLeft;
 		    Iy = img.offsetTop;
 		  }
@@ -645,10 +646,10 @@ function QT001(){
 			zoom.style.left = `${posX - zoom.offsetWidth / 2}px`;
 		  }
 
-		  img.addEventListener( 'load', onLoad );
+		  //img.addEventListener( 'load', onLoad );
 
 
-
+		onLoad();
 		  img.addEventListener( 'mousemove', onMousemove );
 		  img.addEventListener( 'touchmove', onMousemove );
 
