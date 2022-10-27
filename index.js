@@ -591,7 +591,7 @@ function QT001(){
 		    	Iy = EID('header').offsetHeight + 50;
 
 			  
-			zoom.style.top = (y - Iy>img.offsetHeight/2) ? ( y - Zh/2) + 'px' : ( y + Zh/2) + 'px';
+			zoom.style.top = (y - Iy<img.offsetHeight/2) ? ( y - Zh) + 'px' : ( y + Zh) + 'px';
 		    //zoom.style.top = ( y - Zh/2) + 'px';
 		    //zoom.style.left = ( x ) + 'px';
 		    zoom.style.left = (x - Ix>img.offsetWidth/2) ? ( x - Zw/2) + 'px' : ( x + Zw/2) + 'px';
