@@ -587,7 +587,7 @@ function QT001(){
 		  }
 
 		  function updateMagnifier( x, y ) {
-			Ix = (W - img.offsetWidth)/2 - Zw;
+			Ix = (W - img.offsetWidth)/2;
 		    	Iy = EID('header').offsetHeight;
 			  
 			zoom.style.top = (y - Iy>3*Zh/4) ? ( y - Zh/2) + 'px' : ( y + Zh/2) + 'px';
