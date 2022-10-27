@@ -612,9 +612,9 @@ function QT001(){
 			  
 		    //Ix = img.offsetLeft;
 		    //Iy = img.offsetTop;
-			Ix = getOffset(img).left - Zw/2;
+			//Ix = getOffset(img).left - Zw/2;
 		    	//Iy = getOffset(img).top;
-			//Ix = (W - img.offsetWidth)/2;
+			Ix = (W - img.offsetWidth)/2;
 		    	Iy = EID('header').offsetHeight;
 			  
 			  //alert(Ix + "_" + Iy);
