@@ -617,6 +617,7 @@ function QT001(){
 			Ix = (W - img.offsetWidth)/2 - Zw;
 		    	Iy = EID('header').offsetHeight;
 			  
+			alert(img.offsetWidth);
 			  //alert(Ix + "_" + Iy);
 			//alert(W + " - " + img.offsetWidth);
 			//alert(EID('header').offsetHeight);
