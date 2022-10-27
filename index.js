@@ -592,7 +592,7 @@ function QT001(){
 			Zw = zoom.offsetWidth;
 		      Zh = zoom.offsetHeight;
 
-			 if (y - Iy<img.offsetHeight/2) alert(y - Iy);
+			 //if (y - Iy<img.offsetHeight/2) alert(y - Iy);
 			  
 			zoom.style.top = (y - Iy>img.offsetHeight/2) ? ( y - Zh) + 'px' : ( y + Zh) + 'px';
 		    //zoom.style.top = ( y - Zh/2) + 'px';
