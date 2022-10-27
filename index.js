@@ -607,6 +607,7 @@ function QT001(){
 		}  
 		
 		function onLoad () {
+			alert(1);
 		    ratio = img.naturalWidth / img.width;
 		    zoom.style.backgroundImage = 'url(' + img.src + ')';
 			  
