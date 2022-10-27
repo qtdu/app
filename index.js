@@ -590,12 +590,12 @@ function QT001(){
 			Ix = (W - img.offsetWidth)/2 - Zw;
 		    	Iy = EID('header').offsetHeight;
 			  
-			//zoom.style.top = (y - Iy>3*Zh/4) ? ( y - Zh/2) + 'px' : ( y + Zh/2) + 'px';
+			zoom.style.top = (y - Iy>3*Zh/4) ? ( y - Zh/2) + 'px' : ( y + Zh/2) + 'px';
 		    //zoom.style.top = ( y - Zh/2) + 'px';
 		    //zoom.style.left = ( x ) + 'px';
-		    //zoom.style.left = (x - Ix>3*Zw/4) ? ( x - Zw/2) + 'px' : ( x + Zw/2) + 'px';
-			  zoom.style.top = ( y - Zh) + 'px';
-			  zoom.style.left = ( x - Zw) + 'px';
+		    zoom.style.left = (x - Ix>3*Zw/4) ? ( x - Zw/2) + 'px' : ( x + Zw/2) + 'px';
+			  //zoom.style.top = ( y - Zh) + 'px';
+			  //zoom.style.left = ( x - Zw) + 'px';
 			  //ratio = 1;
 		    //zoom.style.backgroundPosition = (( Ix - x ) * ratio + 0*Zw/2) + 'px ' + (( Iy - y ) * ratio + 0*Zh/2 ) + 'px';
 			zoom.style.backgroundPosition = (( Ix - x ) * ratio  + Zw/2) + 'px ' + (( Iy - y ) * ratio + Zh/2 ) + 'px';
