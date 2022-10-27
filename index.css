@@ -869,12 +869,6 @@ label 				 {
 :root {
 	--scaleImage: 1;
 }
-	body {
-  overflow: hidden;
-  margin: 0;
-  
-  background: #222;
-}
 
 .zoom-container {
   text-align: center;
