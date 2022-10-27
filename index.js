@@ -600,7 +600,7 @@ function QT001(){
 		    zoom.style.left = (x - Ix>img.offsetWidth/2) ? ( x - Zw/2) + 'px' : ( x + Zw/2) + 'px';
 			  //zoom.style.top = ( y - Zh) + 'px';
 			  //zoom.style.left = ( x - Zw) + 'px';
-			  //ratio = 1;
+
 		    //zoom.style.backgroundPosition = (( Ix - x ) * ratio + 0*Zw/2) + 'px ' + (( Iy - y ) * ratio + 0*Zh/2 ) + 'px';
 			zoom.style.backgroundPosition = (( Ix - x ) * ratio  + 1*Zw/4) + 'px ' + (( Iy - y ) * ratio + 1*Zh/2 ) + 'px';
 		  
