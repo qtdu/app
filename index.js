@@ -602,7 +602,7 @@ function QT001(){
 			  //zoom.style.left = ( x - Zw) + 'px';
 			  //ratio = 1;
 		    //zoom.style.backgroundPosition = (( Ix - x ) * ratio + 0*Zw/2) + 'px ' + (( Iy - y ) * ratio + 0*Zh/2 ) + 'px';
-			zoom.style.backgroundPosition = (( Ix - x ) * ratio  + 1*Zw/2) + 'px ' + (( Iy - y ) * ratio + 0*Zh/2 ) + 'px';
+			zoom.style.backgroundPosition = (( Ix - x ) * ratio  + 1*Zw/2) + 'px ' + (( Iy - y ) * ratio + 1*Zh/2 ) + 'px';
 		  }
 
 		function getOffset(el) {
