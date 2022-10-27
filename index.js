@@ -648,10 +648,10 @@ function QT001(){
 			zoom.style.left = `${posX - zoom.offsetWidth / 2}px`;
 		  }
 
-		  img.addEventListener( 'load', onLoad );
+		  //img.addEventListener( 'load', onLoad );
 
 
-		//onLoad();
+		onLoad();
 		  img.addEventListener( 'mousemove', onMousemove );
 		  img.addEventListener( 'touchmove', onMousemove );
 
