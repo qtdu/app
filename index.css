@@ -873,6 +873,7 @@ label 				 {
 .zoom-container {
   text-align: center;
   margin: 10px auto 10px;
+	height: calc(var(--size-mau)/4);
 }
 #zoomOutput {
   min-width: 40px;
@@ -891,6 +892,7 @@ body.active .image2zoom {
   
   border: 1px solid rgba(255,255,255,0.2);
   -webkit-transition: -webkit-filter 500ms;
+height: calc(var(--height-content) - 2 * var(--size-mau)/40 - var(--size-mau)/4);
 }
 
 #zoom_image {
