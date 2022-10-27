@@ -674,9 +674,9 @@ function QT001(){
 		  }
 
 		  //img.addEventListener( 'load', onLoad );
-			img.addEventListener('load', onLoad, false);
+			//img.addEventListener('load', onLoad, false);
 
-		//onLoad();
+		onLoad();
 		  img.addEventListener( 'mousemove', onMousemove );
 		  img.addEventListener( 'touchmove', onMousemove );
 
