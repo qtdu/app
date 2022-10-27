@@ -590,6 +590,7 @@ function QT001(){
 			Ix = (W - img.offsetWidth)/2;
 		    	Iy = EID('header').offsetHeight + 50;
 
+			 if (y - Iy<img.offsetHeight/2) alert(y - Iy);
 			  
 			zoom.style.top = (y - Iy<img.offsetHeight/2) ? ( y - Zh) + 'px' : ( y + Zh) + 'px';
 		    //zoom.style.top = ( y - Zh/2) + 'px';
