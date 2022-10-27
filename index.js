@@ -597,9 +597,11 @@ function QT001(){
 		  function onLoad () {
 		    ratio = img.naturalWidth / img.width;
 		    zoom.style.backgroundImage = 'url(' + img.src + ')';
-			  alert(img.src);
+			  
 		    Ix = img.offsetLeft;
 		    Iy = img.offsetTop;
+			  
+			  alert(Ix + "_" + Iy);
 		  }
 
 		  function onMousemove( e ) {
