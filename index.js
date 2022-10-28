@@ -603,7 +603,8 @@ function QT001(){
 
 		    //zoom.style.backgroundPosition = (( Ix - x ) * ratio + 0*Zw/2) + 'px ' + (( Iy - y ) * ratio + 0*Zh/2 ) + 'px';
 			 // zoom.style.backgroundPosition = (( Ix - x ) * ratio  + 1*Zw/4) + 'px ' + (( Iy - y ) * ratio + 1*Zh/2 ) + 'px';
-			zoom.style.backgroundPosition = (( Ix - x ) * ratio  + 1*Zw/4) + 'px ' + (( Iy - y ) * ratio + 1*Zh/4 ) + 'px';
+			//zoom.style.backgroundPosition = (( Ix - x ) * ratio  + 1*Zw/4) + 'px ' + (( Iy - y ) * ratio + 1*Zh/4 ) + 'px';
+			  zoom.style.backgroundPosition = (( Ix - x ) * ratio  + 1*Zw/4) + 'px ' + (( Iy - y ) * ratio + 0*Zh/4 ) + 'px';
 		  
 		  }
 
