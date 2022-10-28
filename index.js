@@ -596,7 +596,7 @@ function QT001(){
 			/*
 			  if (x - Ix<Zw/2) {
 				var v1a = ( x + Zw/2) + 'px';
-				var v2a = (( Ix - x ) * ratio  + 1*Zw/4 - 1*Zw/8 + 1*Zw/8) + 'px '
+				var v2a = (( Ix - x ) * ratio  + 1*Zw/4 - 1*Zw/8 ) + 'px '
 				
 			}  else {
 				  var v1a = ( x - Zw/2) + 'px'
@@ -615,7 +615,7 @@ function QT001(){
 			  
 			  if (x - Ix<Zw/2) {
 				var v1a = ( x + Zw/2) + 'px';
-				var v2a = (( Ix - x ) * ratio  + 1*Zw/4 - 1*Zw/8) + 'px '
+				var v2a = (( Ix - x ) * ratio  + 1*Zw/4 - 1*Zw/8 + 1*Zw/8) + 'px '
 				
 			}  else {
 				  var v1a = ( x - Zw/2) + 'px'
