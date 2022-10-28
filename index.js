@@ -636,7 +636,7 @@ function QT001(){
 			var v1a = ( x ) + 'px';
 			  var v1b = ( y ) + 'px';
 			  var v2a = (( Ix - x ) * ratio + Zw/2) + 'px ';
-			  var v2b = (( Iy - y ) * ratio - Zh/2) + 'px';
+			  var v2b = (( Iy - y ) * ratio + Zh/2) + 'px';
 			
 			  zoom.style.left = v1a;
 			  zoom.style.top = v1b;  
