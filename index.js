@@ -601,7 +601,7 @@ function QT001(){
 				var v2a = (( Ix - x ) * ratio  - 7*Zw/8 + 3*Zw/4) + 'px '
 			}
 			  
-			  if (y - Iy<3Zh/4) {
+			  if (y - Iy<3*Zh/4) {
 				  var v1b = ( y + Zh/2) + 'px';
 				var v2b = (( Iy - y ) * ratio + 1*Zh/4 ) + 'px';
 				
