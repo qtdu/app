@@ -921,7 +921,7 @@ label 				 {
 .zoom-container {
   text-align: center;
   margin: 3px auto 3px auto;
-	height: calc(var(--size-mau)/4);
+	height: calc(1.5*var(--size-mau)/4);
 	display: flex; 
 	justify-content: center; 
 	align-items: center; 
