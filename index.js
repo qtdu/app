@@ -580,6 +580,8 @@ function QT001(){
 
 		  function activate () {
 		    document.body.classList.add( 'active' );
+			try{ ratio = img.naturalWidth / img.width; }
+			catch(err) {ratio = 1;}
 		  }
 
 		  function deactivate() {
@@ -630,7 +632,7 @@ function QT001(){
 		
 		window.window['onLoadImage'] = function() {
 	
-		    ratio = img.naturalWidth / img.width;
+		    
 		    zoom.style.backgroundImage = 'url(' + img.src + ')';
 
 			  
