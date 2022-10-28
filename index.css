@@ -894,16 +894,20 @@ body.active .image2zoom {
   border: 1px solid rgba(255,255,255,0.2);
   -webkit-transition: -webkit-filter 500ms;
 height: calc(0.9*(var(--height-content) - 2 * var(--size-mau)/40 - var(--size-mau)/4));
+	object-fit: contain;
+	width:calc(0.9 * var(--width-content));
 }
+
+
 
 #zoom_image {
 	
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 250px;
-  height: 250px;
-  margin: -125px 0 0 -125px;
+  width: 200px;
+  height: 200px;
+  margin: -100px 0 0 -100px;
   background-repeat: no-repeat;
   box-shadow: 0 0 0 2px rgba(255,0,0,0.5),
     5px 5px 10px 5px rgba(0,0,0,0.2);
@@ -919,10 +923,4 @@ height: calc(0.9*(var(--height-content) - 2 * var(--size-mau)/40 - var(--size-ma
   -webkit-transform: scale(var(--scaleImage));
 }
 
-.image2zoom{
-	object-fit: contain;
 
-   width:calc(0.9 * var(--width-content));
-   height:calc(var(--height-content) - 2 * var(--size-mau)/40);
-   /*max-height:calc(var(--height-content) - 2 * var(--size-mau)/40);*/
-}
