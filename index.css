@@ -262,8 +262,10 @@ body{
 }
 
 .ReadQRcode_reader {
-	height: calc(var(--hesoReader) * var(--tyleReader) * 100vw);
-    	margin: calc(3*var(--margin_reader)) 0 0 0;
+	/*height: calc(var(--hesoReader) * var(--tyleReader) * 100vw);
+    	margin: calc(3*var(--margin_reader)) 0 0 0;*/
+	
+	height: 100vw;
 	background: white;
 	overflow: hidden;
 }
@@ -275,11 +277,13 @@ body{
 	justify-content: center; 
 	align-items: center; 
 	flex-direction: row;
+	display: none;
 }
 
 .ReadQRcode_result {
 	height: calc(var(--vh, 1vh) * 100 - 1.5 * var(--size-standard)/4 - var(--tyleReader) * 100vw - 2*var(--margin_reader));
 	overflow: hidden;
+	display: none;
 }
 
 .ReadQRcode_result_1 {
