@@ -650,7 +650,7 @@ function QT001(){
 		    //updateMagnifier( e.x, e.y );
 		    updateMagnifier( posX, posY );
 			
-			if(getEle(EID('content',[0,0,4,0].style.color == '')
+			if(getEle(EID('content'),[0,0,4,0]).style.color == '')
 		    		timeout = setTimeout( deactivate, 2500 );
 		  }
 
