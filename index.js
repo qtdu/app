@@ -594,7 +594,7 @@ function QT001(){
 
 			if (y - Iy>img.offsetHeight/2) {
 				var v1b = ( y - 3*Zh/2) + 'px';
-				var v2b = (( Iy - y ) * ratio + 1*Zh/4 ) + 'px';
+				var v2b = (( Iy - y ) * ratio + 1*Zh ) + 'px';
 			} else {
 				var v1b = ( y + Zh/2) + 'px';
 				var v2b = (( Iy - y ) * ratio + 1*Zh/4 ) + 'px';
@@ -602,7 +602,7 @@ function QT001(){
 			  
 			if (x - Ix>img.offsetWidth/2) {
 				var v1a = ( x - Zw/2) + 'px'
-				var v2a = (( Ix - x ) * ratio  + 1*Zw) + 'px '
+				var v2a = (( Ix - x ) * ratio  - 1*Zw) + 'px '
 			}  else {
 				var v1a = ( x + Zw/2) + 'px';
 				var v2a = (( Ix - x ) * ratio  + 1*Zw/4) + 'px '
