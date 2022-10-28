@@ -872,7 +872,7 @@ label 				 {
 
 .zoom-container {
   text-align: center;
-  margin: 10px auto 10px;
+  margin: 3px auto 3px auto;
 	height: calc(var(--size-mau)/4);
 }
 #zoomOutput {
@@ -888,7 +888,7 @@ body.active .image2zoom {
 
 .image2zoom {
   display: block;
-  margin: 20px auto;
+  margin: 0px auto 10px auto;
   
   border: 1px solid rgba(255,255,255,0.2);
   -webkit-transition: -webkit-filter 500ms;
