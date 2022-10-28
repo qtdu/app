@@ -594,7 +594,7 @@ function QT001(){
 
 			if (x - Ix>img.offsetWidth/2) {
 				var v1a = ( x - Zw/2) + 'px'
-				var v2a = (( Ix - x ) * ratio  - 7*Zw/8) + 'px '
+				var v2a = (( Ix - x ) * ratio  - 7*Zw/8 + 3*Zw/4) + 'px '
 			}  else {
 				var v1a = ( x + Zw/2) + 'px';
 				var v2a = (( Ix - x ) * ratio  + 1*Zw/4) + 'px '
