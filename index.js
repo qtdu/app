@@ -591,7 +591,7 @@ function QT001(){
 		    	Iy = EID('header').offsetHeight - ECN('content', 'zoom-container')[0].offsetHeight;
 			Zw = zoom.offsetWidth;
 		      Zh = zoom.offsetHeight;
-
+			/*
 			if (x - Ix>img.offsetWidth/2) {
 				var v1a = ( x - Zw/2) + 'px'
 				var v2a = (( Ix - x ) * ratio  - 7*Zw/8 + 3*Zw/4) + 'px '
@@ -606,6 +606,24 @@ function QT001(){
 			} else {
 				var v1b = ( y + Zh/2) + 'px';
 				var v2b = (( Iy - y ) * ratio + 1*Zh/4 ) + 'px';
+			}
+			  */
+			  if (x - Ix<Zw) {
+				var v1a = ( x + Zw/2) + 'px';
+				var v2a = (( Ix - x ) * ratio  + 1*Zw/4 - 1*Zw/8) + 'px '
+				
+			}  else {
+				  var v1a = ( x - Zw/2) + 'px'
+				var v2a = (( Ix - x ) * ratio  - 7*Zw/8 + 3*Zw/4) + 'px '
+			}
+			  
+			  if (y - Iy<Zh) {
+				  var v1b = ( y + Zh/2) + 'px';
+				var v2b = (( Iy - y ) * ratio + 1*Zh/4 ) + 'px';
+				
+			} else {
+				var v1b = ( y - 3*Zh/2) + 'px';
+				var v2b = (( Iy - y ) * ratio - 1*Zh/2 ) + 'px';
 			}
 			  
 			
