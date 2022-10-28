@@ -892,7 +892,7 @@ body.active .image2zoom {
   
   border: 1px solid rgba(255,255,255,0.2);
   -webkit-transition: -webkit-filter 500ms;
-height: calc(var(--height-content) - 2 * var(--size-mau)/40 - var(--size-mau)/4);
+height: calc(0.9*(var(--height-content) - 2 * var(--size-mau)/40 - var(--size-mau)/4));
 }
 
 #zoom_image {
