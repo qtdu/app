@@ -892,7 +892,7 @@ body.active .image2zoom {
 }
 
 .image2zoom {
-  /*display: block;*/
+  display: block;
   margin: 0px auto 10px auto;
 	padding-bottom: 10px;
   
@@ -901,11 +901,6 @@ body.active .image2zoom {
 height: calc(0.9*(var(--height-content) - 2 * var(--size-mau)/40 - var(--size-mau)/4));
 	object-fit: contain;
 	width:calc(0.9 * var(--width-content));
-	
-	display: flex; 
-	justify-content: center; 
-	align-items: flex-start; 
-	/*flex-direction: row;*/
 }
 
 
