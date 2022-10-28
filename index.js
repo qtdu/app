@@ -592,21 +592,23 @@ function QT001(){
 			Zw = zoom.offsetWidth;
 		      Zh = zoom.offsetHeight;
 
-			if (y - Iy>img.offsetHeight/2) {
+			if (x - Ix>img.offsetWidth/2) {
+				var v1a = ( x - Zw/2) + 'px'
+				var v2a = (( Ix - x ) * ratio  - 1*Zw/8) + 'px '
+			}  else {
+				var v1a = ( x + Zw/2) + 'px';
+				var v2a = (( Ix - x ) * ratio  + 1*Zw/4) + 'px '
+			}
+			  
+			  if (y - Iy>img.offsetHeight/2) {
 				var v1b = ( y - 3*Zh/2) + 'px';
-				var v2b = (( Iy - y ) * ratio + 1*Zh ) + 'px';
+				var v2b = (( Iy - y ) * ratio - 1*Zh ) + 'px';
 			} else {
 				var v1b = ( y + Zh/2) + 'px';
 				var v2b = (( Iy - y ) * ratio + 1*Zh/4 ) + 'px';
 			}
 			  
-			if (x - Ix>img.offsetWidth/2) {
-				var v1a = ( x - Zw/2) + 'px'
-				var v2a = (( Ix - x ) * ratio  - 1*Zw) + 'px '
-			}  else {
-				var v1a = ( x + Zw/2) + 'px';
-				var v2a = (( Ix - x ) * ratio  + 1*Zw/4) + 'px '
-			}
+			
 			  
 			
 			  zoom.style.left = v1a;
