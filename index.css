@@ -258,7 +258,7 @@ body{
 	background: white;
 	display: absolute;
 	left: 0;
-	/*top: var(--margin_reader);*/
+	top: var(--margin_reader);
 }
 
 .ReadQRcode_reader {
