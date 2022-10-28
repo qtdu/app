@@ -628,22 +628,11 @@ function QT001(){
 		  };
 		}  
 		
-		function onLoad () {
+		window.window['onLoadImage'] () {
 			
 		    ratio = img.naturalWidth / img.width;
 		    zoom.style.backgroundImage = 'url(' + img.src + ')';
 			  
-		    //Ix = img.offsetLeft;
-		    //Iy = img.offsetTop;
-			//Ix = getOffset(img).left - Zw/2;
-		    	//Iy = getOffset(img).top;
-			//Ix = (W - img.offsetWidth)/2 - Zw;
-		    	//Iy = EID('header').offsetHeight;
-			  
-			//alert(img.offsetWidth);
-			  //alert(Ix + "_" + Iy);
-			//alert(W + " - " + img.offsetWidth);
-			//alert(EID('header').offsetHeight);
 		  }
 
 		  function onMousemove( e ) {
@@ -695,7 +684,7 @@ function QT001(){
 		  //img.addEventListener( 'load', onLoad );
 			//img.addEventListener('load', onLoad, false);
 
-		onLoad();
+		window['onLoadImage']();
 		  img.addEventListener( 'mousemove', onMousemove );
 		  img.addEventListener( 'touchmove', onMousemove );
 
