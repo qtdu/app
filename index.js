@@ -592,8 +592,27 @@ function QT001(){
 			Zw = zoom.offsetWidth;
 		      Zh = zoom.offsetHeight;
 
-			 //if (y - Iy<img.offsetHeight/2) alert(y - Iy);
+			if (y - Iy>img.offsetHeight/2) {
+				var v1b = ( y - 3*Zh/2) + 'px';
+				var v2b = (( Iy - y ) * ratio + 0*Zh/4 ) + 'px';
+			} else {
+				var v1b = ( y + Zh/2) + 'px';
+				var v2b = (( Iy - y ) * ratio + 0*Zh/4 ) + 'px';
+			}
 			  
+			if (x - Ix>img.offsetWidth/2) {
+				var v1a = ( x - Zw/2) + 'px'
+				var v2a = (( Ix - x ) * ratio  + 1*Zw/4) + 'px '
+			}  else {
+				var v1a = ( x + Zw/2) + 'px';
+				var v2a = (( Ix - x ) * ratio  + 1*Zw/4) + 'px '
+			}
+			  
+			zoom.style.top = v1a;  
+			  zoom.style.left = v1b;
+			  zoom.style.backgroundPosition = v2a + v2b;
+			  
+			/*  
 			zoom.style.top = (y - Iy>img.offsetHeight/2) ? ( y - 3*Zh/2) + 'px' : ( y + Zh/2) + 'px';
 		    //zoom.style.top = ( y - Zh/2) + 'px';
 		    //zoom.style.left = ( x ) + 'px';
@@ -606,6 +625,7 @@ function QT001(){
 			zoom.style.backgroundPosition = (( Ix - x ) * ratio  + 1*Zw/4) + 'px ' + (( Iy - y ) * ratio + 1*Zh/4 ) + 'px';
 			  //zoom.style.backgroundPosition = (( Ix - x ) * ratio  + 1*Zw/4) + 'px ' + (( Iy - y ) * ratio + 0*Zh/4 ) + 'px';
 		  
+		  */
 		  }
 
 		function getOffset(el) {
