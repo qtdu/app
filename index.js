@@ -619,7 +619,7 @@ function QT001(){
 				
 			}  else {
 				  var v1a = ( x - Zw/2) + 'px'
-				var v2a = (( Ix - x ) * ratio  - 7*Zw/8 + 3*Zw/4 + 3*Zw/4 - Zw/8) + 'px '
+				var v2a = (( Ix - x ) * ratio  - 7*Zw/8 + 3*Zw/4 + 3*Zw/4 + Zw/8) + 'px '
 			}
 			  
 			  if (y - Iy<5*Zh/4) {
