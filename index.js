@@ -608,8 +608,9 @@ function QT001(){
 				var v2a = (( Ix - x ) * ratio  + 1*Zw/4) + 'px '
 			}
 			  
-			zoom.style.top = v1a;  
-			  zoom.style.left = v1b;
+			
+			  zoom.style.left = v1a;
+			  zoom.style.top = v1b;  
 			  zoom.style.backgroundPosition = v2a + v2b;
 			  
 			/*  
