@@ -254,14 +254,32 @@ body{
 .ReadQRcode_reader {
 	height: calc(2*var(--size-standard));
 	background: green;
+	overflow: hidden;
 }
 
 .ReadQRcode_button {
 	height: calc(1.5*var(--size-standard)/4);
 	background: blue;
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+	flex-direction: row;
 }
 
 .ReadQRcode_result {
+	height: calc(var(--vh, 1vh) * 100 - 9.5 * var(--size-standard)/4);
+	overflow: hidden;
+}
+
+.ReadQRcode_result_1 {
+	height: calc(var(--vh, 1vh) * 100 - 9.5 * var(--size-standard)/4);
+	background: brown;
+}
+.ReadQRcode_result_2 {
+	height: calc(var(--vh, 1vh) * 100 - 9.5 * var(--size-standard)/4);
+	background: brown;
+}
+.ReadQRcode_result_3 {
 	height: calc(var(--vh, 1vh) * 100 - 9.5 * var(--size-standard)/4);
 	background: brown;
 }
