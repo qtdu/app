@@ -256,11 +256,14 @@ body{
 	width: 100vw;
 	height: calc(var(--vh, 1vh) * 100);
 	background: white;
+	display: absolute;
+	left: 0;
+	top: var(--margin_reader);
 }
 
 .ReadQRcode_reader {
 	height: calc(var(--hesoReader) * var(--tyleReader) * 100vw);
-    	margin: var(--margin_reader) 0 var(--margin_reader) 0;
+    	/*margin: var(--margin_reader) 0 var(--margin_reader) 0;*/
 	background: white;
 	overflow: hidden;
 }
