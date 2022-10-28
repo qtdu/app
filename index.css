@@ -258,12 +258,12 @@ body{
 	background: white;
 	display: absolute;
 	left: 0;
-	top: var(--margin_reader);
+	/*top: var(--margin_reader);*/
 }
 
 .ReadQRcode_reader {
 	height: calc(var(--hesoReader) * var(--tyleReader) * 100vw);
-    	/*margin: var(--margin_reader) 0 var(--margin_reader) 0;*/
+    	margin: calc(2*var(--margin_reader)) 0 var(--margin_reader) 0;
 	background: white;
 	overflow: hidden;
 }
