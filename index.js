@@ -628,7 +628,7 @@ function QT001(){
 				
 			} else {
 				var v1b = ( y - 3*Zh/2) + 'px';
-				var v2b = (( Iy - y ) * ratio - 1*Zh/2 ) + 'px';
+				var v2b = (( Iy - y ) * ratio - 1*Zh/2 - Zh) + 'px';
 			}
 			  
 			
