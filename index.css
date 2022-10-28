@@ -918,9 +918,9 @@ max-height: calc(0.9*(var(--height-content) - 2 * var(--size-mau)/40 - var(--siz
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 200px;
-  height: 200px;
-  margin: -100px 0 0 -100px;
+  width: 100px;
+  height: 100px;
+  margin: -50px 0 0 -50px;
   background-repeat: no-repeat;
   box-shadow: 0 0 0 2px rgba(255,0,0,0.5),
     5px 5px 10px 5px rgba(0,0,0,0.2);
