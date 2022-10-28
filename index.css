@@ -889,6 +889,7 @@ body.active .image2zoom {
 .image2zoom {
   display: block;
   margin: 0px auto 10px auto;
+	padding-bottom: 10px;
   
   border: 1px solid rgba(255,255,255,0.2);
   -webkit-transition: -webkit-filter 500ms;
