@@ -252,17 +252,17 @@ body{
 }
 
 .ReadQRcode_reader {
-	height: calc(2*var(--width-content));
+	height: calc(2*var(--size-standard));
 	background: green;
 }
 
 .ReadQRcode_button {
-	height: calc(var(--width-content)/4);
+	height: calc(1.5*var(--size-standard)/4);
 	background: blue;
 }
 
 .ReadQRcode_result {
-	height: calc(var(--vh, 1vh) * 100 - 9*var(--size-mau)/4);
+	height: calc(var(--vh, 1vh) * 100 - 9.5 * var(--size-standard)/4);
 	background: brown;
 }
 
