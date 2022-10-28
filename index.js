@@ -602,7 +602,7 @@ function QT001(){
 			  
 			  if (y - Iy>img.offsetHeight/2) {
 				var v1b = ( y - 3*Zh/2) + 'px';
-				var v2b = (( Iy - y ) * ratio + 1*Zh/2 ) + 'px';
+				var v2b = (( Iy - y ) * ratio - 1*Zh/2 ) + 'px';
 			} else {
 				var v1b = ( y + Zh/2) + 'px';
 				var v2b = (( Iy - y ) * ratio + 1*Zh/4 ) + 'px';
