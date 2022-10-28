@@ -612,7 +612,8 @@ function QT001(){
 				var v2b = (( Iy - y ) * ratio - 1*Zh/2 ) + 'px';
 			}
 			  */
-			  
+			 
+			  /*
 			  if (x - Ix<Zw/2) {
 				var v1a = ( x + Zw/2) + 'px';
 				var v2a = (( Ix - x ) * ratio  + 1*Zw/4 - 1*Zw/8 + 1*Zw/8) + 'px '
@@ -630,9 +631,12 @@ function QT001(){
 				var v1b = ( y - 3*Zh/2) + 'px';
 				var v2b = (( Iy - y ) * ratio - 1*Zh/2 + Zh) + 'px';
 			}
+			*/
 			  
-			
-			  
+			var v1a = ( x ) + 'px';
+			  var v1b = ( y ) + 'px';
+			  var v2a = (( Ix - x ) * ratio + Zw/2) + 'px ';
+			  var v2b = (( Iy - y ) * ratio - Zh/2) + 'px';
 			
 			  zoom.style.left = v1a;
 			  zoom.style.top = v1b;  
