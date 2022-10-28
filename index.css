@@ -272,15 +272,15 @@ body{
 }
 
 .ReadQRcode_result_1 {
-	height: calc(var(--vh, 1vh) * 100 - 9.5 * var(--size-standard)/4);
+	height: calc(var(--vh, 1vh) * 100 - 7 * var(--size-standard)/4);
 	background: brown;
 }
 .ReadQRcode_result_2 {
-	height: calc(var(--vh, 1vh) * 100 - 9.5 * var(--size-standard)/4);
+	height: calc(var(--vh, 1vh) * 100 - 7 * var(--size-standard)/4);
 	background: brown;
 }
 .ReadQRcode_result_3 {
-	height: calc(var(--vh, 1vh) * 100 - 9.5 * var(--size-standard)/4);
+	height: calc(var(--vh, 1vh) * 100 - 7 * var(--size-standard)/4);
 	background: brown;
 }
 
