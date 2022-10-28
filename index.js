@@ -628,10 +628,11 @@ function QT001(){
 		  };
 		}  
 		
-		window.window['onLoadImage'] () {
-			
+		window.window['onLoadImage'] = function() {
+	
 		    ratio = img.naturalWidth / img.width;
 		    zoom.style.backgroundImage = 'url(' + img.src + ')';
+
 			  
 		  }
 
