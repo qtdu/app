@@ -892,10 +892,11 @@ body.active .image2zoom {
 }
 
 .image2zoom_container {
-	display: flex; 
+	/*display: flex; 
 	justify-content: center; 
-	align-items: flex-start; 
+	align-items: flex-start; */
 	/*flex-direction: row;*/
+	height: calc(0.9*(var(--height-content) - 2 * var(--size-mau)/40 - var(--size-mau)/4));
 }
 
 .image2zoom {
@@ -905,7 +906,7 @@ body.active .image2zoom {
   
   border: 1px solid rgba(255,255,255,0.2);
   -webkit-transition: -webkit-filter 500ms;
-height: calc(0.9*(var(--height-content) - 2 * var(--size-mau)/40 - var(--size-mau)/4));
+max-height: calc(0.9*(var(--height-content) - 2 * var(--size-mau)/40 - var(--size-mau)/4));
 	object-fit: contain;
 	width:calc(0.9 * var(--width-content));
 }
