@@ -591,24 +591,8 @@ function QT001(){
 		    	Iy = EID('header').offsetHeight - ECN('content', 'zoom-container')[0].offsetHeight;
 			Zw = zoom.offsetWidth;
 		      Zh = zoom.offsetHeight;
-			/*
-			if (x - Ix>img.offsetWidth/2) {
-				var v1a = ( x - Zw/2) + 'px'
-				var v2a = (( Ix - x ) * ratio  - 7*Zw/8 + 3*Zw/4) + 'px '
-			}  else {
-				var v1a = ( x + Zw/2) + 'px';
-				var v2a = (( Ix - x ) * ratio  + 1*Zw/4 - 1*Zw/8) + 'px '
-			}
-			  
-			  if (y - Iy>img.offsetHeight/2) {
-				var v1b = ( y - 3*Zh/2) + 'px';
-				var v2b = (( Iy - y ) * ratio - 1*Zh/2 ) + 'px';
-			} else {
-				var v1b = ( y + Zh/2) + 'px';
-				var v2b = (( Iy - y ) * ratio + 1*Zh/4 ) + 'px';
-			}
-			  */
-			  if (x - Ix<Zw) {
+
+			  if (x - Ix<Zw/2) {
 				var v1a = ( x + Zw/2) + 'px';
 				var v2a = (( Ix - x ) * ratio  + 1*Zw/4 - 1*Zw/8) + 'px '
 				
@@ -617,7 +601,7 @@ function QT001(){
 				var v2a = (( Ix - x ) * ratio  - 7*Zw/8 + 3*Zw/4) + 'px '
 			}
 			  
-			  if (y - Iy<Zh) {
+			  if (y - Iy<3Zh/4) {
 				  var v1b = ( y + Zh/2) + 'px';
 				var v2b = (( Iy - y ) * ratio + 1*Zh/4 ) + 'px';
 				
@@ -633,20 +617,7 @@ function QT001(){
 			  zoom.style.top = v1b;  
 			  zoom.style.backgroundPosition = v2a + v2b;
 			  
-			/*  
-			zoom.style.top = (y - Iy>img.offsetHeight/2) ? ( y - 3*Zh/2) + 'px' : ( y + Zh/2) + 'px';
-		    //zoom.style.top = ( y - Zh/2) + 'px';
-		    //zoom.style.left = ( x ) + 'px';
-		    zoom.style.left = (x - Ix>img.offsetWidth/2) ? ( x - Zw/2) + 'px' : ( x + Zw/2) + 'px';
-			  //zoom.style.top = ( y - Zh) + 'px';
-			  //zoom.style.left = ( x - Zw) + 'px';
 
-		    //zoom.style.backgroundPosition = (( Ix - x ) * ratio + 0*Zw/2) + 'px ' + (( Iy - y ) * ratio + 0*Zh/2 ) + 'px';
-			 // zoom.style.backgroundPosition = (( Ix - x ) * ratio  + 1*Zw/4) + 'px ' + (( Iy - y ) * ratio + 1*Zh/2 ) + 'px';
-			zoom.style.backgroundPosition = (( Ix - x ) * ratio  + 1*Zw/4) + 'px ' + (( Iy - y ) * ratio + 1*Zh/4 ) + 'px';
-			  //zoom.style.backgroundPosition = (( Ix - x ) * ratio  + 1*Zw/4) + 'px ' + (( Iy - y ) * ratio + 0*Zh/4 ) + 'px';
-		  
-		  */
 		  }
 
 		function getOffset(el) {
