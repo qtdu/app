@@ -3,6 +3,13 @@ function ECN(target,NameClass) {
 	var ele = document || EID(target) || target;
 	return ele.getElementsByClassName(NameClass);
 }
+function getEle(ele, arr) {
+    for(var i=0; i<arr.length; i++){
+      if (arr[i] == -1) { var ele = ele.parentElement; continue; }
+      var ele = ele.children[arr[i]];
+    }
+    return ele;
+}
 var root;
 var thietbi;
 var test = "w3s";
@@ -642,8 +649,9 @@ function QT001(){
 		    activate();
 		    //updateMagnifier( e.x, e.y );
 		    updateMagnifier( posX, posY );
-
-		    timeout = setTimeout( deactivate, 2500 );
+			
+			if(getEle(EID('content',[0,0,4,0].style.color != 'blue')
+		    		timeout = setTimeout( deactivate, 2500 );
 		  }
 
 		  function onMouseleave () {
