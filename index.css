@@ -874,6 +874,11 @@ label 				 {
   text-align: center;
   margin: 3px auto 3px auto;
 	height: calc(var(--size-mau)/4);
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+	flex-direction: row;
+	
 }
 #zoomOutput {
   min-width: 40px;
