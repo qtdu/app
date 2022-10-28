@@ -891,6 +891,13 @@ body.active .image2zoom {
   
 }
 
+.image2zoom_container {
+	display: flex; 
+	justify-content: center; 
+	align-items: flex-start; 
+	/*flex-direction: row;*/
+}
+
 .image2zoom {
   display: block;
   margin: 0px auto 10px auto;
