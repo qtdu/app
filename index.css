@@ -245,60 +245,9 @@ body{
 	
 }
 
-/*Dành cho QRCode*/
-:root {
-	--hesoReader: 1.5;
-	--tyleReader: 0.5;
-	--margin_reader: calc(-1 * (100vw - var(--tyleReader)*100vw)/4);
-}
 
-.ReadQRcode {
-	width: 100vw;
-	height: calc(var(--vh, 1vh) * 100);
-	background: white;
-	display: absolute;
-	left: 0;
-	
-}
 
-.ReadQRcode_reader {
-	/*height: calc(var(--hesoReader) * var(--tyleReader) * 100vw);
-    	margin: calc(4*var(--margin_reader)) 0 0 0;*/
-	
-	margin: calc(1*var(--margin_reader)) 0 0 0;
-	height: 100vw;
-	background: white;
-	overflow: hidden;
-}
 
-.ReadQRcode_button {
-	height: calc(1.5*var(--size-standard)/4);
-	background: white;
-	display: flex; 
-	justify-content: center; 
-	align-items: center; 
-	flex-direction: row;
-	display: none;
-}
-
-.ReadQRcode_result {
-	height: calc(var(--vh, 1vh) * 100 - 1.5 * var(--size-standard)/4 - var(--tyleReader) * 100vw - 2*var(--margin_reader));
-	overflow: hidden;
-	display: none;
-}
-
-.ReadQRcode_result_1 {
-	height: calc(var(--vh, 1vh) * 100 - 1.5 * var(--size-standard)/4 - var(--tyleReader) * 100vw - 2*var(--margin_reader));
-	background: brown;
-}
-.ReadQRcode_result_2 {
-	height: calc(var(--vh, 1vh) * 100 - 1.5 * var(--size-standard)/4 - var(--tyleReader) * 100vw - 2*var(--margin_reader));
-	background: brown;
-}
-.ReadQRcode_result_3 {
-	height: calc(var(--vh, 1vh) * 100 - 1.5 * var(--size-standard)/4 - var(--tyleReader) * 100vw - 2*var(--margin_reader));
-	background: brown;
-}
 
 
 .Alert_khung, .Control_khung, .Login_khung {
