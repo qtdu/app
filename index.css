@@ -163,7 +163,7 @@ body{
 }
 
 .doc {
-    	z-index: 100000;
+    	z-index: 93000;
     	display: var(--display-doc);
 }
 		
@@ -179,7 +179,7 @@ body{
 }
 
 .VirtualButton {
-	z-index: 99000;
+	z-index: 92000;
 	width: var(--width-31G); 
 	height: var(--width-31G);
 	font-size: var(--font-size-31G); 
