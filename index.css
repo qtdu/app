@@ -263,7 +263,7 @@ body{
 
 .ReadQRcode_reader {
 	/*height: calc(var(--hesoReader) * var(--tyleReader) * 100vw);
-    	margin: calc(3*var(--margin_reader)) 0 0 0;*/
+    	margin: calc(4*var(--margin_reader)) 0 0 0;*/
 	
 	margin: calc(1*var(--margin_reader)) 0 0 0;
 	height: 100vw;
