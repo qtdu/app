@@ -877,7 +877,7 @@ label 				 {
 
 .zoom-container {
   text-align: center;
-  margin: 3px auto 3px auto;
+  margin: 7px auto 7px auto;
 	height: calc(1.5*var(--size-mau)/4);
 	display: flex; 
 	justify-content: center; 
