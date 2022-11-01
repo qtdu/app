@@ -566,7 +566,7 @@ function QT001(){
 		});
 
 		function showZoomOutput() {
-		  outputElm.innerText = 'x' + zoomElm.value;
+		  outputElm.innerText = 'tỷ lệ phóng x' + zoomElm.value;
 		}
 		// show initial Zoom Level
 		showZoomOutput();
