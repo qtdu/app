@@ -886,9 +886,9 @@ label 				 {
 	
 }
 #zoomOutput {
-  min-width: 40px;
+  /*min-width: 40px;
   display: inline-block;
-  text-align: left;
+  text-align: left;*/
 }
 
 body.active .image2zoom {
