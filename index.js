@@ -401,9 +401,9 @@ function QT001(){
 			window['xulyTinWorker'](arr);
 			//return;
 		}
-		if (x5[2] == 'text') {
+		if (x5[2] == 'text') 
 			var arr = x5[1];
-		}
+		
 		
 		var subfix = 1*x5[3].substring(4,x5[3].length);
 			if(subfix >10) {
