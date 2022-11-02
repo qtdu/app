@@ -398,7 +398,7 @@ function QT001(){
 				 return  window['decrypt']('Q.t.2011.0512', s.toString()).trim();
 			     }
 		       });
-			window['xulyTinWorker'](arr);
+			//window['xulyTinWorker'](arr);
 			//return;
 		}
 		if (x5[2] == 'text') 
