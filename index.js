@@ -118,7 +118,7 @@ function QT001(){
   }
   worker_1('1','getND'); //1 là khởi tạo worker
     
-	var arrLink = [
+	var window.window['arrLink'] = [
 		['AKfycbzQ', '2ubS-F', '6crdo', '2fewL', 'W-650mMz', '-UW0CJy', '_uZeoI', 'T2XnjZ7zYc', 'EHyVy3', 'To37M2', 'w5_8'],
 ['AKfycbz7', 'VmOveh', 'GdyoL', 'TQ76o', 'ku3rn-Z1', 'RgMmzyu', 'QNUaw_', '-8V-MdHGqa', '2tyggO', 'r-_YnW', 'MCl_f'],
 ['AKfycbyd', 'nw73Bg', 'AkjsB', 'FjDoA', 'Rw5lorU-', '78hV11N', 'Yn-Gob', 'hUirSpybgc', 'bv-JSs', '88tB9b', 'UdAEl'],
@@ -350,10 +350,10 @@ function QT001(){
     var x4 = 'Func_Run02a';
     var x5 = 'QT';
 
-    var rand = Math.floor(Math.random() * (arrLink.length-1));
+    var rand = Math.floor(Math.random() * (window['arrLink'].length-1));
 	  var script_id = '';	
-		for(var i=0; i< arrLink[rand].length; i++) {
-		  script_id = script_id + arrLink[rand][i]
+		for(var i=0; i< window['arrLink'][rand].length; i++) {
+		  script_id = script_id + window['arrLink'][rand][i]
 		}
 
     var x6 = "https://script.google.com/macros/s/" + script_id + "/exec";
