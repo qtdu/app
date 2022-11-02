@@ -398,9 +398,9 @@ function QT001(){
 				 return  window['decrypt']('Q.t.2011.0512', s.toString()).trim();
 			     }
 		       });
-			window['xulyTinWorker'](arr);
+			//window['xulyTinWorker'](arr);
 		}
-		if (x5[2] == 'text') {
+		if (x5[2] == 'text') 
 			var arr = x5[1];
 			var subfix = 1*x5[3].substring(4,x5[3].length);
 			if(subfix >10) {
@@ -464,7 +464,7 @@ function QT001(){
 				window['func_' + pr]('OK');
 			}
 			
-		} 
+		
   	}
 	
 	function XulyFunc(arr) {
