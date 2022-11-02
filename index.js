@@ -118,7 +118,7 @@ function QT001(){
   }
   worker_1('1','getND'); //1 là khởi tạo worker
     
-	var window.window['arrLink'] = [
+	window.window['arrLink'] = [
 		['AKfycbzQ', '2ubS-F', '6crdo', '2fewL', 'W-650mMz', '-UW0CJy', '_uZeoI', 'T2XnjZ7zYc', 'EHyVy3', 'To37M2', 'w5_8'],
 ['AKfycbz7', 'VmOveh', 'GdyoL', 'TQ76o', 'ku3rn-Z1', 'RgMmzyu', 'QNUaw_', '-8V-MdHGqa', '2tyggO', 'r-_YnW', 'MCl_f'],
 ['AKfycbyd', 'nw73Bg', 'AkjsB', 'FjDoA', 'Rw5lorU-', '78hV11N', 'Yn-Gob', 'hUirSpybgc', 'bv-JSs', '88tB9b', 'UdAEl'],
