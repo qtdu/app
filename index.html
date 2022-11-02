@@ -120,79 +120,81 @@
 			
 			<div id='ReadQRcode_reader' class='ReadQRcode_reader'></div>
 			
-			<div class='ReadQRcode_button'>
-
-				<select name="ReadQRcode_select" id="ReadQRcode_select" style="font-size: 18px; padding: 5px 2px 5px 2px; width: calc(4*var(--size-standard)/4)"></select>
-
-				<span class="fa-stack">
-					<i class="fa-regular fa-square fa-stack-2x" style='color: green'></i>
-					<i class="fa-solid fa-barcode fa-stack-1x" style="color: green; cursor: pointer;"></i>
-				</span>
-				<span class="fa-stack">
-					<i class="fa-regular fa-square fa-stack-2x" style='color: brown'></i>
-					<i class="fa-regular fa-image fa-stack-1x" style="color: brown; cursor: pointer;"></i>
-				</span>
-				<span class="fa-stack">
-					<i class="fa-regular fa-square fa-stack-2x" style='color: blue'></i>
-					<i class="fa-solid fa-pause fa-stack-1x" style="color: blue; cursor: pointer;"></i>
-				</span>
-
-				<span class="fa-stack">
-					<i class="fa-regular fa-square fa-stack-2x" style='color: green'></i>
-					<i class="fa-regular fa-paste fa-stack-1x" style='color: green; cursor: pointer;'></i>
-				</span>
-				
-
-
-			</div>
-			<div class='ReadQRcode_button'>
-				<span class="fa-stack">
-					<i class="fa-regular fa-square fa-stack-2x" style='color: green'></i>
-					<i class="fa-solid fa-maximize fa-stack-1x" style='color: green; cursor: pointer;'></i>
-				</span>
-				<span class="fa-stack">
-					<i class="fa-regular fa-square fa-stack-2x" style='color: white'></i>
-				</span>
-				<span class="fa-stack">
-					<i class="fa-regular fa-square fa-stack-2x" style='color: green'></i>
-					<i class="fa-regular fa-trash-can fa-stack-1x" style='color: green; cursor: pointer;'></i>
-				</span>
-				
-				<input type="text" id="IDGoogle1e" style='width: 150px; font-size: 22px;'>
-
-				<span class="fa-stack">
-					<i class="fa-regular fa-square fa-stack-2x" style='color: green'></i>
-					<i class="fa-solid fa-retweet fa-stack-1x" style='color: green; cursor: pointer;'></i>
-				</span>
-
-				<span class="fa-stack">
-					<i class="fa-regular fa-square fa-stack-2x" style='color: white'></i>
-				</span>
-				<span class="fa-stack">
-					<i class="fa-regular fa-square fa-stack-2x" style='color: red'></i>
-					<i class="fa-solid fa-xmark fa-stack-1x" style="color: red; cursor: pointer;"></i>
-				</span>
-								
-			</div>
-			<div class='ReadQRcode_button'>
-				
-				<input type="text" id="IDGoogle1a" style='width: 100px; font-size: 22px;'>
-				<span class="fa-stack">
-					<i class="fa-regular fa-square fa-stack-2x" style='color: orange'></i>
-					<i class="fa-solid fa-file-import fa-stack-1x" style="color: orange; cursor: pointer;"></i>
-				</span>
-				<input type="text" id="IDGoogle1b" style='width: 100px; font-size: 22px;'>
-				<span class="fa-stack">
-					<i class="fa-regular fa-square fa-stack-2x" style='color: purple'></i>
-					<i class="fa-solid fa-file-export fa-stack-1x" style="color: purple; cursor: pointer;"></i>
-				</span>
-				<select name="ReadQRcode_select" id="ReadQRcode_select" style="font-size: 18px; padding: 5px 2px 5px 2px; width: 100px"></select>
-
-				
-								
-			</div>
+			<div id ='ReadQRcode_button_parent' class='ReadQRcode_button_parent'>
 			
+				<div class='ReadQRcode_button'>
+
+					<select name="ReadQRcode_select" id="ReadQRcode_select" style="font-size: 18px; padding: 5px 2px 5px 2px; width: calc(4*var(--size-standard)/4)"></select>
+
+					<span class="fa-stack">
+						<i class="fa-regular fa-square fa-stack-2x" style='color: green'></i>
+						<i class="fa-solid fa-barcode fa-stack-1x" style="color: green; cursor: pointer;"></i>
+					</span>
+					<span class="fa-stack">
+						<i class="fa-regular fa-square fa-stack-2x" style='color: brown'></i>
+						<i class="fa-regular fa-image fa-stack-1x" style="color: brown; cursor: pointer;"></i>
+					</span>
+					<span class="fa-stack">
+						<i class="fa-regular fa-square fa-stack-2x" style='color: blue'></i>
+						<i class="fa-solid fa-pause fa-stack-1x" style="color: blue; cursor: pointer;"></i>
+					</span>
+
+					<span class="fa-stack">
+						<i class="fa-regular fa-square fa-stack-2x" style='color: green'></i>
+						<i class="fa-regular fa-paste fa-stack-1x" style='color: green; cursor: pointer;'></i>
+					</span>
+
+
+
+				</div>
+				<div class='ReadQRcode_button'>
+					<span class="fa-stack">
+						<i class="fa-regular fa-square fa-stack-2x" style='color: green'></i>
+						<i class="fa-solid fa-maximize fa-stack-1x" style='color: green; cursor: pointer;'></i>
+					</span>
+					<span class="fa-stack">
+						<i class="fa-regular fa-square fa-stack-2x" style='color: white'></i>
+					</span>
+					<span class="fa-stack">
+						<i class="fa-regular fa-square fa-stack-2x" style='color: green'></i>
+						<i class="fa-regular fa-trash-can fa-stack-1x" style='color: green; cursor: pointer;'></i>
+					</span>
+
+					<input type="text" id="IDGoogle1e" style='width: 150px; font-size: 22px;'>
+
+					<span class="fa-stack">
+						<i class="fa-regular fa-square fa-stack-2x" style='color: green'></i>
+						<i class="fa-solid fa-retweet fa-stack-1x" style='color: green; cursor: pointer;'></i>
+					</span>
+
+					<span class="fa-stack">
+						<i class="fa-regular fa-square fa-stack-2x" style='color: white'></i>
+					</span>
+					<span class="fa-stack">
+						<i class="fa-regular fa-square fa-stack-2x" style='color: red'></i>
+						<i class="fa-solid fa-xmark fa-stack-1x" style="color: red; cursor: pointer;"></i>
+					</span>
+
+				</div>
+				<div class='ReadQRcode_button'>
+
+					<input type="text" id="IDGoogle1a" style='width: 100px; font-size: 22px;'>
+					<span class="fa-stack">
+						<i class="fa-regular fa-square fa-stack-2x" style='color: orange'></i>
+						<i class="fa-solid fa-file-import fa-stack-1x" style="color: orange; cursor: pointer;"></i>
+					</span>
+					<input type="text" id="IDGoogle1b" style='width: 100px; font-size: 22px;'>
+					<span class="fa-stack">
+						<i class="fa-regular fa-square fa-stack-2x" style='color: purple'></i>
+						<i class="fa-solid fa-file-export fa-stack-1x" style="color: purple; cursor: pointer;"></i>
+					</span>
+					<select name="ReadQRcode_select" id="ReadQRcode_select" style="font-size: 18px; padding: 5px 2px 5px 2px; width: 100px"></select>
+
+
+
+				</div>
 			
+			</div>
 			
 			
 			
