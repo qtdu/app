@@ -371,7 +371,7 @@ function QT001(){
     pr = (pr==null) ? "Main" : pr;
 		
     x6 = x6 + "?para1=F001"; 
-    x6 = x6+ "&para2=" + "GETSHEET"; //loại
+    x6 = x6+ "&para2=" + "GETFUNCTION"; //loại
     x6 = x6 + "]QQQ["  + 'Function_thuquang'; //id sheet (nếu có)
     x6 = x6 + "]QQQ["  + "none"; //sheet name (nếu có)
     x6 = x6 + "]QQQ["  + co; //tên công ty
