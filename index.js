@@ -798,78 +798,6 @@ function QT001(){
 		}
 		ZoomImage();
 	
-		function Q002() {
-			//navigator.mediaDevices.getUserMedia({video: true});
-	
-			var quyen = [['vitri','Đọc clipboard','Ghi clipboard'],
-				     [0,0,0]
-				    ];
-			var myInterval = setInterval(Q002b, 2000);
-			Q002b();
-
-
-			function Q002b() {
-				/*
-				navigator.permissions.query({ name: 'camera' }).then((permissionStatus1) => {
-						if(permissionStatus1.state == 'granted') {
-							quyen[1][0] = 1;
-						} else {
-							//EID('doc').style.display = 'block';
-							//EID('HuongDan').innerHTML = 'Do chương trình sử dụng tính năng dọc barcode nên bạn phải bật camera và cho phép truy cập camera, chương trình mới hoạt động. Xin cảm ơn';
-							//EID('HuongDan').style.display = 'block';
-						}
-						permissionStatus1.onchange = () => {
-							if(batdau == false)
-								location.reload(true);
-						}
-					});
-				*/
-				navigator.permissions.query({ name: 'geolocation' }).then((permissionStatus2) => {
-						if(permissionStatus2.state == 'granted') {
-							quyen[1][0] = 1;
-						} else {
-							EID('doc').style.display = 'block';
-							EID('HuongDan').innerHTML = 'Do chương trình sử dụng tính năng tracking đơn hàng nên bạn phải bật định vị và cho phép truy cập định vị, chương trình mới hoạt động. Xin cảm ơn';
-							EID('HuongDan').style.display = 'block';
-						}
-						permissionStatus2.onchange = () => {
-							if(batdau == false)
-								location.reload(true);
-						}
-					});
-					navigator.permissions.query({ name: 'clipboard-write' }).then((permissionStatus3) => {
-						if(permissionStatus3.state == 'granted') {
-							quyen[1][1] = 1;
-						}else {
-							EID('doc').style.display = 'block';
-							EID('HuongDan').innerHTML = 'Do chương trình sử dụng tính năng copy vào bảng nhớ tạm để thao tác nhanh hơn nên bạn phải bật tính năng bảng nhớ tạm, chương trình mới hoạt động. Xin cảm ơn';
-							EID('HuongDan').style.display = 'block';
-						}
-						permissionStatus3.onchange = () => {
-							if(batdau == false)
-								location.reload(true);
-						}
-					});
-					navigator.permissions.query({ name: 'clipboard-read' }).then((permissionStatus4) => {
-						if(permissionStatus4.state == 'granted') {
-							quyen[1][2] = 1;
-						}else {
-							EID('doc').style.display = 'block';
-							EID('HuongDan').innerHTML = 'Do chương trình sử dụng tính năng copy vào bảng nhớ tạm để thao tác nhanh hơn nên bạn phải bật tính năng bảng nhớ tạm, chương trình mới hoạt động. Xin cảm ơn';
-							EID('HuongDan').style.display = 'block';
-						}
-						permissionStatus4.onchange = () => {
-							if(batdau == false)
-								location.reload(true);
-						}
-					});
-
-					if(quyen[1].indexOf(0)<0) {
-						Q003();
-					}
-			}
-		}
-
 		function Q003() {
 			clearInterval(myInterval);
 			//if (EID("Geo").innerHTML!=""){
@@ -1115,6 +1043,80 @@ function QT001(){
 					//ketthuc ham getcapcha
 				//}
 		}
+	
+		function Q002() {
+			alert(1);
+			//navigator.mediaDevices.getUserMedia({video: true});
+	
+			var quyen = [['vitri','Đọc clipboard','Ghi clipboard'],
+				     [0,0,0]
+				    ];
+			
+			function Q002b() {
+				/*
+				navigator.permissions.query({ name: 'camera' }).then((permissionStatus1) => {
+						if(permissionStatus1.state == 'granted') {
+							quyen[1][0] = 1;
+						} else {
+							//EID('doc').style.display = 'block';
+							//EID('HuongDan').innerHTML = 'Do chương trình sử dụng tính năng dọc barcode nên bạn phải bật camera và cho phép truy cập camera, chương trình mới hoạt động. Xin cảm ơn';
+							//EID('HuongDan').style.display = 'block';
+						}
+						permissionStatus1.onchange = () => {
+							if(batdau == false)
+								location.reload(true);
+						}
+					});
+				*/
+				navigator.permissions.query({ name: 'geolocation' }).then((permissionStatus2) => {
+						if(permissionStatus2.state == 'granted') {
+							quyen[1][0] = 1;
+						} else {
+							EID('doc').style.display = 'block';
+							EID('HuongDan').innerHTML = 'Do chương trình sử dụng tính năng tracking đơn hàng nên bạn phải bật định vị và cho phép truy cập định vị, chương trình mới hoạt động. Xin cảm ơn';
+							EID('HuongDan').style.display = 'block';
+						}
+						permissionStatus2.onchange = () => {
+							if(batdau == false)
+								location.reload(true);
+						}
+					});
+					navigator.permissions.query({ name: 'clipboard-write' }).then((permissionStatus3) => {
+						if(permissionStatus3.state == 'granted') {
+							quyen[1][1] = 1;
+						}else {
+							EID('doc').style.display = 'block';
+							EID('HuongDan').innerHTML = 'Do chương trình sử dụng tính năng copy vào bảng nhớ tạm để thao tác nhanh hơn nên bạn phải bật tính năng bảng nhớ tạm, chương trình mới hoạt động. Xin cảm ơn';
+							EID('HuongDan').style.display = 'block';
+						}
+						permissionStatus3.onchange = () => {
+							if(batdau == false)
+								location.reload(true);
+						}
+					});
+					navigator.permissions.query({ name: 'clipboard-read' }).then((permissionStatus4) => {
+						if(permissionStatus4.state == 'granted') {
+							quyen[1][2] = 1;
+						}else {
+							EID('doc').style.display = 'block';
+							EID('HuongDan').innerHTML = 'Do chương trình sử dụng tính năng copy vào bảng nhớ tạm để thao tác nhanh hơn nên bạn phải bật tính năng bảng nhớ tạm, chương trình mới hoạt động. Xin cảm ơn';
+							EID('HuongDan').style.display = 'block';
+						}
+						permissionStatus4.onchange = () => {
+							if(batdau == false)
+								location.reload(true);
+						}
+					});
+
+					if(quyen[1].indexOf(0)<0) {
+						Q003();
+					}
+			}
+			var myInterval = setInterval(Q002b, 2000);
+			Q002b();
+		}
+
+		
 	
 		function toado(){
 			EID("Geo").innerHTML=="";
