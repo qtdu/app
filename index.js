@@ -120,15 +120,17 @@ function QT001(){
 						batdau = false;
 			
 			trangchinh = true;
-		}
+		} 
 		
+		/*
 		setTimeout(function(){ 
 				if(EID("Geo").innerHTML == ''){
 					EID('doc').style.display = 'block';
 					EID('HuongDan').style.display = 'block';
-				}
+				} 
 			    }, 3000);
-
+		*/
+		
 	}
 	kiemtra();
 	
