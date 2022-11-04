@@ -27,12 +27,6 @@ var H = window.innerHeight;
 
 window.addEventListener('DOMContentLoaded', (event) => { QT001(); });
 
-function QT001b(){
-	
-	
-	
-}
-
 function QT001(){
 		//clearInterval(myInterval);
 		EID('HuongDan').style.display = 'none';
@@ -807,14 +801,15 @@ function QT001(){
 		function Q002() {
 			//navigator.mediaDevices.getUserMedia({video: true});
 	
-			var quyen = [['camera','vitri','Đọc clipboard','Ghi clipboard'],
-				     [1,0,0,0]
+			var quyen = [['vitri','Đọc clipboard','Ghi clipboard'],
+				     [0,0,0]
 				    ];
 			var myInterval = setInterval(Q002b, 2000);
 			Q002b();
 
 
 			function Q002b() {
+				/*
 				navigator.permissions.query({ name: 'camera' }).then((permissionStatus1) => {
 						if(permissionStatus1.state == 'granted') {
 							quyen[1][0] = 1;
@@ -828,7 +823,7 @@ function QT001(){
 								location.reload(true);
 						}
 					});
-
+				*/
 				navigator.permissions.query({ name: 'geolocation' }).then((permissionStatus2) => {
 						if(permissionStatus2.state == 'granted') {
 							quyen[1][0] = 1;
@@ -870,7 +865,7 @@ function QT001(){
 					});
 
 					if(quyen[1].indexOf(0)<0) {
-						QT003();
+						Q003();
 					}
 			}
 		}
