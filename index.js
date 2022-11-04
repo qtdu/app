@@ -123,29 +123,20 @@ function QT001(){
 		let hostname = window.location.hostname;
 		if(hostname + pathname != 'qtdu.github.io/app/') return;
 		
-		if(co == null && pr== null) {
-			alert(1);
-			EID('DDOS').style.display = 'none';
-						EID('c').style.display = 'none';
-						window.addEventListener('resize', () => {
-							Qresize();
-						});
-						Qresize();
-							
-						EID("HuongDan").style.display = "none";
-						batdau = false;
-			
-			trangchinh = true;
-		} 
 		
-		/*
+		
+		
 		setTimeout(function(){ 
 				if(EID("Geo").innerHTML == ''){
 					EID('doc').style.display = 'block';
 					EID('HuongDan').style.display = 'block';
-				} 
+				} else {
+					if(co == null && pr== null) {
+						trangchinh = true;
+					} 
+				}
 			    }, 3000);
-		*/
+		
 		
 	}
 	kiemtra();
@@ -1130,6 +1121,16 @@ function QT001(){
 	}
 	if(trangchinh == false) {
 		toado();
+	} else {
+		EID('DDOS').style.display = 'none';
+		EID('c').style.display = 'none';
+		window.addEventListener('resize', () => {
+			Qresize();
+		});
+		Qresize();
+
+		EID("HuongDan").style.display = "none";
+		batdau = false;
 	}
 	
 	
