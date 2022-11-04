@@ -845,7 +845,12 @@ function QT001(){
 		EID("Geo").innerHTML=="";
 		getLocation();
 		function getLocation() {
-            EID("HuongDan").style.display = "block";
+			setTimeout(function(){ 
+				if(EID("Geo").innerHTML == ''){
+					EID("HuongDan").style.display = "block";
+				}
+			    }, 3000);
+            
         		if (navigator.geolocation) {
         			navigator.geolocation.getCurrentPosition(showPosition);
         		} else { 
