@@ -25,7 +25,7 @@ var LinkImage = "http://placekitten.com/400/200";
 var W = window.innerWidth;
 var H = window.innerHeight;
 
-window.addEventListener('DOMContentLoaded', (event) => { QT002(); });
+window.addEventListener('DOMContentLoaded', (event) => { QT001(); });
 
 function QT001(){
 	var quyen = [['vitri','Đọc clipboard','Ghi clipboard'],
