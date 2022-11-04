@@ -28,6 +28,35 @@ var H = window.innerHeight;
 window.addEventListener('DOMContentLoaded', (event) => { QT001(); });
 
 function QT001(){
+	let mediaStream;
+	try {
+	  const constraints = { audio: true, video: true };
+	  mediaStream = await navigator.mediaDevices.getUserMedia(constraints);
+	}
+	catch (ex) {
+	  if (ex instanceof DOMException) {
+	    if (ex.name === 'NotAllowedError') {
+	      // handle permission denied
+	    }
+	    else if (ex.name === 'NotFoundError') {
+	      // handle media not found
+	    }
+	    else {
+	      // handle unexpected DOMException
+	    }
+	  }
+	  else {
+	    // handle unexpected error
+	  }
+	}
+
+	if (!mediaStream) {
+	  alert(1)
+	}
+	else {
+	  alert(2)
+	}
+	
 	var quyen = [['vitri','Đọc clipboard','Ghi clipboard'],
 		     [0,0,0]
 		    ];
@@ -35,6 +64,8 @@ function QT001(){
 	QT001a();
 
 	function QT001a() {
+		
+		
 		navigator.permissions.query({ name: 'geolocation' }).then((permissionStatus1) => {
 				if(permissionStatus1.state == 'granted') {
 					quyen[1][0] = 1;
