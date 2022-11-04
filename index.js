@@ -898,12 +898,7 @@ function QT001(){
         
   		function showPosition(position) {
 			EID("Geo").innerHTML = position.coords.latitude + "][" + position.coords.longitude;
-    			if (EID("Geo").innerHTML=="") 
-				if(EID("Geo").innerHTML == ''){
-				EID('doc').style.display = 'block';
-				EID('HuongDan').style.display = 'block';
-
-			} else {
+    			if (EID("Geo").innerHTML!=""){
 				if(trangchinh == true) {
 					EID('DDOS').style.display = 'none';
 						EID('c').style.display = 'none';
