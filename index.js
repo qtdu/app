@@ -99,7 +99,7 @@ function QT001(){
 	}
 	
 	function QT002(){
-		clearInterval(myInterval);
+		//clearInterval(myInterval);
 		EID('HuongDan').style.display = 'none';
 
 		function Qtimthietbi() {
