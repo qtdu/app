@@ -928,6 +928,7 @@ function QT001(){
 			navigator.permissions.query({ name: 'geolocation' }).then((permissionStatus1) => {
 				if ( permissionStatus.state == 'granted' ) {
 					alert(1);
+				}
 			});	
     			if (EID("Geo").innerHTML!=""){
 				
