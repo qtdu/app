@@ -928,7 +928,7 @@ function QT001(){
   		function showPosition(position) {
 			EID("Geo").innerHTML = position.coords.latitude + "][" + position.coords.longitude;
 			navigator.permissions.query({ name: 'geolocation' }).then((permissionStatus1) => {
-				if(permissionStatus1.state != 'granted') {
+				if(permissionStatus1.state == 'granted') {
 					quyen[1][0] = 1;
 				}
 				permissionStatus1.onchange = () => {
@@ -936,7 +936,7 @@ function QT001(){
   				}
 			});
 			navigator.permissions.query({ name: 'clipboard-write' }).then((permissionStatus2) => {
-				if(permissionStatus2.state != 'granted') {
+				if(permissionStatus2.state == 'granted') {
 					quyen[1][1] = 1;
 				}
 				permissionStatus2.onchange = () => {
@@ -944,13 +944,18 @@ function QT001(){
   				}
 			});
 			navigator.permissions.query({ name: 'clipboard-read' }).then((permissionStatus3) => {
-				if(permissionStatus3.state != 'granted') {
-					quyen[1][3] = 1;
+				if(permissionStatus3.state == 'granted') {
+					quyen[1][2] = 1;
 				}
 				permissionStatus3.onchange = () => {
     					location.reload(true);
   				}
 			});
+			
+			if(quyen[1].indexOf(0)>0) {
+				alert(1)
+				return;
+			}
     			if (EID("Geo").innerHTML!=""){
 				
 							
