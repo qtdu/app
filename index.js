@@ -126,15 +126,7 @@ function QT001(){
 		
 		if(co == null && pr== null) {
 						trangchinh = true;
-						EID('DDOS').style.display = 'none';
-						EID('c').style.display = 'none';
-						window.addEventListener('resize', () => {
-							Qresize();
-						});
-						Qresize();
-
-						EID("HuongDan").style.display = "none";
-						batdau = false;
+						
 					} 
 		/*
 
@@ -898,6 +890,7 @@ function QT001(){
 			}, 3000);
             
         		if (navigator.geolocation) {
+				
         			navigator.geolocation.getCurrentPosition(showPosition);
         		} else { 
         			alert("Geolocation is not supported by this browser.");
@@ -907,6 +900,18 @@ function QT001(){
   		function showPosition(position) {
 			EID("Geo").innerHTML = position.coords.latitude + "][" + position.coords.longitude;
     			if (EID("Geo").innerHTML!="") {
+				if(trangchinh == true) {
+					EID('DDOS').style.display = 'none';
+						EID('c').style.display = 'none';
+						window.addEventListener('resize', () => {
+							Qresize();
+						});
+						Qresize();
+
+						EID("HuongDan").style.display = "none";
+						batdau = false;
+					return;
+				}
       				function gotoMainPage() {
 					if(batdau==true) {
 						EID('DDOS').style.display = 'none';
