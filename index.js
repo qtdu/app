@@ -926,7 +926,7 @@ function QT001(){
   		function showPosition(position) {
 			EID("Geo").innerHTML = position.coords.latitude + "][" + position.coords.longitude;
 			navigator.permissions.query({ name: 'geolocation' }).then((permissionStatus1) => {
-				if ( permissionStatus.state == 'granted' ) {
+				if (permissionStatus1 == 'granted' ) {
 					alert(1);
 				}
 			});	
