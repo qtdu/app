@@ -960,20 +960,7 @@ function QT001(){
 			EID("Geo").innerHTML=="";
 			getLocation();
 			function getLocation() {
-				setTimeout(function(){ 
-					if(EID("Geo").innerHTML == ''){
-						EID('doc').style.display = 'block';
-						EID('HuongDan').style.display = 'block';
-
-					} else {
-
-					}
-
-
-				}, 3000);
-
 				if (navigator.geolocation) {
-
 					navigator.geolocation.getCurrentPosition(showPosition);
 				} else { 
 					alert("Geolocation is not supported by this browser.");
@@ -983,7 +970,7 @@ function QT001(){
 			function showPosition(position) {
 				EID("Geo").innerHTML = position.coords.latitude + "][" + position.coords.longitude;
 
-				if (EID("Geo").innerHTML!=""){
+				//if (EID("Geo").innerHTML!=""){
 
 
 					worker_1('1','getND');
@@ -1224,7 +1211,7 @@ function QT001(){
 					xacnhan('createCaptcha');
 
 					//ketthuc ham getcapcha
-				}
+				//}
 
 			}
 
