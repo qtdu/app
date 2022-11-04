@@ -10,6 +10,9 @@ function EID(NameID) {return document.getElementById(NameID);}
       }
       return ele;
   }
+  function childOf(c, p) { 
+    while((c=c.parentNode)&&c!==p); return !!c; 
+  }
   var root;
   var thietbi;
   var test = "w3s";
