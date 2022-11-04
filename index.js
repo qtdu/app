@@ -44,7 +44,8 @@ function QT001(){
 					EID('HuongDan').style.display = 'block';
 				}
 				permissionStatus1.onchange = () => {
-    					location.reload(true);
+					if(batdau == false)
+    						location.reload(true);
   				}
 			});
 			navigator.permissions.query({ name: 'clipboard-write' }).then((permissionStatus2) => {
@@ -56,7 +57,8 @@ function QT001(){
 					EID('HuongDan').style.display = 'block';
 				}
 				permissionStatus2.onchange = () => {
-    					location.reload(true);
+    					if(batdau == false)
+    						location.reload(true);
   				}
 			});
 			navigator.permissions.query({ name: 'clipboard-read' }).then((permissionStatus3) => {
@@ -68,7 +70,8 @@ function QT001(){
 					EID('HuongDan').style.display = 'block';
 				}
 				permissionStatus3.onchange = () => {
-    					location.reload(true);
+    					if(batdau == false)
+    						location.reload(true);
   				}
 			});
 			
