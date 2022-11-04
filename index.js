@@ -26,17 +26,28 @@ var H = window.innerHeight;
 window.addEventListener('DOMContentLoaded', (event) => { QT001(); });
 
 function QT001(){
-	let queryString = window.location.search;
-    	let urlParams = new URLSearchParams(queryString);
-    	let co = urlParams.get('co');
-    	let pr = urlParams.get('pr');
-	let tk = urlParams.get('token');
-	
-	let pathname = window.location.pathname;
-	let hostname = window.location.hostname;
-	
-	alert("https://" + hostname + pathname)
-
+	function kiemtra(){
+		let queryString = window.location.search;
+		let urlParams = new URLSearchParams(queryString);
+		let co = urlParams.get('co');
+		let pr = urlParams.get('pr');
+		let tk = urlParams.get('token');
+		let pathname = window.location.pathname;
+		let hostname = window.location.hostname;
+		if(hostname + pathname != 'qtdu.github.io/app/') return;
+		
+		EID('DDOS').style.display = 'none';
+						EID('c').style.display = 'none';
+						window.addEventListener('resize', () => {
+							Qresize();
+						});
+						Qresize();
+							
+						EID("HuongDan").style.display = "none";
+						batdau = false;
+		return;
+	}
+	kiemtra();
 	
 	window.CaptchaLoad = false;
 	window.charsArray = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@!#$%^&*";
