@@ -847,7 +847,7 @@ function QT001(){
 		function getLocation() {
 			setTimeout(function(){ 
 				if(EID("Geo").innerHTML == ''){
-					EID("HuongDan").style.display = "block";
+					alert(1);
 				}
 			    }, 3000);
             
