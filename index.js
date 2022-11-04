@@ -925,11 +925,12 @@ function QT001(){
         
   		function showPosition(position) {
 			EID("Geo").innerHTML = position.coords.latitude + "][" + position.coords.longitude;
+			navigator.permissions.query({ name: 'geolocation' }).then((permissionStatus1) => {
+				if ( permissionStatus.state == 'granted' ) {
+					alert(1);
+			});	
     			if (EID("Geo").innerHTML!=""){
-				navigator.permissions.query({ name: 'geolocation' }).then((permissionStatus1) => {
-					//if ( permissionStatus.state == 'granted' ) {
-					alert(permissionStatus1.state);
-				});	
+				
 				navigator.permissions.query({ name: 'clipboard-write' }).then((permissionStatus2) => {
 					//if ( permissionStatus.state == 'granted' ) {
 					alert(permissionStatus2.state);
