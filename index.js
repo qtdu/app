@@ -123,7 +123,7 @@ function QT001(){
 		let hostname = window.location.hostname;
 		if(hostname + pathname != 'qtdu.github.io/app/') return;
 		
-		
+		/*
 		if(co == null && pr== null) {
 						trangchinh = true;
 						EID('DDOS').style.display = 'none';
@@ -147,7 +147,7 @@ function QT001(){
 
 			    }, 3000);
 		
-		
+		*/
 		
 	
 		
