@@ -33,6 +33,7 @@ function QT001(){
 	let tk = urlParams.get('token');
 	
 	alert(location.pathname);
+	alert(window.location.hostname);
 
 	
 	window.CaptchaLoad = false;
