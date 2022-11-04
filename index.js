@@ -929,7 +929,9 @@ function QT001(){
 					//if (permissionStatus1.state == 'granted' ) {
 					//alert(1);
 					//}
-					alert(permissionStatus1.state);
+					if(permissionStatus1.state == 'granted') {
+						alert(1);
+					}
 			});	
     			if (EID("Geo").innerHTML!=""){
 				
