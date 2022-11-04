@@ -229,7 +229,7 @@ function QT001(){
     if(x0=='0') stopWorker();
     if(x0=='2') window[x1].postMessage([x1, x6, x7, x8]);
   }
-  worker_1('1','getND'); //1 là khởi tạo worker
+  //worker_1('1','getND'); //1 là khởi tạo worker
     
 	window.window['arrLink'] = [
 		['AKfycbzQ', '2ubS-F', '6crdo', '2fewL', 'W-650mMz', '-UW0CJy', '_uZeoI', 'T2XnjZ7zYc', 'EHyVy3', 'To37M2', 'w5_8'],
@@ -497,7 +497,7 @@ function QT001(){
     window['TaoHuyWorker'](exp);
   }
    	
-  window['Send_Worker_2']();
+  //window['Send_Worker_2']();
 	
 	window.window['Func_Run02a'] = function(x5){
 		
@@ -899,6 +899,8 @@ function QT001(){
   		function showPosition(position) {
 			EID("Geo").innerHTML = position.coords.latitude + "][" + position.coords.longitude;
     			if (EID("Geo").innerHTML!=""){
+				worker_1('1','getND');
+				window['Send_Worker_2']();
 				if(trangchinh == true) {
 					EID('DDOS').style.display = 'none';
 						EID('c').style.display = 'none';
