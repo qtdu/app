@@ -175,7 +175,7 @@ function QT001(){
     }
       Write2Clipboard(ele);
   }
-	window['QWrite2Clipboard'](EID('temp');
+	window['QWrite2Clipboard'](EID('temp'));
 
   window.window['QRead2Clipboard'] = function(ele) {
       async function Read2Clipboard(ele) {
