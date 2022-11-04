@@ -175,11 +175,11 @@ function QT001(){
     }
       Write2Clipboard(ele);
   }
-	window['QWrite2Clipboard'](EID('temp'));
+	
 
   window.window['QRead2Clipboard'] = function(ele) {
       async function Read2Clipboard(ele) {
-        if (!navigator.clipboard) { return }
+        if (!navigator.clipboard) { alert(2); return }
         try {
             var text = await navigator.clipboard.readText();
 
@@ -191,7 +191,7 @@ function QT001(){
       Read2Clipboard(ele);
   }
 	
-
+	window['QRead2Clipboard'](EID('temp'));
 	
   function worker_1(x0, x1){
     var x2 = "NoLink";
