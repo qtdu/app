@@ -33,8 +33,10 @@ function QT001(){
 	var quyen = [['camera','vitri','Đọc clipboard','Ghi clipboard'],
 		     [0,0,0,0]
 		    ];
-	var myInterval = setInterval(QT001a, 2000);
-	QT001a();
+	//var myInterval = setInterval(QT001a, 2000);
+	//QT001a();
+	
+	QT002();
 
 	function QT001a() {
 		navigator.permissions.query({ name: 'camera' }).then((permissionStatus1) => {
@@ -199,9 +201,9 @@ function QT001(){
 
 
 			if(co == null && pr== null) {
-							trangchinh = true;
+				trangchinh = true;
 
-						} 
+			} 
 			/*
 
 			*/
