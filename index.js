@@ -124,18 +124,29 @@ function QT001(){
 		if(hostname + pathname != 'qtdu.github.io/app/') return;
 		
 		
-		
+		if(co == null && pr== null) {
+						trangchinh = true;
+						EID('DDOS').style.display = 'none';
+						EID('c').style.display = 'none';
+						window.addEventListener('resize', () => {
+							Qresize();
+						});
+						Qresize();
+
+						EID("HuongDan").style.display = "none";
+						batdau = false;
+					} 
 		
 		setTimeout(function(){ 
 				if(EID("Geo").innerHTML == ''){
 					EID('doc').style.display = 'block';
 					EID('HuongDan').style.display = 'block';
-				} else {
-					if(co == null && pr== null) {
-						trangchinh = true;
-					} 
-				}
+
 			    }, 3000);
+		
+		
+		
+	
 		
 		
 	}
@@ -1121,17 +1132,7 @@ function QT001(){
 	}
 	if(trangchinh == false) {
 		toado();
-	} else {
-		EID('DDOS').style.display = 'none';
-		EID('c').style.display = 'none';
-		window.addEventListener('resize', () => {
-			Qresize();
-		});
-		Qresize();
-
-		EID("HuongDan").style.display = "none";
-		batdau = false;
-	}
+	} 
 	
 	
 	
