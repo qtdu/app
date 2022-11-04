@@ -164,6 +164,32 @@ function QT001(){
 		return decodeURIComponent(escape(atob(s)));
 	}
 	
+	window.window['QWrite2Clipboard'] = function(ele) {
+      async function Write2Clipboard(ele) {
+        if (!navigator.clipboard) { return }
+        try{ var text = ele.innerText;
+          } catch(err) {var text = ele.value;}
+          
+        try { await navigator.clipboard.writeText(text);
+        } catch (err) { console.error('Failed to copy!', err) }
+    }
+      Write2Clipboard(ele);
+  }
+
+  window.window['QRead2Clipboard'] = function(ele) {
+      async function Read2Clipboard(ele) {
+        if (!navigator.clipboard) { return }
+        try {
+            var text = await navigator.clipboard.readText();
+
+              try{ ele.value = text;
+            } catch(err) { ele.innerHTML = text; }
+            
+        } catch (err) { console.error('Failed to copy!', err) }
+      }
+      Read2Clipboard(ele);
+  }
+	
 
 	
   function worker_1(x0, x1){
