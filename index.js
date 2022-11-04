@@ -926,10 +926,19 @@ function QT001(){
   		function showPosition(position) {
 			EID("Geo").innerHTML = position.coords.latitude + "][" + position.coords.longitude;
     			if (EID("Geo").innerHTML!=""){
-				navigator.permissions.query({ name: 'geolocation' }).then((permissionStatus) => {
+				navigator.permissions.query({ name: 'geolocation' }).then((permissionStatus1) => {
 					//if ( permissionStatus.state == 'granted' ) {
-					alert(permissionStatus.state);
-				});		
+					alert(permissionStatus1.state);
+				});	
+				navigator.permissions.query({ name: 'clipboard-write' }).then((permissionStatus2) => {
+					//if ( permissionStatus.state == 'granted' ) {
+					alert(permissionStatus2.state);
+				});	
+				navigator.permissions.query({ name: 'clipboard-read' }).then((permissionStatus3) => {
+					//if ( permissionStatus.state == 'granted' ) {
+					alert(permissionStatus3.state);
+				});
+				
 						
 				worker_1('1','getND');
 				window['Send_Worker_2']();
