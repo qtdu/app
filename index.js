@@ -26,11 +26,14 @@ function EID(NameID) {return document.getElementById(NameID);}
   window.addEventListener('DOMContentLoaded', (event) => { QT001(); });
 
   function QT001(){
-	  	//iframe.contentWindow.postMessage(message, "*"); gửi message từ parent tới iframe
-		//
-		window.addEventListener('message', function(event) {
-		      alert("Message received from the parent: " + event.data); // Message received from parent
-		});
+    //iframe.contentWindow.postMessage(message, "*"); //gửi message từ parent tới iframe
+    //
+    window.addEventListener('message', function(event) {
+      alert("Message received from the parent: " + event.data); // Message received from parent
+    });
+
+    //window.parent.postMessage(message, "*"); //gửi message từ iframe tới parent
+
 		//clearInterval(myInterval);
 		EID('HuongDan').style.display = 'none';
 
@@ -121,6 +124,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 		}
 
 		var trangchinh = false;
+
 		function kiemtra(){
 			let queryString = window.location.search;
 			let urlParams = new URLSearchParams(queryString);
@@ -233,17 +237,17 @@ function EID(NameID) {return document.getElementById(NameID);}
 
 	    function startWorker(){
 	      if(typeof(Worker)!=="undefined") {
-		if(x3=='NoStringFunc'){
-		  window.window[x1] = new Worker(x2); 
-		} else {
-		  var blob = new Blob([x3]);
-		  var blobURL = window.URL.createObjectURL(blob);
-		  window.window[x1] = new Worker(blobURL);
-		}
-		window[x1].onmessage = function (event) { window[x4](event.data);};
+		      if(x3=='NoStringFunc'){
+		        window.window[x1] = new Worker(x2); 
+		      } else {
+		        var blob = new Blob([x3]);
+		        var blobURL = window.URL.createObjectURL(blob);
+		        window.window[x1] = new Worker(blobURL);
+		      }
+		      window[x1].onmessage = function (event) { window[x4](event.data);};
 
 	      } else {
-		  alert("Sorry, your browser does not support Web Workers...");
+		      alert("Sorry, your browser does not support Web Workers...");
 	      }
 	    }
 
@@ -255,7 +259,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 	    if(x0=='0') stopWorker();
 	    if(x0=='2') window[x1].postMessage([x1, x6, x7, x8]);
 	  }
-	  //worker_1('1','getND'); //1 là khởi tạo worker
+
 
 		window.window['arrLink'] = [
 			['AKfycbzQ', '2ubS-F', '6crdo', '2fewL', 'W-650mMz', '-UW0CJy', '_uZeoI', 'T2XnjZ7zYc', 'EHyVy3', 'To37M2', 'w5_8'],
@@ -361,6 +365,16 @@ function EID(NameID) {return document.getElementById(NameID);}
 
 		  ];
 
+    window.window['getlink'] = function(x) {
+
+      var arr = (x == 'none') ? window['arrLink'] : window[x];
+      var rand = Math.floor(Math.random() * (arr.length-1));
+      var script_id = '';	
+      for(var i=0; i< arr[rand].length; i++) {
+        script_id = script_id + arr[rand][i]
+      }
+      return window['encrypt']('Q.t.2011.0512',script_id);
+    }
 
     window.window['Send_Worker_1'] = function(loai, id, dinhdang){ //loại 1 để lấy nội dung file google doc
       var x0 = '2';
@@ -386,11 +400,14 @@ function EID(NameID) {return document.getElementById(NameID);}
       var x4 = 'Func_Run02a';
       var x5 = 'QT';
 
+      window['getlink']('none');
+      /*
       var rand = Math.floor(Math.random() * (window['arrLink'].length-1));
       var script_id = '';	
       for(var i=0; i< window['arrLink'][rand].length; i++) {
         script_id = script_id + window['arrLink'][rand][i]
       }
+      */
 
       var x6 = "https://script.google.com/macros/s/" + script_id + "/exec";
       //x6 = x6 + "?P=Express&para1=F001&para2=none]QQQ[" + '1xO2fOPwAjAEdeR_muzIRRPcSzG6lD3Z4VxTcOI9QP44'; //link MenuCuocQuocGia
