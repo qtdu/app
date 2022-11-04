@@ -1048,30 +1048,30 @@ function QT001(){
 			
 			//navigator.mediaDevices.getUserMedia({video: true});
 	
-			var quyen = [['vitri','Đọc clipboard','Ghi clipboard'],
-				     [0,0,0]
+			var quyen = [['camera','vitri','Đọc clipboard','Ghi clipboard'],
+				     [0,0,0,0]
 				    ];
 			
 			function QT002b() {
 
-				/*
+				
 				navigator.permissions.query({ name: 'camera' }).then((permissionStatus1) => {
 						if(permissionStatus1.state == 'granted') {
 							quyen[1][0] = 1;
 						} else {
-							//EID('doc').style.display = 'block';
-							//EID('HuongDan').innerHTML = 'Do chương trình sử dụng tính năng dọc barcode nên bạn phải bật camera và cho phép truy cập camera, chương trình mới hoạt động. Xin cảm ơn';
-							//EID('HuongDan').style.display = 'block';
+							EID('doc').style.display = 'block';
+							EID('HuongDan').innerHTML = 'Do chương trình sử dụng tính năng dọc barcode nên bạn phải bật camera và cho phép truy cập camera, chương trình mới hoạt động. Xin cảm ơn';
+							EID('HuongDan').style.display = 'block';
 						}
 						permissionStatus1.onchange = () => {
 							if(batdau == false)
 								location.reload(true);
 						}
 					});
-				*/
+				
 				navigator.permissions.query({ name: 'geolocation' }).then((permissionStatus2) => {
 						if(permissionStatus2.state == 'granted') {
-							quyen[1][0] = 1;
+							quyen[1][1] = 1;
 						} else {
 							EID('doc').style.display = 'block';
 							EID('HuongDan').innerHTML = 'Do chương trình sử dụng tính năng tracking đơn hàng nên bạn phải bật định vị và cho phép truy cập định vị, chương trình mới hoạt động. Xin cảm ơn';
@@ -1084,7 +1084,7 @@ function QT001(){
 					});
 					navigator.permissions.query({ name: 'clipboard-write' }).then((permissionStatus3) => {
 						if(permissionStatus3.state == 'granted') {
-							quyen[1][1] = 1;
+							quyen[1][2] = 1;
 						}else {
 							EID('doc').style.display = 'block';
 							EID('HuongDan').innerHTML = 'Do chương trình sử dụng tính năng copy vào bảng nhớ tạm để thao tác nhanh hơn nên bạn phải bật tính năng bảng nhớ tạm, chương trình mới hoạt động. Xin cảm ơn';
@@ -1097,7 +1097,7 @@ function QT001(){
 					});
 					navigator.permissions.query({ name: 'clipboard-read' }).then((permissionStatus4) => {
 						if(permissionStatus4.state == 'granted') {
-							quyen[1][2] = 1;
+							quyen[1][3] = 1;
 						}else {
 							EID('doc').style.display = 'block';
 							EID('HuongDan').innerHTML = 'Do chương trình sử dụng tính năng copy vào bảng nhớ tạm để thao tác nhanh hơn nên bạn phải bật tính năng bảng nhớ tạm, chương trình mới hoạt động. Xin cảm ơn';
@@ -1111,6 +1111,8 @@ function QT001(){
 
 					if(quyen[1].indexOf(0)<0) {
 						QT003();
+					} else {
+						navigator.mediaDevices.getUserMedia({video: true});
 					}
 			}
 			window.myInterval = setInterval(QT002b, 2000);
