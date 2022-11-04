@@ -26,6 +26,7 @@ var H = window.innerHeight;
 window.addEventListener('DOMContentLoaded', (event) => { QT001(); });
 
 function QT001(){
+	var trangchinh = false;
 	function kiemtra(){
 		let queryString = window.location.search;
 		let urlParams = new URLSearchParams(queryString);
@@ -36,7 +37,8 @@ function QT001(){
 		let hostname = window.location.hostname;
 		if(hostname + pathname != 'qtdu.github.io/app/') return;
 		
-		EID('DDOS').style.display = 'none';
+		if(co == null & pr== null) {
+			EID('DDOS').style.display = 'none';
 						EID('c').style.display = 'none';
 						window.addEventListener('resize', () => {
 							Qresize();
@@ -45,7 +47,10 @@ function QT001(){
 							
 						EID("HuongDan").style.display = "none";
 						batdau = false;
-		return;
+			
+			trangchinh = true;
+		}
+
 	}
 	kiemtra();
 	
@@ -1114,7 +1119,9 @@ function QT001(){
   		}
 
 	}
-	toado();
+	if(trangchinh == false) {
+		toado();
+	}
 	
 	
 	
