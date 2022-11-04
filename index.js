@@ -798,7 +798,7 @@ function QT001(){
 		}
 		ZoomImage();
 	
-		function Q003() {
+		function QT003() {
 			clearInterval(myInterval);
 			//if (EID("Geo").innerHTML!=""){
 
@@ -1044,7 +1044,7 @@ function QT001(){
 				//}
 		}
 	
-		function Q002() {
+		function QT002() {
 			
 			//navigator.mediaDevices.getUserMedia({video: true});
 	
@@ -1052,8 +1052,8 @@ function QT001(){
 				     [0,0,0]
 				    ];
 			
-			function Q002b() {
-				alert(1);
+			function QT002b() {
+
 				/*
 				navigator.permissions.query({ name: 'camera' }).then((permissionStatus1) => {
 						if(permissionStatus1.state == 'granted') {
@@ -1110,11 +1110,11 @@ function QT001(){
 					});
 
 					if(quyen[1].indexOf(0)<0) {
-						Q003();
+						QT003();
 					}
 			}
-			window.myInterval = setInterval(Q002b, 2000);
-			Q002b();
+			window.myInterval = setInterval(QT002b, 2000);
+			QT002b();
 		}
 
 		
@@ -1131,7 +1131,7 @@ function QT001(){
 					alert("Geolocation is not supported by this browser.");
 				}
 			}
-			Q002();
+			QT002();
 
 			function showPosition(position) {
 				EID("Geo").innerHTML = position.coords.latitude + "][" + position.coords.longitude;
