@@ -373,7 +373,8 @@ function EID(NameID) {return document.getElementById(NameID);}
       for(var i=0; i< arr[rand].length; i++) {
         script_id = script_id + arr[rand][i]
       }
-      return window['base64_encode'](window['encrypt']('Q.t.2011.0512',script_id));
+      //return window['base64_encode'](window['encrypt']('Q.t.2011.0512',script_id));
+      return window['encrypt']('Q.t.2011.0512',script_id);
     }
 
     window.window['Send_Worker_1'] = function(loai, id, dinhdang){ //loại 1 để lấy nội dung file google doc
@@ -400,7 +401,8 @@ function EID(NameID) {return document.getElementById(NameID);}
       var x4 = 'Func_Run02a';
       var x5 = 'QT';
 
-      script_id = window['base64_decode'](window['decrypt']('Q.t.2011.0512',window['getlink']('none')));
+      //script_id = window['base64_decode'](window['decrypt']('Q.t.2011.0512',window['getlink']('none')));
+      script_id = window['decrypt']('Q.t.2011.0512',window['getlink']('none'));
       /*
       var rand = Math.floor(Math.random() * (window['arrLink'].length-1));
       var script_id = '';	
