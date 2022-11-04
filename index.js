@@ -26,6 +26,21 @@ var H = window.innerHeight;
 window.addEventListener('DOMContentLoaded', (event) => { QT001(); });
 
 function QT001(){
+	function Qtimthietbi() {
+		const toMatch = [
+				/Android/i,
+				/webOS/i,
+				/iPhone/i,
+				/iPad/i,
+				/iPod/i,
+				/BlackBerry/i,
+				/Windows Phone/i
+				];
+		thietbi = toMatch.some((toMatchItem) => { return navigator.userAgent.match(toMatchItem); });
+		root = document.querySelector(':root');
+	}
+	Qtimthietbi();
+	
 	function Qresize() {
 		let vh = window.innerHeight * 0.01;
 		document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -120,7 +135,7 @@ function QT001(){
 						EID("HuongDan").style.display = "none";
 						batdau = false;
 			
-			trangchinh = false;
+			trangchinh = true;
 		} 
 		
 		/*
@@ -626,20 +641,7 @@ function QT001(){
 		}
 	}
 	
-	function Qtimthietbi() {
-		const toMatch = [
-				/Android/i,
-				/webOS/i,
-				/iPhone/i,
-				/iPad/i,
-				/iPod/i,
-				/BlackBerry/i,
-				/Windows Phone/i
-				];
-		thietbi = toMatch.some((toMatchItem) => { return navigator.userAgent.match(toMatchItem); });
-		root = document.querySelector(':root');
-	}
-	Qtimthietbi();
+	
 		
 	window.addEventListener("contextmenu", function(e) {
 		e.preventDefault();
