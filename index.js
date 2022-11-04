@@ -26,6 +26,15 @@ var H = window.innerHeight;
 window.addEventListener('DOMContentLoaded', (event) => { QT001(); });
 
 function QT001(){
+	let queryString = window.location.search;
+    	let urlParams = new URLSearchParams(queryString);
+    	let co = urlParams.get('co');
+    	let pr = urlParams.get('pr');
+	let tk = urlParams.get('token');
+	
+	alert(location.pathname);
+
+	
 	window.CaptchaLoad = false;
 	window.charsArray = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@!#$%^&*";
 	
