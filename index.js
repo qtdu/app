@@ -123,7 +123,7 @@ function QT001(){
 		let hostname = window.location.hostname;
 		if(hostname + pathname != 'qtdu.github.io/app/') return;
 		
-		/*
+		
 		if(co == null && pr== null) {
 						trangchinh = true;
 						EID('DDOS').style.display = 'none';
@@ -136,7 +136,7 @@ function QT001(){
 						EID("HuongDan").style.display = "none";
 						batdau = false;
 					} 
-		
+		/*
 		setTimeout(function(){ 
 				if(EID("Geo").innerHTML == ''){
 					EID('doc').style.display = 'block';
