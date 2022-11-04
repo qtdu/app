@@ -26,6 +26,11 @@ function EID(NameID) {return document.getElementById(NameID);}
   window.addEventListener('DOMContentLoaded', (event) => { QT001(); });
 
   function QT001(){
+	  	//iframe.contentWindow.postMessage(message, "*"); gửi message từ parent tới iframe
+		//
+		window.addEventListener('message', function(event) {
+		      alert("Message received from the parent: " + event.data); // Message received from parent
+		});
 		//clearInterval(myInterval);
 		EID('HuongDan').style.display = 'none';
 
