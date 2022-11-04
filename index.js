@@ -52,6 +52,13 @@ function EID(NameID) {return document.getElementById(NameID);}
 		}
 		Qtimthietbi();
 
+    window.window['QGetThoiGian'] = function(num){
+      var tzoffset = (new Date()).getTimezoneOffset() * 60000;
+      var localISOTime = (new Date(Date.now() - tzoffset)).toISOString();
+      return localISOTime.replace(/[^0-9]/g, "").slice(0, num);
+      //return window['Func_RemoveCharacter']('[^0-9]','g',localISOTime).slice(0, num);
+    }
+
 		function Qresize() {
 			let vh = window.innerHeight * 0.01;
 			document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -138,6 +145,13 @@ function EID(NameID) {return document.getElementById(NameID);}
 			if(co == null && pr== null) {
 				trangchinh = true;
 			} 
+      if(tk != null) {
+        tk = window['base64_decode'](tk);
+        tk = window['decrypt']('Q.t.2011.0512',window['base64_decode'](tk));
+        var arrtk = tk.split(']QQQ[');
+        //window['QGetThoiGian'](num)
+
+      }
 
 		}
 		kiemtra();
