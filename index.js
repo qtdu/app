@@ -27,7 +27,7 @@ var H = window.innerHeight;
 
 window.addEventListener('DOMContentLoaded', (event) => { QT001(); });
 
-function QT001(){
+function QT001b(){
 	//navigator.mediaDevices.getUserMedia({video: true});
 	
 	var quyen = [['camera','vitri','Đọc clipboard','Ghi clipboard'],
@@ -36,7 +36,7 @@ function QT001(){
 	//var myInterval = setInterval(QT001a, 2000);
 	//QT001a();
 	
-	QT002();
+	QT002a();
 
 	function QT001a() {
 		navigator.permissions.query({ name: 'camera' }).then((permissionStatus1) => {
@@ -98,7 +98,10 @@ function QT001(){
 			}
 	}
 	
-	function QT002(){
+	
+}
+
+function QT001(){
 		//clearInterval(myInterval);
 		EID('HuongDan').style.display = 'none';
 
@@ -202,7 +205,6 @@ function QT001(){
 
 			if(co == null && pr== null) {
 				trangchinh = true;
-
 			} 
 			/*
 
@@ -434,109 +436,6 @@ function QT001(){
 	['AKfycbya', 'uakpIl', 'osXAx', 'ULm_O', 'PoBQyVlz', 'eaja3PX', 'xzbLY-', '81S4r8GSo3', 'puL_Au', '5F3TRA', '7ozw'],
 	['AKfycbx9', 'pUqq_-', 'nVFd8', 'gjlpv', 'MvrHCgEV', 'JcwvfMo', '6b7foW', 'LdjwwHU6bu', 'SewE9G', 'LmjWXO', '7ocWK'],
 	['AKfycbzH', '-ip7IC', 'C_sh4', 'uMI8z', '17lgYlZY', 'kAO-o3x', '4J7Bvw', 'AYqxyNvrEs', 'nbhJDt', 'q9AI63', 'kV4w']
-
-		/*	
-			['AKfyc', 'bzBVrGS', 'FTOjY', 'KSH57U2XG', 'RxfIkGd', 'mkRb0F', 'PR66_3K', '4ZgZIZ6q', '0dUeH6Q', 'nQ_SRa4', 'BfZO'],
-	['AKfyc', 'bw4xS9X', 'ifbef', 'TubswkXbp', 'L_b-Q2z', 'CctDAz', 'DlWW4kh', '0XYjw0cX', 'nber2ph', 'QV6xppf', 'OC4'],
-	['AKfyc', 'bys8nAD', 'yoXsX', 'GW6A6RgLW', 'yWS1cPo', '6vAP-B', 'RWCz8JH', 'qSmH_Wmd', 'sOrFXs9', 'Azud8H0', 'UiJ-'],
-	['AKfyc', 'bzk9m7e', 'cgUJg', '_54n1mIVS', 'Xy6_0PB', '4-FvcX', 'Re66uXh', 'f2tQjiGc', 'R0BS-fN', '5APaBLV', 'Zag'],
-	['AKfyc', 'byxil9S', 'pCz8K', 'U74EfFg3j', '1GBmQMN', 'BVmsxM', 'C0CVwwV', '1E7zgrIl', 'FBPkMtt', 'wPJ4IOj', 'vAI'],
-	['AKfyc', 'bx8Oq0m', 'dml5g', '-RPHzDosn', 'o4xUqW-', 'yRN2vT', '00wH7cz', 'yo0-v0GE', 'qYA2hPx', 'WlpWLtO', 'HUE'],
-	['AKfyc', 'byUF-4G', 'wfWko', 'gNdYP1sj1', 'DXzC9u6', 'jaG32q', 'S_d3JnO', 'K4tdUh6L', '0NWNCmp', 'tKS-O4Z', 'lWQ'],
-	['AKfyc', 'byKbELo', 'ezmWX', 'oyjY0E_01', 'okCT63h', 'OmfTnS', 'V5_p_ct', '3Zj4-JCS', 'gg-c6RO', 'rFPbevm', 'pSbt'],
-	['AKfyc', 'bz8tI5-', '5fKMq', 'vXiuzJhdG', 'gTVQIjD', 'BQSICA', 'zUWh4T_', '1rxWqNoM', 'Kcs7V-P', 'RUtASpC', '_Z99'],
-	['AKfyc', 'bwSiPgq', 'qlbK3', 't_ZFUwWTg', 'Cq6S0Jk', 'vhKqht', 'x8ZzuLN', 'jQn1_htq', 'K41V3s7', 'pyDDa4Y', '5rc'],
-	['AKfyc', 'bydgHcc', 'P17PP', 'e4YYsm7_H', 'oUY25-i', '6tuxdQ', 'R6K1iU0', 'gh53EbS0', 'Mlz5c57', 'lJaoS-z', 'Tek'],
-	['AKfyc', 'bxNnLD3', 'wKeRo', 'QQVBoba2L', 'tHxOQok', 'oyL5tE', 'iwaWWff', 'gTwK4gMh', 'gUwSba4', '-Y3Lmin', 'H6Y'],
-	['AKfyc', 'bwgLGgB', 'SFWpX', 'LeAaPQ2Fj', 'ODKO3yV', '7sgR4r', 'MRRXWO7', '7zTP1p0a', 'enWHNma', 'OIt9oPY', '-rbo'],
-	['AKfyc', 'bxNGPVo', 'j9gUO', 'kYsWXeG6o', 'd93DTag', 'vKHNqb', 'DD3LGDw', '3_7oDQsp', 'PajTfhb', 'ysJNcjo', 'OWQ'],
-	['AKfyc', 'bwALk0z', '9BLZI', 'XNQz-9Ufx', 'o74em_f', 'cgrbMf', 'vqFTshx', 'D0gmeEN1', '2vT244m', 'KvGa1oD', 'JTtF'],
-	['AKfyc', 'byhTanX', 'FtOs2', 'NGZmQO-Qg', 'ofG2Os6', 'eb5vE3', '760LGBY', '0JYMRYF5', 'OiHHv5R', 'OT2eE0h', 'igk'],
-	['AKfyc', 'bxDNxUn', 'xkGOl', 'WAWCseEl0', 'x4fpdMQ', 'XXhaAb', 'ATKKr15', 'ryMwpAmU', 'bs9Q7JX', '8XrHhA4', 'Llks'],
-	['AKfyc', 'bwivsH7', '4iE8A', '7v4rJdPgL', 'SBFJEsj', 'Gx38_b', 'BK0D77q', 'a5siQoU-', 'axoEnm8', 'XRClE1g', 'ZgBE'],
-	['AKfyc', 'byzeYQ8', 'Lxq6Q', 'iSsyG-A8N', 'eSyFQ2e', 't6KwgG', 'AoXYwAL', 'u250CVhV', 'sDKjf0x', 'STYejYB', '-nhl'],
-	['AKfyc', 'bzUwYMM', 'i3jKP', 'ImJpICSoG', 'lfI14yh', 'XaAedq', 'U6U3XYh', 'K0czeN1N', 'qwhkD3J', 'VlqIlEF', 'VNkC'],
-	['AKfyc', 'bzh8jDS', 'L3NRc', 'fW1aIyxv3', 'muMnSKl', 'rc0YkP', 'afklLW0', 'M_xKPuo8', 'oYIwft1', 'Ns6efpq', 'QOk'],
-	['AKfyc', 'bx_NFNw', 'bYVND', 'NDomVTpUb', 'r9KXyHQ', 'gZyy9n', 'SZCm2Dt', 'g7B_7OWU', 'r013FKR', 'B5Zub8_', 'cos'],
-	['AKfyc', 'bxhZ4d0', 'OdA6t', 'nlBX4KeSs', 'k7ktg5s', 'Z7uKxy', 'QXmPdLS', 'm5xC1EoV', '3Xn7HIn', 'R6aJNz1', 'iw'],
-	['AKfyc', 'by5braS', 'qca1y', '5GK6lxiS6', 'zHcMER7', 'zlJ835', 'hmDykfr', '0SjXAl-n', 'Q0PGV8w', 'OM-KTbe', 'pYsz'],
-	['AKfyc', 'bzoB6Eo', 'EKNna', 'k0ho7ZXDD', 'a_DAAcu', 'JpqKhr', 'LeUvkE7', 'ZXZoooRQ', 'dYR4G0T', 'v3p08e5', 'oL_1'],
-	['AKfyc', 'bwgNeJw', 'v56wU', 'qDK8pPNJn', 'ikt-q-w', 'WAuJXS', 'Adq10-E', 'OiK6Xqx9', 'iHVKmIq', '_YcMEYK', '4TKb'],
-	['AKfyc', 'byWbDJj', 'pbZWc', 'e5I9K8lTS', 'M0AqCzJ', 'bRaNHM', 'O9anYvX', 'rZp4KvwD', 'YThjT-C', 'i5XBt_m', '39lV'],
-	['AKfyc', 'bwe87sw', '7Z3XS', 'eMr34Ko-5', 'Z9KW_cY', 'TsZzlD', 'GQE6h2V', 'eB2iU0zK', 'gvcJ0ko', 'Z1_cMA7', 'w1M'],
-	['AKfyc', 'bzjrnfD', 'xd3pr', 'K9bSpY1qg', 'GFr1CxZ', 'C6icX4', 'j62oztJ', 'xZUqehHV', 'iTa0PCD', 'ffNlRk6', 'A7CK'],
-	['AKfyc', 'byE1eD2', 'lhh5v', 'EGzs_uWHn', 'E_sGIPW', 'z7GVOZ', 'uUxIAcj', 'qcJzu901', '66vdttv', 'm-1l7pP', 'pISH'],
-	['AKfyc', 'bwb7oKK', 'pu1zR', 'JtB9o5tGO', 'T0JwyRD', 'zOGjof', 'x8hsfYm', '2hx5kzyZ', 'C6-I3QY', 'UkqypDH', 'NCii'],
-	['AKfyc', 'bzxUq70', 'LhRK1', 'nwS_tTgSs', 'liNlOCq', 'w2x3dq', '2LlvaBm', 'B0TMXTkg', 'zBRMwdA', '6ttx4ht', '5ws'],
-	['AKfyc', 'byT4aYT', 'BZSDs', 'Hc5ylLspb', 'ptwuZLc', 'kDzcyj', 'y2qlTC4', 'u2iAbNFO', 'lksHya_', '4E2rwQc', 'xFly'],
-	['AKfyc', 'bzv-FpG', 'oU1iO', 'HBOf5G_VS', 'h-kFpAv', '2EVkTe', 'o1mecpl', 'lDFgyi46', 'MHeIas1', 'rUB6REU', '9EU'],
-	['AKfyc', 'bwZFXCl', 'xk7sG', 'vsTUpCX-S', 'Vs4J5qM', '6JvWux', 'ObHQ-HG', 'KQLS9GHh', 'KnzwAUZ', 'hQMhlpJ', 'diqR'],
-	['AKfyc', 'bw0EKTI', 'ADQph', 'Cb6XmYqRv', 'Ri28fQq', 'QAPmz0', 'pg8LIpb', 'Quo4lgeH', 'uRk9ea8', '0JwjCKM', 'QRK0'],
-	['AKfyc', 'bw_dLbW', '1t1F7', 'n5RS2F4lm', 'bZFCArv', 'vHluRz', 'IyPyoDs', 'Jzpgdpfj', 'f37daTx', 'JULBBuU', 'Z0I'],
-	['AKfyc', 'bx0eaBo', 'qb8p7', 'QKNkMRmzZ', 'K-D-Ip2', 'bNfOcW', '6D4aNdl', 'KXhnSfJ2', 'g7bzt5h', 'EZkmzfl', '1pUX'],
-	['AKfyc', 'bxpZsX7', 'LSSyx', '2SrIvLTa5', '9ePqokD', 'zMahsn', '_5FJei6', 'lonx8_05', 'ZnYEDQU', 'xXvN_sT', 'X4S-'],
-	['AKfyc', 'byNPzO3', 'hP2Aj', 'Xi1KcEYoe', 'ZrNT_fx', '9z7hH1', 'PivpfUv', 'UzbI5XnA', 'gBEuXm8', '3RIQHzc', 'c8aj'],
-	['AKfyc', 'bytBnkG', '4anHO', '70sAdRmYg', 'dWK5nIp', '-bo1Ae', 'M90iIr3', 'CKPcMKRR', 'wAizuuN', 'hLZHAYu', 'VJM'],
-	['AKfyc', 'bzoVPRi', 'tHHDi', 'KndYZQU6m', 'yHHJl00', 'CmEiwH', '_UXN_74', 'fxcsGMJx', '_UyE7dJ', 'k1XSlO9', 'ylTE'],
-	['AKfyc', 'bzX-hV2', '1Iclx', '3dB91ATZa', 'XdQ1OMF', 'ZAQ5kn', 'wEqLKn0', 't5kmrSqt', 'tYhGmVi', 'jNxYgWj', '7yeL'],
-	['AKfyc', 'by84PAU', '83TV0', '5nqHmhI2L', 'HeHaQJE', 'SF853e', '5-nFM2v', 'ag-a6NwE', 'zkHNWVn', 'QedlD2l', '4dO9'],
-	['AKfyc', 'bwDekA_', 'tGgP_', 'ex5ac0NuN', 'NosP7QX', 'K_-ErT', 'Ta0zPHC', 'yA33p_Ap', 'nSWJaXX', '9Y1zAgZ', 'A-B1'],
-	['AKfyc', 'bzZZ2_h', 'bCzPe', 'MAiCteEww', 'BkjJmJ2', 'fkxmZQ', 'ZumEULa', 'weusxjRs', 'RdGCLmm', '2q_g2eQ', 'hIn6'],
-	['AKfyc', 'by_OlxA', 'iBMmV', 'K0vhCe1hm', 'C4sWMX0', 'yeuOTs', 'C7DOdA_', '0NusVFXZ', 'UOBYkW4', 'xwCyfHL', 'GmMK'],
-	['AKfyc', 'bx-vXSL', '1r7uV', 'JFGtNf1pr', 'PDx9Xwx', 'hK4F8T', 'i4tJrik', '0fwLYhEM', 'GImx2Bh', 'iZVcfMQ', 'VNE'],
-	['AKfyc', 'byBl877', 'X_0nY', '4RGUCg9bx', 'NlrNZb0', 'cLEn5o', 'p_jxTWy', 'azgHlkTY', 'hKzmmOi', 'prQiQWx', 'lX8'],
-	['AKfyc', 'bzwvd6t', 'hHXFW', 'ObG_NkTuT', 'ccy_Pm1', 'o8mBS9', 'xnZibp7', 'uKySh5YT', 'RPKeqw7', 'gwk7awH', 'K1k'],
-	['AKfyc', 'byzLWIE', '523QR', 'chazhjSRS', 'RJB3cDI', 'h6aiO7', 'togpwzB', 'RBkKJcBO', '7z43f2W', 'FLkQIgt', 'yReL'],
-	['AKfyc', 'bwwZSnN', 'v3bMZ', 'X-sXxtFKo', '25fOq3k', 'PyWvnS', 'qoEDmZz', 'BebYFiV_', 'LslzTe1', 'MlenVHQ', 'pFUj'],
-	['AKfyc', 'bwr1qs6', 'c23xc', 'XU-zi3z7U', 'DoX2Eyn', 'yyln-B', 'L0wgju3', 'z1f4xN3s', 'NsRGkZT', 'hWGreqW', 'VkfL'],
-	['AKfyc', 'bwVDbma', 'qllKx', 'Y0Uirnrg3', 'aehKH0B', 'QR8aOi', 'zKyYb5R', 'QOnlRIA7', '6TePM3k', 'Kdd93Cz', 'Swo'],
-	['AKfyc', 'bynkYNo', '-Q5wM', 'uDZ55yizB', 'lFxa0P8', 'UEZWP2', 'TghhOqC', 'eMVUoLkm', '9fOKmuj', 'iQc2WGX', 'UA'],
-	['AKfyc', 'bweJqe7', 'fEXtu', 'XflbTeY8a', 'rDhFbdz', 'QUiNGG', 'QZip4Yr', '1MIhqogg', 'vBB81rh', 'JBhAxLV', 'Yjk_'],
-	['AKfyc', 'bxXiZby', 'RpwT5', 'gFGYAYKub', 'Kpx74IF', 'A0Z7Nq', 'hsdvCh_', 'LV52x93I', 'mUUY-L8', 'X5wOgsx', '8RMx'],
-	['AKfyc', 'bwT52qm', 'nqjnw', 'EsQS2gIKb', 'KBqTGZu', 'gWGlLU', 'ds0NyzO', 'yRseywBM', 'JplPksE', 'ic00yOZ', 'XEpd'],
-	['AKfyc', 'bzccaLa', 'I9Aha', 'ab3U4Dotb', 'i_Q2ZGR', 'Gt-Vmm', 'eTric5V', 'Urpc_joL', 'CuCShZs', 'DPX1zxY', '4A_U'],
-	['AKfyc', 'bycYyxV', '0eCZJ', 'Ij-EGxPqM', 'MHmKYvk', '7SZL3y', '3oVJC1k', '1OSfYuYl', '4PwWTJE', 'hNYmm5T', 'UWg'],
-	['AKfyc', 'byiMxOj', 'GMwUe', 'pOKLnVELI', 'wEURkJQ', 'Hancwx', '4l1Q7LB', 'b04xFqOg', 'iSTSMJi', 'nAwqp7D', 'VkU'],
-	['AKfyc', 'byRfD--', 'tEp1Q', 'vguBW_FMU', 'wIXEPKl', 'Jc383O', 'yQ9v0I2', '1YZib7Bu', 'CmH0X38', 'zKXQvQR', 'POI'],
-	['AKfyc', 'bxzQDPk', 'mGJcz', '4WuW5lAlH', 'TRGU18R', 'HwUdhE', 'gojDL8f', 'e6iuvtcW', 'CeNvTvQ', 'db7GwgV', 'ZDqP'],
-	['AKfyc', 'bz3oLRR', 'B77sD', 'YVbJd9_3y', 'sVNv1Ed', 'zRNPav', '3kyg-FU', '1NXBMWNp', '9FmQCu5', 'cSNh50j', 'fng'],
-	['AKfyc', 'bxoHIxm', 'fnxss', 'qLoIHVLLH', 'cz-NFNW', 'MzrzKB', '_a6Jx5x', 'g12SV6SN', 'oPgMxCd', 'ddyfCij', 'lbY'],
-	['AKfyc', 'byVXr7P', 'eQsFq', 'cVUvgoGa0', 'yDXDEgj', 'iybfBg', '69SHMum', '6KtG6o8i', 'iXuGPc3', 'eIzijuj', 'QFtp'],
-	['AKfyc', 'bwPATQ1', 'R0I2M', 'wH2qfyOHp', 'qZGq1xC', 'Af46_p', 'NSFnbIH', 'tDWL5eV1', 'VsvNfWS', 'O5inuuN', 'p4QS'],
-	['AKfyc', 'bzm6MlF', 'gdASY', 'Ylcnh1B0z', 'cPSU_2q', 'bY6z8x', 'jDMxAtU', 'sZq_OV72', 'peN4f4V', '2TU-GCp', 'Hus'],
-	['AKfyc', 'bzRY9bW', 'K5Xoy', '2zJ_dQtei', 'EulJYxi', 'TzxnT6', 'ThBXthv', 'gihvT0a5', 'VP406YU', 'bL8c8KW', 'yxcB'],
-	['AKfyc', 'bx-AHY_', 'EHB20', 'VmK0_--uP', 'hlbHXEn', 'u_XRIq', 'ogrqGXb', '-YfZaLwr', 'RIPHzoT', 'Y2qyzZw', 'xZo'],
-	['AKfyc', 'byymKBP', 'VV-th', '8lZv0KxC2', 'sNeSwMj', 'mSRHn3', 'Bwsj-0n', 'bBIcMyJ8', 'zw_xDo5', 'T_u7_pP', 'So4'],
-	['AKfyc', 'bzojycy', 'YIR55', 'v1CkB1OYm', 'bYbu3TG', '8O0QUw', 'tj-CqWQ', 'XgUb7wUQ', 'oIYr94l', 'qtPmo-E', 'Jqw'],
-	['AKfyc', 'bwNp9or', 'A75Jp', '7GppGvJrC', 'gp9LVtR', 'cFhXWH', 'Se_ggxC', 'QLD4xjdj', 'aKKS0al', 'tlGylIW', '7f8'],
-	['AKfyc', 'bzNfwOS', 'PwQfK', 'gZW7hblSE', 'Zt-jeaU', 'adLcxG', '2rfhlo1', 'LBVE_WmL', 'wjK-C8k', 'WD94Lna', 'F7DS'],
-	['AKfyc', 'bzMtzNZ', 'C8jJF', 'NNGY9nCZC', 'uNFyrRG', 'mu9h2N', 'a9o2bCz', 'TkPiKKI1', 'x-u7cSH', 'uoI_p_Y', 'XTY'],
-	['AKfyc', 'bxI8879', 'OLtjq', 'Qnk_hgjMa', 'hH4eZnE', 'CkjfDs', 'Jksx8fS', 'LP18D0C7', 'Hw2Frfm', 'I_bdtRr', 'ZRIU'],
-	['AKfyc', 'byll-5W', 'yIZT3', 'rUgBxmCct', 'QmAC5II', 'yuBLYh', 'pmqgl-d', '69BoWJtl', 'Ehl4Syi', '9-EX0Fb', 'YPQ'],
-	['AKfyc', 'byQd2IW', 'QKe0R', 'LNVQ6zRRY', 'mfrApvT', 'wgXiV4', 'adoVMAD', 'zjuAT6np', 'TJ4YF_2', 'vGF34sl', 'dkHr'],
-	['AKfyc', 'bwySokT', 'WHHu5', '2Sz7QNlwt', 'm4ImybT', 'EZQ1NH', 'FDkLqu9', 'EbVmr-Zu', 'Nno3lJU', 'blgMCQr', '_AuQ'],
-	['AKfyc', 'bzEQNiI', 'bq-bC', 'nLxU9r5_4', 'L8gzCVF', 'UY-ldx', 'vkn2h_l', 'uLIHyuwC', 'gscv3bp', 'WwIt8iZ', 'otU'],
-	['AKfyc', 'bynNdfA', 'wPd9i', '-sYICKRkp', 'cupdw2u', 'DBoJtE', 'UUddBrh', 'BziLE6rx', 'sprTEdz', '3odjkMD', 'zGU'],
-	['AKfyc', 'bxf5Y5Y', 'cpqjC', 'BUi9tOPjl', 'Bl1krQD', 'IprvVr', '1Q9Nvsg', 'xIJN3-OG', 'AMztcAP', 'h80XC1e', 'pCMF'],
-	['AKfyc', 'bxfDVc5', '4mJ96', 'lwYYEelv2', '4AMiwgI', 'AGSdXJ', '95x2CAF', 'mt99sZgA', 'ODG-mdT', 'GJBpeQk', 'Lmvl'],
-	['AKfyc', 'bwjREwr', 'we8ZX', 'W8cm3ux7u', 'nhjLYJA', '4KT9uy', 'p9y1Cti', 'vpT5sNOF', 'XzfE5g1', 'QqI7mJG', 'dsk'],
-	['AKfyc', 'bxP7GVl', '1Ob7B', 'sTrVVA9Vi', 'nf-fQf0', 'o2wERO', 'WXk6hJP', 'rSEtwl8S', 'OcDtFwJ', 'coPpjFm', 'XTK5'],
-	['AKfyc', 'bzKh5P7', 'RCXBk', 'kB8rOtRyc', 'gqEtKZz', 'nSqECZ', 'x0XXeJX', 'DTzKv7h2', '7tLyfSM', 'O5ceZ2u', 'VTk'],
-	['AKfyc', 'bwY0JQc', 'sIz03', 'WtR_1z0N9', 'bLH6xWd', 'OW7Trb', 'H0QKoFh', 'dkMH7zDw', 'p26Gvla', '4vnxNTt', 'FYcR'],
-	['AKfyc', 'bxqncWG', 'U7OCr', 'mlYo2P3ya', 'BtQpnI0', 'rNYi_Y', 'DLcqmMA', 'N4bPSdWw', 'sFk6dBg', 'HY0EMvJ', 'EIY'],
-	['AKfyc', 'byHNohC', '0WyJh', 'bWJMN7CBi', 'iWxHOYC', 'T6RSYq', 'uAsNZxr', 'xfiE2Dgy', '7m0NHTB', 'eNTZgLp', 'rck'],
-	['AKfyc', 'byst1le', 'cYwty', 'zZ3W1vlWB', '2qZZyQZ', 's3n8j5', 'ntx0ELX', 'q8KOjl5Z', '00qCf4h', 'bSKornp', 'UQ'],
-	['AKfyc', 'bxJvnHv', 'n2-uG', '_2Yo6QJ-4', '8Rp3FQ9', 'qSkINR', 'oZFUwBs', 'hRP7EG_Q', 'eOqL42o', 'AQt58FC', 'DR01'],
-	['AKfyc', 'bzYxoYc', 'sNE3b', 'EI56Wb67Q', 'mDvv15C', 'PH-XOQ', 'Ieo3vIn', 'A0HS-MC7', '0uPMvZH', '2DG-7nh', '8OPe'],
-	['AKfyc', 'bzb25nW', 'IqHLc', 'YKkcphkRR', 'OlPdt81', 'b8q54u', 'wqjbJ2T', '3MCzopYo', 'Y-v4anU', 'l8LYvpn', 'Z00'],
-	['AKfyc', 'bwTPm5N', '3B80L', 'redOslaUz', 'KBQqGZQ', '3SMSBN', '-1TsLd_', '_Vs2q32H', '8v9fmhY', 'dkabdq2', 'syc'],
-	['AKfyc', 'bx25U9B', 'xvwuQ', 'duQCRl2Su', 'nLnwPc5', 'CTtI-3', 'zgxX6bD', 'zGhN5lZb', 'lV4l6xM', '1HO4VK4', 'Q_8'],
-	['AKfyc', 'bzGBeTC', 'PksyE', 'gTWetdBLR', '2t7xNnF', 'kMgqFM', 'y0r4Ui9', 'V-q-0af8', 'lturOGe', '9uWR6tn', 'HDY'],
-	['AKfyc', 'bwM8PA9', 'Rzw35', 'fUoybfrsv', '0onsgx8', 'GszilC', 'tG5-8a2', 'sIUYllWC', 'VWzbFRi', 'drn9R5i', 'Yc8'],
-	['AKfyc', 'byomZwR', 'IodfP', '88QYLfIai', 'Q6yIPWH', 'Tjxr1U', 'Gxgz-b0', 'RZhaV7pX', 'tytdqAU', 'iKzXDoW', 'gYJU'],
-	['AKfyc', 'bzTrrdC', 'Uq_Wg', 'V-WESzwKw', 'byFZ69Y', 'FLVqKG', 'g69nDAM', 'rCrzBCbS', 'UFf5zPc', 'MYHWV3d', 'oqEy'],
-	['AKfyc', 'bzzVI9B', 'IrlEM', 'dg5CLr-pE', 'DgCfoOe', 'mvxD5M', 'btWU3mw', 'V6QLlx7E', 'X9NDcux', '1kfdMqx', '7_g']
-	*/
 
 		  ];
 
@@ -973,22 +872,8 @@ function QT001(){
 		}
 		ZoomImage();
 
-
-		function toado(){
-			EID("Geo").innerHTML=="";
-			getLocation();
-			function getLocation() {
-				if (navigator.geolocation) {
-					navigator.geolocation.getCurrentPosition(showPosition);
-				} else { 
-					alert("Geolocation is not supported by this browser.");
-				}
-			}
-
-			function showPosition(position) {
-				EID("Geo").innerHTML = position.coords.latitude + "][" + position.coords.longitude;
-
-				//if (EID("Geo").innerHTML!=""){
+		function Q002() {
+			//if (EID("Geo").innerHTML!=""){
 
 
 					worker_1('1','getND');
@@ -1230,6 +1115,23 @@ function QT001(){
 
 					//ketthuc ham getcapcha
 				//}
+		}
+	
+		function toado(){
+			EID("Geo").innerHTML=="";
+			getLocation();
+			function getLocation() {
+				if (navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(showPosition);
+				} else { 
+					alert("Geolocation is not supported by this browser.");
+				}
+			}
+
+			function showPosition(position) {
+				EID("Geo").innerHTML = position.coords.latitude + "][" + position.coords.longitude;
+
+				Q002();
 
 			}
 
@@ -1243,7 +1145,6 @@ function QT001(){
 
 
 	}
-}
 
 
 /*
