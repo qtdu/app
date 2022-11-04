@@ -26,6 +26,77 @@ var H = window.innerHeight;
 window.addEventListener('DOMContentLoaded', (event) => { QT001(); });
 
 function QT001(){
+	function Qresize() {
+		let vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
+		var w = window.innerWidth;
+		var h = window.innerHeight;
+
+		if (thietbi == false) {
+			root.style.setProperty('--heso-cotcontent',3);
+			root.style.setProperty('--thietbi',1);
+			if(w>401) {
+				root.style.setProperty('--size-standard','100px');
+			} else {
+				root.style.setProperty('--size-standard','25vw');
+			}
+			if (w>400 && w<720){
+				root.style.setProperty('--display-ngang','flex');
+				root.style.setProperty('--display-doc','none');
+				var nd = '<p>Máy tính có khung làm việc quá nhỏ để hiện thị đầy dủ nội dung.<br><br>Kích thước tối thiểu là:<br>rộng: 720px - cao: 480px</p>'
+			} 
+			if (w<240){
+				root.style.setProperty('--display-ngang','flex');
+				root.style.setProperty('--display-doc','none');
+				var nd = '<p>Thiết bị có quá nhỏ quá nhỏ để hiện thị đầy dủ nội dung.<br><br>Kích thước tối thiểu là:<br>rộng: 240px - 400px<br>cao: 480px - 800px</p>';
+			} 
+			if (w>=240 && w<=400){
+				if(h>=1.5*w) {
+					root.style.setProperty('--display-ngang','none');
+					root.style.setProperty('--display-doc','block');
+					var nd='';
+				} else {
+					root.style.setProperty('--display-ngang','flex');
+					root.style.setProperty('--display-doc','none');
+					var nd = '<p>Thiết bị có quá nhỏ quá nhỏ để hiện thị đầy dủ nội dung.<br><br>Kích thước tối thiểu là:<br>rộng: 240px - 400px<br>cao: 480px - 800px</p>';
+				}
+				root.style.setProperty('--heso-cotcontent',1);
+				root.style.setProperty('--display-content1','block');
+				root.style.setProperty('--display-content2','none');
+				root.style.setProperty('--display-content3','none');
+			}
+			if(w>=720){
+				root.style.setProperty('--display-ngang','none');
+				root.style.setProperty('--display-doc','block');
+				root.style.setProperty('--display-content1','block');
+				root.style.setProperty('--display-content2','block');
+				root.style.setProperty('--display-content3','block');
+			}
+			EID('ngang').innerHTML = nd;
+
+		} else {
+
+			root.style.setProperty('--heso-cotcontent',1);
+			root.style.setProperty('--display-content1','block');
+			root.style.setProperty('--display-content2','none');
+			root.style.setProperty('--display-content3','none');
+			if(w >= 2*h) {
+				root.style.setProperty('--display-ngang','flex');
+				root.style.setProperty('--display-doc','none');
+				var nd = '<p>Chương trình không được thiết kế để hoạt động theo chiều ngang của thiết bị</p>';
+        
+			} else {
+				root.style.setProperty('--thietbi','2');
+				root.style.setProperty('--display-ngang','none');
+				root.style.setProperty('--display-doc','block');
+				root.style.setProperty('--size-standard','200px');
+
+				var nd = '';
+			}
+			EID('ngang').innerHTML = nd;
+		}
+	}
+	
 	var trangchinh = false;
 	function kiemtra(){
 		let queryString = window.location.search;
@@ -59,7 +130,7 @@ function QT001(){
 			    }, 3000);
 
 	}
-	kiemtra();
+	//kiemtra();
 	
 	window.CaptchaLoad = false;
 	window.charsArray = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@!#$%^&*";
@@ -615,76 +686,7 @@ function QT001(){
 	
 	
 	
-	function Qresize() {
-		let vh = window.innerHeight * 0.01;
-		document.documentElement.style.setProperty('--vh', `${vh}px`);
-		var w = window.innerWidth;
-		var h = window.innerHeight;
-
-		if (thietbi == false) {
-			root.style.setProperty('--heso-cotcontent',3);
-			root.style.setProperty('--thietbi',1);
-			if(w>401) {
-				root.style.setProperty('--size-standard','100px');
-			} else {
-				root.style.setProperty('--size-standard','25vw');
-			}
-			if (w>400 && w<720){
-				root.style.setProperty('--display-ngang','flex');
-				root.style.setProperty('--display-doc','none');
-				var nd = '<p>Máy tính có khung làm việc quá nhỏ để hiện thị đầy dủ nội dung.<br><br>Kích thước tối thiểu là:<br>rộng: 720px - cao: 480px</p>'
-			} 
-			if (w<240){
-				root.style.setProperty('--display-ngang','flex');
-				root.style.setProperty('--display-doc','none');
-				var nd = '<p>Thiết bị có quá nhỏ quá nhỏ để hiện thị đầy dủ nội dung.<br><br>Kích thước tối thiểu là:<br>rộng: 240px - 400px<br>cao: 480px - 800px</p>';
-			} 
-			if (w>=240 && w<=400){
-				if(h>=1.5*w) {
-					root.style.setProperty('--display-ngang','none');
-					root.style.setProperty('--display-doc','block');
-					var nd='';
-				} else {
-					root.style.setProperty('--display-ngang','flex');
-					root.style.setProperty('--display-doc','none');
-					var nd = '<p>Thiết bị có quá nhỏ quá nhỏ để hiện thị đầy dủ nội dung.<br><br>Kích thước tối thiểu là:<br>rộng: 240px - 400px<br>cao: 480px - 800px</p>';
-				}
-				root.style.setProperty('--heso-cotcontent',1);
-				root.style.setProperty('--display-content1','block');
-				root.style.setProperty('--display-content2','none');
-				root.style.setProperty('--display-content3','none');
-			}
-			if(w>=720){
-				root.style.setProperty('--display-ngang','none');
-				root.style.setProperty('--display-doc','block');
-				root.style.setProperty('--display-content1','block');
-				root.style.setProperty('--display-content2','block');
-				root.style.setProperty('--display-content3','block');
-			}
-			EID('ngang').innerHTML = nd;
-
-		} else {
-
-			root.style.setProperty('--heso-cotcontent',1);
-			root.style.setProperty('--display-content1','block');
-			root.style.setProperty('--display-content2','none');
-			root.style.setProperty('--display-content3','none');
-			if(w >= 2*h) {
-				root.style.setProperty('--display-ngang','flex');
-				root.style.setProperty('--display-doc','none');
-				var nd = '<p>Chương trình không được thiết kế để hoạt động theo chiều ngang của thiết bị</p>';
-        
-			} else {
-				root.style.setProperty('--thietbi','2');
-				root.style.setProperty('--display-ngang','none');
-				root.style.setProperty('--display-doc','block');
-				root.style.setProperty('--size-standard','200px');
-
-				var nd = '';
-			}
-			EID('ngang').innerHTML = nd;
-		}
-	}
+	
 	
 	function ZoomImage() {
 		
