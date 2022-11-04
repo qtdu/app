@@ -32,8 +32,10 @@ function QT001(){
     	let pr = urlParams.get('pr');
 	let tk = urlParams.get('token');
 	
-	alert(location.pathname);
-	alert(window.location.hostname);
+	let pathname = window.location.pathname;
+	let hostname = window.location.hostname;
+	
+	alert("https://" + hostname + pathname)
 
 	
 	window.CaptchaLoad = false;
