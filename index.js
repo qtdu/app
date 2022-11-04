@@ -141,6 +141,9 @@ function QT001(){
 				if(EID("Geo").innerHTML == ''){
 					EID('doc').style.display = 'block';
 					EID('HuongDan').style.display = 'block';
+					
+					return;
+				}
 
 			    }, 3000);
 		
