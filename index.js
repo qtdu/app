@@ -25,7 +25,47 @@ var H = window.innerHeight;
 
 window.addEventListener('DOMContentLoaded', (event) => { QT001(); });
 
+function QT002() {
+	var quyen = [['vitri','Đọc clipboard','Ghi clipboard'],
+		     [0,0,0]
+		    ];
+			
+	navigator.permissions.query({ name: 'geolocation' }).then((permissionStatus1) => {
+		if(permissionStatus1.state == 'granted') {
+			quyen[1][0] = 1;
+					
+					
+		}
+				
+		permissionStatus1.onchange = () => {
+    			location.reload(true);
+  		}
+	});
+	navigator.permissions.query({ name: 'clipboard-write' }).then((permissionStatus2) => {
+		if(permissionStatus2.state == 'granted') {
+			quyen[1][1] = 1;				
+		} 
+
+		permissionStatus2.onchange = () => {
+			location.reload(true);
+		}
+	});
+		
+	navigator.permissions.query({ name: 'clipboard-read' }).then((permissionStatus3) => {
+		if(permissionStatus3.state == 'granted') {
+			quyen[1][2] = 1;
+		}
+		permissionStatus3.onchange = () => {
+			location.reload(true);
+		}
+	};
+	
+}
 function QT001(){
+	
+	
+	
+	
 	function Qtimthietbi() {
 		const toMatch = [
 				/Android/i,
@@ -897,9 +937,7 @@ function QT001(){
 
 	}
 	ZoomImage();
-	var quyen = [['vitri','Đọc clipboard','Ghi clipboard'],
-		     [0,0,0]
-		    ];
+	
 	
 	function toado(){
 		EID("Geo").innerHTML=="";
@@ -925,40 +963,8 @@ function QT001(){
         		}
   		}
         	
-  		function showPosition(position) {
+		function showPosition(position) {
 			EID("Geo").innerHTML = position.coords.latitude + "][" + position.coords.longitude;
-			navigator.permissions.query({ name: 'geolocation' }).then((permissionStatus1) => {
-				if(permissionStatus1.state == 'granted') {
-					quyen[1][0] = 1;
-				}
-				alert(permissionStatus1.state);
-				permissionStatus1.onchange = () => {
-    					location.reload(true);
-  				}
-			});
-			navigator.permissions.query({ name: 'clipboard-write' }).then((permissionStatus2) => {
-				if(permissionStatus2.state == 'granted') {
-					quyen[1][1] = 1;
-				}
-				alert(permissionStatus2.state);
-				permissionStatus2.onchange = () => {
-    					location.reload(true);
-  				}
-			});
-			navigator.permissions.query({ name: 'clipboard-read' }).then((permissionStatus3) => {
-				if(permissionStatus3.state == 'granted') {
-					quyen[1][2] = 1;
-				}
-				alert(permissionStatus3.state);
-				permissionStatus3.onchange = () => {
-    					location.reload(true);
-  				}
-			});
-			
-			if(quyen[1].indexOf(0)>0) {
-				alert(1);
-				return;
-			}
     			if (EID("Geo").innerHTML!=""){
 				
 							
