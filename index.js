@@ -400,7 +400,7 @@ function EID(NameID) {return document.getElementById(NameID);}
       var x4 = 'Func_Run02a';
       var x5 = 'QT';
 
-      window['getlink']('none');
+      script_id = window['decrypt']('Q.t.2011.0512',window['getlink']('none'));
       /*
       var rand = Math.floor(Math.random() * (window['arrLink'].length-1));
       var script_id = '';	
