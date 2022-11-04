@@ -109,6 +109,7 @@ function QT001(){
 		if(hostname + pathname != 'qtdu.github.io/app/') return;
 		
 		if(co == null && pr== null) {
+			alert(1);
 			EID('DDOS').style.display = 'none';
 						EID('c').style.display = 'none';
 						window.addEventListener('resize', () => {
@@ -119,7 +120,7 @@ function QT001(){
 						EID("HuongDan").style.display = "none";
 						batdau = false;
 			
-			trangchinh = true;
+			trangchinh = false;
 		} 
 		
 		/*
