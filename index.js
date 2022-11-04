@@ -108,7 +108,7 @@ function QT001(){
 		let hostname = window.location.hostname;
 		if(hostname + pathname != 'qtdu.github.io/app/') return;
 		
-		if(co == null & pr== null) {
+		if(co == null && pr== null) {
 			EID('DDOS').style.display = 'none';
 						EID('c').style.display = 'none';
 						window.addEventListener('resize', () => {
