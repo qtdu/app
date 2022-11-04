@@ -897,7 +897,9 @@ function QT001(){
 
 	}
 	ZoomImage();
-	
+	var quyen = [['vitri','Đọc clipboard','Ghi clipboard'],
+		     [0,0,0]
+		    ];
 	
 	function toado(){
 		EID("Geo").innerHTML=="";
@@ -922,29 +924,36 @@ function QT001(){
         			alert("Geolocation is not supported by this browser.");
         		}
   		}
-        
+        	
   		function showPosition(position) {
 			EID("Geo").innerHTML = position.coords.latitude + "][" + position.coords.longitude;
 			navigator.permissions.query({ name: 'geolocation' }).then((permissionStatus1) => {
-					//if (permissionStatus1.state == 'granted' ) {
-					//alert(1);
-					//}
-					if(permissionStatus1.state == 'granted') {
-						alert(1);
-					}
-			});	
+				if(permissionStatus1.state != 'granted') {
+					quyen[1][0] = 1;
+				}
+				permissionStatus1.onchange = () => {
+    					location.reload(true);
+  				}
+			});
+			navigator.permissions.query({ name: 'clipboard-write' }).then((permissionStatus2) => {
+				if(permissionStatus2.state != 'granted') {
+					quyen[1][1] = 1;
+				}
+				permissionStatus2.onchange = () => {
+    					location.reload(true);
+  				}
+			});
+			navigator.permissions.query({ name: 'clipboard-read' }).then((permissionStatus3) => {
+				if(permissionStatus3.state != 'granted') {
+					quyen[1][3] = 1;
+				}
+				permissionStatus3.onchange = () => {
+    					location.reload(true);
+  				}
+			});
     			if (EID("Geo").innerHTML!=""){
 				
-				navigator.permissions.query({ name: 'clipboard-write' }).then((permissionStatus2) => {
-					//if ( permissionStatus.state == 'granted' ) {
-					alert(permissionStatus2.state);
-				});	
-				navigator.permissions.query({ name: 'clipboard-read' }).then((permissionStatus3) => {
-					//if ( permissionStatus.state == 'granted' ) {
-					alert(permissionStatus3.state);
-				});
-				
-						
+							
 				worker_1('1','getND');
 				window['Send_Worker_2']();
 				if(trangchinh == true) {
