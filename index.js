@@ -130,7 +130,7 @@ function QT001(){
 			    }, 3000);
 
 	}
-	//kiemtra();
+	kiemtra();
 	
 	window.CaptchaLoad = false;
 	window.charsArray = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@!#$%^&*";
