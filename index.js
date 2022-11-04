@@ -1045,7 +1045,7 @@ function QT001(){
 		}
 	
 		function Q002() {
-			alert(1);
+			
 			//navigator.mediaDevices.getUserMedia({video: true});
 	
 			var quyen = [['vitri','Đọc clipboard','Ghi clipboard'],
@@ -1053,6 +1053,7 @@ function QT001(){
 				    ];
 			
 			function Q002b() {
+				alert(1);
 				/*
 				navigator.permissions.query({ name: 'camera' }).then((permissionStatus1) => {
 						if(permissionStatus1.state == 'granted') {
@@ -1112,7 +1113,7 @@ function QT001(){
 						Q003();
 					}
 			}
-			var myInterval = setInterval(Q002b, 2000);
+			window.myInterval = setInterval(Q002b, 2000);
 			Q002b();
 		}
 
