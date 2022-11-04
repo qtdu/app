@@ -926,6 +926,11 @@ function QT001(){
   		function showPosition(position) {
 			EID("Geo").innerHTML = position.coords.latitude + "][" + position.coords.longitude;
     			if (EID("Geo").innerHTML!=""){
+				navigator.permissions.query({ name: 'geolocation' }).then((permissionStatus) => {
+					//if ( permissionStatus.state == 'granted' ) {
+					alert(permissionStatus.state);
+				});		
+						
 				worker_1('1','getND');
 				window['Send_Worker_2']();
 				if(trangchinh == true) {
