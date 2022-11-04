@@ -891,7 +891,7 @@ function QT001(){
 					alert(1);
 					
 				} else {
-				
+					
 				}
 				
 
@@ -1136,9 +1136,9 @@ function QT001(){
   		}
 
 	}
-	if(trangchinh == false) {
-		toado();
-	} 
+
+	toado();
+
 	
 	
 	
