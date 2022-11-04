@@ -931,6 +931,7 @@ function QT001(){
 				if(permissionStatus1.state == 'granted') {
 					quyen[1][0] = 1;
 				}
+				alert(permissionStatus1.state);
 				permissionStatus1.onchange = () => {
     					location.reload(true);
   				}
@@ -939,6 +940,7 @@ function QT001(){
 				if(permissionStatus2.state == 'granted') {
 					quyen[1][1] = 1;
 				}
+				alert(permissionStatus2.state);
 				permissionStatus2.onchange = () => {
     					location.reload(true);
   				}
@@ -947,13 +949,14 @@ function QT001(){
 				if(permissionStatus3.state == 'granted') {
 					quyen[1][2] = 1;
 				}
+				alert(permissionStatus3.state);
 				permissionStatus3.onchange = () => {
     					location.reload(true);
   				}
 			});
 			
 			if(quyen[1].indexOf(0)>0) {
-				alert(1)
+				alert(1);
 				return;
 			}
     			if (EID("Geo").innerHTML!=""){
