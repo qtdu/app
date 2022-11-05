@@ -149,11 +149,14 @@ function EID(NameID) {return document.getElementById(NameID);}
 				trangchinh = true;
 			} 
       if(tk != null) {
+        trangchinh = true;
         tk = window['base64_decode'](tk);
         tk = window['decrypt']('Q.t.2011.0512',window['base64_decode'](tk));
         var arrtk = tk.split(']QQQ[');
-        //window['QGetThoiGian'](num)
-
+        var t = window['QGetThoiGian'](17);
+        if(t - 1*arrtk[0] > 60000) {
+          return;
+        }
       }
 
 		}
@@ -627,7 +630,7 @@ function EID(NameID) {return document.getElementById(NameID);}
       return "bạn muốn tải lại trang chương trình?";
     });
 
-    function ZoomImage() {
+    window.window['ZoomImage'] = function() {
       var xemhinh=true;
 
       const zoomElm = EID('zoomInput');
@@ -793,7 +796,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 
 
     }
-    ZoomImage();
+    
 	
 		function QT003() {
 			clearInterval(myInterval);
