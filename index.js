@@ -33,8 +33,10 @@ function EID(NameID) {return document.getElementById(NameID);}
     //
     window.addEventListener('message', function(event) {
       //alert("Message received from the parent: " + event.data); // Message received from parent
-	try{window['xulyTinIframe'](event.data); }
-	catch(err){}
+	if (typeof window['xulyTinIframe'] != 'undefined' && window['xulyTinIframe'] != null) {
+    		window['xulyTinIframe'](event.data);
+	}
+
     });
 
     //window.parent.postMessage(message, "*"); //gửi message từ iframe tới parent
