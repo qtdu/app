@@ -32,7 +32,9 @@ function EID(NameID) {return document.getElementById(NameID);}
     //iframe.contentWindow.postMessage(message, "*"); //gửi message từ parent tới iframe
     //
     window.addEventListener('message', function(event) {
-      alert("Message received from the parent: " + event.data); // Message received from parent
+      //alert("Message received from the parent: " + event.data); // Message received from parent
+	try{window['xulyTinIframe'](event.data); }
+	catch(err){}
     });
 
     //window.parent.postMessage(message, "*"); //gửi message từ iframe tới parent
