@@ -256,6 +256,7 @@ body{
 	border: blue solid;
 	background: white;
 	font-weight: 600; 
+	overflow-x: hidden;
 	
 	width: calc(0.9 * var(--width-content));
 	
