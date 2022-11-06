@@ -218,7 +218,6 @@ body{
 	top: calc(5 * var(--size-mau)/4 + 8 * var(--size-mau)/40);
 	/*opacity: 0.8; */
 	 
-	display: flex;
 	justify-content: center; 
 	align-items: flex-start; /*center;*/
 	
