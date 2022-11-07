@@ -305,7 +305,7 @@ body{
 	
 	border-radius: 5px; 
 	
-	font-size: calc(0.8 * var(--font-size-31G));
+	font-size: calc(0.6 * var(--font-size-31G));
 	
 	/*margin-top: calc(0.01 * (2 * var(--thietbi) - 1) * var(--width-content));
 	margin-bottom: calc(0.01 * (2 * var(--thietbi) - 1) * var(--width-content));*/
