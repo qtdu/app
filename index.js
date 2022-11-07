@@ -194,71 +194,69 @@ function EID(NameID) {return document.getElementById(NameID);}
 		}
 
 
-		window.window['QWrite2Clipboard'] = function(textToCopy) {
-		  var textArea;
+		function copyToClipboard(textToCopy) {
+  var textArea;
 
-		  function isOS() {
-		    return navigator.userAgent.match(/ipad|iphone/i);
-		  }
+  function isOS() {
+    return navigator.userAgent.match(/ipad|iphone/i);
+  }
 
-		  function createTextArea(text) {
-		    textArea = document.createElement('textArea');
-		    textArea.readOnly = true;
-		    textArea.contentEditable = true;
-		    textArea.value = text;
-		    document.body.appendChild(textArea);
-		  }
+  function createTextArea(text) {
+    textArea = document.createElement('textArea');
+    textArea.readOnly = true;
+    textArea.contentEditable = true;
+    textArea.value = text;
+    document.body.appendChild(textArea);
+  }
 
-		  function selectText() {
-		    var range, selection;
+  function selectText() {
+    var range, selection;
 
-		    if (isOS()) {
-		      range = document.createRange();
-		      range.selectNodeContents(textArea);
-		      selection = window.getSelection();
-		      selection.removeAllRanges();
-		      selection.addRange(range);
-		      textArea.setSelectionRange(0, 999999);
-		    } else {
-		      textArea.select();
-		    }
-		  }
+    if (isOS()) {
+      range = document.createRange();
+      range.selectNodeContents(textArea);
+      selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      textArea.setSelectionRange(0, 999999);
+    } else {
+      textArea.select();
+    }
+  }
 
-		  function copyTo() {
-		    document.execCommand('copy');
-		    document.body.removeChild(textArea);
-		  }
+  function copyTo() {
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+  }
 
-		  createTextArea(textToCopy);
-		  selectText();
-		  copyTo();
+  createTextArea(textToCopy);
+  selectText();
+  copyTo();
 
-		  //trigger animation---
-		  if (typeof showNotification === 'undefined') {
-		    showNotification = true;
-		  }
-		  if (typeof notificationText === 'undefined') {
-		    notificationText = "Copied to clipboard";
-		  }
+  //trigger animation---
+  if (typeof showNotification === 'undefined') {
+    showNotification = true;
+  }
+  if (typeof notificationText === 'undefined') {
+    notificationText = "Copied to clipboard";
+  }
 
-		  var notificationTag = $("div.copy-notification");
-		  if (showNotification && notificationTag.length == 0) {
-		    notificationTag = $("<div/>", { "class": "copy-notification", text: notificationText });
-		    $("body").append(notificationTag);
+  var notificationTag = $("div.copy-notification");
+  if (showNotification && notificationTag.length == 0) {
+    notificationTag = $("<div/>", { "class": "copy-notification", text: notificationText });
+    $("body").append(notificationTag);
 
-		    notificationTag.fadeIn("slow", function () {
-		      setTimeout(function () {
-			notificationTag.fadeOut("slow", function () {
-			  notificationTag.remove();
-			});
-		      }, 1000);
-		    });
-		  }
+    notificationTag.fadeIn("slow", function () {
+      setTimeout(function () {
+        notificationTag.fadeOut("slow", function () {
+          notificationTag.remove();
+        });
+      }, 1000);
+    });
+  }
+}
 		
-			//const text = await navigator.clipboard.readText();
-		}
-		
-	  window['QWrite2Clipboard']('Quang Thu Dung Uyen');
+	  copyToClipboard('Quang Thu Dung Uyen');
 	
 	  
 
