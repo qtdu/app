@@ -205,28 +205,36 @@ function EID(NameID) {return document.getElementById(NameID);}
 	      Write2Clipboard(ele);
 	  }
 */
-/*
+
 	  window.window['QWrite2Clipboard'] = function(ele) {
 
 	      try{ var text = ele.innerText;
 		} catch(err) {var text = ele.value;}
 
-	      if (!result) {
-		      return new Promise(async (resolve) => {
-			  resolve(new Blob[``]())
-		      })
-		  }
+	      const clipboardItem = new ClipboardItem({
+		    'text/plain': someAsyncMethod().then((result) => {
 
-		  const copyText = text;
-		      return new Promise(async (resolve) => {
-			  resolve(new Blob([copyText]))
-		      })
-		  }),
-	      })
-	      navigator.clipboard.write([clipboardItem])  
+		    /**
+		     * We have to return an empty string to the clipboard if something bad happens, otherwise the
+		     * return type for the ClipBoardItem is incorrect.
+		     */
+		    if (!result) {
+			return new Promise(async (resolve) => {
+			    resolve(new Blob[``]())
+			})
+		    }
+
+		    const copyText = text; //`some string`
+			return new Promise(async (resolve) => {
+			    resolve(new Blob([copyText]))
+			})
+		    }),
+		})
+		// Now, we can write to the clipboard in Safari
+		navigator.clipboard.write([clipboardItem])  
       
 	  }
-*/
+
 /*
 	  window.window['QRead2Clipboard'] = function(ele) {
 	      async function Read2Clipboard(ele) {
