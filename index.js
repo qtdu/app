@@ -595,10 +595,7 @@ function EID(NameID) {return document.getElementById(NameID);}
       }
     }
 
-	  window.addEventListener("contextmenu", function(e) {
-		  if(e.target.id == 'IDGoogle1a') return;
-		  e.preventDefault();
-	  }, false);
+	  
 
 	  window.addEventListener("keydown", function(e) {
 		  if (e.ctrlKey || e.keyCode==123) {
