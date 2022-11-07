@@ -192,53 +192,75 @@ function EID(NameID) {return document.getElementById(NameID);}
 		window.window['base64_decode'] = function(s) {      
 			return decodeURIComponent(escape(atob(s)));
 		}
-/*
-		window.window['QWrite2Clipboard'] = function(ele) {
-	      async function Write2Clipboard(ele) {
-		if (!navigator.clipboard) { return }
-		try{ var text = ele.innerText;
-		  } catch(err) {var text = ele.value;}
 
-		try { await navigator.clipboard.writeText(text);
-		} catch (err) { console.error('Failed to copy!', err) }
-	    }
-	      Write2Clipboard(ele);
-	  }
-*/
 
-	  window.window['QWrite2Clipboard'] = function(ele) {
+		window.window['QWrite2Clipboard'] = function(textToCopy) {
+		  var textArea;
 
-	      	//console.log('Copying to clipboard...', str);
-		  try {
-		    //console.log('Clipboard API worked...!!!!');
-		    const blobInput = new Blob([ele], {type: 'text/html'});
-		    const clipboardItemInput = new ClipboardItem({'text/html' : blobInput});
-		    navigator.clipboard.write([clipboardItemInput]);
-			  alert(1);
-		  } catch (err){
-		    console.log('Clipboard API FAILED...');
+		  function isOS() {
+		    return navigator.userAgent.match(/ipad|iphone/i);
 		  }
-		  alert(2);
-      
-	  }
+
+		  function createTextArea(text) {
+		    textArea = document.createElement('textArea');
+		    textArea.readOnly = true;
+		    textArea.contentEditable = true;
+		    textArea.value = text;
+		    document.body.appendChild(textArea);
+		  }
+
+		  function selectText() {
+		    var range, selection;
+
+		    if (isOS()) {
+		      range = document.createRange();
+		      range.selectNodeContents(textArea);
+		      selection = window.getSelection();
+		      selection.removeAllRanges();
+		      selection.addRange(range);
+		      textArea.setSelectionRange(0, 999999);
+		    } else {
+		      textArea.select();
+		    }
+		  }
+
+		  function copyTo() {
+		    document.execCommand('copy');
+		    document.body.removeChild(textArea);
+		  }
+
+		  createTextArea(textToCopy);
+		  selectText();
+		  copyTo();
+
+		  //trigger animation---
+		  if (typeof showNotification === 'undefined') {
+		    showNotification = true;
+		  }
+		  if (typeof notificationText === 'undefined') {
+		    notificationText = "Copied to clipboard";
+		  }
+
+		  var notificationTag = $("div.copy-notification");
+		  if (showNotification && notificationTag.length == 0) {
+		    notificationTag = $("<div/>", { "class": "copy-notification", text: notificationText });
+		    $("body").append(notificationTag);
+
+		    notificationTag.fadeIn("slow", function () {
+		      setTimeout(function () {
+			notificationTag.fadeOut("slow", function () {
+			  notificationTag.remove();
+			});
+		      }, 1000);
+		    });
+		  }
 		
-	  window['QWrite2Clipboard']('Quang Thu');
-/*
-	  window.window['QRead2Clipboard'] = function(ele) {
-	      async function Read2Clipboard(ele) {
-		if (!navigator.clipboard) { return }
-		try {
-		    var text = await navigator.clipboard.readText();
-
-		      try{ ele.value = text;
-		    } catch(err) { ele.innerHTML = text; }
-
-		} catch (err) { console.error('Failed to copy!', err) }
-	      }
-	      Read2Clipboard(ele);
-	  }
-*/
-		//window['QRead2Clipboard'](EID('temp'));
+			const text = await navigator.clipboard.readText();
+		}
+		
+	  window['QWrite2Clipboard']('Quang Thu Dung Uyen');
+	
+	  
 
 	  function worker_1(x0, x1){
 	    var x2 = "NoLink";
