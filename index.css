@@ -272,7 +272,7 @@ body{
 	font-weight: 600; 
 	width: calc(0.9 * var(--width-content));
 	height: calc(var(--size-mau)/4);
-	margin-top: calc(0.01 * var(--width-content));
+	margin-top: calc(0.01 * var(--width-content) * (2 * var(--thietbi) - 1));
 	
 	display: flex; 
 	justify-content: center; 
