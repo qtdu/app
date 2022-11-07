@@ -194,69 +194,35 @@ function EID(NameID) {return document.getElementById(NameID);}
 		}
 
 
-		function copyToClipboard(textToCopy) {
-  var textArea;
+	  window.window['QWrite2Clipboard'] = function(ele) {
+	      async function Write2Clipboard(ele) {
+		if (!navigator.clipboard) { return }
+		try{ var text = ele.innerText;
+		  } catch(err) {var text = ele.value;}
 
-  function isOS() {
-    return navigator.userAgent.match(/ipad|iphone/i);
-  }
+		try { await navigator.clipboard.writeText(text);
+		} catch (err) { console.error('Failed to copy!', err) }
+	    }
+	      Write2Clipboard(ele);
+	  }
+	  
+	  window.window['QRead2Clipboard'] = function(ele) {
+	      async function Read2Clipboard(ele) {
+		if (!navigator.clipboard) { return }
+		try {
+		    var text = await navigator.clipboard.readText();
 
-  function createTextArea(text) {
-    textArea = document.createElement('textArea');
-    textArea.readOnly = true;
-    textArea.contentEditable = true;
-    textArea.value = text;
-    document.body.appendChild(textArea);
-  }
+		      try{ ele.value = text;
+		    } catch(err) { ele.innerHTML = text; }
 
-  function selectText() {
-    var range, selection;
+		} catch (err) { console.error('Failed to copy!', err) }
+	      }
+	      Read2Clipboard(ele);
+	  }
 
-    if (isOS()) {
-      range = document.createRange();
-      range.selectNodeContents(textArea);
-      selection = window.getSelection();
-      selection.removeAllRanges();
-      selection.addRange(range);
-      textArea.setSelectionRange(0, 999999);
-    } else {
-      textArea.select();
-    }
-  }
-
-  function copyTo() {
-    document.execCommand('copy');
-    document.body.removeChild(textArea);
-  }
-
-  createTextArea(textToCopy);
-  selectText();
-  copyTo();
-
-  //trigger animation---
-  if (typeof showNotification === 'undefined') {
-    showNotification = true;
-  }
-  if (typeof notificationText === 'undefined') {
-    notificationText = "Copied to clipboard";
-  }
-
-  var notificationTag = $("div.copy-notification");
-  if (showNotification && notificationTag.length == 0) {
-    notificationTag = $("<div/>", { "class": "copy-notification", text: notificationText });
-    $("body").append(notificationTag);
-
-    notificationTag.fadeIn("slow", function () {
-      setTimeout(function () {
-        notificationTag.fadeOut("slow", function () {
-          notificationTag.remove();
-        });
-      }, 1000);
-    });
-  }
-}
-		
-	  copyToClipboard('Quang Thu Dung Uyen');
+		window['QRead2Clipboard'](EID('temp'));
+	  
+	  
 	
 	  
 
