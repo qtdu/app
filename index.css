@@ -274,6 +274,7 @@ body{
 	width: calc(0.9 * var(--width-content));
 	height: calc(var(--size-mau)/4);
 	margin-top: calc(0.01 * var(--width-content) * (2 * var(--thietbi) - 1));
+	margin-right: calc(0.01 * var(--width-content) * (2 - var(--thietbi)));
 	
 	display: flex; 
 	justify-content: center; 
