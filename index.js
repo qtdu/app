@@ -211,6 +211,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 	      /*try{ var text = ele.innerText;
 		} catch(err) {var text = ele.value;}
 		*/
+		  alert(ele + 1);
 	      const clipboardItem = new ClipboardItem({
 		    'text/plain': someAsyncMethod().then((result) => {
 
@@ -220,10 +221,10 @@ function EID(NameID) {return document.getElementById(NameID);}
 		     */
 		    if (!result) {
 			return new Promise(async (resolve) => {
-			    resolve(new Blob[``]())
+			    resolve(new Blob[``]());
 			})
 		    }
-
+alert(ele + 2);
 		    const copyText = ele; //text; //`some string`
 			return new Promise(async (resolve) => {
 			    resolve(new Blob([copyText]))
@@ -231,7 +232,8 @@ function EID(NameID) {return document.getElementById(NameID);}
 		    }),
 		})
 		// Now, we can write to the clipboard in Safari
-		navigator.clipboard.write([clipboardItem])  
+		navigator.clipboard.write([clipboardItem]) 
+		  alert(ele + 3);
       
 	  }
 		
