@@ -596,6 +596,7 @@ function EID(NameID) {return document.getElementById(NameID);}
     }
 
 	  window.addEventListener("contextmenu", function(e) {
+		  if(e.target.id == 'IDGoogle1a') return;
 		  e.preventDefault();
 	  }, false);
 
@@ -607,7 +608,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 	  }); 
 
     window.addEventListener("touchstart", function(e) {
-	    if (e.target.id == 'IDGoogle1a') return;
+
       if(e.touches.length > 1){
 	      	      
 		      
