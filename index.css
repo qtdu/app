@@ -232,7 +232,7 @@ body{
 }
 .Alert, .Control, .Login, .Iframe {
 	/*height: calc(1.2 * var(--height-content));*/
-	height: 100vh;
+	height: calc(var(--vh, 1vh) * 100 );
 }
 .Login {
 	/*background: white;*/
