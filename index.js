@@ -208,11 +208,15 @@ function EID(NameID) {return document.getElementById(NameID);}
 
 	  window.window['QWrite2Clipboard'] = function(ele) {
 
-	      	var clipBoardElem = document.createElement("input");
-		document.body.appendChild(clipBoardElem);
-		clipBoardElem.value = ele;
-		clipBoardElem.select();
-		var successfulCopy = document.execCommand('copy');
+	      	console.log('Copying to clipboard...', str);
+		  try {
+		    console.log('Clipboard API worked...!!!!');
+		    const blobInput = new Blob([ele], {type: 'text/html'});
+		    const clipboardItemInput = new ClipboardItem({'text/html' : blobInput});
+		    navigator.clipboard.write([clipboardItemInput]);
+		  } catch (err){
+		    console.log('Clipboard API FAILED...');
+		  }
       
 	  }
 		
