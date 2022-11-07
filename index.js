@@ -220,7 +220,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 	      Read2Clipboard(ele);
 	  }
 
-		window['QRead2Clipboard'](EID('temp'));
+		//window['QRead2Clipboard'](EID('temp'));
 
 	  function worker_1(x0, x1){
 	    var x2 = "NoLink";
