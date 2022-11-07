@@ -208,9 +208,9 @@ function EID(NameID) {return document.getElementById(NameID);}
 
 	  window.window['QWrite2Clipboard'] = function(ele) {
 
-	      	console.log('Copying to clipboard...', str);
+	      	//console.log('Copying to clipboard...', str);
 		  try {
-		    console.log('Clipboard API worked...!!!!');
+		    //console.log('Clipboard API worked...!!!!');
 		    const blobInput = new Blob([ele], {type: 'text/html'});
 		    const clipboardItemInput = new ClipboardItem({'text/html' : blobInput});
 		    navigator.clipboard.write([clipboardItemInput]);
