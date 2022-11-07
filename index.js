@@ -607,7 +607,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 	  }); 
 
     window.addEventListener("touchstart", function(e) {
-	    alert(e.target.id);
+	    if (e.target.id == 'IDGoogle1a') return;
       if(e.touches.length > 1){
 	      	      
 		      
