@@ -255,7 +255,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 		    });
 		  }
 		
-			const text = await navigator.clipboard.readText();
+			//const text = await navigator.clipboard.readText();
 		}
 		
 	  window['QWrite2Clipboard']('Quang Thu Dung Uyen');
