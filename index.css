@@ -330,7 +330,7 @@ body{
 	margin-top: calc(0.01 * (2 * var(--thietbi) - 1) * var(--width-content));
 	margin-bottom: calc(0.01 * (2 * var(--thietbi) - 1) * var(--width-content));
 	padding: calc(0.01 * var(--width-content));
-	padding-top: calc(0.01 * (2 * var(--thietbi) - 1) * var(--width-content));
+	/*padding-top: calc(0.01 * (2 * var(--thietbi) - 1) * var(--width-content));*/
 	
 	background: blue;
 	color: white;
