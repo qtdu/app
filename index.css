@@ -335,7 +335,7 @@ body{
 	background: blue;
 	color: white;
 	
-	font-size: calc(0.8 * var(--font-size-31G));
+	font-size: calc((0.7 + var(--thietbi)/10) * var(--font-size-31G));
 }
 
 .Alert_body::-webkit-scrollbar, .Alert::-webkit-scrollbar, .Control_body::-webkit-scrollbar, .Control::-webkit-scrollbar, .Iframe_body::-webkit-scrollbar, .Iframe::-webkit-scrollbar, .Login_body::-webkit-scrollbar, .Login::-webkit-scrollbar {
