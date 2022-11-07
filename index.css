@@ -224,13 +224,15 @@ body{
 	
 	padding: calc(0.02 * var(--width-content));
 	
-	padding-top: calc(0.02 * var(--width-content) * (2 * var(--thietbi) - 1));
+	/*padding-top: calc(0.02 * var(--width-content) * (2 * var(--thietbi) - 1));*/
+	padding-top: 0;
 	
 	background: rgb(255, 255, 255, 0.9);
 
 }
 .Alert, .Control, .Login, .Iframe {
-	height: calc(1.2 * var(--height-content));
+	/*height: calc(1.2 * var(--height-content));*/
+	height: 100vh;
 }
 .Login {
 	/*background: white;*/
@@ -261,7 +263,8 @@ body{
 	width: calc(0.9 * var(--width-content));
 	
 	/*top: calc(8 * var(--size-standard)/40);*/
-	margin-top: calc(0.01 * var(--width-content) * (2 * var(--thietbi) - 1));
+	/*margin-top: calc(0.01 * var(--width-content) * (2 * var(--thietbi) - 1));*/
+	margin-top: calc(0.02 * var(--width-content) * (2 * var(--thietbi) - 1) + 0.01 * var(--width-content) * (2 * var(--thietbi) - 1));
 	
 }
 
