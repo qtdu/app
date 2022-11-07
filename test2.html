@@ -2,21 +2,21 @@
 <html>
 <head>
 <style>
-	body {touch-action: none;}
-    .left-side {
-   touch-action: pan-x pinch-zoom;
+	.touch-none:not(.test) {
+  touch-action: none;
 }
-    </style>
+</style>
 </head>
 <body>
 
-<div class="left-side" ><img src="https://csfood.vn/wp-content/uploads/2020/04/S%E1%BB%91t-C%C3%A0-Chua-Tomato-Paste-Castello-H%E1%BB%99p-400g..png" /></div>
+<h1>The input element</h1>
 
-<script>
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Hello World";
-}
-</script>
+<div class="touch-none" style="background: red; width: 300px; height: 400px">
+  <input class="test" type="text" id="fname" name="fname"><br><br>
+</div>
+
+<p>Click the "Submit" button and the form-data will be sent to a page on the 
+server called "action_page.php".</p>
 
 </body>
 </html>
