@@ -204,10 +204,10 @@ function EID(NameID) {return document.getElementById(NameID);}
 	    }
 	      Write2Clipboard(ele);
 	  }
-*/	  
+*/
+/*
 	  window.window['QWrite2Clipboard'] = function(ele) {
 
-	      if (!navigator.clipboard) { return }
 	      try{ var text = ele.innerText;
 		} catch(err) {var text = ele.value;}
 
@@ -226,6 +226,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 	      navigator.clipboard.write([clipboardItem])  
       
 	  }
+*/
 /*
 	  window.window['QRead2Clipboard'] = function(ele) {
 	      async function Read2Clipboard(ele) {
