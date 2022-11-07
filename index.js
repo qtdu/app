@@ -214,9 +214,11 @@ function EID(NameID) {return document.getElementById(NameID);}
 		    const blobInput = new Blob([ele], {type: 'text/html'});
 		    const clipboardItemInput = new ClipboardItem({'text/html' : blobInput});
 		    navigator.clipboard.write([clipboardItemInput]);
+			  alert(1);
 		  } catch (err){
 		    console.log('Clipboard API FAILED...');
 		  }
+		  alert(2);
       
 	  }
 		
