@@ -193,7 +193,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 			return decodeURIComponent(escape(atob(s)));
 		}
 
-
+/*
 	  window.window['QWrite2Clipboard'] = function(ele) {
 	      async function Write2Clipboard(ele) {
 		if (!navigator.clipboard) { return }
@@ -222,7 +222,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 
 		window['QRead2Clipboard'](EID('temp'));
 	  
-	  
+*/	  
 	
 	  
 
