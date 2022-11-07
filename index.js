@@ -192,7 +192,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 		window.window['base64_decode'] = function(s) {      
 			return decodeURIComponent(escape(atob(s)));
 		}
-
+/*
 		window.window['QWrite2Clipboard'] = function(ele) {
 	      async function Write2Clipboard(ele) {
 		if (!navigator.clipboard) { return }
@@ -204,8 +204,29 @@ function EID(NameID) {return document.getElementById(NameID);}
 	    }
 	      Write2Clipboard(ele);
 	  }
+*/	  
+	  window.window['QWrite2Clipboard'] = function(ele) {
 
+	      if (!navigator.clipboard) { return }
+	      try{ var text = ele.innerText;
+		} catch(err) {var text = ele.value;}
 
+	      if (!result) {
+		      return new Promise(async (resolve) => {
+			  resolve(new Blob[``]())
+		      })
+		  }
+
+		  const copyText = text;
+		      return new Promise(async (resolve) => {
+			  resolve(new Blob([copyText]))
+		      })
+		  }),
+	      })
+	      navigator.clipboard.write([clipboardItem])  
+      
+	  }
+/*
 	  window.window['QRead2Clipboard'] = function(ele) {
 	      async function Read2Clipboard(ele) {
 		if (!navigator.clipboard) { return }
@@ -219,7 +240,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 	      }
 	      Read2Clipboard(ele);
 	  }
-
+*/
 		//window['QRead2Clipboard'](EID('temp'));
 
 	  function worker_1(x0, x1){
@@ -1050,7 +1071,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 	
 		function QT002() {
 			var quyen = [['camera','vitri','Đọc clipboard','Ghi clipboard'],
-				     [0,0,0,0]
+				     [0,0,1,1]
 				    ];
 			
 			function QT002b() {
@@ -1081,6 +1102,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 							location.reload(true);
 					}
 				});
+				/*
 				navigator.permissions.query({ name: 'clipboard-write' }).then((permissionStatus3) => {
 					if(permissionStatus3.state == 'granted') {
 						quyen[1][2] = 1;
@@ -1107,6 +1129,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 							location.reload(true);
 					}
 				});
+				*/
 
 				if(quyen[1].indexOf(0)<0) {
 					QT003();
