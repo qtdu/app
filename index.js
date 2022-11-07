@@ -608,8 +608,10 @@ function EID(NameID) {return document.getElementById(NameID);}
 
     window.addEventListener("touchstart", function(e) {
       if(e.touches.length > 1){
-	      if(e.target.id != 'IDGoogle1a')
+	      	      if(e.target.id == 'IDGoogle1a') {
+		      alert(1);}
         	e.preventDefault();
+		      
       }
     },{passive: false});
 
