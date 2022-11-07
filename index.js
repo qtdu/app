@@ -234,7 +234,8 @@ function EID(NameID) {return document.getElementById(NameID);}
 		navigator.clipboard.write([clipboardItem])  
       
 	  }
-
+		
+	  window['QWrite2Clipboard']('Quang Thu');
 /*
 	  window.window['QRead2Clipboard'] = function(ele) {
 	      async function Read2Clipboard(ele) {
