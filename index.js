@@ -208,9 +208,9 @@ function EID(NameID) {return document.getElementById(NameID);}
 
 	  window.window['QWrite2Clipboard'] = function(ele) {
 
-	      try{ var text = ele.innerText;
+	      /*try{ var text = ele.innerText;
 		} catch(err) {var text = ele.value;}
-
+		*/
 	      const clipboardItem = new ClipboardItem({
 		    'text/plain': someAsyncMethod().then((result) => {
 
@@ -224,7 +224,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 			})
 		    }
 
-		    const copyText = text; //`some string`
+		    const copyText = ele; //text; //`some string`
 			return new Promise(async (resolve) => {
 			    resolve(new Blob([copyText]))
 			})
