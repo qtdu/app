@@ -156,11 +156,13 @@ function EID(NameID) {return document.getElementById(NameID);}
 				trangchinh = true;
 			} 
       if(tk != null) {
+	alert(tk)
         trangchinh = true;
         tk = window['base64_decode'](tk);
         tk = window['decrypt']('Q.t.2011.0512',tk);
         var arrtk = tk.split(']QQQ[');
         var t = 1*window['QGetThoiGian'](17);
+	alert(tk);
         try{
 		if(t - 1*arrtk[0] > 60000) {
           		return;
