@@ -227,7 +227,7 @@ body{
 	padding-top: calc(0.02 * var(--width-content) * (2 * var(--thietbi) - 1));
 
 	
-	background: rgb(255, 255, 255, 0.9);
+	background: rgb(255, 255, 255, 1);
 
 }
 .Alert, .Control, .Login, .Iframe {
