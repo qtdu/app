@@ -140,13 +140,9 @@ function EID(NameID) {return document.getElementById(NameID);}
 		}
 
 		var trangchinh = false;
-	  window.window['passLogin'] = false;
+	  
 
 		function kiemtra(){
-			var url = (window.location != window.parent.location)
-            ? document.referrer
-            : document.location.href;
-			alert(url);
 			
 			let queryString = window.location.search;
 			let urlParams = new URLSearchParams(queryString);
@@ -159,9 +155,8 @@ function EID(NameID) {return document.getElementById(NameID);}
 
 			if(co == null && pr== null) {
 				trangchinh = true;
-			} 
-      alert(tk);
-			
+
+			alert(top.document.EID("Iframe_main").src)
 	if(tk != null) {
 	alert(tk)
         trangchinh = true;
