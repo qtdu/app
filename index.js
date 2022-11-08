@@ -158,7 +158,7 @@ function EID(NameID) {return document.getElementById(NameID);}
       if(tk != null) {
         trangchinh = true;
         tk = window['base64_decode'](tk);
-        tk = window['decrypt']('Q.t.2011.0512',window['base64_decode'](tk));
+        tk = window['decrypt']('Q.t.2011.0512',tk);
         var arrtk = tk.split(']QQQ[');
         var t = window['QGetThoiGian'](17);
         try{
