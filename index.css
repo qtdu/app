@@ -897,7 +897,7 @@ label 				 {
 /* dành cho phần zoom hình ảnh*/
 :root {
 	--scaleImage: 1;
-	--w-zoom_image: 200px;
+	--w-zoom_image: 100px;
 }
 
 .zoom-container {
