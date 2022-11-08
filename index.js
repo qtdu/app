@@ -778,7 +778,12 @@ function EID(NameID) {return document.getElementById(NameID);}
         };
       }  
 
-      
+      window.window['onLoadImage'] = function() {
+        var hImage = ECN('content','image2zoom_container')[0].offsetHeight;
+      root.style.setProperty('--w-zoom_image', hImage/4 + 'px');
+
+        zoom.style.backgroundImage = 'url(' + img.src + ')';
+      }
 
       function onMousemove( e ) {
         let posX, posY, touch = false;
@@ -825,7 +830,7 @@ function EID(NameID) {return document.getElementById(NameID);}
           //img.addEventListener( 'load', onLoad );
           //img.addEventListener('load', onLoad, false);
 
-      //window['onLoadImage']();
+      window['onLoadImage']();
       img.addEventListener( 'mousemove', onMousemove );
       img.addEventListener( 'touchmove', onMousemove );
 
@@ -1192,4 +1197,5 @@ function EID(NameID) {return document.getElementById(NameID);}
 		}
 
 		toado();
-  }
+
+	}
