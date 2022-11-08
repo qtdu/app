@@ -140,6 +140,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 		}
 
 		var trangchinh = false;
+	  window.window['passLogin'] = false;
 	  
 
 		function kiemtra(){
