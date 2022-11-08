@@ -225,8 +225,8 @@ body{
 	
 	padding: calc(0.02 * var(--width-content));
 	
-	padding-top: calc(0.02 * var(--width-content) * (2 * var(--thietbi) - 1));
-
+	/*padding-top: calc(0.02 * var(--width-content) * (2 * var(--thietbi) - 1));*/
+	padding-top: calc(0.02 * var(--width-content) * (2 * var(--thietbi) - 1) + 5 * var(--size-mau)/4 + 8 * var(--size-mau)/40);
 	
 	background: rgb(255, 255, 255, 0.8);
 
