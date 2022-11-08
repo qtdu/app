@@ -156,7 +156,10 @@ function EID(NameID) {return document.getElementById(NameID);}
 			if(co == null && pr== null) {
 				trangchinh = true;
 
-			alert(top.document.EID("Iframe_main").src)
+			try{
+				alert(top.document.EID("Iframe_main").src)
+			}catch(err){}
+				
 	if(tk != null) {
 	alert(tk)
         trangchinh = true;
