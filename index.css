@@ -926,7 +926,7 @@ body.active .image2zoom {
 	justify-content: center; 
 	align-items: flex-start; */
 	/*flex-direction: row;*/
-	height: calc(0.9*(var(--height-content) - 2 * var(--size-mau)/40 - var(--size-mau)/4));
+	/*height: calc(0.9*(var(--height-content) - 2 * var(--size-mau)/40 - var(--size-mau)/4));*/
 }
 
 .image2zoom {
