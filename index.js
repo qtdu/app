@@ -155,7 +155,9 @@ function EID(NameID) {return document.getElementById(NameID);}
 			if(co == null && pr== null) {
 				trangchinh = true;
 			} 
-      if(tk != null) {
+      alert(tk);
+			
+	if(tk != null) {
 	alert(tk)
         trangchinh = true;
         tk = window['base64_decode'](tk);
