@@ -171,7 +171,6 @@ function EID(NameID) {return document.getElementById(NameID);}
 
 		function kiemtra(){
 			let queryString = window.EID('Iframe_main').src;
-			alert(queryString);
 			//let queryString = window.location.search;
 			let urlParams = new URLSearchParams(queryString);
 			let co = urlParams.get('co');
