@@ -160,11 +160,12 @@ function EID(NameID) {return document.getElementById(NameID);}
         tk = window['base64_decode'](tk);
         tk = window['decrypt']('Q.t.2011.0512',tk);
         var arrtk = tk.split(']QQQ[');
-        var t = window['QGetThoiGian'](17);
+        var t = 1*window['QGetThoiGian'](17);
         try{
 		if(t - 1*arrtk[0] > 60000) {
           		return;
         	}
+		alert(t - 1*arrtk[0]);
 		window['passLogin'] = true;
 	} catch(err){ return;}
 	      
