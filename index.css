@@ -208,7 +208,8 @@ body{
 	
 	font-weight: 600; 
 	
-	width: 98%; /*var(--width-content);*/
+	/*width: 98%; /*var(--width-content);*/
+	width: 100%;
     	overflow: hidden;
 	/*margin: calc(var(--size-standard)/40);*/
     	
@@ -227,11 +228,12 @@ body{
 	padding-top: calc(0.02 * var(--width-content) * (2 * var(--thietbi) - 1));
 
 	
-	background: rgb(255, 255, 255, 1);
+	background: rgb(255, 255, 255, 0.8);
 
 }
 .Alert, .Control, .Login, .Iframe {
-	height: calc(1.2 * var(--height-content));
+	/*height: calc(1.2 * var(--height-content));*/
+	height: calc(var(--vh, 1vh) * 100);
 
 }
 .Login {
