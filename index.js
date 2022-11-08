@@ -756,14 +756,14 @@ function EID(NameID) {return document.getElementById(NameID);}
 
       function updateMagnifier( x, y ) {
         Ix = (W - img.offsetWidth)/2;
-        Iy = EID('header').offsetHeight - ECN('content', 'zoom-container')[0].offsetHeight;
+        Iy = (H - img.offsetHeight)/2 + EID('header').offsetHeight; //EID('header').offsetHeight - ECN('content', 'zoom-container')[0].offsetHeight;
         Zw = zoom.offsetWidth;
         Zh = zoom.offsetHeight;
 
         var v1a = ( x ) + 'px'; //( x ) + 'px';
         var v1b = ( y - Iy ) + 'px'; //( y - Iy) + 'px';
-        var v2a = (( Ix - x ) * ratio + 0*Zw/2) + 'px '; //(( Ix - x ) * ratio + Zw/2) + 'px ';
-        var v2b = (( Iy - y ) * ratio + 1*Zh/8) + 'px'; //(( Iy - y ) * ratio + Zh/2) + 'px';
+        var v2a = (( Ix - x ) * ratio + 1*Zw/2) + 'px '; //(( Ix - x ) * ratio + Zw/2) + 'px ';
+        var v2b = (( Iy - y ) * ratio + 1*Zh/2) + 'px'; //(( Iy - y ) * ratio + Zh/2) + 'px';
 
         zoom.style.left = v1a;
         zoom.style.top = v1b;  
