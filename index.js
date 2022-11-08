@@ -140,6 +140,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 		}
 
 		var trangchinh = false;
+	  window.window['passLogin'] = false;
 
 		function kiemtra(){
 			let queryString = window.location.search;
@@ -160,9 +161,13 @@ function EID(NameID) {return document.getElementById(NameID);}
         tk = window['decrypt']('Q.t.2011.0512',window['base64_decode'](tk));
         var arrtk = tk.split(']QQQ[');
         var t = window['QGetThoiGian'](17);
-        if(t - 1*arrtk[0] > 60000) {
-          return;
-        }
+        try{
+		if(t - 1*arrtk[0] > 60000) {
+          		return;
+        	}
+		window['passLogin'] = true;
+	} catch(err){ return;}
+	      
       }
 
 		}
@@ -902,10 +907,12 @@ function EID(NameID) {return document.getElementById(NameID);}
 					EID("HuongDan").style.display = "none";
 					batdau = false;
 
+					/*
 					window.window["Begin"] = function Begin() {
 								//code xử lý tiếp theo sau khi đăng nhập ở đây
 					}
 					window["Begin"](); 
+					*/
 				}
 
 			}
@@ -1149,34 +1156,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 							location.reload(true);
 					}
 				});
-				/*
-				navigator.permissions.query({ name: 'clipboard-write' }).then((permissionStatus3) => {
-					if(permissionStatus3.state == 'granted') {
-						quyen[1][2] = 1;
-					}else {
-						EID('doc').style.display = 'block';
-						EID('HuongDan').innerHTML = 'Do chương trình sử dụng tính năng copy vào bảng nhớ tạm để thao tác nhanh hơn nên bạn phải bật tính năng bảng nhớ tạm, chương trình mới hoạt động. Xin cảm ơn';
-						EID('HuongDan').style.display = 'block';
-					}
-					permissionStatus3.onchange = () => {
-						if(batdau == false)
-							location.reload(true);
-					}
-				});
-				navigator.permissions.query({ name: 'clipboard-read' }).then((permissionStatus4) => {
-					if(permissionStatus4.state == 'granted') {
-						quyen[1][3] = 1;
-					}else {
-						EID('doc').style.display = 'block';
-						EID('HuongDan').innerHTML = 'Do chương trình sử dụng tính năng copy vào bảng nhớ tạm để thao tác nhanh hơn nên bạn phải bật tính năng bảng nhớ tạm, chương trình mới hoạt động. Xin cảm ơn';
-						EID('HuongDan').style.display = 'block';
-					}
-					permissionStatus4.onchange = () => {
-						if(batdau == false)
-							location.reload(true);
-					}
-				});
-				*/
+				
 
 				if(quyen[1].indexOf(0)<0) {
 					QT003();
