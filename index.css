@@ -29,6 +29,8 @@
       	--hesoContent1 : 2;
       	--hesoContent2 : 5;
 	
+	--padTop-Iframe: calc(0.02 * var(--width-content) * (2 * var(--thietbi) - 1) + 5 * var(--size-mau)/4 + 8 * var(--size-mau)/40);
+	
 	--top-Iframe: calc(5 * var(--size-mau)/4 + (12 + 2.5 * var(--thietbi)) * var(--size-mau)/40);
 	--h-Iframe: calc( var(--height-content));
 	--w-IframeX: calc(0.8 * var(--width-content));
@@ -232,6 +234,10 @@ body{
 	background: rgb(255, 255, 255, 0.8);
 
 }
+.Iframe { 
+	padding-top: var(--padTop-Iframe);
+}
+
 .Alert, .Control, .Login, .Iframe {
 	/*height: calc(1.2 * var(--height-content));*/
 	height: calc(var(--vh, 1vh) * 100);
