@@ -937,8 +937,8 @@ body.active .image2zoom {
   -webkit-transition: -webkit-filter 500ms;
 max-height: calc(0.9*(var(--height-content) - 2 * var(--size-mau)/40 - var(--size-mau)/4));
 	object-fit: contain;
-	/*width:calc(0.9 * var(--width-content));*/
-	width: 100vw;
+	width:calc(0.9 * var(--width-content));
+	/*width: 100vw;*/
 }
 
 
