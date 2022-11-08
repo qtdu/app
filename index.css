@@ -34,6 +34,7 @@
 	
 	--top-Iframe: calc(5 * var(--size-mau)/4 + (12 + 2.5 * var(--thietbi)) * var(--size-mau)/40);
 	--h-Iframe: calc(var(--vh, 1vh) * 100);
+	--h-Iframe_body: var(--height-content);
 	--h-Iframe_main: calc(var(--height-content) - calc(var(--size-mau)/4));
 	
 	--w-IframeX: calc(0.8 * var(--width-content));
@@ -452,7 +453,7 @@ body{
 .Iframe_body {
 	margin: 0;
 	width: 100vw;
-	height: var(--height-content);
+	height: var(--h-Iframe_body); /*var(--height-content);*/
 	display: flex; 
 	justify-content: center;
 	align-items: flex-start;
