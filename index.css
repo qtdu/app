@@ -897,6 +897,7 @@ label 				 {
 /* dành cho phần zoom hình ảnh*/
 :root {
 	--scaleImage: 1;
+	--w-zoom_image: 200px;
 }
 
 .zoom-container {
@@ -948,9 +949,9 @@ max-height: calc(0.9*(var(--height-content) - 2 * var(--size-mau)/40 - var(--siz
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 200px;
-  height: 200px;
-  margin: -100px 0 0 -100px;
+  width: var(--w-zoom_image); /*200px;*/
+  height: var(--w-zoom_image); /*200px;*/
+  margin: calc(-1 * var(--w-zoom_image)) 0 0 calc(-1 * var(--w-zoom_image));
   background-repeat: no-repeat;
   box-shadow: 0 0 0 2px rgba(255,0,0,0.5),
     5px 5px 10px 5px rgba(0,0,0,0.2);
