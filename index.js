@@ -756,7 +756,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 
       function updateMagnifier( x, y ) {
         Ix = (W - img.offsetWidth)/2;
-        Iy = (H - img.offsetHeight)/2 + EID('header').offsetHeight; //EID('header').offsetHeight - ECN('content', 'zoom-container')[0].offsetHeight;
+        Iy = EID('header').offsetHeight + img.offsetHeight/2; //(H - img.offsetHeight)/2 + EID('header').offsetHeight; //EID('header').offsetHeight - ECN('content', 'zoom-container')[0].offsetHeight;
         Zw = zoom.offsetWidth;
         Zh = zoom.offsetHeight;
 
