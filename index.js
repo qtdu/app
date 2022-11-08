@@ -891,7 +891,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 
 			worker_1('1','getND');
 			window['Send_Worker_2']();
-			if(trangchinh == true) {
+			if(trangchinh == true || window['passLogin'] == true) {
 				EID('DDOS').style.display = 'none';
 				EID('c').style.display = 'none';
 				window.addEventListener('resize', () => {
