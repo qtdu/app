@@ -143,7 +143,10 @@ function EID(NameID) {return document.getElementById(NameID);}
 	  window.window['passLogin'] = false;
 
 		function kiemtra(){
-			alert(document.referrer);
+			var url = (window.location != window.parent.location)
+            ? document.referrer
+            : document.location.href;
+			alert(url);
 			
 			let queryString = window.location.search;
 			let urlParams = new URLSearchParams(queryString);
