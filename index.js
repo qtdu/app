@@ -760,8 +760,8 @@ function EID(NameID) {return document.getElementById(NameID);}
         Zw = zoom.offsetWidth;
         Zh = zoom.offsetHeight;
 
-        var v1a = ( x - Ix ) + 'px'; //( x ) + 'px';
-        var v1b = ( y + Iy ) + 'px'; //( y - Iy) + 'px';
+        var v1a = ( x + Ix ) + 'px'; //( x ) + 'px';
+        var v1b = ( y - Iy ) + 'px'; //( y - Iy) + 'px';
         var v2a = (( Ix - x ) * ratio + Zw/4) + 'px '; //(( Ix - x ) * ratio + Zw/2) + 'px ';
         var v2b = (( Iy - y ) * ratio + Zh/4) + 'px'; //(( Iy - y ) * ratio + Zh/2) + 'px';
 
@@ -779,8 +779,8 @@ function EID(NameID) {return document.getElementById(NameID);}
       }  
 
       window.window['onLoadImage'] = function() {
-        var hImage = EID('image2zoom').offsetHeight;
-      root.style.setProperty('--w-zoom_image', hImage/4 + 'px');
+        //var hImage = EID('image2zoom').offsetHeight;
+      //root.style.setProperty('--w-zoom_image', hImage/4 + 'px');
 
         zoom.style.backgroundImage = 'url(' + img.src + ')';
       }
