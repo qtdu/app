@@ -143,6 +143,8 @@ function EID(NameID) {return document.getElementById(NameID);}
 	  window.window['passLogin'] = false;
 
 		function kiemtra(){
+			var a = parent.window.location;
+			alert(a);
 			let queryString = window.location.search;
 			let urlParams = new URLSearchParams(queryString);
 			let co = urlParams.get('co');
