@@ -138,30 +138,8 @@ function EID(NameID) {return document.getElementById(NameID);}
 				EID('ngang').innerHTML = nd;
 			}
 		}
-
-		var trangchinh = false;
 	  
-
-		function kiemtra(){
-			
-			let queryString = window.location.search;
-			let urlParams = new URLSearchParams(queryString);
-			let co = urlParams.get('co');
-			let pr = urlParams.get('pr');
-			let tk = urlParams.get('token');
-			let pathname = window.location.pathname;
-			let hostname = window.location.hostname;
-			if(hostname + pathname != 'qtdu.github.io/app/') return;
-
-			if(co == null && pr== null) {
-				trangchinh = true;
-
-      			}
-
-		}
-		kiemtra();
-
-		window.CaptchaLoad = false;
+	  	window.CaptchaLoad = false;
 		window.charsArray = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@!#$%^&*";
 
 		window.window['encrypt'] = function(key, value) {
@@ -185,6 +163,48 @@ function EID(NameID) {return document.getElementById(NameID);}
 		window.window['base64_decode'] = function(s) {      
 			return decodeURIComponent(escape(atob(s)));
 		}
+
+		
+	  
+	  	var trangchinh = false;
+	  	window.window['passLogin'] = false;
+
+		function kiemtra(){
+			let queryString = window.EID('Iframe_main').src;
+			alert(queryString);
+			//let queryString = window.location.search;
+			let urlParams = new URLSearchParams(queryString);
+			let co = urlParams.get('co');
+			let pr = urlParams.get('pr');
+			let tk = urlParams.get('token');
+			let pathname = window.location.pathname;
+			let hostname = window.location.hostname;
+			if(hostname + pathname != 'qtdu.github.io/app/') return;
+
+			if(co == null && pr== null) {
+				trangchinh = true;
+      			}
+			
+
+		      if(tk != null) {
+			tk = window['base64_decode'](tk);
+			tk = window['decrypt']('Q.t.2011.0512',tk);
+			var arrtk = tk.split(']QQQ[');
+			var t = 1*window['QGetThoiGian'](17);
+			try{
+				      if(t - 1*arrtk[0] < 60000) { 
+			    window['passLogin'] = true;
+			  }else {
+			    return; 
+			  }
+			}catch(err) {return;}
+
+		      }
+
+		}
+		kiemtra();
+
+		
 
 /*
 	  window.window['QWrite2Clipboard'] = function(ele) {
