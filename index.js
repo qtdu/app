@@ -140,7 +140,6 @@ function EID(NameID) {return document.getElementById(NameID);}
 		}
 
 		var trangchinh = false;
-	  window.window['passLogin'] = false;
 	  
 
 		function kiemtra(){
@@ -157,27 +156,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 			if(co == null && pr== null) {
 				trangchinh = true;
 
-			try{
-				alert(top.document.EID("Iframe_main").src)
-			}catch(err){}
-				
-	if(tk != null) {
-	alert(tk)
-        trangchinh = true;
-        tk = window['base64_decode'](tk);
-        tk = window['decrypt']('Q.t.2011.0512',tk);
-        var arrtk = tk.split(']QQQ[');
-        var t = 1*window['QGetThoiGian'](17);
-	alert(tk);
-        try{
-		if(t - 1*arrtk[0] > 60000) {
-          		return;
-        	}
-		alert(t - 1*arrtk[0]);
-		window['passLogin'] = true;
-	} catch(err){ return;}
-	      
-      }
+      			}
 
 		}
 		kiemtra();
