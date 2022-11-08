@@ -194,6 +194,7 @@ body{
 	display: flex; 
 	justify-content: center; 
 	align-items: center;
+	cursor: pointer;
 }
 .VirtualButton div{ width: var(--width-31G); text-align: center;}
 
