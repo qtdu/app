@@ -215,7 +215,8 @@ body{
 	font-size: var(--font-size-31G);
 	
 	left: 0;
-	top: calc(5 * var(--size-mau)/4 + 8 * var(--size-mau)/40);
+	/*top: calc(5 * var(--size-mau)/4 + 8 * var(--size-mau)/40);*/
+	top: 0;
 	/*opacity: 0.8; */
 	
 	justify-content: center; 
