@@ -763,7 +763,7 @@ function EID(NameID) {return document.getElementById(NameID);}
         var v1a = ( x ) + 'px'; //( x ) + 'px';
         var v1b = ( y - Iy ) + 'px'; //( y - Iy) + 'px';
         var v2a = (( Ix - x ) * ratio + 1*Zw/2) + 'px '; //(( Ix - x ) * ratio + Zw/2) + 'px ';
-        var v2b = (( Iy - y ) * ratio - 4*Zh/2) + 'px'; //(( Iy - y ) * ratio + Zh/2) + 'px';
+        var v2b = (( Iy - y ) * ratio - 0*Zh/2) + 'px'; //(( Iy - y ) * ratio + Zh/2) + 'px';
 
         zoom.style.left = v1a;
         zoom.style.top = v1b;  
