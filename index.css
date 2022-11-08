@@ -469,6 +469,8 @@ body{
 	height: var(--h-Iframe_main); /*calc(var(--height-content) - calc(var(--size-mau)/4));*/
 	width: 100%;
 	border: none;
+	padding: 0;
+	margin: 0;
 }
 
 
