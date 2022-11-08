@@ -33,7 +33,7 @@
 	--pad-Iframe: calc(0.02 * var(--width-content));
 	
 	--top-Iframe: calc(5 * var(--size-mau)/4 + (12 + 2.5 * var(--thietbi)) * var(--size-mau)/40);
-	--h-Iframe: calc( var(--height-content));
+	--h-Iframe: calc(var(--vh, 1vh) * 100);
 	--h-Iframe_main: calc(var(--height-content) - calc(var(--size-mau)/4));
 	
 	--w-IframeX: calc(0.8 * var(--width-content));
@@ -245,7 +245,7 @@ body{
 
 .Alert, .Control, .Login, .Iframe {
 	/*height: calc(1.2 * var(--height-content));*/
-	height: calc(var(--vh, 1vh) * 100);
+	height: var(--h-Iframe) ; 
 
 }
 .Login {
