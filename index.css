@@ -163,12 +163,12 @@ body{
 }
 
 .doc {
-    	z-index: 93000;
+    	z-index: 102000;
     	display: var(--display-doc);
 }
 		
 .HuongDan {
-        z-index: 100000;
+        z-index: 101000;
         width: 100%; height: 100vh; 
         background: orange; 
         position: fixed; 
@@ -179,7 +179,7 @@ body{
 }
 
 .VirtualButton {
-	z-index: 92000;
+	z-index: 100000;
 	width: var(--width-31G); 
 	height: var(--width-31G);
 	font-size: var(--font-size-31G); 
