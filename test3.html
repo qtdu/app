@@ -52,7 +52,7 @@ const html5QrCode = new Html5Qrcode("reader");
 const qrCodeSuccessCallback = (decodedText, decodedResult) => {
     alert(decodedText);
 };
-const config = { fps: 10, qrbox: { width: 250, height: 250 } };
+const config = { fps: 10, qrbox: { width: 250, height: 250 }, experimentalFeatures: { useBarCodeDetectorIfSupported: true } };
 function openScanner(){
   // Opening the scanner
   
