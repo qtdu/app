@@ -67,7 +67,7 @@ function openScanner(){
 
   const scanConfig = { fps: 10, qrbox: 250 };
   // If you want to prefer front camera
-  html5qrcode.start({ facingMode: "user" }, scanConfig, onScanSuccess);
+  html5qrcode.start({ facingMode: "environment" }, scanConfig, onScanSuccess);
 }
 function closeScanner(){
   html5QrCode.stop().then(ignore => {
