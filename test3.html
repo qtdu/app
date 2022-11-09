@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.2.8/html5-qrcode.min.js"></script>
+    <style>
+    	.scan-area{
+  width: auto;
+  text-align: center;
+}
+    </style>
+	
+</head>
+<body>
+
+<div class="container mt-5">
+  <div class="text-right">
+    <button class="btn btn-primary" onclick="openScanner()" data-toggle="modal" data-target="#exampleModal">Scan Tower</butto>      
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Qr Code Scanner</h5>
+        <button  type="button" onclick="closeScanner()" data-dismiss="modal" class="close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="reader" class="scan-area">
+       
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button data-dismiss="modal" onclick="closeScanner()" type="button" class="btn btn-danger">Stop Scanning</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+const html5QrCode = new Html5Qrcode("reader");
+function openScanner(){
+  // Opening the scanner
+  html5QrCode.start(
+  { facingMode: "user" }, 
+  {
+    fps: 10
+  },
+  qrCodeMessage => {
+    // do something when code is read
+    console.log("Qr Code Found");
+  },
+  errorMessage => {
+    // parse error, ignore it.
+  })
+.catch(err => {
+  // Opening the scanner failed.
+});
+}
+function closeScanner(){
+  html5QrCode.stop().then(ignore => {
+}).catch(err => {
+});
+}
+</script>
+
+</body>
+</html>
