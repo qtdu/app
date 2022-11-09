@@ -52,7 +52,7 @@ const html5QrCode = new Html5Qrcode("reader");
 function openScanner(){
   // Opening the scanner
   html5QrCode.start(
-  { facingMode: "user" }, 
+  { facingMode: "environment" }, 
   {
     fps: 10
   },
