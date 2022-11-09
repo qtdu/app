@@ -761,7 +761,7 @@ function EID(NameID) {return document.getElementById(NameID);}
         Zh = zoom.offsetHeight;
 
         var v1a = ( x + Zw/2) + 'px'; //( x ) + 'px';
-        var v1b = ( y - Zh) + 'px'; //( y - Iy) + 'px';
+        var v1b = ( y ) + 'px'; //( y - Iy) + 'px';
         var v2a = (( Ix - x ) * ratio + 1*Zw/2) + 'px '; //(( Ix - x ) * ratio + Zw/2) + 'px ';
         var v2b = (( Iy - y ) * ratio + 3*Zh/2) + 'px'; //(( Iy - y ) * ratio + Zh/2) + 'px';
 
