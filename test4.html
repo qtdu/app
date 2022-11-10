@@ -178,8 +178,20 @@ window.window['func_ScanBarcode'] = function(x) {
    * { id: "id", label: "label" }
    */
   if (devices && devices.length) {
-    var cameraId = devices[0].id;
-    var cameraLabel = devices[0].label;
+  	var cameraId = devices[0].id;
+  	for(var i=0; i< devices.length; i++){
+
+    	var cameraLabel = devices[i].label;
+        
+        cameraLabel = cameraLabel.toUpperCase();
+
+        if(cameraLabel.indexOf('BACK')>=0) {
+        	cameraId = devices[i].id;
+            break;
+        }
+    }
+    //var cameraId = devices[0].id;
+    //var cameraLabel = devices[0].label;
     // .. use this to start scanning.
     //alert(cameraLabel);
     
