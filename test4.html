@@ -196,6 +196,7 @@ window.window['func_ScanBarcode'] = function(x) {
     //alert(cameraLabel);
     
     html5qrcode.start({ deviceId: { exact: cameraId} }, scanConfig, onScanSuccess);
+    html5qrcode1.start({ deviceId: { exact: cameraId} }, scanConfig, onScanSuccess);
   }
 }).catch(err => {
   // handle err
@@ -216,12 +217,7 @@ function openScanner(){
 
   window['func_ScanBarcode']("reader" + "]QQQ[" + "0.7]TTT[" + EID('barcode').value + "]TTT[10]TTT[true" + "]QQQ[Send_Worker_1]QQQ[loai12"); 
   
-  setTimeout(function(){ 
-      var q = EID('reader').querySelectorAll('*');
-      for(i=0;i<q.length;i++){
-        alert(q[i].innerHTML);
-      }
-  }, 2000);
+  
   
 }
 
