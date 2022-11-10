@@ -25,7 +25,7 @@
 <div class="container mt-5">
   <div class="text-right">
     <button class="btn btn-primary" onclick="openScanner()" data-toggle="modal" data-target="#exampleModal">Scan Tower</button>  
-    <button class="btn btn-primary" onclick="openScanner1()" data-toggle="modal" data-target="#exampleModal">Scan Tower1</button>  
+ 
   </div>
 </div>
 
@@ -43,6 +43,9 @@
       </div>
       <div class="modal-body">
         <div id="reader" class="scan-area">
+       
+        </div>
+        <div id="reader1" class="scan-area">
        
         </div>
       </div>
@@ -142,9 +145,15 @@ window.window['func_ScanBarcode'] = function(x) {
       
 
    if(formatCode == 'true' || formatCode == 'false') {
-   
-           alert(1)     
+       
             window.html5qrcode = new Html5Qrcode(x1, {
+            // Use this flag to turn on the feature.
+            	experimentalFeatures: {
+                	useBarCodeDetectorIfSupported: (formatCode === 'true')
+            	}
+        	});
+            
+            window.html5qrcode1 = new Html5Qrcode(x1+1, {
             // Use this flag to turn on the feature.
             	experimentalFeatures: {
                 	useBarCodeDetectorIfSupported: (formatCode === 'true')
@@ -156,14 +165,32 @@ window.window['func_ScanBarcode'] = function(x) {
   			
                 
     } else {
-    alert(2)
+
     	window.html5qrcode = new Html5Qrcode(x1, {
             // Use this flag to turn on the feature.
             	formatsToSupport: formatCode
         	});
     } 
     
-    html5qrcode.start({ facingMode: "environment" }, scanConfig, onScanSuccess);
+    Html5Qrcode.getCameras().then(devices => {
+  /**
+   * devices would be an array of objects of type:
+   * { id: "id", label: "label" }
+   */
+  if (devices && devices.length) {
+    var cameraId = devices[0].id;
+    var cameraLabel = devices[0].label;
+    // .. use this to start scanning.
+    //alert(cameraLabel);
+    
+    html5qrcode.start({ deviceId: { exact: cameraId} }, scanConfig, onScanSuccess);
+  }
+}).catch(err => {
+  // handle err
+});
+    
+    //html5qrcode.start({ facingMode: "environment" }, scanConfig, onScanSuccess);
+    //html5qrcode1.start({ facingMode: "environment" }, scanConfig, onScanSuccess);
 
   
 
@@ -176,12 +203,24 @@ function openScanner(){
 
 
   window['func_ScanBarcode']("reader" + "]QQQ[" + "0.7]TTT[" + EID('barcode').value + "]TTT[10]TTT[true" + "]QQQ[Send_Worker_1]QQQ[loai12"); 
+  
+  setTimeout(function(){ 
+      var q = EID('reader').querySelectorAll('*');
+      for(i=0;i<q.length;i++){
+        alert(q[i].innerHTML);
+      }
+  }, 2000);
+  
 }
 
 
 
 function closeScanner(){
     html5qrcode.stop().then(ignore => { 
+      }).catch(err => {
+      });
+      
+      html5qrcode1.stop().then(ignore => { 
       }).catch(err => {
       });
 
@@ -192,3 +231,4 @@ function closeScanner(){
 
 </body>
 </html>
+
