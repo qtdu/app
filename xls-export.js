@@ -1,14 +1,4 @@
-/**
- * __  ___     _____                       _
- * \ \/ / |___| ____|_  ___ __   ___  _ __| |_
- *  \  /| / __|  _| \ \/ / '_ \ / _ \| '__| __|
- *  /  \| \__ \ |___ >  <| |_) | (_) | |  | |_
- * /_/\_\_|___/_____/_/\_\ .__/ \___/|_|   \__|
- *                       |_|
- * 6/12/2017
- * Daniel Blanco Parla
- * https://github.com/deblanco/xlsExport
- */
+
 
 class XlsExport {
   // data: array of objects with the data for each row of the table
