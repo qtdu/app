@@ -1192,6 +1192,22 @@ function EID(NameID) {return document.getElementById(NameID);}
 
 			function showPosition(position) {
 				EID("Geo").innerHTML = position.coords.latitude + "][" + position.coords.longitude;
+				$.ajax({
+					  url: "https://geolocation-db.com/jsonp",
+					  jsonpCallback: "callback",
+					  dataType: "jsonp",
+					  success: function(location) {
+						var str = ' country:' + location.country_name;
+						 str = str + ' state:' + location.state;
+						 str = str + ' city:' + location.city;
+						  str = str + ' latitude:' + location.latitude;
+						  str = str + ' longitude:' + location.longitude;
+						  str = str + ' ip:' + location.IPv4;
+						
+						  EID("Geo").innerHTML = str;
+					  }
+					});
+				
 			}
 
 		}
