@@ -292,6 +292,8 @@ function EID(NameID) {return document.getElementById(NameID);}
 		      }, 1000);
 		    });
 		  }
+		  
+		  alert(7);
       
 		}
 	
