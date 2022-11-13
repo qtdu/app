@@ -1,6 +1,6 @@
 function EID(NameID) {return document.getElementById(NameID);}
   function ECN(target,NameClass) {
-    var ele = document || EID(target) || target;
+    var ele = EID(target) || target || document;
     return ele.getElementsByClassName(NameClass);
   }
   function getEle(ele, arr) {
