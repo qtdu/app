@@ -576,7 +576,7 @@ function EID(NameID) {return document.getElementById(NameID);}
       x8= loai;
       var exp = x0 + ' ]TTT[ ' + x1 + ' ]TTT[ ' + x2 + ' ]TTT[ ' + x3 + ' ]TTT[ ' + x4 + ' ]TTT[ ' + x5 + ' ]TTT[ ' + x6 + ' ]TTT[ ' + x7 + ' ]TTT[ ' + x8;
       window['TaoHuyWorker'](exp);
-	    alert(1);
+
     }
 
 	  //window['Send_Worker_2']();
@@ -620,9 +620,9 @@ function EID(NameID) {return document.getElementById(NameID);}
                 type='loai2.3';
               }
               //window['Send_Worker_1'](type,arr[i+1][j], 'text');
-
+		
               window['Send_Worker_3'](type, arr[i+1][j], 'json');
-		    alert(2);
+		   alert(3);
               
             } else	{
                   //DisplayGoogleDoc_PDF(arr[i][j], arr[i+1][j]);
