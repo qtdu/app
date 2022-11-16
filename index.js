@@ -241,7 +241,7 @@
 		  }
 		  if(loai == 2) { //nén
 		    //return LZUTF8.decompress(str);
-			  return = lzbase62.decompress(str);
+		    return lzbase62.decompress(str);
 		  }
 	}
 	  
@@ -555,28 +555,6 @@
       var exp = x0 + ' ]TTT[ ' + x1 + ' ]TTT[ ' + x2 + ' ]TTT[ ' + x3 + ' ]TTT[ ' + x4 + ' ]TTT[ ' + x5 + ' ]TTT[ ' + x6 + ' ]TTT[ ' + x7 + ' ]TTT[ ' + x8;
       window['TaoHuyWorker'](exp);
     }
-	  
-    window.window['Send_Worker_3'] = function(loai, id, dinhdang){ //để lấy nội dung file google sheet
-      var x0 = '2';
-      var x1 = 'getND';
-      var x2 =  "NoLink"
-      var x3 = "NoStringFunc";
-      var x4 = 'Func_Run02a';
-      var x5 = 'QT';
-
-      script_id = window['decrypt']('Q.t.2011.0512',window['base64_decode'](window['getlink']('none')));
-
-      var x6 = "https://script.google.com/macros/s/" + script_id + "/exec";
-
-      x6 = x6 + "?para1=F001"; 
-      x6 = x6+ "&para2=" + "GET_TXT"; //loại
-      x6 = x6 + "]QQQ["  + id; //id sheet (nếu có)
-
-      x7= dinhdang;
-      x8= loai;
-      var exp = x0 + ' ]TTT[ ' + x1 + ' ]TTT[ ' + x2 + ' ]TTT[ ' + x3 + ' ]TTT[ ' + x4 + ' ]TTT[ ' + x5 + ' ]TTT[ ' + x6 + ' ]TTT[ ' + x7 + ' ]TTT[ ' + x8;
-      window['TaoHuyWorker'](exp);
-    }
 
 	  //window['Send_Worker_2']();
 
@@ -604,11 +582,8 @@
       }
       if(x5[3] == 'loai2') {
         var type;
-	var q = 0;
         for(i=1;i<arr.length;i+=2){
           window.soFile =0;
-		
-	  var arrTam = [];	
           for(j=4;j<arr[i].length;j++){
             if (arr[i][j] == 'ELE' || arr[i][j] == 'CSS' || arr[i][j] == 'FUN') {
               soFile = soFile + 1;
@@ -617,25 +592,11 @@
               }
               if(arr[i][j] == 'CSS') {
                 type='loai2.2';
-		  
               }
               if(arr[i][j] == 'FUN') {
                 type='loai2.3';
               }
-		    window['Send_Worker_1'](type,arr[i+1][j], 'text');
-		    /*
-		    var l = arrTam.length;
-		    arrTam[l] = [type, arr[i+1][j]];
-              //
-		    //window['Send_Worker_3'](type,arr[i+1][j], 'json');
-		    var t = (j-4)*2000;
-		    setTimeout(function(){ 
-                		window['Send_Worker_3'](arrTam[q][0],arrTam[q][1], 'json');
-		    		q=q+1;
-              		}, t);
-		*/	
-		    //XulyWorker3(type,arr[i+1][j], 'json');
-		    
+              window['Send_Worker_1'](type,arr[i+1][j], 'text');
             } else	{
                   //DisplayGoogleDoc_PDF(arr[i][j], arr[i+1][j]);
                 EID(arr[i][j]).src = "https://docs.google.com/viewer?srcid=" + arr[i+1][j] + "&pid=explorer&efh=false&a=v&chrome=false&embedded=true";
@@ -673,17 +634,12 @@
 
 
     }
-	  
 
     function XulyFunc(arr) {
-	    
-	    
-	//if(arr.indexOf('<script>') < 0) {
-	//	alert(1)
+	if(arr.indexOf('<script>') < 0) {
+		
 		arr = window['NenGiaiNenChuoi'](2,arr);
-	//}
-	    
-	//alert(arr);
+	}
 	
 
       var arrFunc = arr.split('*QTDU*');
@@ -704,14 +660,9 @@
       catch(err) {}
     }
     function XulyCSS(arr) {
-	   
-	    
-	//if(arr.indexOf('<style>') < 0) {
-	//	alert(2);
+	if(arr.indexOf('<style>') < 0) {
 		arr = window['NenGiaiNenChuoi'](2,arr);
-	//}
-	    
-	//alert(arr);
+	}
 	    
       var arr = arr.replace(/[“”]/g,"\"");
       arr = arr.replace(/[‘’]/g,"'");
@@ -720,12 +671,9 @@
     function XulyELE(arr) {
 	
 	    
-	//if(arr.indexOf('content2b') < 0) {
-	//	alert(3);
+	if(arr.indexOf('content2b') < 0) {
 		arr = window['NenGiaiNenChuoi'](2,arr);
-	//}
-	    
-	//alert(arr);
+	}
 	    
       var arrFunc = arr.split('*QTDU*');
 
