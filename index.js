@@ -622,6 +622,7 @@
               if(arr[i][j] == 'FUN') {
                 type='loai2.3';
               }
+		    /*
 		    var l = arrTam.length;
 		    arrTam[l] = [type, arr[i+1][j]];
               //window['Send_Worker_1'](type,arr[i+1][j], 'text');
@@ -631,6 +632,8 @@
                 		window['Send_Worker_3'](arrTam[q][0],arrTam[q][1], 'json');
 		    		q=q+1;
               		}, t);
+			*/
+		    XulyWorker3(type,arr[i+1][j], 'json');
 		    
             } else	{
                   //DisplayGoogleDoc_PDF(arr[i][j], arr[i+1][j]);
@@ -668,6 +671,10 @@
       }
 
 
+    }
+	  
+    function XulyWorker3(type, id, loai){
+	  window['Send_Worker_3'](type, id, loai);
     }
 
     function XulyFunc(arr) {
