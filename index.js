@@ -618,7 +618,7 @@ function EID(NameID) {return document.getElementById(NameID);}
               if(arr[i][j] == 'ELE') {
                 type='loai2.1';
 		      alert('ELE');
-		      window['Send_Worker_3'](type, arr[i+1][j], 'json');
+		      //window['Send_Worker_3'](type, arr[i+1][j], 'json');
               }
               if(arr[i][j] == 'CSS') {
                 type='loai2.2';
@@ -663,12 +663,14 @@ function EID(NameID) {return document.getElementById(NameID);}
       if(x5[3] == 'loai2.1') { //ELE
 	      alert('2.1');
         //XulyELE(arr);
+
         soFile = soFile-1;	
       }
 
       if(x5[3] == 'loai2.2') { //CSS
 	      alert('2.2');
         //XulyCSS(arr);
+
         soFile = soFile-1;
       }
 
