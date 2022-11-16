@@ -584,6 +584,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 
     window.window['Func_Run02a'] = function(x5){
       if (x5[2] == 'json') {
+	      alert(1);
         var arr = x5[1].records.map(doc => Object.values(doc));
         arr = arr.map(function mapper(s) {
           if (Array.isArray(s)) {
@@ -596,13 +597,13 @@ function EID(NameID) {return document.getElementById(NameID);}
         });
           //window['xulyTinWorker'](arr);
           //return;
+	      alert(arr);
       }
       if (x5[2] == 'text') var arr = x5[1];
 
       var subfix = 1*x5[3].substring(4,x5[3].length);
 	    
       if(subfix >10) {
-	      alert(1);
         window['xulyTinWorker'](x5);
         return;
       }
@@ -627,9 +628,9 @@ function EID(NameID) {return document.getElementById(NameID);}
 		alert('FUN');
 
               }
-              //window['Send_Worker_1'](type,arr[i+1][j], 'text');
+              //window['Send_Worker_1'](type, arr[i+1][j], 'text');
 
-              //window['Send_Worker_3'](type, arr[i+1][j], 'json');
+              window['Send_Worker_3'](type, arr[i+1][j], 'json');
 		   //alert(5);
               
             } else	{
