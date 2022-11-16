@@ -627,7 +627,7 @@
               //window['Send_Worker_1'](type,arr[i+1][j], 'text');
 		    //window['Send_Worker_3'](type,arr[i+1][j], 'json');
 		    var t = (j-4)*2000;
-		    //setTimeout(function(){ 
+		    setTimeout(function(){ 
                 		window['Send_Worker_3'](arrTam[q][0],arrTam[q][1], 'json');
 		    		q=q+1;
               		}, t);
