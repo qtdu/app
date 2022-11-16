@@ -555,6 +555,28 @@
       var exp = x0 + ' ]TTT[ ' + x1 + ' ]TTT[ ' + x2 + ' ]TTT[ ' + x3 + ' ]TTT[ ' + x4 + ' ]TTT[ ' + x5 + ' ]TTT[ ' + x6 + ' ]TTT[ ' + x7 + ' ]TTT[ ' + x8;
       window['TaoHuyWorker'](exp);
     }
+	  
+    window.window['Send_Worker_3'] = function(loai, id, dinhdang){ //để lấy nội dung file google sheet
+      var x0 = '2';
+      var x1 = 'getND';
+      var x2 =  "NoLink"
+      var x3 = "NoStringFunc";
+      var x4 = 'Func_Run02a';
+      var x5 = 'QT';
+
+      script_id = window['decrypt']('Q.t.2011.0512',window['base64_decode'](window['getlink']('none')));
+
+      var x6 = "https://script.google.com/macros/s/" + script_id + "/exec";
+
+      x6 = x6 + "?para1=F001"; 
+      x6 = x6+ "&para2=" + "GET_TXT"; //loại
+      x6 = x6 + "]QQQ["  + id; //id sheet (nếu có)
+
+      x7= dinhdang;
+      x8= loai;
+      var exp = x0 + ' ]TTT[ ' + x1 + ' ]TTT[ ' + x2 + ' ]TTT[ ' + x3 + ' ]TTT[ ' + x4 + ' ]TTT[ ' + x5 + ' ]TTT[ ' + x6 + ' ]TTT[ ' + x7 + ' ]TTT[ ' + x8;
+      window['TaoHuyWorker'](exp);
+    }
 
 	  //window['Send_Worker_2']();
 
@@ -592,6 +614,7 @@
               }
               if(arr[i][j] == 'CSS') {
                 type='loai2.2';
+		window['Send_Worker_3'] = function('loai3.2', arr[i+1][j], 'json')
               }
               if(arr[i][j] == 'FUN') {
                 type='loai2.3';
@@ -619,6 +642,13 @@
         XulyFunc(arr);
         soFile = soFile-1;
       }
+	    
+	    if(x5[3] == 'loai3.2') { //CSS
+		if(arr.indexOf('<style>') < 0) {
+			var st = window['NenGiaiNenChuoi'](2,arr);
+		}
+		    alert(st);
+      		}
 
       if(soFile == 0) {
             //soFile = 1;
