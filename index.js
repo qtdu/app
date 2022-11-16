@@ -634,11 +634,11 @@ function EID(NameID) {return document.getElementById(NameID);}
     }
 
     function XulyFunc(arr) {
-	alert(arr)    
-	var str1 = window['NenGiaiNenChuoi'](1, arr);
-	alert(str1);
-	var str2 = window['NenGiaiNenChuoi'](2, str1);
-	    alert(str2)
+
+	alert(arr.substring(0,9));
+	if(arr.substring(0,9) != 'content2b') {
+		arr = window['NenGiaiNenChuoi'](2, arr);
+	}
 
       var arrFunc = arr.split('*QTDU*');
       var tenham = arrFunc[1].replace(/(\r\n|\n|\r)/gm, " ");
