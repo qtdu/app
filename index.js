@@ -636,6 +636,7 @@ function EID(NameID) {return document.getElementById(NameID);}
     function XulyFunc(arr) {
 
 	if(arr.substring(0,9) != 'content2b') {
+		alert(arr.substring(0,9));
 		arr = window['NenGiaiNenChuoi'](2, arr);
 	}
 
@@ -658,6 +659,7 @@ function EID(NameID) {return document.getElementById(NameID);}
     }
     function XulyCSS(arr) {
 	if(arr.substring(0,7) != '<style>') {
+		alert(arr.substring(0,7));
 		arr = window['NenGiaiNenChuoi'](2, arr);
 	}
 	    
@@ -667,6 +669,7 @@ function EID(NameID) {return document.getElementById(NameID);}
     }
     function XulyELE(arr) {
 	if(arr.substring(0,8) != '<script>') {
+		alert(arr.substring(0,8));
 		arr = window['NenGiaiNenChuoi'](2, arr);
 	}
 	    
