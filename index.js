@@ -580,7 +580,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 
     }
 
-	  window['Send_Worker_2']();
+	  //window['Send_Worker_2']();
 
     window.window['Func_Run02a'] = function(x5){
       if (x5[2] == 'json') {
@@ -611,7 +611,7 @@ function EID(NameID) {return document.getElementById(NameID);}
         for(i=1;i<arr.length;i+=2){
           window.soFile =0;
           for(j=4;j<arr[i].length;j++){
-		  //alert(arr[i][j]);
+		  alert(arr[i].length);
             if (arr[i][j] == 'ELE' || arr[i][j] == 'CSS' || arr[i][j] == 'FUN') {
               soFile = soFile + 1;
               if(arr[i][j] == 'ELE') {
