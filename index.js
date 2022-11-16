@@ -635,8 +635,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 
     function XulyFunc(arr) {
 
-	alert(arr.substring(0,8));
-	if(arr.substring(0,8) != '<script>') {
+	if(arr.substring(0,9) != 'content2b') {
 		arr = window['NenGiaiNenChuoi'](2, arr);
 	}
 
