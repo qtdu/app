@@ -611,26 +611,24 @@
 		
           for(j=4;j<arr[i].length;j++){
             if (arr[i][j] == 'ELE' || arr[i][j] == 'CSS' || arr[i][j] == 'FUN') {
-              //soFile = soFile + 1;
+              soFile = soFile + 1;
               if(arr[i][j] == 'ELE') {
                 type='loai2.1';
-		      soFile = soFile + 1;
               }
               if(arr[i][j] == 'CSS') {
                 type='loai2.2';
-		      soFile = soFile + 1;
+		      window['Send_Worker_3'](type,arr[i+1][j], 'json');
               }
               if(arr[i][j] == 'FUN') {
                 type='loai2.3';
-		      soFile = soFile + 1;
               }
               //window['Send_Worker_1'](type,arr[i+1][j], 'text');
 		    //window['Send_Worker_3'](type,arr[i+1][j], 'json');
-		    var t = (j-4)*2000;
-		    setTimeout(function(){ 
-			    alert(soFile);
-                		//window['Send_Worker_3'](type,arr[i+1][j], 'json');
-              		}, t);
+		    //var t = (j-4)*2000;
+		    //setTimeout(function(){ 
+		//	    alert(soFile);
+                //		//window['Send_Worker_3'](type,arr[i+1][j], 'json');
+              	//	}, t);
 		    
             } else	{
                   //DisplayGoogleDoc_PDF(arr[i][j], arr[i+1][j]);
@@ -695,6 +693,8 @@
       catch(err) {}
     }
     function XulyCSS(arr) {
+	    alert(arr); return;
+	    
 	if(arr.indexOf('<style>') < 0) {
 		arr = window['NenGiaiNenChuoi'](2,arr);
 	}
