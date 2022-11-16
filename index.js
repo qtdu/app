@@ -650,7 +650,7 @@
 		    var st = arr
 		    alert(st);
 		if(st.indexOf('<style>') < 0) {
-			var st = window['NenGiaiNenChuoi'](2,st);
+			//st = window['NenGiaiNenChuoi'](2,st);
 		}
 		alert(st);
       	
