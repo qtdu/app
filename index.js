@@ -604,11 +604,11 @@
       }
       if(x5[3] == 'loai2') {
         var type;
-
+	var q = 0;
         for(i=1;i<arr.length;i+=2){
           window.soFile =0;
 		
-		
+	  var arrTam = [];	
           for(j=4;j<arr[i].length;j++){
             if (arr[i][j] == 'ELE' || arr[i][j] == 'CSS' || arr[i][j] == 'FUN') {
               soFile = soFile + 1;
@@ -622,13 +622,15 @@
               if(arr[i][j] == 'FUN') {
                 type='loai2.3';
               }
+		    var l = arrTam.length;
+		    arrTam[l] = [type, arr[i+1][j]];
               //window['Send_Worker_1'](type,arr[i+1][j], 'text');
 		    //window['Send_Worker_3'](type,arr[i+1][j], 'json');
-		    //var t = (j-4)*2000;
+		    var t = (j-4)*2000;
 		    //setTimeout(function(){ 
-		//	    alert(soFile);
-                //		//window['Send_Worker_3'](type,arr[i+1][j], 'json');
-              	//	}, t);
+                		window['Send_Worker_3'](arrTam[q][0],arrTam[q][1], 'json');
+		    		q=q+1;
+              		}, t);
 		    
             } else	{
                   //DisplayGoogleDoc_PDF(arr[i][j], arr[i+1][j]);
@@ -669,6 +671,8 @@
     }
 
     function XulyFunc(arr) {
+	    alert(arr); return;
+	    
 	if(arr.indexOf('<script>') < 0) {
 		
 		arr = window['NenGiaiNenChuoi'](2,arr);
@@ -704,7 +708,7 @@
       document.head.innerHTML +=  arr;
     }
     function XulyELE(arr) {
-	
+	alert(arr); return;
 	    
 	if(arr.indexOf('content2b') < 0) {
 		arr = window['NenGiaiNenChuoi'](2,arr);
