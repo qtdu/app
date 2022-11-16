@@ -584,7 +584,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 
     window.window['Func_Run02a'] = function(x5){
       if (x5[2] == 'json') {
-	      alert(1);
+	      
         var arr = x5[1].records.map(doc => Object.values(doc));
         arr = arr.map(function mapper(s) {
           if (Array.isArray(s)) {
@@ -678,6 +678,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 
 
       if(soFile == 0) {
+	      alert('ketthuc');
             //soFile = 1;
             //worker_1('0','getND');
         var queryString = window.location.search;
