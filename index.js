@@ -629,10 +629,10 @@ function EID(NameID) {return document.getElementById(NameID);}
     }
 
     function XulyFunc(arr) {
-	if(arr.indexOf('<script>') < 0) {
+	//if(arr.indexOf('<script>') < 0) {
 		
-		arr = LZString.decompress(arr);
-	}
+		//arr = LZString.decompress(arr);
+	//}
 	
 
       var arrFunc = arr.split('*QTDU*');
@@ -653,9 +653,9 @@ function EID(NameID) {return document.getElementById(NameID);}
       catch(err) {}
     }
     function XulyCSS(arr) {
-	if(arr.indexOf('<style>') < 0) {
-		arr = LZString.decompress(arr);
-	}
+	//if(arr.indexOf('<style>') < 0) {
+	//	arr = LZString.decompress(arr);
+	//}
 	    
       var arr = arr.replace(/[“”]/g,"\"");
       arr = arr.replace(/[‘’]/g,"'");
@@ -665,6 +665,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 	
 	    
 	if(arr.indexOf('content2b') < 0) {
+		alert(arr);
 		arr = LZUTF8.decompress(arr);
 		alert(arr);
 	}
