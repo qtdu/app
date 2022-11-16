@@ -677,12 +677,12 @@
     function XulyFunc(arr) {
 	    
 	    
-	if(arr.indexOf('<script>') < 0) {
-		alert(1)
+	//if(arr.indexOf('<script>') < 0) {
+	//	alert(1)
 		arr = window['NenGiaiNenChuoi'](2,arr);
-	}
+	//}
 	    
-
+	alert(arr);
 	
 
       var arrFunc = arr.split('*QTDU*');
@@ -705,12 +705,12 @@
     function XulyCSS(arr) {
 	   
 	    
-	if(arr.indexOf('<style>') < 0) {
-		alert(2);
+	//if(arr.indexOf('<style>') < 0) {
+	//	alert(2);
 		arr = window['NenGiaiNenChuoi'](2,arr);
-	}
+	//}
 	    
-	     alert(arr); 
+	alert(arr);
 	    
       var arr = arr.replace(/[“”]/g,"\"");
       arr = arr.replace(/[‘’]/g,"'");
@@ -719,12 +719,12 @@
     function XulyELE(arr) {
 	
 	    
-	if(arr.indexOf('content2b') < 0) {
-		alert(3);
+	//if(arr.indexOf('content2b') < 0) {
+	//	alert(3);
 		arr = window['NenGiaiNenChuoi'](2,arr);
-	}
+	//}
 	    
-	    alert(arr); 
+	alert(arr);
 	    
       var arrFunc = arr.split('*QTDU*');
 
