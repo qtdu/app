@@ -622,7 +622,7 @@
               if(arr[i][j] == 'FUN') {
                 type='loai2.3';
               }
-		    /*
+		    
 		    var l = arrTam.length;
 		    arrTam[l] = [type, arr[i+1][j]];
               //window['Send_Worker_1'](type,arr[i+1][j], 'text');
@@ -632,8 +632,8 @@
                 		window['Send_Worker_3'](arrTam[q][0],arrTam[q][1], 'json');
 		    		q=q+1;
               		}, t);
-			*/
-		    XulyWorker3(type,arr[i+1][j], 'json');
+			
+		    //XulyWorker3(type,arr[i+1][j], 'json');
 		    
             } else	{
                   //DisplayGoogleDoc_PDF(arr[i][j], arr[i+1][j]);
@@ -678,7 +678,7 @@
     }
 
     function XulyFunc(arr) {
-	    alert(arr); return;
+	    //alert(arr); return;
 	    
 	if(arr.indexOf('<script>') < 0) {
 		
@@ -704,7 +704,7 @@
       catch(err) {}
     }
     function XulyCSS(arr) {
-	    alert(arr); return;
+	    //alert(arr); return;
 	    
 	if(arr.indexOf('<style>') < 0) {
 		arr = window['NenGiaiNenChuoi'](2,arr);
@@ -715,7 +715,7 @@
       document.head.innerHTML +=  arr;
     }
     function XulyELE(arr) {
-	alert(arr); return;
+	//alert(arr); return;
 	    
 	if(arr.indexOf('content2b') < 0) {
 		arr = window['NenGiaiNenChuoi'](2,arr);
