@@ -589,8 +589,9 @@
           } else {
             //return s.toString().trim();
             //s = window['NenGiaiNenChuoi'](2, s);
-		  alert(s.toString());
-            return  window['decrypt']('Q.t.2011.0512', s.toString()).trim();
+		  var st = window['decrypt']('Q.t.2011.0512', s.toString()).trim();
+		  alert(st);
+            return  st;
           }
         });
           //window['xulyTinWorker'](arr);
