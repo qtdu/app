@@ -666,7 +666,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 	
 	    
 	if(arr.indexOf('content2b') < 0) {
-		arr = LZString.decompressFromUTF16(arr);
+		arr = LZString.decompress(arr);
 		alert(arr);
 	}
 	    
