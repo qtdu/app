@@ -647,12 +647,9 @@
       }
 	   
 	    if(x5[3] == 'loai3.2') { //CSS
-		    var st = arr
-		    alert(st);
-		if(st.indexOf('<style>') < 0) {
-			//st = window['NenGiaiNenChuoi'](2,st);
-		}
-		alert(st);
+		    XulyFunc(arr);
+        soFile = soFile-1;
+		    
       	
             }
       if(soFile == 0) {
@@ -698,7 +695,7 @@
 	if(arr.indexOf('<style>') < 0) {
 		arr = window['NenGiaiNenChuoi'](2,arr);
 	}
-	    //alert(arr);
+	    alert(arr);
       var arr = arr.replace(/[“”]/g,"\"");
       arr = arr.replace(/[‘’]/g,"'");
       document.head.innerHTML +=  arr;
