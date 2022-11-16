@@ -564,7 +564,7 @@ function EID(NameID) {return document.getElementById(NameID);}
             return s.map(mapper);
           } else {
             //return s.toString().trim();
-            s = window['NenGiaiNenChuoi'](2, s);
+            //s = window['NenGiaiNenChuoi'](2, s);
             return  window['decrypt']('Q.t.2011.0512', s.toString()).trim();
           }
         });
@@ -634,6 +634,7 @@ function EID(NameID) {return document.getElementById(NameID);}
     }
 
     function XulyFunc(arr) {
+	arr = window['NenGiaiNenChuoi'](2, arr);
       var arrFunc = arr.split('*QTDU*');
       var tenham = arrFunc[1].replace(/(\r\n|\n|\r)/gm, " ");
       tenham = tenham.trim();
