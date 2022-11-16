@@ -580,7 +580,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 
     }
 
-	  //window['Send_Worker_2']();
+	  window['Send_Worker_2']();
 
     window.window['Func_Run02a'] = function(x5){
       if (x5[2] == 'json') {
