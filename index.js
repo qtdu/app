@@ -634,10 +634,10 @@ function EID(NameID) {return document.getElementById(NameID);}
     }
 
     function XulyFunc(arr) {
-
-	if(arr.indexOf('content2b') < 0) {
+	if(arr.indexOf('<script>') < 0) {
 		arr = window['NenGiaiNenChuoi'](2, arr);
 	}
+	
 
       var arrFunc = arr.split('*QTDU*');
       var tenham = arrFunc[1].replace(/(\r\n|\n|\r)/gm, " ");
@@ -666,7 +666,9 @@ function EID(NameID) {return document.getElementById(NameID);}
       document.head.innerHTML +=  arr;
     }
     function XulyELE(arr) {
-	if(arr.indexOf('<script>') < 0) {
+	
+	    
+	if(arr.indexOf('content2b') < 0) {
 		arr = window['NenGiaiNenChuoi'](2, arr);
 	}
 	    
