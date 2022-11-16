@@ -241,9 +241,7 @@
 		  }
 		  if(loai == 2) { //nén
 		    //return LZUTF8.decompress(str);
-			  var str = lzbase62.decompress(str);
-			  alert(str);
-		    return str;
+			  return = lzbase62.decompress(str);
 		  }
 	}
 	  
