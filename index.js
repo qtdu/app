@@ -623,7 +623,7 @@
 		    var t = (j-4)*2000;
 		    setTimeout(function(){ 
 			    alert(type + "_" + arr[i+1][j]);
-                		window['Send_Worker_3'](type,arr[i+1][j], 'json');
+                		//window['Send_Worker_3'](type,arr[i+1][j], 'json');
               		}, t);
 		    
             } else	{
