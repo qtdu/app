@@ -1,4 +1,5 @@
-function EID(NameID) {return document.getElementById(NameID);}
+
+  function EID(NameID) {return document.getElementById(NameID);}
   function ECN(target,NameClass) {
     var ele = EID(target) || target || document;
     return ele.getElementsByClassName(NameClass);
@@ -313,7 +314,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 	  function worker_1(x0, x1){
 	    var x2 = "NoLink";
 	    var x3 = "function T(exp){ " +
-				"if(exp[2] == 'myself') { postMessage(exp); }" + 
+				"if(exp[2] == 'myself') { postMessage(exp); return; }" + 
 				"fetch (exp[1])" +
 				  ".then(x => D(x,exp[2]))" +
 				  ".then(y => postMessage([exp[0],y,exp[2],exp[3]]));" +
@@ -555,36 +556,10 @@ function EID(NameID) {return document.getElementById(NameID);}
       window['TaoHuyWorker'](exp);
     }
 
-    window.window['Send_Worker_3'] = function(loai, id, dinhdang){ //để lấy nội dung file txt
-      var x0 = '2';
-      var x1 = 'getND';
-      var x2 =  "NoLink"
-      var x3 = "NoStringFunc";
-      var x4 = 'Func_Run02a';
-      var x5 = 'QT';
-
-      script_id = window['decrypt']('Q.t.2011.0512',window['base64_decode'](window['getlink']('none')));
-
-
-      var x6 = "https://script.google.com/macros/s/" + script_id + "/exec";
-
-      x6 = x6 + "?para1=F001"; 
-      x6 = x6+ "&para2=" + "GET_TXT"; //loại
-      x6 = x6 + "]QQQ["  + id; //id sheet (nếu có)
-
-      x7= dinhdang;
-      x8= loai;
-      var exp = x0 + ' ]TTT[ ' + x1 + ' ]TTT[ ' + x2 + ' ]TTT[ ' + x3 + ' ]TTT[ ' + x4 + ' ]TTT[ ' + x5 + ' ]TTT[ ' + x6 + ' ]TTT[ ' + x7 + ' ]TTT[ ' + x8;
-      window['TaoHuyWorker'](exp);
-	    
-
-    }
-
 	  //window['Send_Worker_2']();
 
     window.window['Func_Run02a'] = function(x5){
       if (x5[2] == 'json') {
-	      
         var arr = x5[1].records.map(doc => Object.values(doc));
         arr = arr.map(function mapper(s) {
           if (Array.isArray(s)) {
@@ -597,12 +572,10 @@ function EID(NameID) {return document.getElementById(NameID);}
         });
           //window['xulyTinWorker'](arr);
           //return;
-	      alert(arr);
       }
       if (x5[2] == 'text') var arr = x5[1];
 
       var subfix = 1*x5[3].substring(4,x5[3].length);
-	    
       if(subfix >10) {
         window['xulyTinWorker'](x5);
         return;
@@ -612,31 +585,19 @@ function EID(NameID) {return document.getElementById(NameID);}
         for(i=1;i<arr.length;i+=2){
           window.soFile =0;
           for(j=4;j<arr[i].length;j++){
-
             if (arr[i][j] == 'ELE' || arr[i][j] == 'CSS' || arr[i][j] == 'FUN') {
               soFile = soFile + 1;
               if(arr[i][j] == 'ELE') {
                 type='loai2.1';
-		      //alert('ELE');
-		      //window['Send_Worker_3'](type, arr[i+1][j], 'json');
               }
               if(arr[i][j] == 'CSS') {
                 type='loai2.2';
-		      //alert('CSS');
-		      //window['Send_Worker_3'](type, arr[i+1][j], 'json');
               }
               if(arr[i][j] == 'FUN') {
                 type='loai2.3';
-		//alert('FUN');
-
               }
-              //window['Send_Worker_1'](type, arr[i+1][j], 'text');
-			window['Send_Worker_3'](type, arr[i+1][j], 'json');
-              
-		   //alert(5);
-              
+              window['Send_Worker_1'](type,arr[i+1][j], 'text');
             } else	{
-		    alert(6);
                   //DisplayGoogleDoc_PDF(arr[i][j], arr[i+1][j]);
                 EID(arr[i][j]).src = "https://docs.google.com/viewer?srcid=" + arr[i+1][j] + "&pid=explorer&efh=false&a=v&chrome=false&embedded=true";
             }
@@ -644,7 +605,6 @@ function EID(NameID) {return document.getElementById(NameID);}
         }
       }
 
-      /*
       if(x5[3] == 'loai2.1') { //ELE
         XulyELE(arr);
         soFile = soFile-1;	
@@ -659,31 +619,8 @@ function EID(NameID) {return document.getElementById(NameID);}
         XulyFunc(arr);
         soFile = soFile-1;
       }
-      */
-      if(x5[3] == 'loai2.1') { //ELE
-	      //alert('2.1');
-        XulyELE(arr);
-
-        soFile = soFile-1;	
-      }
-
-      if(x5[3] == 'loai2.2') { //CSS
-	      //alert('2.2');
-        XulyCSS(arr);
-
-        soFile = soFile-1;
-      }
-
-      if(x5[3] == 'loai2.3') { //FUN
-        XulyFunc('2.3');
-        //alert(arr);
-        soFile = soFile-1;
-      }
-
-
 
       if(soFile == 0) {
-	      alert('ketthuc');
             //soFile = 1;
             //worker_1('0','getND');
         var queryString = window.location.search;
@@ -692,7 +629,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 
         pr = (pr==null) ? "Main" : pr;
 
-        //window['func_' + pr]('OK');
+        window['func_' + pr]('OK');
       }
 
 
@@ -1309,3 +1246,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 
 		toado();
   }
+
+
+
+
