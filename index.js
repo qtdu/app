@@ -678,11 +678,11 @@
 	    
 	    
 	if(arr.indexOf('<script>') < 0) {
-		
+		alert(1)
 		arr = window['NenGiaiNenChuoi'](2,arr);
 	}
 	    
-	    alert(arr); 
+
 	
 
       var arrFunc = arr.split('*QTDU*');
@@ -706,6 +706,7 @@
 	   
 	    
 	if(arr.indexOf('<style>') < 0) {
+		alert(2);
 		arr = window['NenGiaiNenChuoi'](2,arr);
 	}
 	    
@@ -719,6 +720,7 @@
 	
 	    
 	if(arr.indexOf('content2b') < 0) {
+		alert(3);
 		arr = window['NenGiaiNenChuoi'](2,arr);
 	}
 	    
