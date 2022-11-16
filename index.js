@@ -669,7 +669,9 @@ function EID(NameID) {return document.getElementById(NameID);}
 	
 	    
 	if(arr.indexOf('content2b') < 0) {
+		alert(arr);
 		arr = window['NenGiaiNenChuoi'](2, arr);
+		alert(arr);
 	}
 	    
       var arrFunc = arr.split('*QTDU*');
