@@ -623,9 +623,9 @@ function EID(NameID) {return document.getElementById(NameID);}
 		      alert(3);
               }
               //window['Send_Worker_1'](type,arr[i+1][j], 'text');
-		
+		alert(4);
               window['Send_Worker_3'](type, arr[i+1][j], 'json');
-		   alert(4);
+		   alert(5);
               
             } else	{
                   //DisplayGoogleDoc_PDF(arr[i][j], arr[i+1][j]);
