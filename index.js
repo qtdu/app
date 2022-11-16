@@ -657,7 +657,6 @@ function EID(NameID) {return document.getElementById(NameID);}
       catch(err) {}
     }
     function XulyCSS(arr) {
-	alert(arr.substring(0,7));
 	if(arr.substring(0,7) != '<style>') {
 		arr = window['NenGiaiNenChuoi'](2, arr);
 	}
@@ -667,7 +666,6 @@ function EID(NameID) {return document.getElementById(NameID);}
       document.head.innerHTML +=  arr;
     }
     function XulyELE(arr) {
-	alert(arr.substring(0,8));
 	if(arr.substring(0,8) != '<script>') {
 		arr = window['NenGiaiNenChuoi'](2, arr);
 	}
