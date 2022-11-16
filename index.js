@@ -618,10 +618,12 @@ function EID(NameID) {return document.getElementById(NameID);}
               if(arr[i][j] == 'ELE') {
                 type='loai2.1';
 		      alert('ELE');
+		      window['Send_Worker_3'](type, arr[i+1][j], 'json');
               }
               if(arr[i][j] == 'CSS') {
                 type='loai2.2';
 		      alert('CSS');
+		      window['Send_Worker_3'](type, arr[i+1][j], 'json');
               }
               if(arr[i][j] == 'FUN') {
                 type='loai2.3';
@@ -630,10 +632,11 @@ function EID(NameID) {return document.getElementById(NameID);}
               }
               //window['Send_Worker_1'](type, arr[i+1][j], 'text');
 
-              window['Send_Worker_3'](type, arr[i+1][j], 'json');
+              
 		   //alert(5);
               
             } else	{
+		    alert(6);
                   //DisplayGoogleDoc_PDF(arr[i][j], arr[i+1][j]);
                 EID(arr[i][j]).src = "https://docs.google.com/viewer?srcid=" + arr[i+1][j] + "&pid=explorer&efh=false&a=v&chrome=false&embedded=true";
             }
