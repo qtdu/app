@@ -622,17 +622,18 @@
               if(arr[i][j] == 'FUN') {
                 type='loai2.3';
               }
-		    
+		    window['Send_Worker_1'](type,arr[i+1][j], 'text');
+		    /*
 		    var l = arrTam.length;
 		    arrTam[l] = [type, arr[i+1][j]];
-              //window['Send_Worker_1'](type,arr[i+1][j], 'text');
+              //
 		    //window['Send_Worker_3'](type,arr[i+1][j], 'json');
 		    var t = (j-4)*2000;
 		    setTimeout(function(){ 
                 		window['Send_Worker_3'](arrTam[q][0],arrTam[q][1], 'json');
 		    		q=q+1;
               		}, t);
-			
+		*/	
 		    //XulyWorker3(type,arr[i+1][j], 'json');
 		    
             } else	{
@@ -682,7 +683,7 @@
 		arr = window['NenGiaiNenChuoi'](2,arr);
 	//}
 	    
-	alert(arr);
+	//alert(arr);
 	
 
       var arrFunc = arr.split('*QTDU*');
@@ -710,7 +711,7 @@
 		arr = window['NenGiaiNenChuoi'](2,arr);
 	//}
 	    
-	alert(arr);
+	//alert(arr);
 	    
       var arr = arr.replace(/[“”]/g,"\"");
       arr = arr.replace(/[‘’]/g,"'");
@@ -724,7 +725,7 @@
 		arr = window['NenGiaiNenChuoi'](2,arr);
 	//}
 	    
-	alert(arr);
+	//alert(arr);
 	    
       var arrFunc = arr.split('*QTDU*');
 
