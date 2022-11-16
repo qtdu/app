@@ -614,7 +614,6 @@ function EID(NameID) {return document.getElementById(NameID);}
               soFile = soFile + 1;
               if(arr[i][j] == 'ELE') {
                 type='loai2.1';
-		      alert(1);
               }
               if(arr[i][j] == 'CSS') {
                 type='loai2.2';
@@ -622,12 +621,12 @@ function EID(NameID) {return document.getElementById(NameID);}
               }
               if(arr[i][j] == 'FUN') {
                 type='loai2.3';
-		      alert(3);
-		      window['Send_Worker_3'](type, arr[i+1][j], 'json');
+
+
               }
               //window['Send_Worker_1'](type,arr[i+1][j], 'text');
-		//alert(4);
-              //window['Send_Worker_3'](type, arr[i+1][j], 'json');
+
+              window['Send_Worker_3'](type, arr[i+1][j], 'json');
 		   //alert(5);
               
             } else	{
@@ -655,11 +654,13 @@ function EID(NameID) {return document.getElementById(NameID);}
       }
       */
       if(x5[3] == 'loai2.1') { //ELE
+	      alert(arr);
         //XulyELE(arr);
         soFile = soFile-1;	
       }
 
       if(x5[3] == 'loai2.2') { //CSS
+	      alert(arr);
         //XulyCSS(arr);
         soFile = soFile-1;
       }
