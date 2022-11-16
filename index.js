@@ -634,7 +634,7 @@ function EID(NameID) {return document.getElementById(NameID);}
     }
 
     function XulyFunc(arr) {
-	arr = window['NenGiaiNenChuoi'](2, arr);
+	//arr = window['NenGiaiNenChuoi'](2, arr);
       var arrFunc = arr.split('*QTDU*');
       var tenham = arrFunc[1].replace(/(\r\n|\n|\r)/gm, " ");
       tenham = tenham.trim();
