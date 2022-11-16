@@ -635,8 +635,8 @@ function EID(NameID) {return document.getElementById(NameID);}
 
     function XulyFunc(arr) {
 
-	alert(arr.substring(0,9));
-	if(arr.substring(0,9) != 'content2b') {
+	alert(arr.substring(0,8));
+	if(arr.substring(0,8) != '<script>') {
 		arr = window['NenGiaiNenChuoi'](2, arr);
 	}
 
@@ -658,16 +658,20 @@ function EID(NameID) {return document.getElementById(NameID);}
       catch(err) {}
     }
     function XulyCSS(arr) {
-	    //arr = window['NenGiaiNenChuoi'](2, arr);
-	    //alert(arr);
+	alert(arr.substring(0,7));
+	if(arr.substring(0,7) != '<style>') {
+		arr = window['NenGiaiNenChuoi'](2, arr);
+	}
 	    
       var arr = arr.replace(/[“”]/g,"\"");
       arr = arr.replace(/[‘’]/g,"'");
       document.head.innerHTML +=  arr;
     }
     function XulyELE(arr) {
-	    //arr = window['NenGiaiNenChuoi'](2, arr);
-	    //alert(arr);
+	alert(arr.substring(0,8));
+	if(arr.substring(0,8) != '<script>') {
+		arr = window['NenGiaiNenChuoi'](2, arr);
+	}
 	    
       var arrFunc = arr.split('*QTDU*');
 
