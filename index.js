@@ -620,9 +620,9 @@
               }
               //window['Send_Worker_1'](type,arr[i+1][j], 'text');
 		    //window['Send_Worker_3'](type,arr[i+1][j], 'json');
-		    var t = (j-4)*2000;
+		    var t = (j-4)*1000;
 		    setTimeout(function(){ 
-                		alert(soFile);
+                		window['Send_Worker_3'](type,arr[i+1][j], 'json');
               		}, t);
 		    
             } else	{
