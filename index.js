@@ -615,7 +615,7 @@
               }
               if(arr[i][j] == 'CSS') {
                 type='loai2.2';
-		      window['Send_Worker_1'](type,arr[i+1][j], 'text');
+		      //window['Send_Worker_1'](type,arr[i+1][j], 'text');
 		window['Send_Worker_3']('loai3.2', '1j709VNEi6H639h7X2km5Q82NVwTF-Tro', 'json')
               }
               if(arr[i][j] == 'FUN') {
