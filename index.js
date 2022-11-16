@@ -635,8 +635,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 
     function XulyFunc(arr) {
 
-	if(arr.substring(0,9) != 'content2b') {
-		alert(arr.substring(0,9));
+	if(arr.indexOf('content2b') < 0) {
 		arr = window['NenGiaiNenChuoi'](2, arr);
 	}
 
@@ -658,8 +657,7 @@ function EID(NameID) {return document.getElementById(NameID);}
       catch(err) {}
     }
     function XulyCSS(arr) {
-	if(arr.substring(0,7) != '<style>') {
-		alert(arr.substring(0,7));
+	if(arr.indexOf('<style>') < 0) {
 		arr = window['NenGiaiNenChuoi'](2, arr);
 	}
 	    
@@ -668,8 +666,7 @@ function EID(NameID) {return document.getElementById(NameID);}
       document.head.innerHTML +=  arr;
     }
     function XulyELE(arr) {
-	if(arr.substring(0,8) != '<script>') {
-		alert(arr.substring(0,8));
+	if(arr.indexOf('<script>') < 0) {
 		arr = window['NenGiaiNenChuoi'](2, arr);
 	}
 	    
