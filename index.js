@@ -717,9 +717,10 @@ function EID(NameID) {return document.getElementById(NameID);}
 	    
 	if(arr.indexOf('content2b') < 0) {
 		alert(arr);
-		arr = lzw_decode(arr)
+		arr = lzw_decode(arr);
 		alert(arr);
 	}
+	    alert(1);
 	    
       var arrFunc = arr.split('*QTDU*');
 
