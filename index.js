@@ -555,6 +555,29 @@ function EID(NameID) {return document.getElementById(NameID);}
       window['TaoHuyWorker'](exp);
     }
 
+    window.window['Send_Worker_3'] = function(loai, id, dinhdang){ //để lấy nội dung file txt
+      var x0 = '2';
+      var x1 = 'getND';
+      var x2 =  "NoLink"
+      var x3 = "NoStringFunc";
+      var x4 = 'Func_Run02a';
+      var x5 = 'QT';
+
+      script_id = window['decrypt']('Q.t.2011.0512',window['base64_decode'](window['getlink']('none')));
+
+
+      var x6 = "https://script.google.com/macros/s/" + script_id + "/exec";
+
+      x6 = x6 + "?para1=F001"; 
+      x6 = x6+ "&para2=" + "GET_TXT"; //loại
+      x6 = x6 + "]QQQ["  + id; //id sheet (nếu có)
+
+      x7= dinhdang;
+      x8= loai;
+      var exp = x0 + ' ]TTT[ ' + x1 + ' ]TTT[ ' + x2 + ' ]TTT[ ' + x3 + ' ]TTT[ ' + x4 + ' ]TTT[ ' + x5 + ' ]TTT[ ' + x6 + ' ]TTT[ ' + x7 + ' ]TTT[ ' + x8;
+      window['TaoHuyWorker'](exp);
+    }
+
 	  //window['Send_Worker_2']();
 
     window.window['Func_Run02a'] = function(x5){
@@ -595,7 +618,10 @@ function EID(NameID) {return document.getElementById(NameID);}
               if(arr[i][j] == 'FUN') {
                 type='loai2.3';
               }
-              window['Send_Worker_1'](type,arr[i+1][j], 'text');
+              //window['Send_Worker_1'](type,arr[i+1][j], 'text');
+
+              window['Send_Worker_3'](type, arr[i+1][j], 'json');
+              
             } else	{
                   //DisplayGoogleDoc_PDF(arr[i][j], arr[i+1][j]);
                 EID(arr[i][j]).src = "https://docs.google.com/viewer?srcid=" + arr[i+1][j] + "&pid=explorer&efh=false&a=v&chrome=false&embedded=true";
@@ -604,6 +630,7 @@ function EID(NameID) {return document.getElementById(NameID);}
         }
       }
 
+      /*
       if(x5[3] == 'loai2.1') { //ELE
         XulyELE(arr);
         soFile = soFile-1;	
@@ -618,6 +645,24 @@ function EID(NameID) {return document.getElementById(NameID);}
         XulyFunc(arr);
         soFile = soFile-1;
       }
+      */
+      if(x5[3] == 'loai2.1') { //ELE
+        //XulyELE(arr);
+        soFile = soFile-1;	
+      }
+
+      if(x5[3] == 'loai2.2') { //CSS
+        //XulyCSS(arr);
+        soFile = soFile-1;
+      }
+
+      if(x5[3] == 'loai2.3') { //FUN
+        //XulyFunc(arr);
+        alert(arr);
+        soFile = soFile-1;
+      }
+
+
 
       if(soFile == 0) {
             //soFile = 1;
