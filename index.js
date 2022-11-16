@@ -617,21 +617,21 @@ function EID(NameID) {return document.getElementById(NameID);}
               soFile = soFile + 1;
               if(arr[i][j] == 'ELE') {
                 type='loai2.1';
-		      alert('ELE');
+		      //alert('ELE');
 		      //window['Send_Worker_3'](type, arr[i+1][j], 'json');
               }
               if(arr[i][j] == 'CSS') {
                 type='loai2.2';
-		      alert('CSS');
-		      window['Send_Worker_3'](type, arr[i+1][j], 'json');
+		      //alert('CSS');
+		      //window['Send_Worker_3'](type, arr[i+1][j], 'json');
               }
               if(arr[i][j] == 'FUN') {
                 type='loai2.3';
-		alert('FUN');
+		//alert('FUN');
 
               }
               //window['Send_Worker_1'](type, arr[i+1][j], 'text');
-
+			window['Send_Worker_3'](type, arr[i+1][j], 'json');
               
 		   //alert(5);
               
@@ -661,22 +661,22 @@ function EID(NameID) {return document.getElementById(NameID);}
       }
       */
       if(x5[3] == 'loai2.1') { //ELE
-	      alert('2.1');
-        //XulyELE(arr);
+	      //alert('2.1');
+        XulyELE(arr);
 
         soFile = soFile-1;	
       }
 
       if(x5[3] == 'loai2.2') { //CSS
-	      alert('2.2');
-        //XulyCSS(arr);
+	      //alert('2.2');
+        XulyCSS(arr);
 
         soFile = soFile-1;
       }
 
       if(x5[3] == 'loai2.3') { //FUN
-        //XulyFunc('2.3');
-        alert(arr);
+        XulyFunc('2.3');
+        //alert(arr);
         soFile = soFile-1;
       }
 
