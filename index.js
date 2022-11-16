@@ -577,7 +577,6 @@ function EID(NameID) {return document.getElementById(NameID);}
       var exp = x0 + ' ]TTT[ ' + x1 + ' ]TTT[ ' + x2 + ' ]TTT[ ' + x3 + ' ]TTT[ ' + x4 + ' ]TTT[ ' + x5 + ' ]TTT[ ' + x6 + ' ]TTT[ ' + x7 + ' ]TTT[ ' + x8;
       window['TaoHuyWorker'](exp);
 	    
-	    alert(6);
 
     }
 
@@ -610,6 +609,7 @@ function EID(NameID) {return document.getElementById(NameID);}
         for(i=1;i<arr.length;i+=2){
           window.soFile =0;
           for(j=4;j<arr[i].length;j++){
+		  alert(arr[i][j]);
             if (arr[i][j] == 'ELE' || arr[i][j] == 'CSS' || arr[i][j] == 'FUN') {
               soFile = soFile + 1;
               if(arr[i][j] == 'ELE') {
@@ -682,7 +682,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 
         pr = (pr==null) ? "Main" : pr;
 
-        window['func_' + pr]('OK');
+        //window['func_' + pr]('OK');
       }
 
 
