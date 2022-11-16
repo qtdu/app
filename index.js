@@ -313,7 +313,7 @@ function EID(NameID) {return document.getElementById(NameID);}
 	  function worker_1(x0, x1){
 	    var x2 = "NoLink";
 	    var x3 = "function T(exp){ " +
-				"if(exp[2] == 'myself') { postMessage(exp); return; }" + 
+				"if(exp[2] == 'myself') { postMessage(exp); }" + 
 				"fetch (exp[1])" +
 				  ".then(x => D(x,exp[2]))" +
 				  ".then(y => postMessage([exp[0],y,exp[2],exp[3]]));" +
