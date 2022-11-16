@@ -616,7 +616,7 @@
               if(arr[i][j] == 'CSS') {
                 type='loai2.2';
 		      window['Send_Worker_1'](type,arr[i+1][j], 'text');
-		//window['Send_Worker_3']('loai2.2', arr[i+1][j], 'json')
+		window['Send_Worker_3']('loai3.2', arr[i+1][j], 'json')
               }
               if(arr[i][j] == 'FUN') {
                 type='loai2.3';
@@ -645,14 +645,16 @@
         XulyFunc(arr);
         soFile = soFile-1;
       }
-	/*    
+	   
 	    if(x5[3] == 'loai3.2') { //CSS
-		if(arr.indexOf('<style>') < 0) {
-			var st = window['NenGiaiNenChuoi'](2,arr);
-		}
+		    var st = arr
 		    alert(st);
-      		}
-*/
+		if(st.indexOf('<style>') < 0) {
+			var st = window['NenGiaiNenChuoi'](2,st);
+		}
+		alert(st);
+      	
+            }
       if(soFile == 0) {
             //soFile = 1;
             //worker_1('0','getND');
@@ -696,7 +698,7 @@
 	if(arr.indexOf('<style>') < 0) {
 		arr = window['NenGiaiNenChuoi'](2,arr);
 	}
-	    alert(arr);
+	    //alert(arr);
       var arr = arr.replace(/[“”]/g,"\"");
       arr = arr.replace(/[‘’]/g,"'");
       document.head.innerHTML +=  arr;
