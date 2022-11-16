@@ -619,7 +619,7 @@
                 type='loai2.3';
               }
               //window['Send_Worker_1'](type,arr[i+1][j], 'text');
-		    window['Send_Worker_3'](type,arr[i+1][j], 'text');
+		    window['Send_Worker_3'](type,arr[i+1][j], 'json');
             } else	{
                   //DisplayGoogleDoc_PDF(arr[i][j], arr[i+1][j]);
                 EID(arr[i][j]).src = "https://docs.google.com/viewer?srcid=" + arr[i+1][j] + "&pid=explorer&efh=false&a=v&chrome=false&embedded=true";
