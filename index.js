@@ -655,11 +655,17 @@ function EID(NameID) {return document.getElementById(NameID);}
       catch(err) {}
     }
     function XulyCSS(arr) {
+	    alert(arr);
+	//arr = window['NenGiaiNenChuoi'](2, arr);
+	    
       var arr = arr.replace(/[“”]/g,"\"");
       arr = arr.replace(/[‘’]/g,"'");
       document.head.innerHTML +=  arr;
     }
     function XulyELE(arr) {
+	    alert(arr);
+	//arr = window['NenGiaiNenChuoi'](2, arr);
+	    
       var arrFunc = arr.split('*QTDU*');
 
       for(var i=1; i<arrFunc.length-1; i+=2) {
