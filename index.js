@@ -303,6 +303,7 @@ function EID(NameID) {return document.getElementById(NameID);}
         return LZString.compress(str);
       }
       if(loai == 2) { //nén
+	alert('Q');
         return LZString.decompress(str);
       }
     }
