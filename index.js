@@ -673,12 +673,9 @@
 
     }
 	  
-    function XulyWorker3(type, id, loai){
-	  window['Send_Worker_3'](type, id, loai);
-    }
 
     function XulyFunc(arr) {
-	    //alert(arr); return;
+	    alert(arr); 
 	    
 	if(arr.indexOf('<script>') < 0) {
 		
@@ -704,7 +701,7 @@
       catch(err) {}
     }
     function XulyCSS(arr) {
-	    //alert(arr); return;
+	    alert(arr); 
 	    
 	if(arr.indexOf('<style>') < 0) {
 		arr = window['NenGiaiNenChuoi'](2,arr);
@@ -715,7 +712,7 @@
       document.head.innerHTML +=  arr;
     }
     function XulyELE(arr) {
-	//alert(arr); return;
+	alert(arr); 
 	    
 	if(arr.indexOf('content2b') < 0) {
 		arr = window['NenGiaiNenChuoi'](2,arr);
