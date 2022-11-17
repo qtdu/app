@@ -581,6 +581,7 @@
 	  //window['Send_Worker_2']();
 
     window.window['Func_Run02a'] = function(x5){
+	var dinhdang = x5[2];
       if (x5[2] == 'json') {
         var arr = x5[1].records.map(doc => Object.values(doc));
         arr = arr.map(function mapper(s) {
@@ -639,7 +640,7 @@
       }
 
       if(x5[3] == 'loai2.2') { //CSS
-        XulyCSS(arr);
+        XulyCSS(arr, dinhdang);
         soFile = soFile-1;
       }
 
@@ -693,21 +694,23 @@
       try { this['func_' + tenham](); }
       catch(err) {}
     }
-    function XulyCSS(arr) {
+    function XulyCSS(arr, dinhdang) {
 	    alert(arr[0][0]);
 	    //alert(arr.length);
-	    var str = arr[0][0];
-	    alert(str.length);
-	if(arr.indexOf('<style>') < 0) {
-		alert('Q');
-		alert(str);
+	if (dinhdang == 'json') {
+		var str = arr[0][0];
+	} else {
+		var str = arr;
+	}
+
+	if(str.indexOf('<style>') < 0) {
 		str = window['NenGiaiNenChuoi'](2,str);
 	}
-	    alert('T');
+
+      var str = str.replace(/[“”]/g,"\"");
+      str = str.replace(/[‘’]/g,"'");
+      document.head.innerHTML +=  str;
 	    alert(str);
-      var arr = arr.replace(/[“”]/g,"\"");
-      arr = arr.replace(/[‘’]/g,"'");
-      document.head.innerHTML +=  arr;
     }
     function XulyELE(arr) {
 	
