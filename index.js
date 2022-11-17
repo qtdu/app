@@ -631,7 +631,7 @@
 		      //window['Send_Worker_3']('loai3.3', '1A788jFIdcLM32aGwcgXYrAMl5bbAGuJc', 'json');
               }
 		var str = arr[i+1][j];
-		    alert(str);
+		    //alert(str);
 		    var arrstr = str.split(']TTT[');
 		    //if(arrstr[1] == 'Google doc') { window['Send_Worker_1'](type,arrstr[0], 'text'); }
 		    //if(arrstr[1] == 'Text File') { window['Send_Worker_3'](type, arrstr[0], 'json'); }
