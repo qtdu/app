@@ -655,7 +655,36 @@
     function XulyFunELECSS(data)  {
     	for(var i=0; i< data.length; i++) {
 		var st = window['NenGiaiNenChuoi'](2,data[i]);
-		alert(st);
+		if(st.substring(0,8) == '<script>') {
+			alert(1);  
+			/*
+			var arrFunc = st.split('*QTDU*');
+		      var tenham = arrFunc[1].replace(/(\r\n|\n|\r)/gm, " ");
+		      tenham = tenham.trim();
+
+			//var ndham = arrFunc[2].replace(/(\r\n|\n|\r)/gm, " "); //thay thế 3 kiểu ký tự xuống hàng
+			//ndham = ndham.replace(/\s+/g," "); //thay thế 2 khoảng trắng bằng 1 khoảng trắng
+		      var ndham = arrFunc[2].replace(/[“”]/g,"\"");
+			//var ndham = ndham.replace(/[“”]/g,"\"");
+		      ndham = ndham.replace(/[‘’]/g,"'");
+
+		      ndham = ndham.trim();
+
+		      this['func_' + tenham] = new Function('return ' + ndham)();
+
+		      try { this['func_' + tenham](); }
+		      catch(err) {}
+		      */
+			      
+		}
+		
+		if(st.substring(0,7) == '<style>') {
+			alert(2);
+		}
+		if(st.substring(0,9) == 'content2b') {
+			alert(3);
+		}
+		
 	}
     }
 
