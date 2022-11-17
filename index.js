@@ -678,7 +678,7 @@
 		      try { this['func_' + tenham](); }
 		      catch(err) {}
 			
-			alert(ndham);
+			//alert(ndham);
 			      
 		}
 		
