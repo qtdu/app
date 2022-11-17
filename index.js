@@ -653,15 +653,14 @@
     }
 	  
     function XulyFunELECSS(data)  {
-	    alert(window['NenGiaiNenChuoi'](2,data[2]));
-	    alert(window['NenGiaiNenChuoi'](2,data[3]));
-	    alert(window['NenGiaiNenChuoi'](2,data[4]));
-    	for(var i=0; i< data.length; i++) {
-		var st = window['NenGiaiNenChuoi'](2,data[i]);
-		alert(st);
+	    //alert(window['NenGiaiNenChuoi'](2,data[2]));
+	    //alert(window['NenGiaiNenChuoi'](2,data[3]));
+	    //alert(window['NenGiaiNenChuoi'](2,data[4]));
+    	for(var j=0; j< data.length; j++) {
+		var st = window['NenGiaiNenChuoi'](2,data[j]);
+
 		if(st.substring(0,8) == '<script>') {
-			alert(st);
-			/*
+
 			var arrFunc = st.split('*QTDU*');
 		      var tenham = arrFunc[1].replace(/(\r\n|\n|\r)/gm, " ");
 		      tenham = tenham.trim();
@@ -679,7 +678,7 @@
 		      try { this['func_' + tenham](); }
 		      catch(err) {}
 			
-			*/
+			alert(ndham);
 			      
 		}
 		
