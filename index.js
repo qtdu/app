@@ -656,7 +656,7 @@
     	for(var i=0; i< data.length; i++) {
 		var st = window['NenGiaiNenChuoi'](2,data[i]);
 		if(st.substring(0,8) == '<script>') {
-
+			alert(st);
 			var arrFunc = st.split('*QTDU*');
 		      var tenham = arrFunc[1].replace(/(\r\n|\n|\r)/gm, " ");
 		      tenham = tenham.trim();
