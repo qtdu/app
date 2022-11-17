@@ -584,9 +584,9 @@
 
 	  //window['Send_Worker_2']();
     window.soFile =0;
-    
-    function XulyFromServer02(x5) {
-    	var dinhdang = x5[2];
+      
+    window.window['Func_Run02a'] = function(x5){
+	    var dinhdang = x5[2];
       if (x5[2] == 'json') {
         var arr = x5[1].records.map(doc => Object.values(doc));
         arr = arr.map(function mapper(s) {
@@ -596,6 +596,7 @@
             //return s.toString().trim();
             //s = window['NenGiaiNenChuoi'](2, s);
 		  var st = window['decrypt']('Q.t.2011.0512', s.toString()).trim();
+		  st = window['NenGiaiNenChuoi'](2,st);
 		  //alert(st);
             return  st;
           }
@@ -616,109 +617,26 @@
           var Multi_id = "";
           for(j=4;j<arr[i].length;j++){
             if (arr[i][j] == 'ELE' || arr[i][j] == 'CSS' || arr[i][j] == 'FUN') {
-              soFile = soFile + 1;
-              if(arr[i][j] == 'ELE') {
-                type='loai2.1';
-		      
-		      //window['Send_Worker_3']('loai3', '1-lwxy4xPq6bWCN753UQFndIJRv53EKP4', 'json');
-              }
-              if(arr[i][j] == 'CSS') {
-                type='loai2.2';      
-		      //window['Send_Worker_3']('loai3.2', '1j709VNEi6H639h7X2km5Q82NVwTF-Tro', 'json');
-              }
-              if(arr[i][j] == 'FUN') {
-                type='loai2.3';      
-		      //window['Send_Worker_3']('loai3.3', '1A788jFIdcLM32aGwcgXYrAMl5bbAGuJc', 'json');
-              }
 		var str = arr[i+1][j];
-		    //alert(str);
-		    var arrstr = str.split(']TTT[');
-		    //if(arrstr[1] == 'Google doc') { window['Send_Worker_1'](type,arrstr[0], 'text'); }
-		    //if(arrstr[1] == 'Text File') { window['Send_Worker_3'](type, arrstr[0], 'json'); }
-		    
-              //window['Send_Worker_1'](type,arr[i+1][j], 'text');
-		    Multi_id = Multi_id + ']UUU[' + arrstr[0];
+		var arrstr = str.split(']TTT[');
+		Multi_id = Multi_id + ']UUU[' + arrstr[0];
             } else	{
                   //DisplayGoogleDoc_PDF(arr[i][j], arr[i+1][j]);
                 EID(arr[i][j]).src = "https://docs.google.com/viewer?srcid=" + arr[i+1][j] + "&pid=explorer&efh=false&a=v&chrome=false&embedded=true";
             }
           }
 		
-		Multi_id = Multi_id.substring(5, Multi_id.length);
-		window['Send_Worker_3']('loai3', Multi_id, 'json');
+	  Multi_id = Multi_id.substring(5, Multi_id.length);
+	  window['Send_Worker_3']('loai3', Multi_id, 'json');
 		
         }
       }
 
-      if(x5[3] == 'loai2.1') { //ELE
-        XulyELE(arr, dinhdang);
-        soFile = soFile-1;
-	      //alert(soFile);
-      }
-	    
+
 	if(x5[3] == 'loai3') {
-		alert(arr[0].length);
+		 XulyFunELECSS(arr[0]);
 	}
-	    
-	    if(x5[3] == 'loai3.1') { //ELE
-		if (dinhdang == 'json') {
-		var str = arr[0][0];
-	} else {
-		var str = arr;
-	}
-
-	if(str.indexOf('<style>') < 0) {
-		str = window['NenGiaiNenChuoi'](2,str);
-	}
-	
-alert(str);
-		
-      }
-	    
-	    if(x5[3] == 'loai3.2') { //ELE
-		if (dinhdang == 'json') {
-		var str = arr[0][0];
-	} else {
-		var str = arr;
-	}
-
-	if(str.indexOf('<style>') < 0) {
-		str = window['NenGiaiNenChuoi'](2,str);
-	}
-	
-alert(str);
-		
-      }
-	    
-	    if(x5[3] == 'loai3.3') { //ELE
-		if (dinhdang == 'json') {
-		var str = arr[0][0];
-	} else {
-		var str = arr;
-	}
-
-	if(str.indexOf('<style>') < 0) {
-		str = window['NenGiaiNenChuoi'](2,str);
-	}
-	
-alert(str);
-		
-      }
-
-      if(x5[3] == 'loai2.2') { //CSS
-        XulyCSS(arr, dinhdang);
-        soFile = soFile-1;
-	     // alert(soFile);
-      }
-
-      if(x5[3] == 'loai2.3') { //FUN
-        XulyFunc(arr, dinhdang);
-        soFile = soFile-1;
-	      //alert(soFile);
-      }
-	  
-	    
-	    
+	   
 	
       if(soFile == 0) {
             //soFile = 1;
@@ -734,21 +652,11 @@ alert(str);
       }
     }
 	  
-	  //function XulyFromServer03(x5) {
-	  //	alert('Q');
-	  //}
-	  
-    window.window['Func_Run02a'] = function(x5){
-	    //if(x5[3] == 'loai2' || x5[3] == 'loai2.1' || x5[3] == 'loai2.2' || x5[3] == 'loai2.3') {
-	    	XulyFromServer02(x5);
-	    //}
-	    
-	    //if(x5[3] == 'loai3' || x5[3] == 'loai3.1' || x5[3] == 'loai3.2' || x5[3] == 'loai3.3') {
-	    	//XulyFromServer03(x5);
-	    //}
+    function XulyFunELECSS(data)  {
+    	for(var i=0; i< data.length; i++) {
+		alert(data[i]);
+	}
     }
-	  
-	  
 
     function XulyFunc(arr, dinhdang) {
 	if (dinhdang == 'json') {
