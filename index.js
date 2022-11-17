@@ -695,8 +695,11 @@
     }
     function XulyCSS(arr) {
 	if(arr.indexOf('<style>') < 0) {
+		alert('Q');
+		alert(arr);
 		arr = window['NenGiaiNenChuoi'](2,arr);
 	}
+	    alert('T');
 	    alert(arr);
       var arr = arr.replace(/[“”]/g,"\"");
       arr = arr.replace(/[‘’]/g,"'");
