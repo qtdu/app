@@ -694,9 +694,10 @@
       catch(err) {}
     }
     function XulyCSS(arr) {
-	    //alert(arr[0]);
+	    alert(arr[0].length);
 	    //alert(arr.length);
 	    var str = arr[0];
+	    alert(str.length);
 	if(arr.indexOf('<style>') < 0) {
 		alert('Q');
 		alert(str);
