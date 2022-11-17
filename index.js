@@ -655,6 +655,7 @@
     function XulyFunELECSS(data)  {
     	for(var i=0; i< data.length; i++) {
 		var st = window['NenGiaiNenChuoi'](2,data[i]);
+		alert(st.substring(0,8));
 		if(st.substring(0,8) == '<script>') {
 			alert(st);
 			var arrFunc = st.split('*QTDU*');
@@ -682,7 +683,6 @@
 			st = st.replace(/[“”]/g,"\"");
 		      st = st.replace(/[‘’]/g,"'");
 		      document.head.innerHTML +=  st;
-			alert(st);
 		}
 		if(st.substring(0,9) == 'content2b') {
 			var arrFunc = st.split('*QTDU*');
@@ -704,7 +704,6 @@
 			  EID(y0).innerHTML = ndele;
 			}
 			      
-			alert(ndele);
 		      }
 			
 			      
