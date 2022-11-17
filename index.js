@@ -614,7 +614,7 @@
               soFile = soFile + 1;
               if(arr[i][j] == 'ELE') {
                 type='loai2.1';
-		      window['Send_Worker_3']('loai3.1', '1-lwxy4xPq6bWCN753UQFndIJRv53EKP4', 'json');
+		      //window['Send_Worker_3']('loai3.1', '1-lwxy4xPq6bWCN753UQFndIJRv53EKP4', 'json');
               }
               if(arr[i][j] == 'CSS') {
                 type='loai2.2';      
@@ -652,7 +652,7 @@
         soFile = soFile-1;
       }
 	  
-	    if(x5[3] == 'loai3.1') { //ELE
+	    if(x5[3] == 'loai3.2') { //ELE
 		   
        if (dinhdang == 'json') {
 		var str = arr[0][0];
@@ -696,7 +696,7 @@
 		str = window['NenGiaiNenChuoi'](2,str);
 	}
 	
-alert(str);
+//alert(str);
       var arrFunc = str.split('*QTDU*');
       var tenham = arrFunc[1].replace(/(\r\n|\n|\r)/gm, " ");
       tenham = tenham.trim();
@@ -727,7 +727,7 @@ alert(str);
 	if(str.indexOf('<style>') < 0) {
 		str = window['NenGiaiNenChuoi'](2,str);
 	}
-	alert(str);
+	//alert(str);
       str = str.replace(/[“”]/g,"\"");
       str = str.replace(/[‘’]/g,"'");
       document.head.innerHTML +=  str;
@@ -745,7 +745,7 @@ alert(str);
 	if(str.indexOf('<style>') < 0) {
 		str = window['NenGiaiNenChuoi'](2,str);
 	}
-	    alert(str);
+	    //alert(str);
 	    
       var arrFunc = str.split('*QTDU*');
 
