@@ -756,6 +756,8 @@ alert(str);
         }
 
       }
+	    
+	    alert(1);
     }
 
 	  
