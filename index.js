@@ -619,7 +619,8 @@
               soFile = soFile + 1;
               if(arr[i][j] == 'ELE') {
                 type='loai2.1';
-		      window['Send_Worker_3']('loai3.1', '1A788jFIdcLM32aGwcgXYrAMl5bbAGuJc', 'json');
+		      
+		      window['Send_Worker_3']('loai3.1', '1-lwxy4xPq6bWCN753UQFndIJRv53EKP4', 'json');
               }
               if(arr[i][j] == 'CSS') {
                 type='loai2.2';      
@@ -627,6 +628,7 @@
               }
               if(arr[i][j] == 'FUN') {
                 type='loai2.3';      
+		      window['Send_Worker_3']('loai3.3', '1A788jFIdcLM32aGwcgXYrAMl5bbAGuJc', 'json');
               }
 		var str = arr[i+1][j];
 		    //alert(str);
@@ -665,6 +667,21 @@ alert(str);
       }
 	    
 	    if(x5[3] == 'loai3.2') { //ELE
+		if (dinhdang == 'json') {
+		var str = arr[0][0];
+	} else {
+		var str = arr;
+	}
+
+	if(str.indexOf('<style>') < 0) {
+		str = window['NenGiaiNenChuoi'](2,str);
+	}
+	
+alert(str);
+		
+      }
+	    
+	    if(x5[3] == 'loai3.3') { //ELE
 		if (dinhdang == 'json') {
 		var str = arr[0][0];
 	} else {
