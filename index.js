@@ -579,7 +579,7 @@
     }
 
 	  //window['Send_Worker_2']();
-    var soFile =0;
+    window.soFile =0;
     window.window['Func_Run02a'] = function(x5){
 	var dinhdang = x5[2];
       if (x5[2] == 'json') {
@@ -639,17 +639,20 @@
 
       if(x5[3] == 'loai2.1') { //ELE
         XulyELE(arr, dinhdang);
-        soFile = soFile-1;	
+        soFile = soFile-1;
+	      alert(soFile);
       }
 
       if(x5[3] == 'loai2.2') { //CSS
         XulyCSS(arr, dinhdang);
         soFile = soFile-1;
+	      alert(soFile);
       }
 
       if(x5[3] == 'loai2.3') { //FUN
         XulyFunc(arr, dinhdang);
         soFile = soFile-1;
+	      alert(soFile);
       }
 	  
 	    if(x5[3] == 'loai3.2') { //ELE
