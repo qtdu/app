@@ -623,7 +623,7 @@
               }
               if(arr[i][j] == 'CSS') {
                 type='loai2.2';      
-		      window['Send_Worker_3']('loai3.1', '1j709VNEi6H639h7X2km5Q82NVwTF-Tro', 'json');
+		      window['Send_Worker_3']('loai3.2', '1j709VNEi6H639h7X2km5Q82NVwTF-Tro', 'json');
               }
               if(arr[i][j] == 'FUN') {
                 type='loai2.3';      
