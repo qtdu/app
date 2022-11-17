@@ -640,7 +640,7 @@
       }
 
       if(x5[3] == 'loai2.2') { //CSS
-        XulyCSS(arr, dinhdang);
+        XulyCSS(arr);
         soFile = soFile-1;
       }
 
@@ -650,7 +650,7 @@
       }
 	   
 	    if(x5[3] == 'loai3.2') { //CSS
-		    XulyCSS(arr);
+		    XulyCSS(arr, dinhdang);
         soFile = soFile-1;
 		    
       	
