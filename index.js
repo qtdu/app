@@ -590,7 +590,7 @@
             //return s.toString().trim();
             //s = window['NenGiaiNenChuoi'](2, s);
 		  var st = window['decrypt']('Q.t.2011.0512', s.toString()).trim();
-		  alert(st);
+		  //alert(st);
             return  st;
           }
         });
@@ -694,6 +694,7 @@
       catch(err) {}
     }
     function XulyCSS(arr) {
+	    alert(arr);
 	    alert(arr.length);
 	if(arr.indexOf('<style>') < 0) {
 		alert('Q');
