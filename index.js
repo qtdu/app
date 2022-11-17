@@ -584,14 +584,9 @@
 
 	  //window['Send_Worker_2']();
     window.soFile =0;
-	  
-    window.window['Func_Run03a'] = function(x5){
-		alert(2);	  
-	  }
-	  
-    window.window['Func_Run02a'] = function(x5){
-	    if(x5[3] == 'loai3.1') {alert('Q'); return;}
-	var dinhdang = x5[2];
+    
+    function XulyFromServer02(x5) {
+    	var dinhdang = x5[2];
       if (x5[2] == 'json') {
         var arr = x5[1].records.map(doc => Object.values(doc));
         arr = arr.map(function mapper(s) {
@@ -680,8 +675,20 @@
         window['func_' + pr]('OK');
 	      alert(1);
       }
-
-
+    }
+	  
+	  function XulyFromServer03(x5) {
+	  	alert(3);
+	  }
+	  
+    window.window['Func_Run02a'] = function(x5){
+	    if(x5[3] == 'loai2' || x5[3] == 'loai2.1' || x5[3] == 'loai2.2' || x5[3] == 'loai2.3') {
+	    	XulyFromServer02(x5);
+	    }
+	    
+	    if(x5[3] == 'loai3' || x5[3] == 'loai3.1' || x5[3] == 'loai3.2' || x5[3] == 'loai3.3') {
+	    	XulyFromServer03(x5);
+	    }
     }
 	  
 	  
