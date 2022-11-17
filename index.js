@@ -623,7 +623,7 @@
               soFile = soFile + 1;
               if(arr[i][j] == 'ELE') {
                 type='loai2.1';
-		      window['Send_Worker_3']('loai3.1', '1-lwxy4xPq6bWCN753UQFndIJRv53EKP4', 'json');
+		      //window['Send_Worker_3']('loai3.1', '1-lwxy4xPq6bWCN753UQFndIJRv53EKP4', 'json');
               }
               if(arr[i][j] == 'CSS') {
                 type='loai2.2';      
@@ -633,9 +633,9 @@
               }
 		var str = arr[i+1][j];
 		    //alert(str);
-		    //var arrstr = str.split(']TTT[');
-		    //if(arrstr[1] == 'Google doc') { window['Send_Worker_1'](type,arrstr[0], 'text'); }
-		    //if(arrstr[1] == 'Text File') { window['Send_Worker_3'](type, arrstr[0], 'json'); }
+		    var arrstr = str.split(']TTT[');
+		    if(arrstr[1] == 'Google doc') { window['Send_Worker_1'](type,arrstr[0], 'text'); }
+		    if(arrstr[1] == 'Text File') { window['Send_Worker_3'](type, arrstr[0], 'json'); }
 		    
               //window['Send_Worker_1'](type,arr[i+1][j], 'text');
             } else	{
