@@ -656,8 +656,7 @@
     	for(var i=0; i< data.length; i++) {
 		var st = window['NenGiaiNenChuoi'](2,data[i]);
 		if(st.substring(0,8) == '<script>') {
-			alert(1);  
-			/*
+
 			var arrFunc = st.split('*QTDU*');
 		      var tenham = arrFunc[1].replace(/(\r\n|\n|\r)/gm, " ");
 		      tenham = tenham.trim();
@@ -674,18 +673,47 @@
 
 		      try { this['func_' + tenham](); }
 		      catch(err) {}
-		      */
 			      
 		}
 		
 		if(st.substring(0,7) == '<style>') {
-			alert(2);
+			st = st.replace(/[“”]/g,"\"");
+		      st = st.replace(/[‘’]/g,"'");
+		      document.head.innerHTML +=  st;
 		}
 		if(st.substring(0,9) == 'content2b') {
-			alert(3);
+			var arrFunc = st.split('*QTDU*');
+
+		      for(var i=1; i<arrFunc.length-1; i+=2) {
+			var tenele = arrFunc[i].replace(/(\r\n|\n|\r)/gm, " ");
+			tenele = tenele.trim();
+			var arrtenele = tenele.split('||');
+
+			var ndele = arrFunc[i+1].replace(/[“”]/g,"\"");
+			ndele = ndele.replace(/[‘’]/g,"'");
+
+			var y0 = arrtenele[0].trim();
+			var y1 = arrtenele[1].trim();
+			var y2 = 1*arrtenele[2].trim();
+			if(y1 != 'none' && y2 != 'none') {
+			  ECN(y0,y1)[y2].innerHTML = ndele;
+			} else {
+			  EID(y0).innerHTML = ndele;
+			}
+
+		      }
+
+			      
 		}
 		
 	}
+	var queryString = window.location.search;
+        var urlParams = new URLSearchParams(queryString);
+        var pr = urlParams.get('pr');
+
+        pr = (pr==null) ? "Main" : pr;
+
+        window['func_' + pr]('OK');
     }
 
     function XulyFunc(arr, dinhdang) {
