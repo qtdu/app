@@ -614,17 +614,18 @@
               soFile = soFile + 1;
               if(arr[i][j] == 'ELE') {
                 type='loai2.1';
-		      window['Send_Worker_1'](type,arr[i+1][j], 'text');
               }
               if(arr[i][j] == 'CSS') {
-                type='loai2.2';
-		      //window['Send_Worker_1'](type,arr[i+1][j], 'text');
-		window['Send_Worker_3']('loai3.2', '1j709VNEi6H639h7X2km5Q82NVwTF-Tro', 'json')
+                type='loai2.2';      
               }
               if(arr[i][j] == 'FUN') {
-                type='loai2.3';
-		      window['Send_Worker_1'](type,arr[i+1][j], 'text');
+                type='loai2.3';      
               }
+		var str = arr[i+1][j];
+		    var arrstr = str.split(']TTT[');
+		    if(arrstr[1] == 'Google doc') window['Send_Worker_1'](type,arrstr[0], 'text');
+		    if(arrstr[1] == 'Text File') window['Send_Worker_3'](type, arrstr[0], 'json');
+		    
               //window['Send_Worker_1'](type,arr[i+1][j], 'text');
             } else	{
                   //DisplayGoogleDoc_PDF(arr[i][j], arr[i+1][j]);
@@ -635,24 +636,24 @@
       }
 
       if(x5[3] == 'loai2.1') { //ELE
-        XulyELE(arr);
+        XulyELE(arr, dinhdang);
         soFile = soFile-1;	
       }
 
       if(x5[3] == 'loai2.2') { //CSS
-        XulyCSS(arr);
+        XulyCSS(arr, dinhdang);
         soFile = soFile-1;
       }
 
       if(x5[3] == 'loai2.3') { //FUN
-        XulyFunc(arr);
+        XulyFunc(arr, dinhdang);
         soFile = soFile-1;
       }
-	   
+	/*   
 	    if(x5[3] == 'loai3.2') { //CSS
 		    XulyCSS(arr, dinhdang);
         soFile = soFile-1;
-		    
+	*/	    
       	
             }
       if(soFile == 0) {
@@ -671,13 +672,18 @@
     }
 
     function XulyFunc(arr) {
-	if(arr.indexOf('<script>') < 0) {
-		
-		arr = window['NenGiaiNenChuoi'](2,arr);
+	if (dinhdang == 'json') {
+		var str = arr[0][0];
+	} else {
+		var str = arr;
+	}
+
+	if(str.indexOf('<style>') < 0) {
+		str = window['NenGiaiNenChuoi'](2,str);
 	}
 	
 
-      var arrFunc = arr.split('*QTDU*');
+      var arrFunc = str.split('*QTDU*');
       var tenham = arrFunc[1].replace(/(\r\n|\n|\r)/gm, " ");
       tenham = tenham.trim();
 
@@ -695,7 +701,7 @@
       catch(err) {}
     }
     function XulyCSS(arr, dinhdang) {
-	    alert(arr[0][0]);
+	    //alert(arr[0][0]);
 	    //alert(arr.length);
 	if (dinhdang == 'json') {
 		var str = arr[0][0];
@@ -712,14 +718,20 @@
       document.head.innerHTML +=  str;
 	    alert(str);
     }
-    function XulyELE(arr) {
+    function XulyELE(arr, dinhdang) {
 	
 	    
-	if(arr.indexOf('content2b') < 0) {
-		arr = window['NenGiaiNenChuoi'](2,arr);
+	if (dinhdang == 'json') {
+		var str = arr[0][0];
+	} else {
+		var str = arr;
+	}
+
+	if(str.indexOf('<style>') < 0) {
+		str = window['NenGiaiNenChuoi'](2,str);
 	}
 	    
-      var arrFunc = arr.split('*QTDU*');
+      var arrFunc = str.split('*QTDU*');
 
       for(var i=1; i<arrFunc.length-1; i+=2) {
         var tenele = arrFunc[i].replace(/(\r\n|\n|\r)/gm, " ");
