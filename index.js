@@ -654,9 +654,11 @@
 	    if(x5[3] == 'loai3.2') { //CSS
 		    XulyCSS(arr, dinhdang);
         soFile = soFile-1;
-	*/	    
+		    
       	
             }
+	    
+	*/
       if(soFile == 0) {
             //soFile = 1;
             //worker_1('0','getND');
@@ -715,7 +717,7 @@
 		str = window['NenGiaiNenChuoi'](2,str);
 	}
 
-      var str = str.replace(/[“”]/g,"\"");
+      str = str.replace(/[“”]/g,"\"");
       str = str.replace(/[‘’]/g,"'");
       document.head.innerHTML +=  str;
 	    alert(str);
