@@ -561,7 +561,7 @@
       var x1 = 'getND';
       var x2 =  "NoLink"
       var x3 = "NoStringFunc";
-      var x4 = 'Func_Run02a';
+      var x4 = 'Func_Run03a';
       var x5 = 'QT';
 
       script_id = window['decrypt']('Q.t.2011.0512',window['base64_decode'](window['getlink']('none')));
@@ -655,21 +655,7 @@
 	      alert(soFile);
       }
 	  
-	    if(x5[3] == 'loai3.2') { //ELE
-		   
-       if (dinhdang == 'json') {
-		var str = arr[0][0];
-	} else {
-		var str = arr;
-	}
-
-	if(str.indexOf('<style>') < 0) {
-		str = window['NenGiaiNenChuoi'](2,str);
-	}
-	    alert(str);
-		    
-      	
-            }
+	    
 	    
 	
       if(soFile == 0) {
@@ -687,6 +673,10 @@
 
 
     }
+	  
+	  window.window['Func_Run03a'] = function(x5){
+		alert(2);	  
+	  }
 
     function XulyFunc(arr, dinhdang) {
 	if (dinhdang == 'json') {
