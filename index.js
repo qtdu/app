@@ -649,7 +649,7 @@
       }
 	   
 	    if(x5[3] == 'loai3.2') { //CSS
-		    XulyFunc(arr);
+		    XulyCSS(arr);
         soFile = soFile-1;
 		    
       	
