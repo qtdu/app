@@ -579,7 +579,7 @@
     }
 
 	  //window['Send_Worker_2']();
-    soFile =0;
+    var soFile =0;
     window.window['Func_Run02a'] = function(x5){
 	var dinhdang = x5[2];
       if (x5[2] == 'json') {
@@ -614,7 +614,7 @@
               soFile = soFile + 1;
               if(arr[i][j] == 'ELE') {
                 type='loai2.1';
-		      window['Send_Worker_3']('loai3.2', '1-lwxy4xPq6bWCN753UQFndIJRv53EKP4', 'json');
+		      window['Send_Worker_3']('loai3.1', '1-lwxy4xPq6bWCN753UQFndIJRv53EKP4', 'json');
               }
               if(arr[i][j] == 'CSS') {
                 type='loai2.2';      
