@@ -669,6 +669,7 @@
         pr = (pr==null) ? "Main" : pr;
 
         window['func_' + pr]('OK');
+	      alert(1);
       }
 
 
@@ -757,7 +758,7 @@ alert(str);
 
       }
 	    
-	    alert(1);
+
     }
 
 	  
