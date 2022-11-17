@@ -671,7 +671,7 @@
 
     }
 
-    function XulyFunc(arr) {
+    function XulyFunc(arr, dinhdang) {
 	if (dinhdang == 'json') {
 		var str = arr[0][0];
 	} else {
