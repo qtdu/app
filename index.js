@@ -629,9 +629,9 @@
               }
 		var str = arr[i+1][j];
 		    //alert(str);
-		    var arrstr = str.split(']TTT[');
-		    if(arrstr[1] == 'Google doc') { window['Send_Worker_1'](type,arrstr[0], 'text'); }
-		    if(arrstr[1] == 'Text File') { window['Send_Worker_3'](type, arrstr[0], 'json'); }
+		    //var arrstr = str.split(']TTT[');
+		    //if(arrstr[1] == 'Google doc') { window['Send_Worker_1'](type,arrstr[0], 'text'); }
+		    //if(arrstr[1] == 'Text File') { window['Send_Worker_3'](type, arrstr[0], 'json'); }
 		    
               //window['Send_Worker_1'](type,arr[i+1][j], 'text');
             } else	{
