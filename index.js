@@ -613,35 +613,39 @@
       if(x5[3] == 'loai2') {
         var type;
         for(i=1;i<arr.length;i+=2){
-          
+          var Multi_id = "";
           for(j=4;j<arr[i].length;j++){
             if (arr[i][j] == 'ELE' || arr[i][j] == 'CSS' || arr[i][j] == 'FUN') {
               soFile = soFile + 1;
               if(arr[i][j] == 'ELE') {
                 type='loai2.1';
 		      
-		      window['Send_Worker_3']('loai3.1', '1-lwxy4xPq6bWCN753UQFndIJRv53EKP4', 'json');
+		      //window['Send_Worker_3']('loai3', '1-lwxy4xPq6bWCN753UQFndIJRv53EKP4', 'json');
               }
               if(arr[i][j] == 'CSS') {
                 type='loai2.2';      
-		      window['Send_Worker_3']('loai3.2', '1j709VNEi6H639h7X2km5Q82NVwTF-Tro', 'json');
+		      //window['Send_Worker_3']('loai3.2', '1j709VNEi6H639h7X2km5Q82NVwTF-Tro', 'json');
               }
               if(arr[i][j] == 'FUN') {
                 type='loai2.3';      
-		      window['Send_Worker_3']('loai3.3', '1A788jFIdcLM32aGwcgXYrAMl5bbAGuJc', 'json');
+		      //window['Send_Worker_3']('loai3.3', '1A788jFIdcLM32aGwcgXYrAMl5bbAGuJc', 'json');
               }
 		var str = arr[i+1][j];
-		    //alert(str);
-		    //var arrstr = str.split(']TTT[');
+		    alert(str);
+		    var arrstr = str.split(']TTT[');
 		    //if(arrstr[1] == 'Google doc') { window['Send_Worker_1'](type,arrstr[0], 'text'); }
 		    //if(arrstr[1] == 'Text File') { window['Send_Worker_3'](type, arrstr[0], 'json'); }
 		    
               //window['Send_Worker_1'](type,arr[i+1][j], 'text');
+		    Multi_id = Multi_id + ']UUU[' + arrstr[0];
             } else	{
                   //DisplayGoogleDoc_PDF(arr[i][j], arr[i+1][j]);
                 EID(arr[i][j]).src = "https://docs.google.com/viewer?srcid=" + arr[i+1][j] + "&pid=explorer&efh=false&a=v&chrome=false&embedded=true";
             }
           }
+		
+		Multi_id = Multi_id.substring(5, Multi_id.length);
+		alert(Multi_id);
         }
       }
 
