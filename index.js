@@ -657,7 +657,7 @@
       }
 	    
 	if(x5[3] == 'loai3') {
-		alert('T');
+		alert(arr[0][0].length);
 	}
 	    
 	    if(x5[3] == 'loai3.1') { //ELE
