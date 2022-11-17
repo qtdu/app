@@ -596,7 +596,7 @@
             //return s.toString().trim();
             //s = window['NenGiaiNenChuoi'](2, s);
 		  var st = window['decrypt']('Q.t.2011.0512', s.toString()).trim();
-		  st = window['NenGiaiNenChuoi'](2,st);
+		  
 		  //alert(st);
             return  st;
           }
@@ -654,7 +654,8 @@
 	  
     function XulyFunELECSS(data)  {
     	for(var i=0; i< data.length; i++) {
-		alert(data[i]);
+		var st = window['NenGiaiNenChuoi'](2,data[i]);
+		alert(st);
 	}
     }
 
