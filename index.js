@@ -647,6 +647,12 @@
         soFile = soFile-1;
 	      //alert(soFile);
       }
+	    
+	if(x5[3] == 'loai3.1') { //ELE
+		alert(soFile);
+        alert('Q');
+	      //alert(soFile);
+      }
 
       if(x5[3] == 'loai2.2') { //CSS
         XulyCSS(arr, dinhdang);
@@ -677,18 +683,18 @@
       }
     }
 	  
-	  function XulyFromServer03(x5) {
-	  	alert('Q');
-	  }
+	  //function XulyFromServer03(x5) {
+	  //	alert('Q');
+	  //}
 	  
     window.window['Func_Run02a'] = function(x5){
-	    if(x5[3] == 'loai2' || x5[3] == 'loai2.1' || x5[3] == 'loai2.2' || x5[3] == 'loai2.3') {
+	    //if(x5[3] == 'loai2' || x5[3] == 'loai2.1' || x5[3] == 'loai2.2' || x5[3] == 'loai2.3') {
 	    	XulyFromServer02(x5);
-	    }
+	    //}
 	    
-	    if(x5[3] == 'loai3' || x5[3] == 'loai3.1' || x5[3] == 'loai3.2' || x5[3] == 'loai3.3') {
-	    	XulyFromServer03(x5);
-	    }
+	    //if(x5[3] == 'loai3' || x5[3] == 'loai3.1' || x5[3] == 'loai3.2' || x5[3] == 'loai3.3') {
+	    	//XulyFromServer03(x5);
+	    //}
     }
 	  
 	  
