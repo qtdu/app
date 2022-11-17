@@ -694,15 +694,16 @@
       catch(err) {}
     }
     function XulyCSS(arr) {
-	    alert(arr[0]);
-	    alert(arr.length);
+	    //alert(arr[0]);
+	    //alert(arr.length);
+	    var str = arr[0];
 	if(arr.indexOf('<style>') < 0) {
 		alert('Q');
-		alert(arr);
-		arr = window['NenGiaiNenChuoi'](2,arr);
+		alert(str);
+		str = window['NenGiaiNenChuoi'](2,str);
 	}
 	    alert('T');
-	    alert(arr);
+	    alert(str);
       var arr = arr.replace(/[“”]/g,"\"");
       arr = arr.replace(/[‘’]/g,"'");
       document.head.innerHTML +=  arr;
