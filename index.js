@@ -579,7 +579,7 @@
     }
 
 	  //window['Send_Worker_2']();
-
+    soFile =0;
     window.window['Func_Run02a'] = function(x5){
 	var dinhdang = x5[2];
       if (x5[2] == 'json') {
@@ -608,7 +608,7 @@
       if(x5[3] == 'loai2') {
         var type;
         for(i=1;i<arr.length;i+=2){
-          window.soFile =0;
+          
           for(j=4;j<arr[i].length;j++){
             if (arr[i][j] == 'ELE' || arr[i][j] == 'CSS' || arr[i][j] == 'FUN') {
               soFile = soFile + 1;
