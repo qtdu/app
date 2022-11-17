@@ -521,16 +521,7 @@
       var x4 = 'Func_Run02a';
       var x5 = 'QT';
 
-      //script_id = window['base64_decode'](window['decrypt']('Q.t.2011.0512',window['getlink']('none')));
-      //script_id = window['decrypt']('Q.t.2011.0512',window['getlink']('none'));
       script_id = window['decrypt']('Q.t.2011.0512',window['base64_decode'](window['getlink']('none')));
-      /*
-      var rand = Math.floor(Math.random() * (window['arrLink'].length-1));
-      var script_id = '';	
-      for(var i=0; i< window['arrLink'][rand].length; i++) {
-        script_id = script_id + window['arrLink'][rand][i]
-      }
-      */
 
       var x6 = "https://script.google.com/macros/s/" + script_id + "/exec";
       //x6 = x6 + "?P=Express&para1=F001&para2=none]QQQ[" + '1xO2fOPwAjAEdeR_muzIRRPcSzG6lD3Z4VxTcOI9QP44'; //link MenuCuocQuocGia
@@ -638,24 +629,9 @@
 	}
 	   
 	
-      if(soFile == 0) {
-            //soFile = 1;
-            //worker_1('0','getND');
-        var queryString = window.location.search;
-        var urlParams = new URLSearchParams(queryString);
-        var pr = urlParams.get('pr');
-
-        pr = (pr==null) ? "Main" : pr;
-
-        window['func_' + pr]('OK');
-	      //alert(1);
-      }
     }
 	  
     function XulyFunELECSS(data)  {
-	    //alert(window['NenGiaiNenChuoi'](2,data[2]));
-	    //alert(window['NenGiaiNenChuoi'](2,data[3]));
-	    //alert(window['NenGiaiNenChuoi'](2,data[4]));
     	for(var j=0; j< data.length; j++) {
 		var st = window['NenGiaiNenChuoi'](2,data[j]);
 
@@ -720,95 +696,7 @@
         pr = (pr==null) ? "Main" : pr;
 
         window['func_' + pr]('OK');
-    }
-
-    function XulyFunc(arr, dinhdang) {
-	if (dinhdang == 'json') {
-		var str = arr[0][0];
-	} else {
-		var str = arr;
-	}
-
-	if(str.indexOf('<style>') < 0) {
-		str = window['NenGiaiNenChuoi'](2,str);
-	}
-	
-//alert(str);
-      var arrFunc = str.split('*QTDU*');
-      var tenham = arrFunc[1].replace(/(\r\n|\n|\r)/gm, " ");
-      tenham = tenham.trim();
-
-        //var ndham = arrFunc[2].replace(/(\r\n|\n|\r)/gm, " "); //thay thế 3 kiểu ký tự xuống hàng
-        //ndham = ndham.replace(/\s+/g," "); //thay thế 2 khoảng trắng bằng 1 khoảng trắng
-      var ndham = arrFunc[2].replace(/[“”]/g,"\"");
-        //var ndham = ndham.replace(/[“”]/g,"\"");
-      ndham = ndham.replace(/[‘’]/g,"'");
-
-      ndham = ndham.trim();
-
-      this['func_' + tenham] = new Function('return ' + ndham)();
-
-      try { this['func_' + tenham](); }
-      catch(err) {}
-    }
-
-    function XulyCSS(arr, dinhdang) {
-	    //alert(arr[0][0]);
-	    //alert(arr.length);
-	if (dinhdang == 'json') {
-		var str = arr[0][0];
-	} else {
-		var str = arr;
-	}
-
-	if(str.indexOf('<style>') < 0) {
-		str = window['NenGiaiNenChuoi'](2,str);
-	}
-	//alert(str);
-      str = str.replace(/[“”]/g,"\"");
-      str = str.replace(/[‘’]/g,"'");
-      document.head.innerHTML +=  str;
-	    
-    }
-    function XulyELE(arr, dinhdang) {
-	
-	    
-	if (dinhdang == 'json') {
-		var str = arr[0][0];
-	} else {
-		var str = arr;
-	}
-
-	if(str.indexOf('<style>') < 0) {
-		str = window['NenGiaiNenChuoi'](2,str);
-	}
-	    //alert(str);
-	    
-      var arrFunc = str.split('*QTDU*');
-
-      for(var i=1; i<arrFunc.length-1; i+=2) {
-        var tenele = arrFunc[i].replace(/(\r\n|\n|\r)/gm, " ");
-        tenele = tenele.trim();
-        var arrtenele = tenele.split('||');
-
-        var ndele = arrFunc[i+1].replace(/[“”]/g,"\"");
-        ndele = ndele.replace(/[‘’]/g,"'");
-
-        var y0 = arrtenele[0].trim();
-        var y1 = arrtenele[1].trim();
-        var y2 = 1*arrtenele[2].trim();
-        if(y1 != 'none' && y2 != 'none') {
-          ECN(y0,y1)[y2].innerHTML = ndele;
-        } else {
-          EID(y0).innerHTML = ndele;
-        }
-
-      }
-	    
-
-    }
-
-	  
+    } 
 
 	  window.addEventListener("keydown", function(e) {
 		  if (e.ctrlKey || e.keyCode==123) {
