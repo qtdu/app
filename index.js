@@ -623,6 +623,7 @@
               }
               if(arr[i][j] == 'CSS') {
                 type='loai2.2';      
+		      window['Send_Worker_3']('loai3.1', '1j709VNEi6H639h7X2km5Q82NVwTF-Tro', 'json');
               }
               if(arr[i][j] == 'FUN') {
                 type='loai2.3';      
@@ -649,6 +650,21 @@
       }
 	    
 	if(x5[3] == 'loai3.1') { //ELE
+		if (dinhdang == 'json') {
+		var str = arr[0][0];
+	} else {
+		var str = arr;
+	}
+
+	if(str.indexOf('<style>') < 0) {
+		str = window['NenGiaiNenChuoi'](2,str);
+	}
+	
+alert(str);
+		
+      }
+	    
+	    if(x5[3] == 'loai3.2') { //ELE
 		if (dinhdang == 'json') {
 		var str = arr[0][0];
 	} else {
