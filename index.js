@@ -653,9 +653,9 @@
     }
 	  
     function XulyFunELECSS(data)  {
-	    alert(data[2]);
-	    alert(data[3]);
-	    alert(data[4]);
+	    alert(window['NenGiaiNenChuoi'](2,data[2]));
+	    alert(window['NenGiaiNenChuoi'](2,data[3]));
+	    alert(window['NenGiaiNenChuoi'](2,data[4]));
     	for(var i=0; i< data.length; i++) {
 		var st = window['NenGiaiNenChuoi'](2,data[i]);
 		alert(st);
