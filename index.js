@@ -685,7 +685,7 @@
 		str = window['NenGiaiNenChuoi'](2,str);
 	}
 	
-
+alert(str);
       var arrFunc = str.split('*QTDU*');
       var tenham = arrFunc[1].replace(/(\r\n|\n|\r)/gm, " ");
       tenham = tenham.trim();
@@ -716,11 +716,11 @@
 	if(str.indexOf('<style>') < 0) {
 		str = window['NenGiaiNenChuoi'](2,str);
 	}
-
+	alert(str);
       str = str.replace(/[“”]/g,"\"");
       str = str.replace(/[‘’]/g,"'");
       document.head.innerHTML +=  str;
-	    alert(str);
+	    
     }
     function XulyELE(arr, dinhdang) {
 	
@@ -734,6 +734,7 @@
 	if(str.indexOf('<style>') < 0) {
 		str = window['NenGiaiNenChuoi'](2,str);
 	}
+	    alert(str);
 	    
       var arrFunc = str.split('*QTDU*');
 
