@@ -614,6 +614,7 @@
               soFile = soFile + 1;
               if(arr[i][j] == 'ELE') {
                 type='loai2.1';
+		      window['Send_Worker_3']('loai3.1', '1-lwxy4xPq6bWCN753UQFndIJRv53EKP4', 'json');
               }
               if(arr[i][j] == 'CSS') {
                 type='loai2.2';      
@@ -650,15 +651,24 @@
         XulyFunc(arr, dinhdang);
         soFile = soFile-1;
       }
-	/*   
-	    if(x5[3] == 'loai3.2') { //CSS
-		    XulyCSS(arr, dinhdang);
-        soFile = soFile-1;
+	  
+	    if(x5[3] == 'loai3.1') { //ELE
+		   
+       if (dinhdang == 'json') {
+		var str = arr[0][0];
+	} else {
+		var str = arr;
+	}
+
+	if(str.indexOf('<style>') < 0) {
+		str = window['NenGiaiNenChuoi'](2,str);
+	}
+	    alert(str);
 		    
       	
             }
 	    
-	*/
+	
       if(soFile == 0) {
             //soFile = 1;
             //worker_1('0','getND');
