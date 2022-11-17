@@ -565,7 +565,7 @@
       var x1 = 'getND';
       var x2 =  "NoLink"
       var x3 = "NoStringFunc";
-      var x4 = 'Func_Run03a';
+      var x4 = 'Func_Run02a';
       var x5 = 'QT';
 
       script_id = window['decrypt']('Q.t.2011.0512',window['base64_decode'](window['getlink']('none')));
@@ -590,6 +590,7 @@
 	  }
 	  
     window.window['Func_Run02a'] = function(x5){
+	    if(x5[3] == 'loai3.1') {alert('Q'); return;}
 	var dinhdang = x5[2];
       if (x5[2] == 'json') {
         var arr = x5[1].records.map(doc => Object.values(doc));
@@ -623,7 +624,7 @@
               soFile = soFile + 1;
               if(arr[i][j] == 'ELE') {
                 type='loai2.1';
-		      //window['Send_Worker_3']('loai3.1', '1-lwxy4xPq6bWCN753UQFndIJRv53EKP4', 'json');
+		      window['Send_Worker_3']('loai3.1', '1-lwxy4xPq6bWCN753UQFndIJRv53EKP4', 'json');
               }
               if(arr[i][j] == 'CSS') {
                 type='loai2.2';      
