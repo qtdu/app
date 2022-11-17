@@ -645,19 +645,19 @@
       if(x5[3] == 'loai2.1') { //ELE
         XulyELE(arr, dinhdang);
         soFile = soFile-1;
-	      alert(soFile);
+	      //alert(soFile);
       }
 
       if(x5[3] == 'loai2.2') { //CSS
         XulyCSS(arr, dinhdang);
         soFile = soFile-1;
-	      alert(soFile);
+	     // alert(soFile);
       }
 
       if(x5[3] == 'loai2.3') { //FUN
         XulyFunc(arr, dinhdang);
         soFile = soFile-1;
-	      alert(soFile);
+	      //alert(soFile);
       }
 	  
 	    
@@ -673,12 +673,12 @@
         pr = (pr==null) ? "Main" : pr;
 
         window['func_' + pr]('OK');
-	      alert(1);
+	      //alert(1);
       }
     }
 	  
 	  function XulyFromServer03(x5) {
-	  	alert(3);
+	  	alert('Q');
 	  }
 	  
     window.window['Func_Run02a'] = function(x5){
