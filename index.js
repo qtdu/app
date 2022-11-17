@@ -673,6 +673,8 @@
 
 		      try { this['func_' + tenham](); }
 		      catch(err) {}
+			
+			alert(ndham);
 			      
 		}
 		
@@ -680,6 +682,7 @@
 			st = st.replace(/[“”]/g,"\"");
 		      st = st.replace(/[‘’]/g,"'");
 		      document.head.innerHTML +=  st;
+			alert(st);
 		}
 		if(st.substring(0,9) == 'content2b') {
 			var arrFunc = st.split('*QTDU*');
@@ -700,9 +703,10 @@
 			} else {
 			  EID(y0).innerHTML = ndele;
 			}
-
+			      
+			alert(ndele);
 		      }
-
+			
 			      
 		}
 		
