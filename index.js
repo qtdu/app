@@ -359,7 +359,7 @@
 		        var blobURL = window.URL.createObjectURL(blob);
 		        window.window[x1] = new Worker(blobURL);
 		      }
-		      window[x1].onmessage = function (event) { window[x4](event.data);};
+		      window[x1].onmessage = function (event) { TraKetQua(event.data);};
 
 	      } else {
 		      alert("Sorry, your browser does not support Web Workers...");
@@ -369,6 +369,10 @@
 	    function stopWorker(){ 
 	      window[x1].terminate(); 
 	    }
+		  
+		  function TraKetQua(data) {
+		  	window[x4](data);
+		  }
 
 	    if(x0=='1') startWorker();
 	    if(x0=='0') stopWorker();
