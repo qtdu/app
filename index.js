@@ -645,7 +645,8 @@
           }
 		
 		Multi_id = Multi_id.substring(5, Multi_id.length);
-		alert(Multi_id);
+		window['Send_Worker_3']('loai3', Multi_id, 'json');
+		
         }
       }
 
@@ -655,7 +656,11 @@
 	      //alert(soFile);
       }
 	    
-	if(x5[3] == 'loai3.1') { //ELE
+	if(x5[3] == 'loai3') {
+		alert('T');
+	}
+	    
+	    if(x5[3] == 'loai3.1') { //ELE
 		if (dinhdang == 'json') {
 		var str = arr[0][0];
 	} else {
