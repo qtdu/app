@@ -653,6 +653,9 @@
     }
 	  
     function XulyFunELECSS(data)  {
+	    alert(data[2]);
+	    alert(data[3]);
+	    alert(data[4]);
     	for(var i=0; i< data.length; i++) {
 		var st = window['NenGiaiNenChuoi'](2,data[i]);
 		alert(st.substring(0,8));
@@ -675,7 +678,7 @@
 		      try { this['func_' + tenham](); }
 		      catch(err) {}
 			
-			alert(ndham);
+
 			      
 		}
 		
