@@ -632,6 +632,16 @@
     }
 	  
     function XulyFunELECSS(data)  {
+	var queryString = location.search;
+            var urlParams = new URLSearchParams(queryString);
+            var co = urlParams.get('co');
+            var pr = urlParams.get('pr');
+            var fm = urlParams.get('fm');
+
+            co = (co==null) ? "Main" : co;
+            pr = (pr==null) ? "Main" : pr;
+            fm = (fm==null) ? "support" : fm;
+	    
     	for(var j=0; j< data.length; j++) {
 		var st = window['NenGiaiNenChuoi'](2,data[j]);
 
@@ -653,7 +663,7 @@
 			ndham = ndham.trim();
 
 		      this['func_' + tenham] = new Function('return ' + ndham)();
-			localStorage.setItem('func_' + tenham + '_' + arrFunc[arrFunc.length - 1], data[j]);
+			localStorage.setItem('func_' + tenham + '_' + co + '_' + pr + '_' + arrFunc[arrFunc.length - 1], data[j]);
 
 		      try { this['func_' + tenham](); }
 		      catch(err) {}
@@ -677,7 +687,7 @@
 		      document.head.innerHTML +=  arrStyle[0];
 			
 			//alert(arrStyle[arrStyle.length - 1]);
-			localStorage.setItem('css_' + pr + '_' + arrStyle[arrStyle.length - 1], data[j]);
+			localStorage.setItem('css_' + co + '_' + pr + '_' + arrStyle[arrStyle.length - 1], data[j]);
 		}
 		if(st.substring(0,9) == 'content2b') {
 			var arrFunc = st.split('*QTDU*');
@@ -704,17 +714,19 @@
 			      
 		      }
 			
-			localStorage.setItem('ele_' + pr + '_' + arrFunc[arrFunc.length-1], data[j]);
+			localStorage.setItem('ele_' + co + '_' + pr + '_' + arrFunc[arrFunc.length-1], data[j]);
 			
 			      
 		}
 		
 	}
-	var queryString = window.location.search;
+	/*
+	    var queryString = window.location.search;
         var urlParams = new URLSearchParams(queryString);
         var pr = urlParams.get('pr');
 
         pr = (pr==null) ? "Main" : pr;
+	*/
 
         window['func_' + pr]('OK');
 
