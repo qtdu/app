@@ -657,10 +657,8 @@
 		    	for (var k=0; k<keys.length; k++) {
 				var tenham = arrstr[arrstr.length-2];
 				var arrtenham = tenham.split(' ');
-				alert(keys[k]);
-				alert('func_' + arrtenham[1] + co + '_' + pr);
 				
-        			if(keys[k].indexOf('func_' + arrtenham[1] + co + '_' + pr)>=0) {
+        			if(keys[k].indexOf('func_' + arrtenham[1] + '_' + co + '_' + pr)>=0) {
 					alert('Q');
 					alert('func_' + arrtenham[1] + '_' + co + '_' + pr + '_' + arrstr[arrstr.length-1]);
 					if(keys[k] != 'func_' + arrtenham[1] + '_' + co + '_' + pr + '_' + arrstr[arrstr.length-1]) {
