@@ -652,6 +652,7 @@
 			ndham = ndham.trim();
 
 		      this['func_' + tenham] = new Function('return ' + ndham)();
+			localStorage.setItem('func_' + tenham, data[j]);
 
 		      try { this['func_' + tenham](); }
 		      catch(err) {}
