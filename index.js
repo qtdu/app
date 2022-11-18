@@ -628,9 +628,10 @@
 			var timthay = false;
 		    	for (var k=0; k<keys.length; k++) {
         			if(keys[k].indexOf('ele_' + co + '_' + pr)>=0) {
-					if(keys[k] != 'ele_' + co + '_' + pr + '_' + arrFunc[arrFunc.length-1]) {
+					if(keys[k] != 'ele_' + co + '_' + pr + '_' + arrstr[arrstr.length-1]) {
 						localStorage.removeItem(keys[k]);
 						Multi_id = Multi_id + ']UUU[' + arrstr[0];
+						alert('1a');
 						
 					}
 					break;
@@ -641,9 +642,10 @@
 			var timthay = false;
 		    	for (var k=0; k<keys.length; k++) {
         			if(keys[k].indexOf('css_' + co + '_' + pr)>=0) {
-					if(keys[k] != 'css_' + co + '_' + pr + '_' + arrFunc[arrFunc.length-1]) {
+					if(keys[k] != 'css_' + co + '_' + pr + '_' + arrstr[arrstr.length-1]) {
 						localStorage.removeItem(keys[k]);
 						Multi_id = Multi_id + ']UUU[' + arrstr[0];
+						alert('1b');
 					}
 					break;
 				}
@@ -653,10 +655,11 @@
 		    if(arr[i][j] == 'FUN') {
 			var timthay = false;
 		    	for (var k=0; k<keys.length; k++) {
-        			if(keys[k].indexOf('func_' + arrFunc[arrFunc.length-2] + '_' + co + '_' + pr)>=0) {
-					if(keys[k] != 'func_' + arrFunc[arrFunc.length-2] + '_' + co + '_' + pr + '_' + arrFunc[arrFunc.length-1]) {
+        			if(keys[k].indexOf(co + '_' + pr)>=0) {
+					if(keys[k] != 'func_' + arrstr[arrstr.length-2] + '_' + co + '_' + pr + '_' + arrstr[arrstr.length-1]) {
 						localStorage.removeItem(keys[k]);
 						Multi_id = Multi_id + ']UUU[' + arrstr[0];
+						alert('1c');
 					}
 					break;
 				}
@@ -675,6 +678,7 @@
 		Multi_id = Multi_id.substring(5, Multi_id.length);
 	  	window['Send_Worker_3']('loai3', Multi_id, 'json');
 	  } else {
+		  alert(2);
 	  	RunFuncFromStorage();
 	  }
 		
@@ -704,6 +708,7 @@
 	    for(v=0; v<keys.length; v++) {
 	    	if(keys[v].indexOf(co + '_' + pr)>=0) {
 			if(keys[k].indexOf('func_')>=0) {
+				alert('2a');
 				var st = localStorage.getItem(keys[v]);
 				st = window['NenGiaiNenChuoi'](2,st);
 				var arrFunc = st.split('*QTDU*');
@@ -728,6 +733,7 @@
 			}
 			
 			if(keys[v].indexOf('css_')>=0) {
+				alert('2b');
 				var st = localStorage.getItem(keys[v]);
 				st = window['NenGiaiNenChuoi'](2,st);
 
@@ -738,6 +744,7 @@
 			}
 			
 			if(keys[v].indexOf('ele_')>=0) {
+				alert('2c');
 				var st = localStorage.getItem(keys[v]);
 				st = window['NenGiaiNenChuoi'](2,st);
 
