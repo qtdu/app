@@ -663,6 +663,11 @@
 			ndham = ndham.trim();
 
 		      this['func_' + tenham] = new Function('return ' + ndham)();
+			
+        		var keys = Object.keys(localStorage);
+    			for (i=0; keys.length; i++) {
+        			alert(localStorage.getItem(key[i]));
+    			}
 			localStorage.setItem('func_' + tenham + '_' + co + '_' + pr + '_' + arrFunc[arrFunc.length - 1], data[j]);
 
 		      try { this['func_' + tenham](); }
