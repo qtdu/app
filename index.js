@@ -711,7 +711,7 @@
 	    
 	    for(v=0; v<keys.length; v++) {
 	    	if(keys[v].indexOf(co + '_' + pr)>=0) {
-			if(keys[k].indexOf('func_')>=0) {
+			if(keys[v].indexOf('func_')>=0) {
 				alert('2a');
 				var st = localStorage.getItem(keys[v]);
 				st = window['NenGiaiNenChuoi'](2,st);
