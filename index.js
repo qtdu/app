@@ -649,12 +649,19 @@
 
 		      ndham = ndham.trim();
 
-		      this['func_' + tenham] = new Function('return ' + ndham)();
+		      //this['func_' + tenham] = new Function('return ' + ndham)();
 
-		      try { this['func_' + tenham](); }
-		      catch(err) {}
+		      //try { this['func_' + tenham](); }
+		      //catch(err) {}
 			
 			//alert(ndham);
+			
+		      var script = document.createElement('script');
+  
+
+			script.setAttribute('type', 'text/javascript');
+
+			document.body.appendChild(ndham);
 			      
 		}
 		
