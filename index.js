@@ -670,9 +670,10 @@
 		}
 		
 		if(st.substring(0,7) == '<style>') {
-			st = st.replace(/[“”]/g,"\"");
-		      st = st.replace(/[‘’]/g,"'");
-		      document.head.innerHTML +=  st;
+			//st = st.replace(/[“”]/g,"\"");
+		      //st = st.replace(/[‘’]/g,"'");
+		      var arrStyle = st.split('*QTDU*');
+		      document.head.innerHTML +=  arrStyle[0];
 		}
 		if(st.substring(0,9) == 'content2b') {
 			var arrFunc = st.split('*QTDU*');
@@ -682,8 +683,10 @@
 			tenele = tenele.trim();
 			var arrtenele = tenele.split('||');
 
-			var ndele = arrFunc[i+1].replace(/[“”]/g,"\"");
-			ndele = ndele.replace(/[‘’]/g,"'");
+			//var ndele = arrFunc[i+1].replace(/[“”]/g,"\"");
+			//ndele = ndele.replace(/[‘’]/g,"'");
+			      
+			var ndele = arrFunc[i+1];
 
 			var y0 = arrtenele[0].trim();
 			var y1 = arrtenele[1].trim();
