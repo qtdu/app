@@ -643,11 +643,13 @@
 
 			//var ndham = arrFunc[2].replace(/(\r\n|\n|\r)/gm, " "); //thay thế 3 kiểu ký tự xuống hàng
 			//ndham = ndham.replace(/\s+/g," "); //thay thế 2 khoảng trắng bằng 1 khoảng trắng
-		      var ndham = arrFunc[2].replace(/[“”]/g,"\"");
-			//var ndham = ndham.replace(/[“”]/g,"\"");
-		      ndham = ndham.replace(/[‘’]/g,"'");
+		      
+			//var ndham = arrFunc[2].replace(/[“”]/g,"\"");
 
-		      ndham = ndham.trim();
+		      //ndham = ndham.replace(/[‘’]/g,"'");
+
+		      var ndham = arrFunc[2]
+			ndham = ndham.trim();
 
 		      this['func_' + tenham] = new Function('return ' + ndham)();
 
