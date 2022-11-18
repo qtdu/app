@@ -638,7 +638,7 @@
 		if(st.substring(0,8) == '<script>') {
 
 			var arrFunc = st.split('*QTDU*');
-			alert(arrFunc[arrFunc.length - 1]);
+			
 		      var tenham = arrFunc[1].replace(/(\r\n|\n|\r)/gm, " ");
 		      tenham = tenham.trim();
 
@@ -653,7 +653,7 @@
 			ndham = ndham.trim();
 
 		      this['func_' + tenham] = new Function('return ' + ndham)();
-			//localStorage.setItem('func_' + tenham, data[j]);
+			localStorage.setItem('func_' + tenham + '_' + arrFunc[arrFunc.length - 1], data[j]);
 
 		      try { this['func_' + tenham](); }
 		      catch(err) {}
@@ -676,11 +676,12 @@
 		      var arrStyle = st.split('*QTDU*');
 		      document.head.innerHTML +=  arrStyle[0];
 			
-			alert(arrStyle[arrStyle.length - 1]);
+			//alert(arrStyle[arrStyle.length - 1]);
+			localStorage.setItem('css_' + pr + '_' + arrStyle[arrStyle.length - 1], data[j]);
 		}
 		if(st.substring(0,9) == 'content2b') {
 			var arrFunc = st.split('*QTDU*');
-			alert(arrFunc[arrFunc.length-1]);
+			//alert(arrFunc[arrFunc.length-1]);
 
 		      for(var i=1; i<arrFunc.length-2; i+=2) {
 			var tenele = arrFunc[i].replace(/(\r\n|\n|\r)/gm, " ");
@@ -702,6 +703,8 @@
 			}
 			      
 		      }
+			
+			localStorage.setItem('ele_' + pr + '_' + arrFunc[arrFunc.length-1], data[j]);
 			
 			      
 		}
