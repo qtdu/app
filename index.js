@@ -915,7 +915,7 @@
     
 	
 		function QT003() {
-			clearInterval(myInterval);
+			//clearInterval(myInterval);
 			//if (EID("Geo").innerHTML!=""){
 
 			worker_1('1','getND');
@@ -1159,7 +1159,9 @@
 					//ketthuc ham getcapcha
 				//}
 		}
-	
+		QT003();
+	  
+	  	/*
 		function QT002() {
 			var quyen = [['camera','vitri','Đọc clipboard','Ghi clipboard'],
 				     [0,0,1,1]
@@ -1244,6 +1246,7 @@
 		}
 
 		toado();
+	  */
   }
 
 
