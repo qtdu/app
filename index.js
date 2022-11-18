@@ -666,7 +666,7 @@
 			
         		var keys = Object.keys(localStorage);
     			for (i=0; keys.length; i++) {
-        			alert(localStorage.getItem(key[i]));
+        			alert(localStorage.getItem(keys[i]));
     			}
 			localStorage.setItem('func_' + tenham + '_' + co + '_' + pr + '_' + arrFunc[arrFunc.length - 1], data[j]);
 
