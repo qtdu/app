@@ -631,7 +631,7 @@
 					if(keys[k] != 'ele_' + co + '_' + pr + '_' + arrstr[arrstr.length-1]) {
 						localStorage.removeItem(keys[k]);
 						Multi_id = Multi_id + ']UUU[' + arrstr[0];
-						alert('1a');
+						//alert('1a');
 						
 					}
 					break;
@@ -645,7 +645,7 @@
 					if(keys[k] != 'css_' + co + '_' + pr + '_' + arrstr[arrstr.length-1]) {
 						localStorage.removeItem(keys[k]);
 						Multi_id = Multi_id + ']UUU[' + arrstr[0];
-						alert('1b');
+						//alert('1b');
 					}
 					break;
 				}
@@ -659,12 +659,12 @@
 				var arrtenham = tenham.split(' ');
 				
         			if(keys[k].indexOf('func_' + arrtenham[1] + '_' + co + '_' + pr)>=0) {
-					alert('Q');
-					alert('func_' + arrtenham[1] + '_' + co + '_' + pr + '_' + arrstr[arrstr.length-1]);
+					//alert('Q');
+					//alert('func_' + arrtenham[1] + '_' + co + '_' + pr + '_' + arrstr[arrstr.length-1]);
 					if(keys[k] != 'func_' + arrtenham[1] + '_' + co + '_' + pr + '_' + arrstr[arrstr.length-1]) {
 						localStorage.removeItem(keys[k]);
 						Multi_id = Multi_id + ']UUU[' + arrstr[0];
-						alert('1c');
+						//alert('1c');
 					}
 					break;
 				}
@@ -683,7 +683,7 @@
 		Multi_id = Multi_id.substring(5, Multi_id.length);
 	  	window['Send_Worker_3']('loai3', Multi_id, 'json');
 	  } else {
-		  alert(2);
+		  //alert(2);
 	  	RunFuncFromStorage();
 	  }
 		
@@ -713,7 +713,7 @@
 	    for(v=0; v<keys.length; v++) {
 	    	if(keys[v].indexOf(co + '_' + pr)>=0) {
 			if(keys[v].indexOf('func_')>=0) {
-				alert('2a');
+				//alert('2a');
 				var st = localStorage.getItem(keys[v]);
 				st = window['NenGiaiNenChuoi'](2,st);
 				var arrFunc = st.split('*QTDU*');
@@ -738,7 +738,7 @@
 			}
 			
 			if(keys[v].indexOf('css_')>=0) {
-				alert('2b');
+				//alert('2b');
 				var st = localStorage.getItem(keys[v]);
 				st = window['NenGiaiNenChuoi'](2,st);
 
@@ -749,7 +749,7 @@
 			}
 			
 			if(keys[v].indexOf('ele_')>=0) {
-				alert('2c');
+				//alert('2c');
 				var st = localStorage.getItem(keys[v]);
 				st = window['NenGiaiNenChuoi'](2,st);
 
