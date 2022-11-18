@@ -622,7 +622,7 @@
 		var str = arr[i+1][j];
 		var arrstr = str.split(']TTT[');
 		
-			Multi_id = Multi_id + ']UUU[' + arrstr[0];
+			//Multi_id = Multi_id + ']UUU[' + arrstr[0];
 		    
 		    if(arr[i][j] == 'ELE') {
 			var timthay = false;
@@ -655,9 +655,10 @@
 		    if(arr[i][j] == 'FUN') {
 			var timthay = false;
 		    	for (var k=0; k<keys.length; k++) {
+				alert(keys[k]);
+				alert('func_' + arrstr[arrstr.length-2] + '_' + co + '_' + pr + '_' + arrstr[arrstr.length-1]);
         			if(keys[k].indexOf('func_' + arrstr[arrstr.length-2] + co + '_' + pr)>=0) {
-					alert(keys[k]);
-					alert('func_' + arrstr[arrstr.length-2] + '_' + co + '_' + pr + '_' + arrstr[arrstr.length-1]);
+					
 					if(keys[k] != 'func_' + arrstr[arrstr.length-2] + '_' + co + '_' + pr + '_' + arrstr[arrstr.length-1]) {
 						localStorage.removeItem(keys[k]);
 						Multi_id = Multi_id + ']UUU[' + arrstr[0];
