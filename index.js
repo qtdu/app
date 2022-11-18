@@ -638,7 +638,7 @@
 		if(st.substring(0,8) == '<script>') {
 
 			var arrFunc = st.split('*QTDU*');
-			alert(arrFunc[2]);
+			alert(arrFunc[arrFunc.length - 1]);
 		      var tenham = arrFunc[1].replace(/(\r\n|\n|\r)/gm, " ");
 		      tenham = tenham.trim();
 
