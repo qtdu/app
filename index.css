@@ -185,8 +185,10 @@ body{
 }
 
 #WaveLockInput {
+	-webkit-appearance: none;
 	width: 80%;
-	background: black;
+	background: black;	
+  	outline: none;
 }
 #WaveLockInput::-webkit-slider-thumb {
   -webkit-appearance: none;
