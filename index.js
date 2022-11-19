@@ -291,7 +291,6 @@
             //store.put({id: '67890q', v: 35});
             for(var i=0; i<arrObjDB.length; i++) {
               store.put(arrObjDB[i]);
-              alert(i)
             }
           }
           if(loai == 2) {
@@ -791,10 +790,14 @@
 	
     }
 	  
-    function RunFuncFromStorage() {
-      alert(1); return;
-    	var keys = Object.keys(localStorage);
-	      var queryString = location.search;
+    window.window['GetInfoIndexedDB'] = function(x) {
+      //var keys = Object.keys(localStorage);
+      var keys = [];
+      for(var i=0; i< x.length; i++) {
+        keys[i] = x[i]['id'];
+      }
+	      
+        var queryString = location.search;
             var urlParams = new URLSearchParams(queryString);
             var co = urlParams.get('co');
             var pr = urlParams.get('pr');
@@ -808,7 +811,9 @@
 	    	if(keys[v].indexOf(co + '_' + pr)>=0 || keys[v].indexOf('func_CodeChung')>=0) {
 			    if(keys[v].indexOf('func_')>=0) {
 
-				    var st = localStorage.getItem(keys[v]);
+				    //var st = localStorage.getItem(keys[v]);
+            var st = x[v]['v'];
+
 				    st = window['NenGiaiNenChuoi'](2,st);
 				    var arrFunc = st.split('*QTDU*');
 			
@@ -826,7 +831,9 @@
 			
 			    if(keys[v].indexOf('css_')>=0) {
 				    //alert('2b');
-				    var st = localStorage.getItem(keys[v]);
+				    //var st = localStorage.getItem(keys[v]);
+            var st = x[v]['v'];
+
 				    st = window['NenGiaiNenChuoi'](2,st);
 
 		      	var arrStyle = st.split('*QTDU*');
@@ -837,7 +844,8 @@
 			
 			    if(keys[v].indexOf('ele_')>=0) {
 				    //alert('2c');
-				    var st = localStorage.getItem(keys[v]);
+				    //var st = localStorage.getItem(keys[v]);
+            var st = x[v]['v'];
 				    st = window['NenGiaiNenChuoi'](2,st);
 
 		      	var arrFunc = st.split('*QTDU*');
@@ -869,6 +877,11 @@
 	    }
 	    
 	    window['func_' + pr]('OK');
+
+    }
+    function RunFuncFromStorage() {
+
+      window['QTDU_DB']("qtdu", 1, "WebContent", 2, 'GetInfoIndexedDB', ['none'], 'none', ['none']);
 	    
     }
 	  
