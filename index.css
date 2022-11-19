@@ -185,12 +185,13 @@ body{
 }
 
 #WaveLockInput {
-	-webkit-appearance: none;
+
 	width: 80%;
 	background: black;	
   	outline: none;
 }
 
+/*
 #WaveLockInput::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -202,6 +203,7 @@ body{
   background: white;
   cursor: pointer;
 }
+*/
 		
 .HuongDan {
         z-index: 101000;
