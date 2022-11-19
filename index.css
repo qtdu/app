@@ -190,6 +190,7 @@ body{
 	background: black;	
   	outline: none;
 }
+
 #WaveLockInput::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
