@@ -185,7 +185,19 @@ body{
 }
 
 #WaveLockInput {
-	width: 100%;
+	width: 80%;
+	background: black;
+}
+#WaveLockInput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: white;
+  cursor: pointer;
+}
+
+#WaveLockInput::-moz-range-thumb {
+  background: white;
+  cursor: pointer;
 }
 		
 .HuongDan {
