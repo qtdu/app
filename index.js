@@ -659,7 +659,7 @@
     window.soFile =0;
 
     window.window['TraketquaIndexedDB'] = function(x, arr) {
-      alert(x);
+      alert(x.length);
       var type;
 	    var keys = Object.keys(localStorage);
       var queryString = location.search;
