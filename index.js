@@ -747,7 +747,7 @@
             if(keys[k].indexOf(co + '_' + pr) >= 0 || keys[k].indexOf('func_CodeChung_') >= 0)
               //localStorage.removeItem(keys[k]);
               window['QTDU_DB']("qtdu", 1, "WebContent", 3, 'none', ['none'], 'none', [keys[k]]);
-
+		alert(1);
             
           }
           
@@ -770,7 +770,7 @@
           }
         }
 
-
+	alert(Multi_id);
         if(Multi_id != '') {
           Multi_id = Multi_id.substring(5, Multi_id.length);
           window['Send_Worker_3']('loai3', Multi_id, 'json');
