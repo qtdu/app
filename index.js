@@ -308,10 +308,12 @@
             }
           }
           if(loai == 2) {
-		  alert('Q');
+		 
             store.getAll().onsuccess = function(event) {
                       window[tenHamReturn](event.target.result, arrExp);
                         db.close();
+		    
+		     alert('Q');
                         
             };        
           }
