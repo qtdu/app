@@ -280,7 +280,7 @@
       //loại 3: delete id
       //loai 4: delete cả db
       // NameDB:  "qtdu"
-      var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
+      var indexedDB = window.indexedDB || window.mozIndexedDB || 	window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
 
       if(loai == 1 || loai == 2 || loai == 3) {
         var open = indexedDB.open(NameDB, verDB);
@@ -304,7 +304,6 @@
             //store.put({id: '12345q', v: 42});
             //store.put({id: '67890q', v: 35});
             for(var i=0; i<arrObjDB.length; i++) {
-		    alert(arrObjDB[i]);
               store.put(arrObjDB[i]);
             }
           }
@@ -676,13 +675,10 @@
     
 
     window.window['TraketquaIndexedDB'] = function(x, arr) {
-	
-	
+
       var type;
 	    //var keys = Object.keys(localStorage);
-	    
-	//alert(arr);
-	    
+
       var keys = [];
       for(var i=0; i< x.length; i++) {
         keys[i] = x[i]['id'];
@@ -748,12 +744,9 @@
 
           }
           if(timthay == 0) {
-            if(keys[k].indexOf(co + '_' + pr) >= 0 || keys[k].indexOf('func_CodeChung_') >= 0) {
-		     //window['QTDU_DB']("qtdu", 1, "WebContent", 3, 'none', ['none'], 'none', [keys[k]]);
-	    }
+            if(keys[k].indexOf(co + '_' + pr) >= 0 || keys[k].indexOf('func_CodeChung_') >= 0)
               //localStorage.removeItem(keys[k]);
-              
-		   
+              window['QTDU_DB']("qtdu", 1, "WebContent", 3, 'none', ['none'], 'none', [keys[k]]);
 
             
           }
@@ -781,16 +774,12 @@
         if(Multi_id != '') {
           Multi_id = Multi_id.substring(5, Multi_id.length);
           window['Send_Worker_3']('loai3', Multi_id, 'json');
-		alert(11);
         } else {
           RunFuncFromStorage();
-		alert(12);
         }
     }
 
     window.window['Func_Run02a'] = function(x5){
-	    
-
 	    var dinhdang = x5[2];
       if (x5[2] == 'json') {
         var arr = x5[1].records.map(doc => Object.values(doc));
@@ -809,8 +798,6 @@
           //return;
       }
       if (x5[2] == 'text') var arr = x5[1];
-	    
-
 
       var subfix = 1*x5[3].substring(4,x5[3].length);
       if(subfix >10) {
@@ -819,9 +806,9 @@
       }
       if(x5[3] == 'loai2') {
         
-	
+
         window['QTDU_DB']("qtdu", 1, "WebContent", 2, 'TraketquaIndexedDB', arr, 'none', ['none']);
-	
+
 	      
 
       }
@@ -835,7 +822,6 @@
     }
 	  
     window.window['GetInfoIndexedDB'] = function(x) {
-
       //var keys = Object.keys(localStorage);
       var keys = [];
       for(var i=0; i< x.length; i++) {
@@ -943,8 +929,8 @@
 	    
     	for(var j=0; j< data.length; j++) {
 		var st = window['NenGiaiNenChuoi'](2,data[j]);
-		
-		
+
+    
 
 		if(st.substring(0,8) == '<script>') {
 
