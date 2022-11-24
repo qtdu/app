@@ -687,6 +687,7 @@
       for(var i=0; i< x.length; i++) {
         keys[i] = x[i]['id'];
       }
+	    alert(x.length);
 
       var queryString = location.search;
         var urlParams = new URLSearchParams(queryString);
@@ -716,7 +717,8 @@
           }
           
         }
-
+	
+	if(key == []) alert('DU');
           
         for (var k=0; k<l; k++) {
 		var key;
