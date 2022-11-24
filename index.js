@@ -767,7 +767,6 @@
           }
         }
 
-	alert(Multi_id);
         if(Multi_id != '') {
           Multi_id = Multi_id.substring(5, Multi_id.length);
           window['Send_Worker_3']('loai3', Multi_id, 'json');
@@ -803,9 +802,7 @@
       }
       if(x5[3] == 'loai2') {
         
-alert('T1');
         window['QTDU_DB']("qtdu", 1, "WebContent", 2, 'TraketquaIndexedDB', arr, 'none', ['none']);
-alert('T2');
 	      
 
       }
