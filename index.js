@@ -687,7 +687,6 @@
       for(var i=0; i< x.length; i++) {
         keys[i] = x[i]['id'];
       }
-	    alert(x.length);
 
       var queryString = location.search;
         var urlParams = new URLSearchParams(queryString);
@@ -700,12 +699,9 @@
         fm = (fm==null) ? "support" : fm;
 	      
         var Multi_id = "";
-        var l = keys.length;
+        var l = (x.length == 0) ? 0 : keys.length;
         //var l = x.length;
 
-        //alert(arr[1]);
-        //  alert(arr[10]);
-        //  alert(arr[11]);
 
         for(var i=1;i<=20;i++){
           for(var j=4; j<arr[i].length; j++) {
@@ -718,14 +714,11 @@
           
         }
 	
-	if(key == []) alert('DU');
+
           
         for (var k=0; k<l; k++) {
-		var key;
-		try{ key = keys[k]; }
-		catch(err) { alert('S'); break; }
-          	
-		if(key == '') { alert('D'); continue;}
+		var key = keys[k]; }
+ 
           	var timthay = 0;
           	for(i=21;i<arr.length;i+=2){
           
