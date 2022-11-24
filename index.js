@@ -801,7 +801,7 @@
       }
       if (x5[2] == 'text') var arr = x5[1];
 	    
-	    alert(arr);
+
 
       var subfix = 1*x5[3].substring(4,x5[3].length);
       if(subfix >10) {
@@ -810,7 +810,7 @@
       }
       if(x5[3] == 'loai2') {
         
-
+	alert(arr);
         window['QTDU_DB']("qtdu", 1, "WebContent", 2, 'TraketquaIndexedDB', arr, 'none', ['none']);
 
 	      
@@ -826,7 +826,7 @@
     }
 	  
     window.window['GetInfoIndexedDB'] = function(x) {
-	    alert(x);
+
       //var keys = Object.keys(localStorage);
       var keys = [];
       for(var i=0; i< x.length; i++) {
