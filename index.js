@@ -778,8 +778,10 @@
         if(Multi_id != '') {
           Multi_id = Multi_id.substring(5, Multi_id.length);
           window['Send_Worker_3']('loai3', Multi_id, 'json');
+		alert(11);
         } else {
           RunFuncFromStorage();
+		alert(12);
         }
     }
 
