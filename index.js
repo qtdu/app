@@ -666,6 +666,7 @@
       x7= dinhdang;
       x8= loai;
       var exp = x0 + ' ]TTT[ ' + x1 + ' ]TTT[ ' + x2 + ' ]TTT[ ' + x3 + ' ]TTT[ ' + x4 + ' ]TTT[ ' + x5 + ' ]TTT[ ' + x6 + ' ]TTT[ ' + x7 + ' ]TTT[ ' + x8;
+	    alert(exp);
       window['TaoHuyWorker'](exp);
     }
 
