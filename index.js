@@ -280,7 +280,7 @@
       //loại 3: delete id
       //loai 4: delete cả db
       // NameDB:  "qtdu"
-      var indexedDB = window.indexedDB || window.mozIndexedDB || 	window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
+      var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
 
       if(loai == 1 || loai == 2 || loai == 3) {
         var open = indexedDB.open(NameDB, verDB);
@@ -304,6 +304,7 @@
             //store.put({id: '12345q', v: 42});
             //store.put({id: '67890q', v: 35});
             for(var i=0; i<arrObjDB.length; i++) {
+		    alert(arrObjDB[i]);
               store.put(arrObjDB[i]);
             }
           }
@@ -815,7 +816,7 @@
         
 	
         window['QTDU_DB']("qtdu", 1, "WebContent", 2, 'TraketquaIndexedDB', arr, 'none', ['none']);
-	alert(arr);
+	
 	      
 
       }
