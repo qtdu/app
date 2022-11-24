@@ -748,10 +748,12 @@
 
           }
           if(timthay == 0) {
-            if(keys[k].indexOf(co + '_' + pr) >= 0 || keys[k].indexOf('func_CodeChung_') >= 0)
+            if(keys[k].indexOf(co + '_' + pr) >= 0 || keys[k].indexOf('func_CodeChung_') >= 0) {
+		     //window['QTDU_DB']("qtdu", 1, "WebContent", 3, 'none', ['none'], 'none', [keys[k]]);
+	    }
               //localStorage.removeItem(keys[k]);
               
-		    //window['QTDU_DB']("qtdu", 1, "WebContent", 3, 'none', ['none'], 'none', [keys[k]]);
+		   
 
             
           }
