@@ -682,7 +682,7 @@
 
       var type;
 	    //var keys = Object.keys(localStorage);
-
+	alert(x);
       var keys = [];
       for(var i=0; i< x.length; i++) {
         keys[i] = x[i]['id'];
@@ -811,9 +811,9 @@
       }
       if(x5[3] == 'loai2') {
         
-
+	alert('T1');
         window['QTDU_DB']("qtdu", 1, "WebContent", 2, 'TraketquaIndexedDB', arr, 'none', ['none']);
-
+	alert('T2');
 	      
 
       }
