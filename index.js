@@ -683,6 +683,8 @@
       for(var i=0; i< x.length; i++) {
         keys[i] = x[i]['id'];
       }
+	    alert(x);
+	    alert(arr);
 
       var queryString = location.search;
         var urlParams = new URLSearchParams(queryString);
@@ -697,6 +699,7 @@
         var Multi_id = "";
         //var l = keys.length;
         var l = x.length;
+	    alert(l);
 
         //alert(arr[1]);
         //  alert(arr[10]);
