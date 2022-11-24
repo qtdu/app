@@ -718,6 +718,10 @@
         }
 	alert(keys);
 	    alert(l);
+	    if(keys = '') {
+		    alert(l);
+		    l=0;
+	    }
           
         for (var k=0; k<l; k++) {
           var key = keys[k];
