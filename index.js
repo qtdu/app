@@ -682,7 +682,7 @@
 
       var type;
 	    //var keys = Object.keys(localStorage);
-	alert(x);
+	
       var keys = [];
       for(var i=0; i< x.length; i++) {
         keys[i] = x[i]['id'];
@@ -716,6 +716,7 @@
           }
           
         }
+	alert(l);
           
         for (var k=0; k<l; k++) {
           var key = keys[k];
