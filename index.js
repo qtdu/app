@@ -696,17 +696,13 @@
         var l = keys.length;
         //var l = x.length;
 
-        alert(arr[0]);
-          alert(arr[1]);
-          alert(arr[20]);
-	    alert(arr[21]);
           
         for (var k=0; k<l; k++) {
           var key = keys[k];
           
           
           var timthay = 0;
-          for(i=1;i<arr.length;i+=2){
+          for(i=21;i<arr.length;i+=2){
           
             for(j=4;j<arr[i].length;j++){
               var str = arr[i+1][j];
