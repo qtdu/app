@@ -781,7 +781,7 @@
 
     window.window['Func_Run02a'] = function(x5){
 	    
-	    alert(x5);
+
 	    var dinhdang = x5[2];
       if (x5[2] == 'json') {
         var arr = x5[1].records.map(doc => Object.values(doc));
@@ -800,6 +800,8 @@
           //return;
       }
       if (x5[2] == 'text') var arr = x5[1];
+	    
+	    alert(arr);
 
       var subfix = 1*x5[3].substring(4,x5[3].length);
       if(subfix >10) {
