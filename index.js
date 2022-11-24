@@ -822,6 +822,7 @@
     }
 	  
     window.window['GetInfoIndexedDB'] = function(x) {
+	    alert(x);
       //var keys = Object.keys(localStorage);
       var keys = [];
       for(var i=0; i< x.length; i++) {
