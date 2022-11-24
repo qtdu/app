@@ -719,8 +719,9 @@
 
           
         for (var k=0; k<l; k++) {
-		alert(keys)
-          	var key = keys[k];
+		try{ var key = keys[k]; }
+		catch(err) {alert('S'); break;}
+          	
 		if(key == '') { alert('D'); continue;}
           	var timthay = 0;
           	for(i=21;i<arr.length;i+=2){
