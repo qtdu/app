@@ -676,10 +676,12 @@
 
     window.window['TraketquaIndexedDB'] = function(x, arr) {
 	
-	alert(2);
+	
       var type;
 	    //var keys = Object.keys(localStorage);
-
+	    
+	alert(arr);
+	    
       var keys = [];
       for(var i=0; i< x.length; i++) {
         keys[i] = x[i]['id'];
@@ -820,7 +822,6 @@
 
 
       if(x5[3] == 'loai3') {
-	      alert(arr[0]);
         XulyFunELECSS(arr[0]);
       }
 	   
@@ -937,7 +938,7 @@
     	for(var j=0; j< data.length; j++) {
 		var st = window['NenGiaiNenChuoi'](2,data[j]);
 		
-		alert(st);
+		
 
 		if(st.substring(0,8) == '<script>') {
 
