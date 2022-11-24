@@ -696,9 +696,10 @@
         var l = keys.length;
         //var l = x.length;
 
-        alert(arr[1]);
-          alert(arr[10]);
-          alert(arr[11]);
+        alert(arr[0]);
+          alert(arr[1]);
+          alert(arr[20]);
+	    alert(arr[21]);
           
         for (var k=0; k<l; k++) {
           var key = keys[k];
