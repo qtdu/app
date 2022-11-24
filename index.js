@@ -681,7 +681,7 @@
       var type;
 	    //var keys = Object.keys(localStorage);
 	    
-	alert(arr);
+	//alert(arr);
 	    
       var keys = [];
       for(var i=0; i< x.length; i++) {
@@ -750,7 +750,8 @@
           if(timthay == 0) {
             if(keys[k].indexOf(co + '_' + pr) >= 0 || keys[k].indexOf('func_CodeChung_') >= 0)
               //localStorage.removeItem(keys[k]);
-              window['QTDU_DB']("qtdu", 1, "WebContent", 3, 'none', ['none'], 'none', [keys[k]]);
+              
+		    //window['QTDU_DB']("qtdu", 1, "WebContent", 3, 'none', ['none'], 'none', [keys[k]]);
 
             
           }
