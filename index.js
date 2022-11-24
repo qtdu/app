@@ -280,7 +280,7 @@
       //loại 3: delete id
       //loai 4: delete cả db
       // NameDB:  "qtdu"
-      var indexedDB = window.indexedDB || window.mozIndexedDB || 	window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
+      var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
 
       if(loai == 1 || loai == 2 || loai == 3) {
         var open = indexedDB.open(NameDB, verDB);
@@ -308,6 +308,7 @@
             }
           }
           if(loai == 2) {
+		  alert('Q');
             store.getAll().onsuccess = function(event) {
                       window[tenHamReturn](event.target.result, arrExp);
                         db.close();
@@ -745,10 +746,11 @@
 
           }
           if(timthay == 0) {
-            if(keys[k].indexOf(co + '_' + pr) >= 0 || keys[k].indexOf('func_CodeChung_') >= 0)
+            if(keys[k].indexOf(co + '_' + pr) >= 0 || keys[k].indexOf('func_CodeChung_') >= 0) {
+		    window['QTDU_DB']("qtdu", 1, "WebContent", 3, 'none', ['none'], 'none', [keys[k]]);
+	    }
               //localStorage.removeItem(keys[k]);
-              window['QTDU_DB']("qtdu", 1, "WebContent", 3, 'none', ['none'], 'none', [keys[k]]);
-		alert(1);
+              
             
           }
           
