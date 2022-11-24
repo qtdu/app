@@ -698,7 +698,9 @@
         for (var k=0; k<l; k++) {
           var key = keys[k];
           
-          alert(arr);
+          alert(arr[1]);
+          alert(arr[10]);
+          alert(arr[11]);
           var timthay = 0;
           for(i=1;i<arr.length;i+=2){
           
