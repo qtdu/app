@@ -716,17 +716,13 @@
           }
           
         }
-	alert(keys);
-	    alert(l);
-	    if(keys = '') {
-		    alert(l);
-		    l=0;
-	    }
+
           
         for (var k=0; k<l; k++) {
           var key = keys[k];
           
-          alert('Q1');
+          alert(key);
+	if(key == '') continue;
           var timthay = 0;
           for(i=21;i<arr.length;i+=2){
           
