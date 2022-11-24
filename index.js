@@ -819,6 +819,7 @@
 
 
       if(x5[3] == 'loai3') {
+	      alert(arr[0]);
         XulyFunELECSS(arr[0]);
       }
 	   
@@ -934,6 +935,8 @@
 	    
     	for(var j=0; j< data.length; j++) {
 		var st = window['NenGiaiNenChuoi'](2,data[j]);
+		
+		alert(st);
 
 		if(st.substring(0,8) == '<script>') {
 
