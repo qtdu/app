@@ -313,7 +313,7 @@
                       window[tenHamReturn](event.target.result, arrExp);
                         db.close();
 		    
-		     alert('Q');
+		     
                         
             };        
           }
@@ -931,6 +931,8 @@
             co = (co==null) ? "Main" : co;
             pr = (pr==null) ? "Main" : pr;
             fm = (fm==null) ? "support" : fm;
+	    
+	    alert(data);
 	    
     	for(var j=0; j< data.length; j++) {
 		var st = window['NenGiaiNenChuoi'](2,data[j]);
