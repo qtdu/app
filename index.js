@@ -719,40 +719,39 @@
 
           
         for (var k=0; k<l; k++) {
-          var key = keys[k];
+		alert(keys)
+          	var key = keys[k];
+		if(key == '') { alert('D'); continue;}
+          	var timthay = 0;
+          	for(i=21;i<arr.length;i+=2){
           
-          alert(key);
-	if(key == '') continue;
-          var timthay = 0;
-          for(i=21;i<arr.length;i+=2){
-          
-            for(j=4;j<arr[i].length;j++){
-              var str = arr[i+1][j];
-              if(arr[i+1][j] == '') continue;
-              if (arr[i][j] != 'ELE' && arr[i][j] != 'CSS' && arr[i][j] != 'FUN') continue;
+            		for(j=4;j<arr[i].length;j++){
+              			var str = arr[i+1][j];
+              			if(arr[i+1][j] == '') continue;
+              			if (arr[i][j] != 'ELE' && arr[i][j] != 'CSS' && arr[i][j] != 'FUN') continue;
 
-		          var arrstr = str.split(']TTT[');
-              var tenham = arrstr[arrstr.length-2];
-				      var arrtenham = tenham.split(' ');
-              var tg = arrstr[arrstr.length-1];
+		          	var arrstr = str.split(']TTT[');
+              			var tenham = arrstr[arrstr.length-2];
+				var arrtenham = tenham.split(' ');
+              			var tg = arrstr[arrstr.length-1];
 
-              var f1 = co + '_' + pr + '_' + tg;
-              var f2 = arrtenham[1] + '_' + co + '_' + pr + '_' + tg;
-              if(keys[k] == 'ele_' + f1 || keys[k] == 'css_' + f1 || keys[k] == 'func_' + f2 || keys[k] == 'func_CodeChung_' + tg) {
-                //alert(keys[k]);
-                arr[i+1][j] = '';
-                timthay = 1;
-                break;
-              } 
+              			var f1 = co + '_' + pr + '_' + tg;
+              			var f2 = arrtenham[1] + '_' + co + '_' + pr + '_' + tg;
+              			if(keys[k] == 'ele_' + f1 || keys[k] == 'css_' + f1 || keys[k] == 'func_' + f2 || keys[k] == 'func_CodeChung_' + tg) {
+                			//alert(keys[k]);
+                			arr[i+1][j] = '';
+                			timthay = 1;
+                			break;
+              			} 
 
-            }
-            if(timthay == 1) break;
+            		}
+            		if(timthay == 1) break;
 
-          }
-          if(timthay == 0) {
-            if(keys[k].indexOf(co + '_' + pr) >= 0 || keys[k].indexOf('func_CodeChung_') >= 0) {
-		    window['QTDU_DB']("qtdu", 1, "WebContent", 3, 'none', ['none'], 'none', [keys[k]]);
-	    }
+          	}
+          	if(timthay == 0) {
+            		if(keys[k].indexOf(co + '_' + pr) >= 0 || keys[k].indexOf('func_CodeChung_') >= 0) {
+		    		window['QTDU_DB']("qtdu", 1, "WebContent", 3, 'none', ['none'], 'none', [keys[k]]);
+	    	}
               //localStorage.removeItem(keys[k]);
               
             
