@@ -716,12 +716,13 @@
           }
           
         }
-	alert(l);
+	alert(keys);
+	    alert(l);
           
         for (var k=0; k<l; k++) {
           var key = keys[k];
           
-          
+          alert('Q1');
           var timthay = 0;
           for(i=21;i<arr.length;i+=2){
           
