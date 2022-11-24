@@ -738,7 +738,7 @@
 
         }
 
-        for(i=1;i<arr.length;i+=2){
+        for(i=21;i<arr.length;i+=2){
           for(j=4;j<arr[i].length;j++){
             if (arr[i][j] == 'ELE' || arr[i][j] == 'CSS' || arr[i][j] == 'FUN') {
               var str = arr[i+1][j];
