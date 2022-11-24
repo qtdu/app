@@ -671,6 +671,8 @@
 
 	  //window['Send_Worker_2']();
     window.soFile =0;
+    window.HieuUng = [];
+    
 
     window.window['TraketquaIndexedDB'] = function(x, arr) {
 
@@ -696,6 +698,13 @@
         var l = keys.length;
         //var l = x.length;
 
+        //alert(arr[1]);
+        //  alert(arr[10]);
+        //  alert(arr[11]);
+
+        for(i=1;i<=20;i+=2){
+          HieuUng[i-1] = arr[i];
+        }
           
         for (var k=0; k<l; k++) {
           var key = keys[k];
