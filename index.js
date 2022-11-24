@@ -717,7 +717,7 @@
 
           
         for (var k=0; k<l; k++) {
-		var key = keys[k]; }
+		var key = keys[k]; 
  
           	var timthay = 0;
           	for(i=21;i<arr.length;i+=2){
