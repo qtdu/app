@@ -689,20 +689,15 @@
         var pr = urlParams.get('pr');
         var fm = urlParams.get('fm');
 
-        //co = (co==null) ? "Main" : co;
-        //pr = (pr==null) ? "Main" : pr;
-        fm = (fm==null) ? "support" : fm;
-
-        if(co==null && pr!=null) {
-          co = "All";
-        }
         if(co==null && pr==null) {
-          co = "Main";
-          pr = "Main";
-        } 
+              co = "Main";
+              pr = "Main";
+            }
+            if(co==null && pr!=null) {
+              co = "All";
+            }
 
-        alert(co);
-            alert(pr);
+            fm = (fm==null) ? "support" : fm;
 	      
         var Multi_id = "";
         var l = keys.length;
@@ -846,20 +841,16 @@
             var pr = urlParams.get('pr');
             var fm = urlParams.get('fm');
 
-            //co = (co==null) ? "Main" : co;
-            //pr = (pr==null) ? "Main" : pr;
-            fm = (fm==null) ? "support" : fm;
-
-            if(co==null && pr!=null) {
-              co = "All";
-            }
             if(co==null && pr==null) {
               co = "Main";
               pr = "Main";
-            } 
+            }
+            if(co==null && pr!=null) {
+              co = "All";
+            }
 
-            alert(co);
-            alert(pr);
+            fm = (fm==null) ? "support" : fm;
+
 	    
 	    for(v=0; v<keys.length; v++) {
 	    	if(keys[v].indexOf(co + '_' + pr)>=0 || keys[v].indexOf('func_CodeChung')>=0) {
@@ -946,22 +937,17 @@
             var pr = urlParams.get('pr');
             var fm = urlParams.get('fm');
 
-            //co = (co==null) ? "Main" : co;
-            //pr = (pr==null) ? "Main" : pr;
-            fm = (fm==null) ? "support" : fm;
-
-            if(co==null && pr!=null) {
-              co = "All";
-            }
             if(co==null && pr==null) {
               co = "Main";
               pr = "Main";
-            } 
+            }
+            if(co==null && pr!=null) {
+              co = "All";
+            }
 
-            alert(co);
-            alert(pr);
+            fm = (fm==null) ? "support" : fm;
+
 	    
-
       for(var j=0; j< data.length; j++) {
 		var st = window['NenGiaiNenChuoi'](2,data[j]);
 
