@@ -716,8 +716,8 @@
         
 
 
-        var bd1 = (HieuUng.length == 0) ? 21: arr.length;
-        var bd2 = (HieuUng.length == 0) ? 4: arr[0].length;
+        var bd1 = (HieuUng.length == 0) ? 21: 0;
+        var bd2 = (HieuUng.length == 0) ? 4: 0;
 
         alert(arr);
 
