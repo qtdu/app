@@ -630,8 +630,13 @@
       var co = urlParams.get('co');
       var pr = urlParams.get('pr');
 
-      co = (co==null) ? "Main" : co;
-      pr = (pr==null) ? "Main" : pr;
+      if(co==null && pr==null) {
+              co = "Main";
+              pr = "Main";
+            }
+            if(co==null && pr!=null) {
+              co = "All";
+            }
 
       x6 = x6 + "?para1=F001"; 
       x6 = x6+ "&para2=" + "GETFUNCTION"; //loại
