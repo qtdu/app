@@ -184,7 +184,7 @@
 			if(hostname + pathname != 'qtdu.github.io/app/') return;
 
 			if(co == null && pr == null) {
-        alert(co + "_" + pr)
+        alert(queryString);
 				trangchinh = true;
       			}
 			
