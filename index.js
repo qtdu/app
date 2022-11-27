@@ -716,14 +716,16 @@
         
 
 
-          
+        var bd1 = (HieuUng.length == 0) ? 21: 0;
+        var bd2 = (HieuUng.length == 0) ? 4: 0;
+
         for (var k=0; k<l; k++) {
           var key = keys[k];
           
           
           var timthay = 0;
-          for(i=21;i<arr.length;i+=2){
-            for(j=4;j<arr[i].length;j++){
+          for(var i=bd1;i<arr.length;i+=2){
+            for(var j=bd2;j<arr[i].length;j++){
               var str = arr[i+1][j];
               if(arr[i+1][j] == '') continue;
               if (arr[i][j] != 'ELE' && arr[i][j] != 'CSS' && arr[i][j] != 'FUN') continue;
@@ -766,21 +768,10 @@
 
         }
 
-        if(HieuUng.length == 0) {
-          for(var i=1;i<=20;i++){
-            for(var j=4; j<arr[i].length; j++) {
-              if(arr[i][j] != '') {
-                var len = HieuUng.length;
-                HieuUng[len] = arr[i][j];
-              }
-              
-            }
-            
-          }
-        }
+        
 
-        for(i=21;i<arr.length;i+=2){
-          for(j=4;j<arr[i].length;j++){
+        for(i=bd1;i<arr.length;i+=2){
+          for(j=bd2;j<arr[i].length;j++){
             if (arr[i][j] == 'ELE' || arr[i][j] == 'CSS' || arr[i][j] == 'FUN') {
               var str = arr[i+1][j];
 		          var arrstr = str.split(']TTT[');
@@ -792,6 +783,19 @@
               //DisplayGoogleDoc_PDF(arr[i][j], arr[i+1][j]);
                 EID(arr[i][j]).src = "https://docs.google.com/viewer?srcid=" + arr[i+1][j] + "&pid=explorer&efh=false&a=v&chrome=false&embedded=true";
             }
+          }
+        }
+
+        if(HieuUng.length == 0) {
+          for(var i=1;i<=20;i++){
+            for(var j=4; j<arr[i].length; j++) {
+              if(arr[i][j] != '') {
+                var len = HieuUng.length;
+                HieuUng[len] = arr[i][j];
+              }
+              
+            }
+            
           }
         }
 
