@@ -821,7 +821,7 @@
 	
     }
 	  
-    window.window['GetInfoIndexedDB'] = function(x, arr) {
+    window.window['GetInfoIndexedDB'] = function(x) {
       //var keys = Object.keys(localStorage);
       var keys = [];
       for(var i=0; i< x.length; i++) {
