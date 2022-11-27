@@ -711,6 +711,8 @@
           }
           
         }
+
+        alert(arr);
           
         for (var k=0; k<l; k++) {
           var key = keys[k];
@@ -769,6 +771,7 @@
           }
         }
 
+        alert(Multi_id);
         if(Multi_id != '') {
           Multi_id = Multi_id.substring(5, Multi_id.length);
           window['Send_Worker_3']('loai3', Multi_id, 'json');
@@ -925,7 +928,7 @@
             pr = (pr==null) ? "Main" : pr;
             fm = (fm==null) ? "support" : fm;
 	    
-    	alert(data);
+
       for(var j=0; j< data.length; j++) {
 		var st = window['NenGiaiNenChuoi'](2,data[j]);
 
