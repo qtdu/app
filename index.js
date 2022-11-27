@@ -675,7 +675,6 @@
     
 
     window.window['TraketquaIndexedDB'] = function(x, arr) {
-      alert(x);
       var type;
 	    //var keys = Object.keys(localStorage);
 
@@ -770,7 +769,6 @@
           }
         }
 
-        alert(Multi_id);
         if(Multi_id != '') {
           Multi_id = Multi_id.substring(5, Multi_id.length);
           window['Send_Worker_3']('loai3', Multi_id, 'json');
@@ -927,7 +925,8 @@
             pr = (pr==null) ? "Main" : pr;
             fm = (fm==null) ? "support" : fm;
 	    
-    	for(var j=0; j< data.length; j++) {
+    	alert(data);
+      for(var j=0; j< data.length; j++) {
 		var st = window['NenGiaiNenChuoi'](2,data[j]);
 
     
