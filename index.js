@@ -183,7 +183,6 @@
 			var hostname = window.location.hostname;
 			if(hostname + pathname != 'qtdu.github.io/app/') return;
 
-			alert(queryString + "_" + co + "_" + pr)
       if(co == null && pr == null) {
         
 				trangchinh = true;
