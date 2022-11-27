@@ -719,7 +719,7 @@
         var bd1 = (HieuUng.length == 0) ? 21: 0;
         var bd2 = (HieuUng.length == 0) ? 4: 0;
 
-        alert(l);
+        alert(HieuUng.length);
 
         for (var k=0; k<l; k++) {
           var key = keys[k];
@@ -741,7 +741,7 @@
               var f2 = arrtenham[1] + '_' + co + '_' + pr + '_' + tg;
 
               
-
+              
               if((keys[k] == 'ele_' + f1 || keys[k] == 'css_' + f1 || keys[k] == 'func_' + f2 || keys[k] == 'func_CodeChung_' + tg) && HieuUng.length == 0) {
                 //alert(keys[k]);
                 arr[i+1][j] = '';
@@ -750,6 +750,7 @@
               } 
 
               if(keys[k] == 'func_AllSound_' + tg && HieuUng.length > 0) {
+                alert('q')
                 arr[i+1][j] = '';
                 timthay = 1;
                 break;
@@ -801,7 +802,7 @@
           }
         }
 
-        //alert(Multi_id);
+        alert(Multi_id);
         if(Multi_id != '') {
           Multi_id = Multi_id.substring(5, Multi_id.length);
           window['Send_Worker_3']('loai3', Multi_id, 'json');
