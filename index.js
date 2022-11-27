@@ -183,7 +183,8 @@
 			let hostname = window.location.hostname;
 			if(hostname + pathname != 'qtdu.github.io/app/') return;
 
-			if(co == null && pr== null) {
+			if(co == null && pr == null) {
+        alert(co + "_" + pr)
 				trangchinh = true;
       			}
 			
@@ -1228,7 +1229,6 @@
 			worker_1('1','getND');
 			window['Send_Worker_2']();
 
-      alert(trangchinh + "_" + window['passLogin']);
 			if(trangchinh == true || window['passLogin'] == true) {
 				EID('DDOS').style.display = 'none';
 				EID('c').style.display = 'none';
