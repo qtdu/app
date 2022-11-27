@@ -712,17 +712,8 @@
         //alert(arr[1]);
         //  alert(arr[10]);
         //  alert(arr[11]);
-
-        for(var i=1;i<=20;i++){
-          for(var j=4; j<arr[i].length; j++) {
-            if(arr[i][j] != '') {
-              var len = HieuUng.length;
-              HieuUng[len] = arr[i][j];
-            }
-            
-          }
-          
-        }
+        
+        
 
 
           
@@ -732,7 +723,6 @@
           
           var timthay = 0;
           for(i=21;i<arr.length;i+=2){
-          
             for(j=4;j<arr[i].length;j++){
               var str = arr[i+1][j];
               if(arr[i+1][j] == '') continue;
@@ -745,12 +735,21 @@
 
               var f1 = co + '_' + pr + '_' + tg;
               var f2 = arrtenham[1] + '_' + co + '_' + pr + '_' + tg;
-              if(keys[k] == 'ele_' + f1 || keys[k] == 'css_' + f1 || keys[k] == 'func_' + f2 || keys[k] == 'func_CodeChung_' + tg) {
+
+              
+
+              if((keys[k] == 'ele_' + f1 || keys[k] == 'css_' + f1 || keys[k] == 'func_' + f2 || keys[k] == 'func_CodeChung_' + tg) && HieuUng.length == 0) {
                 //alert(keys[k]);
                 arr[i+1][j] = '';
                 timthay = 1;
                 break;
               } 
+
+              if(keys[k] == 'func_AllSound_' + tg && HieuUng.length > 0) {
+                arr[i+1][j] = '';
+                timthay = 1;
+                break;
+              }
 
             }
             if(timthay == 1) break;
@@ -765,6 +764,19 @@
           }
           
 
+        }
+
+        if(HieuUng.length == 0) {
+          for(var i=1;i<=20;i++){
+            for(var j=4; j<arr[i].length; j++) {
+              if(arr[i][j] != '') {
+                var len = HieuUng.length;
+                HieuUng[len] = arr[i][j];
+              }
+              
+            }
+            
+          }
         }
 
         for(i=21;i<arr.length;i+=2){
