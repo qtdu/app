@@ -716,10 +716,10 @@
         
 
 
-        var bd1 = (HieuUng.length == 0) ? 21: 0;
-        var bd2 = (HieuUng.length == 0) ? 4: 0;
+        var bd1 = (HieuUng.length == 0) ? 21: arr.length;
+        var bd2 = (HieuUng.length == 0) ? 4: arr[0].length;
 
-        alert(HieuUng.length);
+        alert(arr);
 
         for (var k=0; k<l; k++) {
           var key = keys[k];
@@ -750,7 +750,6 @@
               } 
 
               if(keys[k] == 'func_AllSound_' + tg && HieuUng.length > 0) {
-                alert('q')
                 arr[i+1][j] = '';
                 timthay = 1;
                 break;
