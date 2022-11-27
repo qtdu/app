@@ -717,7 +717,7 @@
 
 
         var bd1 = (HieuUng.length == 0) ? 21: 0;
-        var bd2 = (HieuUng.length == 0) ? 4: arr[0].length;
+        var bd2 = (HieuUng.length == 0) ? 4: 0;
 
         for (var k=0; k<l; k++) {
           var key = keys[k];
