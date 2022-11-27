@@ -831,7 +831,7 @@
       }
       if(x5[3] == 'loai2') {
         
-
+        alert(arr);
         window['QTDU_DB']("qtdu", 1, "WebContent", 2, 'TraketquaIndexedDB', arr, 'none', ['none']);
 
 	      
