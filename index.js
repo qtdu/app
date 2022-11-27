@@ -1227,6 +1227,8 @@
 
 			worker_1('1','getND');
 			window['Send_Worker_2']();
+
+      alert(trangchinh + "_" + window['passLogin']);
 			if(trangchinh == true || window['passLogin'] == true) {
 				EID('DDOS').style.display = 'none';
 				EID('c').style.display = 'none';
