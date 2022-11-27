@@ -700,6 +700,9 @@
           co = "Main";
           pr = "Main";
         } 
+
+        alert(co);
+            alert(pr);
 	      
         var Multi_id = "";
         var l = keys.length;
@@ -854,6 +857,9 @@
               co = "Main";
               pr = "Main";
             } 
+
+            alert(co);
+            alert(pr);
 	    
 	    for(v=0; v<keys.length; v++) {
 	    	if(keys[v].indexOf(co + '_' + pr)>=0 || keys[v].indexOf('func_CodeChung')>=0) {
@@ -951,6 +957,9 @@
               co = "Main";
               pr = "Main";
             } 
+
+            alert(co);
+            alert(pr);
 	    
 
       for(var j=0; j< data.length; j++) {
