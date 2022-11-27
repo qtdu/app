@@ -762,7 +762,7 @@
               window['QTDU_DB']("qtdu", 1, "WebContent", 3, 'none', ['none'], 'none', [keys[k]]);
             }
 
-            alert(keys[k]);
+
 
             // || keys[k].indexOf('func_AllSound_') >= 0
               
@@ -804,7 +804,7 @@
           }
         }
 
-
+        alert(Multi_id);
         if(Multi_id != '') {
           Multi_id = Multi_id.substring(5, Multi_id.length);
           window['Send_Worker_3']('loai3', Multi_id, 'json');
