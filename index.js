@@ -689,9 +689,17 @@
         var pr = urlParams.get('pr');
         var fm = urlParams.get('fm');
 
-        co = (co==null) ? "Main" : co;
-        pr = (pr==null) ? "Main" : pr;
+        //co = (co==null) ? "Main" : co;
+        //pr = (pr==null) ? "Main" : pr;
         fm = (fm==null) ? "support" : fm;
+
+        if(co==null && pr!=null) {
+          co = "All";
+        }
+        if(co==null && pr==null) {
+          co = "Main";
+          pr = "Main";
+        } 
 	      
         var Multi_id = "";
         var l = keys.length;
@@ -712,7 +720,7 @@
           
         }
 
-        alert(arr);
+
           
         for (var k=0; k<l; k++) {
           var key = keys[k];
@@ -771,7 +779,7 @@
           }
         }
 
-        alert(Multi_id);
+        //alert(Multi_id);
         if(Multi_id != '') {
           Multi_id = Multi_id.substring(5, Multi_id.length);
           window['Send_Worker_3']('loai3', Multi_id, 'json');
@@ -835,9 +843,17 @@
             var pr = urlParams.get('pr');
             var fm = urlParams.get('fm');
 
-            co = (co==null) ? "Main" : co;
-            pr = (pr==null) ? "Main" : pr;
+            //co = (co==null) ? "Main" : co;
+            //pr = (pr==null) ? "Main" : pr;
             fm = (fm==null) ? "support" : fm;
+
+            if(co==null && pr!=null) {
+              co = "All";
+            }
+            if(co==null && pr==null) {
+              co = "Main";
+              pr = "Main";
+            } 
 	    
 	    for(v=0; v<keys.length; v++) {
 	    	if(keys[v].indexOf(co + '_' + pr)>=0 || keys[v].indexOf('func_CodeChung')>=0) {
@@ -924,9 +940,17 @@
             var pr = urlParams.get('pr');
             var fm = urlParams.get('fm');
 
-            co = (co==null) ? "Main" : co;
-            pr = (pr==null) ? "Main" : pr;
+            //co = (co==null) ? "Main" : co;
+            //pr = (pr==null) ? "Main" : pr;
             fm = (fm==null) ? "support" : fm;
+
+            if(co==null && pr!=null) {
+              co = "All";
+            }
+            if(co==null && pr==null) {
+              co = "Main";
+              pr = "Main";
+            } 
 	    
 
       for(var j=0; j< data.length; j++) {
