@@ -717,9 +717,7 @@
 
 
         var bd1 = (HieuUng.length == 0) ? 21: 0;
-        var bd2 = (HieuUng.length == 0) ? 4: 0;
-
-        alert(arr);
+        var bd2 = (HieuUng.length == 0) ? 4: arr[0].length;
 
         for (var k=0; k<l; k++) {
           var key = keys[k];
@@ -760,9 +758,14 @@
 
           }
           if(timthay == 0) {
-            if(keys[k].indexOf(co + '_' + pr) >= 0 || keys[k].indexOf('func_CodeChung_') >= 0 || keys[k].indexOf('func_AllSound_') >= 0)
-              //localStorage.removeItem(keys[k]);
+            if((keys[k].indexOf(co + '_' + pr) >= 0 || keys[k].indexOf('func_CodeChung_') >= 0) && HieuUng.length == 0) {
               window['QTDU_DB']("qtdu", 1, "WebContent", 3, 'none', ['none'], 'none', [keys[k]]);
+            }
+
+            alert(keys[k]);
+
+            // || keys[k].indexOf('func_AllSound_') >= 0
+              
 
             
           }
@@ -801,7 +804,7 @@
           }
         }
 
-        alert(Multi_id);
+
         if(Multi_id != '') {
           Multi_id = Multi_id.substring(5, Multi_id.length);
           window['Send_Worker_3']('loai3', Multi_id, 'json');
