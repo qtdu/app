@@ -173,17 +173,17 @@
 	  	window.window['passLogin'] = false;
 
 		function kiemtra(){
-			let queryString = window.EID('Iframe_main').src;
+			var queryString = window.EID('Iframe_main').src;
 			//let queryString = window.location.search;
-			let urlParams = new URLSearchParams(queryString);
-			let co = urlParams.get('co');
-			let pr = urlParams.get('pr');
-			let tk = urlParams.get('token');
-			let pathname = window.location.pathname;
-			let hostname = window.location.hostname;
+			var urlParams = new URLSearchParams(queryString);
+			var co = urlParams.get('co');
+			var pr = urlParams.get('pr');
+			var tk = urlParams.get('token');
+			var pathname = window.location.pathname;
+			var hostname = window.location.hostname;
 			if(hostname + pathname != 'qtdu.github.io/app/') return;
 
-			alert(co + "_" + pr)
+			alert(queryString + "_" + co + "_" + pr)
       if(co == null && pr == null) {
         
 				trangchinh = true;
