@@ -758,7 +758,7 @@
 
           }
           if(timthay == 0) {
-            if((keys[k].indexOf(co + '_' + pr) >= 0 || keys[k].indexOf('func_CodeChung_') >= 0) && HieuUng.length == 0) {
+            if((keys[k].indexOf(co + '_' + pr) >= 0 || keys[k].indexOf('func_CodeChung_') >= 0) && HieuUng.length == 0 || (keys[k].indexOf('func_AllSound_') >= 0 && HieuUng.length > 0)) {
               window['QTDU_DB']("qtdu", 1, "WebContent", 3, 'none', ['none'], 'none', [keys[k]]);
             }
 
@@ -879,7 +879,7 @@
 
 	    
 	    for(v=0; v<keys.length; v++) {
-	    	if(keys[v].indexOf(co + '_' + pr)>=0 || keys[v].indexOf('func_CodeChung')>=0) {
+	    	if(keys[v].indexOf(co + '_' + pr)>=0 || keys[v].indexOf('func_CodeChung')>=0 || keys[v].indexOf('func_AllSound')>=0) {
 			    if(keys[v].indexOf('func_')>=0) {
 
 				    //var st = localStorage.getItem(keys[v]);
@@ -990,7 +990,7 @@
 			ndham = ndham.trim();
 			
 
-      if(tenham == 'CodeChung') {
+      if(tenham == 'CodeChung' || tenham == 'AllSound') {
         //localStorage.setItem('func_' + tenham + '_' + arrFunc[arrFunc.length - 1], data[j]);
 
         var arrObjDB = [{id: 'func_' + tenham + '_' + arrFunc[arrFunc.length - 1], v: data[j]}];
