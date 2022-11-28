@@ -976,7 +976,10 @@
 	    
 	    window['func_' + pr]('OK');
 
+      if(DaNapLanDau == false) DaNapLanDau = true;
+
     }
+
     function RunFuncFromStorage() {
 
       window['QTDU_DB']("qtdu", 1, "WebContent", 2, 'GetInfoIndexedDB', ['none'], 'none', ['none']);
