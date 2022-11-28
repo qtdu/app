@@ -678,6 +678,7 @@
 	  //window['Send_Worker_2']();
     window.soFile =0;
     window.HieuUng = [];
+    window.DaNapLanDau = false;
     
 
     window.window['TraketquaIndexedDB'] = function(x, arr) {
@@ -716,8 +717,8 @@
         
 
 
-        var bd1 = (HieuUng.length == 0) ? 21: 0;
-        var bd2 = (HieuUng.length == 0) ? 4: 0;
+        var bd1 = (DaNapLanDau == false) ? 21: 0;
+        var bd2 = (DaNapLanDau == false) ? 4: 0;
 
         for (var k=0; k<l; k++) {
           var key = keys[k];
@@ -740,14 +741,14 @@
 
               
               
-              if((keys[k] == 'ele_' + f1 || keys[k] == 'css_' + f1 || keys[k] == 'func_' + f2 || keys[k] == 'func_CodeChung_' + tg) && HieuUng.length == 0) {
+              if((keys[k] == 'ele_' + f1 || keys[k] == 'css_' + f1 || keys[k] == 'func_' + f2 || keys[k] == 'func_CodeChung_' + tg) && DaNapLanDau == false) {
                 //alert(keys[k]);
                 arr[i+1][j] = '';
                 timthay = 1;
                 break;
               } 
 
-              if(keys[k] == 'func_AllSound_' + tg && HieuUng.length > 0) {
+              if(keys[k] == 'func_AllSound_' + tg && DaNapLanDau == true) {
                 arr[i+1][j] = '';
                 timthay = 1;
                 break;
@@ -758,7 +759,7 @@
 
           }
           if(timthay == 0) {
-            if((keys[k].indexOf(co + '_' + pr) >= 0 || keys[k].indexOf('func_CodeChung_') >= 0) && HieuUng.length == 0 || (keys[k].indexOf('func_AllSound_') >= 0 && HieuUng.length > 0)) {
+            if((keys[k].indexOf(co + '_' + pr) >= 0 || keys[k].indexOf('func_CodeChung_') >= 0) && DaNapLanDau == false || (keys[k].indexOf('func_AllSound_') >= 0 && DaNapLanDau == true)) {
               window['QTDU_DB']("qtdu", 1, "WebContent", 3, 'none', ['none'], 'none', [keys[k]]);
             }
 
@@ -804,7 +805,6 @@
           }
         }
 
-        alert(Multi_id);
         if(Multi_id != '') {
           Multi_id = Multi_id.substring(5, Multi_id.length);
           window['Send_Worker_3']('loai3', Multi_id, 'json');
@@ -879,72 +879,99 @@
 
 	    
 	    for(v=0; v<keys.length; v++) {
-	    	if(keys[v].indexOf(co + '_' + pr)>=0 || keys[v].indexOf('func_CodeChung')>=0 || keys[v].indexOf('func_AllSound')>=0) {
-			    if(keys[v].indexOf('func_')>=0) {
+        if(DaNapLanDau == false) {
+          if(keys[v].indexOf(co + '_' + pr)>=0 || keys[v].indexOf('func_CodeChung')>=0) {
+            if(keys[v].indexOf('func_')>=0) {
 
-				    //var st = localStorage.getItem(keys[v]);
-            var st = x[v]['v'];
+              //var st = localStorage.getItem(keys[v]);
+              var st = x[v]['v'];
 
-				    st = window['NenGiaiNenChuoi'](2,st);
-				    var arrFunc = st.split('*QTDU*');
-			
-			      var tenham = arrFunc[1].replace(/(\r\n|\n|\r)/gm, " ");
-			      tenham = tenham.trim();
+              st = window['NenGiaiNenChuoi'](2,st);
+              var arrFunc = st.split('*QTDU*');
+        
+              var tenham = arrFunc[1].replace(/(\r\n|\n|\r)/gm, " ");
+              tenham = tenham.trim();
 
-			      var ndham = arrFunc[2]
-				    ndham = ndham.trim();
+              var ndham = arrFunc[2]
+              ndham = ndham.trim();
 
-			      this['func_' + tenham] = new Function('return ' + ndham)();
+              this['func_' + tenham] = new Function('return ' + ndham)();
 
-			      try { this['func_' + tenham](); }
-			      catch(err) {}
-			    }
-			
-			    if(keys[v].indexOf('css_')>=0) {
+              try { this['func_' + tenham](); }
+              catch(err) {}
+            }
+        
+            if(keys[v].indexOf('css_')>=0) {
 
-				    //var st = localStorage.getItem(keys[v]);
-            var st = x[v]['v'];
+              //var st = localStorage.getItem(keys[v]);
+              var st = x[v]['v'];
 
-				    st = window['NenGiaiNenChuoi'](2,st);
+              st = window['NenGiaiNenChuoi'](2,st);
 
-		      	var arrStyle = st.split('*QTDU*');
-		      
-				    document.head.innerHTML +=  arrStyle[0];
-			
-			    }
-			
-			    if(keys[v].indexOf('ele_')>=0) {
+              var arrStyle = st.split('*QTDU*');
+            
+              document.head.innerHTML +=  arrStyle[0];
+        
+            }
+        
+            if(keys[v].indexOf('ele_')>=0) {
 
-				    //var st = localStorage.getItem(keys[v]);
-            var st = x[v]['v'];
-				    st = window['NenGiaiNenChuoi'](2,st);
+              //var st = localStorage.getItem(keys[v]);
+              var st = x[v]['v'];
+              st = window['NenGiaiNenChuoi'](2,st);
 
-		      	var arrFunc = st.split('*QTDU*');
+              var arrFunc = st.split('*QTDU*');
 
 
-			      for(var i=1; i<arrFunc.length-2; i+=2) {
-				      var tenele = arrFunc[i].replace(/(\r\n|\n|\r)/gm, " ");
-				      tenele = tenele.trim();
-				      var arrtenele = tenele.split('||');
+              for(var i=1; i<arrFunc.length-2; i+=2) {
+                var tenele = arrFunc[i].replace(/(\r\n|\n|\r)/gm, " ");
+                tenele = tenele.trim();
+                var arrtenele = tenele.split('||');
 
-				      //var ndele = arrFunc[i+1].replace(/[“”]/g,"\"");
-				      //ndele = ndele.replace(/[‘’]/g,"'");
+                //var ndele = arrFunc[i+1].replace(/[“”]/g,"\"");
+                //ndele = ndele.replace(/[‘’]/g,"'");
 
-				      var ndele = arrFunc[i+1];
+                var ndele = arrFunc[i+1];
 
-				      var y0 = arrtenele[0].trim();
-				      var y1 = arrtenele[1].trim();
-				      var y2 = 1*arrtenele[2].trim();
-				      if(y1 != 'none' && y2 != 'none') {
-				        ECN(y0,y1)[y2].innerHTML = ndele;
-				      } else {
-				        EID(y0).innerHTML = ndele;
-				      }
+                var y0 = arrtenele[0].trim();
+                var y1 = arrtenele[1].trim();
+                var y2 = 1*arrtenele[2].trim();
+                if(y1 != 'none' && y2 != 'none') {
+                  ECN(y0,y1)[y2].innerHTML = ndele;
+                } else {
+                  EID(y0).innerHTML = ndele;
+                }
 
-			      }
-			
-			    }
-		    }
+              }
+        
+            }
+          }
+        
+        } else {
+          if(keys[v].indexOf('func_AllSound')>=0) {
+            if(keys[v].indexOf('func_')>=0) {
+
+              //var st = localStorage.getItem(keys[v]);
+              var st = x[v]['v'];
+
+              st = window['NenGiaiNenChuoi'](2,st);
+              var arrFunc = st.split('*QTDU*');
+        
+              var tenham = arrFunc[1].replace(/(\r\n|\n|\r)/gm, " ");
+              tenham = tenham.trim();
+
+              var ndham = arrFunc[2]
+              ndham = ndham.trim();
+
+              this['func_' + tenham] = new Function('return ' + ndham)();
+
+              try { this['func_' + tenham](); }
+              catch(err) {}
+            }
+          }
+
+        }
+	    	
 	    }
 	    
 	    window['func_' + pr]('OK');
