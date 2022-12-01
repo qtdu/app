@@ -42,6 +42,24 @@
 	
 	--width-31G: calc(5vh * (2 - var(--thietbi)) + 5vw * (var(--thietbi) - 1));
 	--font-size-31G: 1em;
+
+  --z-index-DDOS: 99;
+  --z-index-ngang: 102000;
+  --z-index-doc: 102000;
+  --z-index-WaveLock: 101001;
+  --z-index-HuongDan: 101000;
+  --z-index-VirtualButton: 100000;
+  --z-index-Alert: 98000;
+  --z-index-Control: 97000;
+  --z-index-Iframe: 96000;
+  --z-index-ReadQRcode: 95000;
+  --z-index-Login: 94000;
+  --z-index-header_content: 90;
+  --z-index-content_image: 1000;
+  --z-index-content_div3: 1002;
+  --z-index-content_div2: 1001;
+  --z-index-content_div1: 1000;
+
 }
 
 html, body {
@@ -90,7 +108,7 @@ body{
 }
 
 .DDOS {
-	z-index: 99;
+	z-index: var(--z-index-DDOS);
 }
 
 #xacnhan {
@@ -158,7 +176,7 @@ body{
     	padding: 0 10vw 0 10vw;
     
     	background: orange;
-    	z-index: 102000;
+    	z-index: var(--z-index-ngang); /*102000;*/
     	font-size: calc(var(--size-mau)/4);
 }
 
@@ -169,12 +187,12 @@ body{
 }
 
 .doc {
-    	z-index: 102000;
+    	z-index: var(--z-index-doc); /*102000;*/
     	display: var(--display-doc);
 }
 
 .WaveLock {
-	 z-index: 101001;
+	 z-index: var(--z-index-WaveLock); /*101001;*/
 	display: none; /*flex;*/
 	justify-content: center; 
 	align-items: center;
@@ -198,7 +216,6 @@ body{
   background: white;
   cursor: pointer;
 }
-
 #WaveLockInput::-moz-range-thumb {
   background: white;
   cursor: pointer;
@@ -206,7 +223,7 @@ body{
 */
 		
 .HuongDan {
-        z-index: 101000;
+        z-index: var(--z-index-HuongDan); /*101000;*/
         width: 100%; height: 100vh; 
         background: orange; 
         position: fixed; 
@@ -217,7 +234,7 @@ body{
 }
 
 .VirtualButton {
-	z-index: 100000;
+	z-index: var(--z-index-VirtualButton); /*100000;*/
 	width: var(--width-31G); 
 	height: var(--width-31G);
 	font-size: var(--font-size-31G); 
@@ -236,11 +253,11 @@ body{
 }
 .VirtualButton div{ width: var(--width-31G); text-align: center;}
 
-.Alert {z-index: 98000; display: none; /*flex;*/}
-.Control {z-index: 97000; display: none; /*flex;*/}
-.Iframe {z-index: 96000; display: none; /*flex;*/}
-.ReadQRcode{z-index: 95000; display: none; /*flex;*/ }
-.Login {z-index: 94000; display: none; /*flex;*/}
+.Alert {z-index: var(--z-index-Alert); display: none; /*flex;*/}
+.Control {z-index: var(--z-index-Control); display: none; /*flex;*/}
+.Iframe {z-index: var(--z-index-Iframe); display: none; /*flex;*/}
+.ReadQRcode{z-index: var(--z-index-ReadQRcode); display: none; /*flex;*/ }
+.Login {z-index: var(--z-index-Login); display: none; /*flex;*/}
 
 .Alert, .Control, .Iframe, .Login {
 	position: fixed; 
@@ -508,7 +525,7 @@ body{
 
 		
 .header, .content {
-	z-index: 90;
+	z-index: var(--z-index-header_content); /*90;*/
 }
 
 
@@ -607,7 +624,7 @@ body{
 	position: absolute;
 	width: 100%;
 	height: calc(var(--height-content) - 2 * var(--size-mau)/40);
-	z-index: 1000;
+	z-index: var(--z-index-content_image); /*1000;*/
 	display: none;
 	background: white;
 }
@@ -627,9 +644,9 @@ body{
 	height: calc(var(--height-content) - 1.5 * var(--size-mau));
 	display: none;
 }
-.content1_div3, .content2_div3, .content3_div3 {z-index: 1002; display: none;}
-.content1_div2, .content2_div2, .content3_div2 {z-index: 1001; display: none;}
-.content1_div1, .content2_div1, .content3_div1 {z-index: 1000; display: none;}
+.content1_div3, .content2_div3, .content3_div3 {z-index: var(--z-index-content_div3); display: none;}
+.content1_div2, .content2_div2, .content3_div2 {z-index: var(--z-index-content_div2); display: none;}
+.content1_div1, .content2_div1, .content3_div1 {z-index: var(--z-index-content_div1); display: none;}
 
 
 
