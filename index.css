@@ -242,7 +242,7 @@ body{
 .ReadQRcode{z-index: 95000; display: none; /*flex;*/ }
 .Login {z-index: 94000; display: none; /*flex;*/}
 
-.Alert, .Control, .Iframe, .Login {
+.Alert, .Control, .Iframe, .Login, .ReadQRcode {
 	position: fixed; 
 	
 	font-weight: 600; 
